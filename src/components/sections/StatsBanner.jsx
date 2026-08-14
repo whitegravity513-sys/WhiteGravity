@@ -1,0 +1,240 @@
+import React, { useState, useEffect, useRef } from "react";
+import { motion, useInView } from "framer-motion";
+import { COUNTER_STATS } from "../../data/mock";
+
+function AnimatedCounter({ value, inView }) {
+  const numericPart = value.replace(/[^0-9]/g, "");
+  const suffix = value.replace(/[0-9]/g, "");
+  const target = parseInt(numericPart, 10);
+
+  const [count, setCount] = useState(0);
+  const hasAnimated = useRef(false);
+
+  useEffect(() => {
+    if (!inView || hasAnimated.current) return;
+
+    hasAnimated.current = true;
+
+    let start = 0;
+
+    const duration = 1200;
+    const fps = 60;
+    const totalSteps = (duration / 1000) * fps;
+    const stepIncrement = target / totalSteps;
+
+    const timer = setInterval(() => {
+      start += stepIncrement;
+
+      if (start >= target) {
+        setCount(target);
+        clearInterval(timer);
+      } else {
+        setCount(Math.floor(start));
+      }
+    }, 1000 / fps);
+
+    return () => clearInterval(timer);
+  }, [inView, target]);
+
+  return (
+    <>
+      {count}
+      {suffix}
+    </>
+  );
+}
+
+export default function StatsBanner() {
+  const ref = useRef(null);
+
+  const inView = useInView(ref, {
+    once: true,
+    amount: 0.2,
+  });
+
+  return (
+    <section
+      className="
+        relative
+        z-10
+        -mt-8
+        sm:-mt-10
+        md:-mt-14
+        lg:-mt-20
+        pb-2
+        sm:pb-4
+        md:pb-6
+      "
+    >
+      <div
+        className="
+          container-x
+          mx-auto
+          w-full
+          px-4
+          sm:px-6
+          lg:px-8
+        "
+      >
+        <motion.div
+          ref={ref}
+          initial={{
+            opacity: 0,
+            y: 40,
+          }}
+          animate={
+            inView
+              ? {
+                  opacity: 1,
+                  y: 0,
+                }
+              : {}
+          }
+          transition={{
+            duration: 0.5,
+            ease: "easeOut",
+          }}
+          className="
+            w-full
+            rounded-2xl
+            bg-white
+            border
+            border-slate-100
+            shadow-xl
+            px-4
+            py-6
+            sm:rounded-3xl
+            sm:px-6
+            sm:py-7
+            md:px-8
+            md:py-8
+            lg:px-10
+            lg:py-10
+
+            grid
+            grid-cols-2
+            gap-y-7
+            gap-x-3
+
+            sm:gap-y-8
+            sm:gap-x-5
+
+            md:grid-cols-4
+            md:gap-6
+          "
+        >
+          {COUNTER_STATS.map((s, i) => (
+            <motion.div
+              key={s.label}
+              initial={{
+                opacity: 0,
+                scale: 0.8,
+              }}
+              animate={
+                inView
+                  ? {
+                      opacity: 1,
+                      scale: 1,
+                    }
+                  : {}
+              }
+              transition={{
+                duration: 0.5,
+                delay: i * 0.1,
+              }}
+              className="
+                relative
+                flex
+                flex-col
+                items-center
+                justify-center
+                text-center
+                min-w-0
+              "
+            >
+              {/* Counter */}
+              <div
+                className="
+                  whitespace-nowrap
+                  text-2xl
+                  font-extrabold
+                  tracking-tight
+                  text-[#009B6C]
+
+                  xs:text-3xl
+                  sm:text-4xl
+                  md:text-4xl
+                  lg:text-5xl
+                "
+              >
+                <AnimatedCounter
+                  value={s.value}
+                  inView={inView}
+                />
+              </div>
+
+              {/* Label */}
+              <div
+                className="
+                  mt-1.5
+                  max-w-[130px]
+                  text-xs
+                  font-semibold
+                  leading-snug
+                  text-slate-600
+
+                  sm:mt-2
+                  sm:max-w-none
+                  sm:text-sm
+
+                  md:text-base
+                "
+              >
+                {s.label}
+              </div>
+
+              {/* Divider for mobile 2x2 layout */}
+              {i < COUNTER_STATS.length - 1 && (
+                <div
+                  className="
+                    absolute
+                    -right-2
+                    top-1/2
+                    hidden
+                    h-12
+                    -translate-y-1/2
+                    border-r
+                    border-slate-200
+
+                    sm:-right-3
+
+                    md:hidden
+                  "
+                />
+              )}
+
+              {/* Bottom divider for mobile */}
+              {i < 2 && (
+                <div
+                  className="
+                    absolute
+                    -bottom-3
+                    left-1/2
+                    w-[80%]
+                    -translate-x-1/2
+                    border-b
+                    border-slate-100
+
+                    sm:-bottom-4
+
+                    md:hidden
+                  "
+                />
+              )}
+            </motion.div>
+          ))}
+        </motion.div>
+      </div>
+    </section>
+  );
+}
