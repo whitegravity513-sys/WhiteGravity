@@ -124,7 +124,6 @@ export default function ServicesGrid() {
           xl:px-0
         "
       >
-
         {/* ================= HEADING ================= */}
 
         <div
@@ -162,9 +161,7 @@ export default function ServicesGrid() {
           >
             {/* Section Pill */}
 
-            <SectionPill icon={Zap}>
-              What We Do
-            </SectionPill>
+            <SectionPill icon={Zap}>What We Do</SectionPill>
 
             {/* Heading */}
 
@@ -186,10 +183,7 @@ export default function ServicesGrid() {
                 px-2
               "
             >
-              Our{" "}
-              <span className="text-[#009B6C]">
-                IT Services
-              </span>
+              Our <span className="text-[#009B6C]">IT Services</span>
             </h2>
 
             {/* Description */}
@@ -257,8 +251,7 @@ export default function ServicesGrid() {
               }}
               whileHover={{
                 y: -6,
-                boxShadow:
-                  "0 16px 40px -8px rgba(0,155,108,0.18)",
+                boxShadow: "0 16px 40px -8px rgba(0,155,108,0.18)",
               }}
               className="
                 w-full
@@ -284,7 +277,6 @@ export default function ServicesGrid() {
                 duration-300
               "
             >
-
               {/* ================= IMAGE ================= */}
 
               <div
@@ -372,7 +364,6 @@ export default function ServicesGrid() {
                   text-center
                 "
               >
-
                 {/* Title */}
 
                 <h3
@@ -446,7 +437,6 @@ export default function ServicesGrid() {
                   "
                 >
                   Explore Service
-
                   <ArrowRight
                     className="
                       w-3.5
@@ -468,4 +458,4 @@ export default function ServicesGrid() {
       </div>
     </section>
   );
-} 
+}

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import {
   CheckCircle2,
   Users,
@@ -8,7 +8,7 @@ import {
   Clock,
   HeartHandshake,
 } from "lucide-react";
-import { motion } from "framer-motion";
+import { motion, useAnimation } from "framer-motion";
 import SectionPill from "../SectionPill";
 import AnimatedText from "../AnimatedText";
 import TypewriterText from "../TypewriterText";
@@ -23,7 +23,243 @@ const ICONS = [
   CheckCircle2,
 ];
 
+/* ── Single Flip Card Component ── */
+function FlipCard({ item, i }) {
+  const Icon = ICONS[i % ICONS.length];
+  const [isFlipped, setIsFlipped] = useState(false);
+  const controls = useAnimation();
+  const [hasAnimated, setHasAnimated] = useState(false);
+
+  return (
+    <motion.div
+      initial={{
+        opacity: 0,
+        y: 36,
+      }}
+      whileInView={{
+        opacity: 1,
+        y: 0,
+      }}
+      whileTap={{
+        scale: 0.98,
+      }}
+      viewport={{
+        once: true,
+        margin: "-30px",
+      }}
+      transition={{
+        duration: 0.45,
+        delay: i * 0.12,
+        ease: [0.22, 1, 0.36, 1],
+      }}
+      className="w-full"
+      style={{
+        perspective: 1200,
+      }}
+      onMouseEnter={() => {
+        if (hasAnimated) {
+          setIsFlipped(true);
+          controls.start({ rotateY: 180 });
+        }
+      }}
+      onMouseLeave={() => {
+        if (hasAnimated) {
+          setIsFlipped(false);
+          controls.start({ rotateY: 0 });
+        }
+      }}
+    >
+
+      {/* 3D Flip Container */}
+      <motion.div
+        initial={{
+          rotateY: 180,
+        }}
+        whileInView={{
+          rotateY: 0,
+        }}
+        animate={controls}
+        viewport={{
+          once: true,
+        }}
+        transition={{
+          duration: 0.8,
+          delay: hasAnimated ? 0 : i * 0.15,
+          ease: [0.25, 0.46, 0.45, 0.94],
+        }}
+        onAnimationComplete={() => {
+          if (!hasAnimated) setHasAnimated(true);
+        }}
+        className="relative w-full min-h-[170px] sm:min-h-[180px] h-full cursor-pointer"
+        style={{
+          transformStyle: "preserve-3d",
+        }}
+      >
+
+        {/* ===== FRONT FACE ===== */}
+        <div
+          className="
+            group
+            absolute
+            inset-0
+            flex
+            h-full
+            w-full
+            flex-col
+            items-center
+            justify-center
+            gap-3
+            rounded-2xl
+            border
+            border-emerald-100
+            bg-emerald-50
+            p-4
+            text-center
+            shadow-sm
+            transition-all
+            duration-300
+
+            hover:border-emerald-300
+            hover:bg-emerald-100
+            hover:shadow-md
+
+            sm:p-5
+          "
+          style={{
+            backfaceVisibility: "hidden",
+          }}
+        >
+
+          {/* ICON */}
+          <div
+            className="
+              flex
+              h-10
+              w-10
+              flex-shrink-0
+              items-center
+              justify-center
+              rounded-xl
+              bg-white
+              shadow-sm
+              transition-all
+              duration-300
+
+              group-hover:bg-[#009B6C]
+
+              sm:h-11
+              sm:w-11
+            "
+          >
+            <Icon
+              className="
+                h-5
+                w-5
+                text-[#009B6C]
+                transition-colors
+                duration-300
+
+                group-hover:text-white
+              "
+            />
+          </div>
+
+          {/* CARD TEXT */}
+          <div className="flex flex-col items-center">
+            <h4
+              className="
+                text-[13px]
+                font-bold
+                leading-snug
+                text-slate-800
+                transition-colors
+                duration-300
+
+                group-hover:text-[#007a55]
+
+                sm:text-sm
+              "
+            >
+              {item.title}
+            </h4>
+
+            <p
+              className="
+                mt-2
+                max-w-[220px]
+                text-[11px]
+                leading-relaxed
+                text-slate-500
+
+                sm:text-xs
+              "
+            >
+              {item.desc}
+            </p>
+          </div>
+
+        </div>
+
+        {/* ===== BACK FACE ===== */}
+        <div
+          className="
+            absolute
+            inset-0
+            flex
+            h-full
+            w-full
+            flex-col
+            items-center
+            justify-center
+            gap-2
+            rounded-2xl
+            border
+            border-emerald-200
+            bg-gradient-to-br
+            from-[#009B6C]
+            to-emerald-600
+            p-4
+            shadow-lg
+
+            sm:p-5
+          "
+          style={{
+            backfaceVisibility: "hidden",
+            transform: "rotateY(180deg)",
+          }}
+        >
+          <div
+            className="
+              flex
+              h-14
+              w-14
+              items-center
+              justify-center
+              rounded-full
+              bg-white/20
+            "
+          >
+            <Icon className="h-7 w-7 text-white" />
+          </div>
+          <span className="mt-1 text-base font-bold text-white">
+            {item.title}
+          </span>
+          <p className="mt-1 max-w-[200px] text-center text-[11px] leading-relaxed text-white/80 sm:text-xs">
+            {item.desc}
+          </p>
+        </div>
+
+      </motion.div>
+
+    </motion.div>
+  );
+}
+
 export default function WhyUs() {
+  /* Split cards: first 3, then remaining 2 */
+  const firstRow = WHY_US.slice(0, 3);
+  const secondRow = WHY_US.slice(3);
+
   return (
     <section className="relative overflow-hidden bg-[#f8fdfb] py-12 sm:py-16 md:py-20 lg:py-24">
 
@@ -121,7 +357,7 @@ export default function WhyUs() {
             </p>
 
             {/* =====================================================
-                WHY US CARDS
+                WHY US CARDS — ROW 1 (3 cards)
             ====================================================== */}
 
             <div
@@ -136,172 +372,32 @@ export default function WhyUs() {
                 lg:grid-cols-3
               "
             >
+              {firstRow.map((item, i) => (
+                <FlipCard key={item.title} item={item} i={i} />
+              ))}
+            </div>
 
-              {WHY_US.map((item, i) => {
-                const Icon = ICONS[i % ICONS.length];
+            {/* =====================================================
+                WHY US CARDS — ROW 2 (2 cards, centered)
+            ====================================================== */}
 
-                return (
-                  <motion.div
-                    key={item.title}
-                    initial={{
-                      opacity: 0,
-                      y: 36,
-                    }}
-                    whileInView={{
-                      opacity: 1,
-                      y: 0,
-                    }}
-                    whileHover={{
-                      y: -5,
-                    }}
-                    whileTap={{
-                      scale: 0.98,
-                    }}
-                    viewport={{
-                      once: true,
-                      margin: "-30px",
-                    }}
-                    transition={{
-                      duration: 0.45,
-                      delay: i * 0.12,
-                      ease: [0.22, 1, 0.36, 1],
-                    }}
-                    className="w-full"
-                    style={{
-                      perspective: 1000,
-                    }}
-                  >
+            <div
+              className="
+                mt-4
+                flex
+                flex-col
+                items-center
+                gap-4
 
-                    <motion.div
-                      initial={{
-                        rotateY: -90,
-                      }}
-                      whileInView={{
-                        rotateY: 0,
-                      }}
-                      viewport={{
-                        once: true,
-                      }}
-                      transition={{
-                        duration: 0.7,
-                        delay: i * 0.12,
-                        ease: "easeOut",
-                      }}
-                      className="
-                        group
-                        flex
-                        min-h-[170px]
-                        h-full
-                        flex-col
-                        items-center
-                        justify-center
-                        gap-3
-                        rounded-2xl
-                        border
-                        border-emerald-100
-                        bg-emerald-50
-                        p-4
-                        text-center
-                        shadow-sm
-                        transition-all
-                        duration-300
-
-                        hover:border-emerald-300
-                        hover:bg-emerald-100
-                        hover:shadow-md
-
-                        sm:min-h-[180px]
-                        sm:p-5
-                      "
-                      style={{
-                        transformStyle: "preserve-3d",
-                      }}
-                    >
-
-                      {/* ICON */}
-
-                      <motion.div
-                        whileHover={{
-                          rotate: 10,
-                          scale: 1.1,
-                        }}
-                        transition={{
-                          duration: 0.2,
-                        }}
-                        className="
-                          flex
-                          h-10
-                          w-10
-                          flex-shrink-0
-                          items-center
-                          justify-center
-                          rounded-xl
-                          bg-white
-                          shadow-sm
-                          transition-all
-                          duration-300
-
-                          group-hover:bg-[#009B6C]
-
-                          sm:h-11
-                          sm:w-11
-                        "
-                      >
-                        <Icon
-                          className="
-                            h-5
-                            w-5
-                            text-[#009B6C]
-                            transition-colors
-                            duration-300
-
-                            group-hover:text-white
-                          "
-                        />
-                      </motion.div>
-
-                      {/* CARD TEXT */}
-
-                      <div className="flex flex-col items-center">
-
-                        <h4
-                          className="
-                            text-[13px]
-                            font-bold
-                            leading-snug
-                            text-slate-800
-                            transition-colors
-                            duration-300
-
-                            group-hover:text-[#007a55]
-
-                            sm:text-sm
-                          "
-                        >
-                          {item.title}
-                        </h4>
-
-                        <p
-                          className="
-                            mt-2
-                            max-w-[220px]
-                            text-[11px]
-                            leading-relaxed
-                            text-slate-500
-
-                            sm:text-xs
-                          "
-                        >
-                          {item.desc}
-                        </p>
-
-                      </div>
-
-                    </motion.div>
-
-                  </motion.div>
-                );
-              })}
+                sm:flex-row
+                sm:justify-center
+              "
+            >
+              {secondRow.map((item, i) => (
+                <div key={item.title} className="w-full sm:w-[calc(50%-8px)] lg:w-[calc(33.333%-11px)]">
+                  <FlipCard item={item} i={i + 3} />
+                </div>
+              ))}
 
             </div>
           </motion.div>

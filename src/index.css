@@ -72,7 +72,7 @@ h1, h2, h3, h4, h5, h6 {
   100% { transform: translateX(0); }
 }
 .animate-marquee-reverse      { animation: marquee-reverse 20s linear infinite; will-change: transform; transform: translateZ(0); }
-.animate-marquee-reverse-slow { animation: marquee-reverse 120s linear infinite; will-change: transform; transform: translateZ(0); }
+.animate-marquee-reverse-slow { animation: marquee-reverse 30s linear infinite; will-change: transform; transform: translateZ(0); }
 
 
 /* ─── Fade-in Up ─────────────────────────────────────────────────────────────── */
