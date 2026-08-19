@@ -6,7 +6,7 @@ import { motion } from 'framer-motion';
 export default function PageHeader({ title, crumbs = [] }) {
   return (
     <section className="relative bg-[#009B6C] text-white overflow-hidden">
-      <div className="container-x pt-24 pb-8 md:pt-32 md:pb-12 relative z-10 flex flex-col items-center text-center">
+      <div className="container-x pt-24 pb-8 md:pt-28 md:pb-12 lg:pt-32 lg:pb-14 relative z-10 flex flex-col items-center text-center">
         <motion.h1 initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5 }} className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight">
           {title}
         </motion.h1>

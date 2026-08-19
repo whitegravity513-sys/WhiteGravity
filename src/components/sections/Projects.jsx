@@ -11,12 +11,12 @@ const BriefcaseIcon = ({ className }) => (
 
 export default function Projects() {
   return (
-    <section className="py-8 md:py-10 bg-[#fbf9f6]">
-      <div className="container-x">
+    <section className="py-10 sm:py-12 md:py-16 lg:py-20 bg-[#fbf9f6]">
+      <div className="container-x px-4 sm:px-6 lg:px-8">
         <motion.div initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.3 }} className="text-center max-w-2xl mx-auto">
           <SectionPill icon={BriefcaseIcon}>Our Work</SectionPill>
-          <h2 className="mt-4 text-3xl md:text-5xl font-bold text-slate-900"><AnimatedText text="Recent Projects & Case Studies" /></h2>
-          <p className="mt-4 text-slate-600">A showcase of websites, apps, and digital solutions we've delivered for clients across industries.</p>
+          <h2 className="mt-4 text-2xl sm:text-3xl md:text-5xl font-bold text-slate-900"><AnimatedText text="Recent Projects & Case Studies" /></h2>
+          <p className="mt-4 text-sm sm:text-base text-slate-600 px-2">A showcase of websites, apps, and digital solutions we've delivered for clients across industries.</p>
         </motion.div>
 
         <div className="mt-8 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">

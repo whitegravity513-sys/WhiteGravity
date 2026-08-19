@@ -23,9 +23,13 @@ const ICONS = [
   CheckCircle2,
 ];
 
-/* ── Single Flip Card Component ── */
+/* ============================================================
+   SINGLE FLIP CARD
+============================================================ */
+
 function FlipCard({ item, i }) {
   const Icon = ICONS[i % ICONS.length];
+
   const [isFlipped, setIsFlipped] = useState(false);
   const controls = useAnimation();
   const [hasAnimated, setHasAnimated] = useState(false);
@@ -59,18 +63,26 @@ function FlipCard({ item, i }) {
       onMouseEnter={() => {
         if (hasAnimated) {
           setIsFlipped(true);
-          controls.start({ rotateY: 180 });
+
+          controls.start({
+            rotateY: 180,
+          });
         }
       }}
       onMouseLeave={() => {
         if (hasAnimated) {
           setIsFlipped(false);
-          controls.start({ rotateY: 0 });
+
+          controls.start({
+            rotateY: 0,
+          });
         }
       }}
     >
+      {/* =====================================================
+          3D FLIP CONTAINER
+      ====================================================== */}
 
-      {/* 3D Flip Container */}
       <motion.div
         initial={{
           rotateY: 180,
@@ -88,15 +100,27 @@ function FlipCard({ item, i }) {
           ease: [0.25, 0.46, 0.45, 0.94],
         }}
         onAnimationComplete={() => {
-          if (!hasAnimated) setHasAnimated(true);
+          if (!hasAnimated) {
+            setHasAnimated(true);
+          }
         }}
-        className="relative w-full min-h-[170px] sm:min-h-[180px] h-full cursor-pointer"
+        className="
+          relative
+          h-full
+          min-h-[175px]
+          w-full
+          cursor-pointer
+
+          sm:min-h-[180px]
+        "
         style={{
           transformStyle: "preserve-3d",
         }}
       >
+        {/* =====================================================
+            FRONT FACE
+        ====================================================== */}
 
-        {/* ===== FRONT FACE ===== */}
         <div
           className="
             group
@@ -113,7 +137,7 @@ function FlipCard({ item, i }) {
             border
             border-emerald-100
             bg-emerald-50
-            p-4
+            p-3
             text-center
             shadow-sm
             transition-all
@@ -129,13 +153,13 @@ function FlipCard({ item, i }) {
             backfaceVisibility: "hidden",
           }}
         >
-
           {/* ICON */}
+
           <div
             className="
               flex
-              h-10
-              w-10
+              h-9
+              w-9
               flex-shrink-0
               items-center
               justify-center
@@ -153,22 +177,26 @@ function FlipCard({ item, i }) {
           >
             <Icon
               className="
-                h-5
-                w-5
+                h-4
+                w-4
                 text-[#009B6C]
                 transition-colors
                 duration-300
 
                 group-hover:text-white
+
+                sm:h-5
+                sm:w-5
               "
             />
           </div>
 
           {/* CARD TEXT */}
+
           <div className="flex flex-col items-center">
             <h4
               className="
-                text-[13px]
+                text-[12px]
                 font-bold
                 leading-snug
                 text-slate-800
@@ -185,22 +213,25 @@ function FlipCard({ item, i }) {
 
             <p
               className="
-                mt-2
+                mt-1
                 max-w-[220px]
-                text-[11px]
+                text-[10px]
                 leading-relaxed
                 text-slate-500
 
+                sm:mt-2
                 sm:text-xs
               "
             >
               {item.desc}
             </p>
           </div>
-
         </div>
 
-        {/* ===== BACK FACE ===== */}
+        {/* =====================================================
+            BACK FACE
+        ====================================================== */}
+
         <div
           className="
             absolute
@@ -218,7 +249,7 @@ function FlipCard({ item, i }) {
             bg-gradient-to-br
             from-[#009B6C]
             to-emerald-600
-            p-4
+            p-3
             shadow-lg
 
             sm:p-5
@@ -231,84 +262,197 @@ function FlipCard({ item, i }) {
           <div
             className="
               flex
-              h-14
-              w-14
+              h-11
+              w-11
               items-center
               justify-center
               rounded-full
               bg-white/20
+
+              sm:h-14
+              sm:w-14
             "
           >
-            <Icon className="h-7 w-7 text-white" />
+            <Icon
+              className="
+                h-6
+                w-6
+                text-white
+
+                sm:h-7
+                sm:w-7
+              "
+            />
           </div>
-          <span className="mt-1 text-base font-bold text-white">
+
+          <span
+            className="
+              mt-1
+              text-sm
+              font-bold
+              text-white
+
+              sm:text-base
+            "
+          >
             {item.title}
           </span>
-          <p className="mt-1 max-w-[200px] text-center text-[11px] leading-relaxed text-white/80 sm:text-xs">
+
+          <p
+            className="
+              mt-1
+              max-w-[200px]
+              text-center
+              text-[10px]
+              leading-relaxed
+              text-white/80
+
+              sm:text-xs
+            "
+          >
             {item.desc}
           </p>
         </div>
-
       </motion.div>
-
     </motion.div>
   );
 }
 
+/* ============================================================
+   WHY US
+============================================================ */
+
 export default function WhyUs() {
-  /* Split cards: first 3, then remaining 2 */
-  const firstRow = WHY_US.slice(0, 3);
-  const secondRow = WHY_US.slice(3);
-
   return (
-    <section className="relative overflow-hidden bg-[#f8fdfb] py-12 sm:py-16 md:py-20 lg:py-24">
+    <section
+      className="
+        relative
+        overflow-hidden
+        bg-[#f8fdfb]
 
-      {/* ================= BACKGROUND BLOBS ================= */}
+        py-12
+        sm:py-16
+        md:py-20
+        lg:py-24
+      "
+    >
+      {/* =====================================================
+          BACKGROUND BLOBS
+      ====================================================== */}
 
-      <div className="blob-2 pointer-events-none absolute -right-20 top-10 h-64 w-64 rounded-full bg-emerald-100/40 blur-3xl sm:h-80 sm:w-80" />
+      <div
+        className="
+          blob-2
+          pointer-events-none
+          absolute
+          -right-20
+          top-10
+          h-64
+          w-64
+          rounded-full
+          bg-emerald-100/40
+          blur-3xl
 
-      <div className="blob-3 pointer-events-none absolute -bottom-20 -left-20 h-56 w-56 rounded-full bg-teal-100/30 blur-3xl sm:h-64 sm:w-64" />
+          sm:h-80
+          sm:w-80
+        "
+      />
+
+      <div
+        className="
+          blob-3
+          pointer-events-none
+          absolute
+          -bottom-20
+          -left-20
+          h-56
+          w-56
+          rounded-full
+          bg-teal-100/30
+          blur-3xl
+
+          sm:h-64
+          sm:w-64
+        "
+      />
 
       <div className="container-x relative z-10">
+        <div
+          className="
+            grid
+            grid-cols-1
+            items-center
+            gap-12
 
-        <div className="grid grid-cols-1 items-center gap-12 lg:grid-cols-12 lg:gap-12 xl:gap-16">
-
-          {/* =====================================================
+            lg:grid-cols-12
+            lg:gap-12
+            xl:gap-16
+          "
+        >
+          {/* =================================================
               LEFT CONTENT
-          ====================================================== */}
+          ================================================== */}
 
           <motion.div
-            initial={{ opacity: 0, x: -30 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true, amount: 0.15 }}
-            transition={{ duration: 0.5 }}
-            className="w-full lg:col-span-7"
+            initial={{
+              opacity: 0,
+              x: -30,
+            }}
+            whileInView={{
+              opacity: 1,
+              x: 0,
+            }}
+            viewport={{
+              once: true,
+              amount: 0.15,
+            }}
+            transition={{
+              duration: 0.5,
+            }}
+            className="
+              w-full
+              min-w-0
+
+              lg:col-span-7
+            "
           >
+            {/* =================================================
+                SECTION PILL
+            ================================================== */}
 
-            {/* Section Pill */}
+            <div
+              className="
+                flex
+                justify-center
 
-            <div className="flex justify-center lg:justify-start">
-              <SectionPill icon={Users}>Why Us</SectionPill>
+                lg:justify-start
+              "
+            >
+              <SectionPill icon={Users}>
+                Why Us
+              </SectionPill>
             </div>
 
-            {/* ================= HEADING ================= */}
+            {/* =================================================
+                HEADING
+            ================================================== */}
 
             <h2
               className="
-                mt-4
+                mt-5
                 text-center
-                text-3xl
+                text-4xl
                 font-bold
-                leading-[1.15]
+                leading-[1.12]
                 text-[#009B6C]
 
                 sm:text-4xl
                 md:text-5xl
 
                 lg:text-left
-                lg:text-[44px]
+                lg:text-[48px]
 
-                xl:text-5xl
+                xl:text-[52px]
               "
             >
               <span className="inline">
@@ -331,7 +475,9 @@ export default function WhyUs() {
               </span>
             </h2>
 
-            {/* ================= DESCRIPTION ================= */}
+            {/* =================================================
+                DESCRIPTION
+            ================================================== */}
 
             <p
               className="
@@ -356,76 +502,106 @@ export default function WhyUs() {
               />
             </p>
 
-            {/* =====================================================
-                WHY US CARDS — ROW 1 (3 cards)
-            ====================================================== */}
+            {/* =================================================
+                WHY US CARDS
+
+                MOBILE  → 2 COLUMNS
+                TABLET  → 2 COLUMNS
+                DESKTOP → 3 COLUMNS
+
+                DESKTOP:
+                
+                Card 1 | Card 2 | Card 3
+
+                   Card 4 | Card 5
+
+                Card 4 & 5 are positioned BETWEEN
+                the three cards.
+            ================================================== */}
 
             <div
               className="
                 mt-8
+
                 grid
-                grid-cols-1
-                gap-4
+                grid-cols-2
+                gap-3
 
-                sm:grid-cols-2
+                sm:gap-4
 
-                lg:grid-cols-3
+                lg:grid-cols-6
+                lg:gap-4
+                xl:gap-5
               "
             >
-              {firstRow.map((item, i) => (
-                <FlipCard key={item.title} item={item} i={i} />
-              ))}
-            </div>
+              {WHY_US.map((item, i) => (
+                <div
+                  key={item.title}
+                  className={`
+                    min-w-0
+                    w-full
 
-            {/* =====================================================
-                WHY US CARDS — ROW 2 (2 cards, centered)
-            ====================================================== */}
+                    ${
+                      /* ======================================
+                         MOBILE + TABLET
+                         Keep EXACTLY 2-column layout
+                      ====================================== */
 
-            <div
-              className="
-                mt-4
-                flex
-                flex-col
-                items-center
-                gap-4
+                      i === 4
+                        ? `
+                          col-span-2
+                          mx-auto
+                          w-[calc(50%-6px)]
 
-                sm:flex-row
-                sm:justify-center
-              "
-            >
-              {secondRow.map((item, i) => (
-                <div key={item.title} className="w-full sm:w-[calc(50%-8px)] lg:w-[calc(33.333%-11px)]">
-                  <FlipCard item={item} i={i + 3} />
+                          lg:col-span-2
+                          lg:col-start-4
+                          lg:w-full
+                        `
+                        : i === 3
+                        ? `
+                          lg:col-span-2
+                          lg:col-start-2
+                        `
+                        : `
+                          lg:col-span-2
+                        `
+                    }
+                  `}
+                >
+                  <FlipCard
+                    item={item}
+                    i={i}
+                  />
                 </div>
               ))}
-
             </div>
           </motion.div>
 
-          {/* =====================================================
+          {/* =================================================
               RIGHT IMAGE
-          ====================================================== */}
+              
+              MOBILE / TABLET → NORMAL
+              DESKTOP → RIGHT SIDE
+          ================================================== */}
 
           <div
             className="
               relative
-              mx-auto
+              z-10
+              block
               w-full
-              max-w-[620px]
+              min-w-0
+              mx-auto
 
               lg:col-span-5
               lg:mx-0
-              lg:max-w-none
             "
           >
-
-            {/* Image area */}
-
             <div
               className="
                 relative
+                block
                 w-full
-
                 px-4
                 pb-10
                 pt-8
@@ -439,27 +615,13 @@ export default function WhyUs() {
                 lg:pt-10
               "
             >
+              {/* =================================================
+                  BACKGROUND TILT
+              ================================================== */}
 
-              {/* ================= BACKGROUND TILT ================= */}
-
-              <motion.div
-                initial={{
-                  opacity: 0,
-                  scale: 0.8,
-                }}
-                whileInView={{
-                  opacity: 1,
-                  scale: 1,
-                }}
-                viewport={{
-                  once: true,
-                  amount: 0.15,
-                }}
-                transition={{
-                  duration: 0.8,
-                  ease: "easeOut",
-                }}
+              <div
                 className="
+                  pointer-events-none
                   absolute
                   inset-5
                   rounded-[2rem]
@@ -475,37 +637,17 @@ export default function WhyUs() {
                 }}
               />
 
-              {/* ================= IMAGE ================= */}
+              {/* =================================================
+                  IMAGE
+              ================================================== */}
 
-              <motion.div
-                initial={{
-                  opacity: 0,
-                  rotateY: -90,
-                  scale: 0.95,
-                }}
-                whileInView={{
-                  opacity: 1,
-                  rotateY: 0,
-                  scale: 1,
-                }}
-                viewport={{
-                  once: true,
-                  margin: "-50px",
-                }}
-                transition={{
-                  duration: 1.4,
-                  delay: 0.1,
-                  ease: "easeOut",
-                }}
-                style={{
-                  transformOrigin: "left",
-                  transformStyle: "preserve-3d",
-                }}
+              <div
                 className="
                   group
                   relative
                   z-10
-                  aspect-[4/3]
+                  block
+                  aspect-square
                   w-full
                   overflow-hidden
                   rounded-[1.5rem]
@@ -514,21 +656,21 @@ export default function WhyUs() {
                   bg-white
                   shadow-2xl
 
-                  sm:aspect-[16/11]
+                  sm:aspect-[4/5]
                   sm:rounded-[2rem]
                   sm:border-[6px]
 
-                  lg:aspect-[4/3]
+                  lg:aspect-[4/5]
                 "
               >
-
                 <img
                   src="/images/about-collaboration-new.jpg"
                   alt="White Gravity Team"
-                  loading="lazy"
+                  loading="eager"
                   className="
                     absolute
                     inset-0
+                    block
                     h-full
                     w-full
                     object-cover
@@ -540,13 +682,22 @@ export default function WhyUs() {
                   "
                 />
 
-                <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-emerald-950/40 via-transparent to-transparent" />
+                <div
+                  className="
+                    pointer-events-none
+                    absolute
+                    inset-0
+                    bg-gradient-to-t
+                    from-emerald-950/40
+                    via-transparent
+                    to-transparent
+                  "
+                />
+              </div>
 
-              </motion.div>
-
-              {/* =====================================================
+              {/* =================================================
                   CLIENT SATISFACTION
-              ====================================================== */}
+              ================================================== */}
 
               <motion.div
                 initial={{
@@ -588,7 +739,6 @@ export default function WhyUs() {
                   md:py-4
                 "
               >
-
                 <motion.div
                   animate={{
                     y: [0, -6, 0],
@@ -598,9 +748,14 @@ export default function WhyUs() {
                     duration: 4,
                     ease: "easeInOut",
                   }}
-                  className="flex items-center gap-2.5 sm:gap-3"
-                >
+                  className="
+                    flex
+                    items-center
+                    gap-2.5
 
+                    sm:gap-3
+                  "
+                >
                   <div
                     className="
                       flex
@@ -622,24 +777,43 @@ export default function WhyUs() {
                   </div>
 
                   <div>
+                    <div
+                      className="
+                        text-lg
+                        font-extrabold
+                        leading-none
+                        text-slate-900
 
-                    <div className="text-lg font-extrabold leading-none text-slate-900 sm:text-xl md:text-2xl">
+                        sm:text-xl
+                        md:text-2xl
+                      "
+                    >
                       98%
                     </div>
 
-                    <div className="mt-1 whitespace-nowrap text-[7px] font-bold uppercase tracking-wider text-slate-500 sm:text-[9px] md:text-[10px]">
+                    <div
+                      className="
+                        mt-1
+                        whitespace-nowrap
+                        text-[7px]
+                        font-bold
+                        uppercase
+                        tracking-wider
+                        text-slate-500
+
+                        sm:text-[9px]
+                        md:text-[10px]
+                      "
+                    >
                       Client Satisfaction
                     </div>
-
                   </div>
-
                 </motion.div>
-
               </motion.div>
 
-              {/* =====================================================
+              {/* =================================================
                   EXPERIENCE
-              ====================================================== */}
+              ================================================== */}
 
               <motion.div
                 initial={{
@@ -681,7 +855,6 @@ export default function WhyUs() {
                   md:py-4
                 "
               >
-
                 <motion.div
                   animate={{
                     y: [0, 6, 0],
@@ -692,9 +865,14 @@ export default function WhyUs() {
                     ease: "easeInOut",
                     delay: 1,
                   }}
-                  className="flex items-center gap-2.5 sm:gap-3"
-                >
+                  className="
+                    flex
+                    items-center
+                    gap-2.5
 
+                    sm:gap-3
+                  "
+                >
                   <div
                     className="
                       flex
@@ -710,30 +888,56 @@ export default function WhyUs() {
                       sm:w-11
                     "
                   >
-                    <span className="text-sm font-bold text-emerald-600 sm:text-lg">
+                    <span
+                      className="
+                        text-sm
+                        font-bold
+                        text-emerald-600
+
+                        sm:text-lg
+                      "
+                    >
                       5+
                     </span>
                   </div>
 
                   <div>
+                    <div
+                      className="
+                        whitespace-nowrap
+                        text-sm
+                        font-extrabold
+                        leading-none
+                        text-slate-900
 
-                    <div className="whitespace-nowrap text-sm font-extrabold leading-none text-slate-900 sm:text-lg md:text-xl">
+                        sm:text-lg
+                        md:text-xl
+                      "
+                    >
                       Years Pro
                     </div>
 
-                    <div className="mt-1 whitespace-nowrap text-[7px] font-bold uppercase tracking-wider text-slate-500 sm:text-[9px] md:text-[10px]">
+                    <div
+                      className="
+                        mt-1
+                        whitespace-nowrap
+                        text-[7px]
+                        font-bold
+                        uppercase
+                        tracking-wider
+                        text-slate-500
+
+                        sm:text-[9px]
+                        md:text-[10px]
+                      "
+                    >
                       Experience
                     </div>
-
                   </div>
-
                 </motion.div>
-
               </motion.div>
-
             </div>
           </div>
-
         </div>
       </div>
     </section>

@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { ArrowRight, Zap } from "lucide-react";
 import { motion } from "framer-motion";
 import SectionPill from "../SectionPill";
@@ -47,16 +47,23 @@ const imageFold = {
 };
 
 export default function ServicesGrid() {
+  const navigate = useNavigate();
+
   return (
     <section
       className="
         relative
         overflow-hidden
 
-        py-10
-        sm:py-12
-        md:py-16
-        lg:py-20
+        pt-8
+        sm:pt-10
+        md:pt-12
+        lg:pt-14
+        
+        pb-10
+        sm:pb-12
+        md:pb-16
+        lg:pb-20
  
         bg-[#e8f7f2]
       "
@@ -253,6 +260,7 @@ export default function ServicesGrid() {
                 y: -6,
                 boxShadow: "0 16px 40px -8px rgba(0,155,108,0.18)",
               }}
+              onClick={() => navigate(`/${s.slug}`)}
               className="
                 w-full
                 min-w-0
@@ -273,6 +281,8 @@ export default function ServicesGrid() {
                 flex-col
                 group
 
+                cursor-pointer
+
                 transition-all
                 duration-300
               "
@@ -286,10 +296,10 @@ export default function ServicesGrid() {
 
                   w-full
 
-                  h-40
-                  sm:h-44
-                  md:h-48
-                  lg:h-52
+                  h-36
+                  sm:h-40
+                  md:h-44
+                  lg:h-48
 
                   bg-white
 
@@ -297,8 +307,8 @@ export default function ServicesGrid() {
                   items-center
                   justify-center
 
-                  p-2
-                  sm:p-3
+                  p-4
+                  sm:p-6
 
                   rounded-t-xl
                   sm:rounded-t-2xl
@@ -312,8 +322,8 @@ export default function ServicesGrid() {
                   loading="lazy"
                   alt={s.title}
                   className="
-                    w-full
-                    h-full
+                    w-[90%]
+                    h-[90%]
 
                     object-contain
                     object-center
@@ -412,7 +422,7 @@ export default function ServicesGrid() {
                 {/* Link */}
 
                 <Link
-                  to={`/services/${s.slug}`}
+                  to={`/${s.slug}`}
                   className="
                     mt-4
 

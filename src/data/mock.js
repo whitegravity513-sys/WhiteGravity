@@ -7,22 +7,22 @@ export const NAV_LINKS = [
     label: 'Services',
     href: '/services',
     children: [
-      { label: 'Custom software development', href: '/services/custom-software-development' },
-      { label: 'Website Development', href: '/services/website-development' },
-      { label: 'Ecommerce Development', href: '/services/ecommerce-development' },
-      { label: 'Mobile App Development', href: '/services/mobile-app-development' },
-      { label: 'Web App Development', href: '/services/web-app-development' },
-      { label: 'CRM & ERP Development', href: '/services/crm-erp-development' },
-      { label: 'Digital Marketing', href: '/services/digital-marketing' },
-      { label: 'Meta Ads & Google Ads', href: '/services/meta-google-ads' },
+      { label: 'Custom software development', href: '/custom-software-development' },
+      { label: 'Website Development', href: '/website-development' },
+      { label: 'Ecommerce Development', href: '/ecommerce-development' },
+      { label: 'Mobile App Development', href: '/mobile-app-development' },
+      { label: 'Web App Development', href: '/web-app-development' },
+      { label: 'CRM & ERP Development', href: '/crm-erp-development' },
+      { label: 'Digital Marketing', href: '/digital-marketing' },
+      { label: 'Meta Ads & Google Ads', href: '/meta-google-ads' },
     ],
   },
   {
     label: 'ERP Consultation',
     href: '/erp-consultation',
     children: [
-      { label: 'Zoho Consultation', href: '/erp-consultation/zoho-consultation' },
-    ],
+      { label: 'Zoho Consultation', href: '/zoho-consultation' },
+    ], 
   },
   { label: 'Industries', href: '/industries' },
   { label: 'Contact Us', href: '/contact' },
@@ -108,20 +108,16 @@ export const PARTNERS = [
 ];
 
 export const TESTIMONIALS = [
-  { name: 'Alok Kumar', role: 'Director', company: 'Sejwal Industries', img: '/images/testimonial-alok.jpg', rating: 4.5, text: 'White Gravity built our web platform end-to-end. The team is fast, transparent, and truly invested in outcomes.' },
-  { name: 'Aditi Sharma', role: 'Founder', company: 'Raaf Beauty', img: '/images/testimonial-raafi.jpg', rating: 5.0, text: 'From CRM setup to campaigns, White Gravity became a real growth partner. Highly recommended for scaling businesses.' },
-  { name: 'Madhu Sudan Mishra', role: 'Founder', company: 'Kartavyam NGO', img: '/images/testimonial-madhu.jpg', rating: 4.0, text: 'Their sprint-based delivery is a game changer. We shipped a full ecommerce store in weeks, not months.' },
-  { name: 'Rupesh Gera', role: 'Founder', company: 'Posh Pro', img: '/images/testimonial-rupesh.jpg', rating: 4.5, text: 'The Zoho implementation streamlined our operations. Team is deeply knowledgeable and always available.' },
-  { name: 'Vikram Malhotra', role: 'Founder', company: 'Decortiq Interior', img: '/images/testimonial-vikram.png', rating: 3.5, text: 'Beautiful design, clean code, tangible ROI. That sums up our experience with the White Gravity team.' },
-  { name: 'Anuj Kumar', role: 'Director', company: 'SKB Buildcon', img: '/images/testimonial-anuj.jpg', rating: 5.0, text: 'Their Google & Meta ads brought us qualified leads within the first month. Metrics-obsessed in the best way.' },
-  { name: 'Seema Chauhan', role: 'Director', company: 'Sejwal Foundation', img: '/images/testimonial-seema.jpg', rating: 4.5, text: 'Migrated our legacy ERP with zero downtime. White Gravity is the partner every growing business needs.' },
-  { name: 'Rahul Verma', role: 'CEO', company: 'TechNova Solutions', img: '/images/testimonial-rahul.jpg', rating: 4.0, text: 'Working with White Gravity was an absolute pleasure. Their attention to detail and proactive approach helped us launch ahead of schedule.' },
-  { name: 'Neha Gupta', role: 'Marketing Head', company: 'StyleBoutique', img: '/images/testimonial-neha.jpg', rating: 5.0, text: 'The SEO and digital marketing strategy they crafted doubled our organic traffic in just 3 months. Truly exceptional work.' },
-  { name: 'Sanjay Patel', role: 'Operations Manager', company: 'LogiCorp', img: '/images/testimonial-sanjay.jpg', rating: 3.5, text: 'Their custom ERP solution completely transformed how we manage our inventory. We save hours every day now.' },
-  { name: 'Priya Singh', role: 'Co-Founder', company: 'EduTech India', img: '/images/testimonial-priya.jpg', rating: 4.5, text: 'The mobile app developed by White Gravity is flawless. Our students love the interface and the performance is top-notch.' },
-  { name: 'Karan Mehta', role: 'Managing Director', company: 'Mehta Estates', img: '/images/testimonial-karan.jpg', rating: 4.0, text: 'They rebuilt our real estate portal from scratch. The leads have skyrocketed thanks to the blazing fast website.' },
-  { name: 'Anita Desai', role: 'Owner', company: 'Desai Handicrafts', img: '/images/testimonial-anita.jpg', rating: 4.5, text: 'They took my small offline business online with a beautiful Shopify store. Sales have been phenomenal ever since.' },
-  { name: 'Ravi Teja', role: 'VP Engineering', company: 'FinTech Pro', img: '/images/testimonial-ravi.jpg', rating: 4.0, text: 'Great technical expertise! They seamlessly integrated multiple payment gateways and ensured robust security for our platform.' }
+  { name: 'Ekta Pandey', rating: 5.0, text: 'My website is really well-defined. I appreciate their support and highly recommend them for E-commerce website development.' },
+  { name: 'SHIREEN NAQVI', rating: 5.0, text: 'I had a wonderful experience working with White Gravity Web Solutions. Their team is highly professional, creative, and responsive throughout the entire process. They understood my requirements clearly and delivered a high-quality website with excellent attention to detail. Their technical expertise, timely communication, and commitment to customer satisfaction made the experience smooth and hassle-free. I highly recommend White Gravity Web Solutions to anyone looking for reliable web design and development services.' },
+  { name: 'Avnish', rating: 5.0, text: 'I had a really good experience with this company. They understood what I needed, communicated clearly, and delivered exactly what they promised. I appreciate their support and recommend them to others.' },
+  { name: 'Anshika Choudhary', rating: 5.0, text: 'White gravity helped me grow and increase my bussiness. There team helped me with my digital marketing , social media management and website development.' },
+  { name: 'Aditya Maurya', rating: 5.0, text: 'My website is really well-designed and impressive. The layout is clean, the navigation is smooth, and the overall presentation looks very professional Great work.' },
+  { name: 'VISHAL TIMOLY', rating: 5.0, text: 'I had a great experience with White Gravity Web Solutions. Their team is highly professional, responsive, and committed to delivering quality work. They understood my requirements perfectly and completed the project on time. The communication was smooth throughout the process, and the final result exceeded my expectations. I highly recommend White Gravity Web Solutions to anyone looking for reliable web development and digital solutions. Keep up the excellent work!' },
+  { name: 'Sujeet Kumar', rating: 5.0, text: 'I had a great experience working with White Gravity Web Solution. Their team is professional, responsive, and highly skilled in website design and development. They understood my requirements clearly and delivered a modern, responsive, and high-performing website on time. Communication throughout the project was excellent, and they were always willing to make changes whenever needed. I highly recommend White Gravity Web Solution to anyone looking for reliable web development and digital marketing services.' },
+  { name: 'Deepak Kumar', rating: 5.0, text: 'Excellent service by White Gravity Web Solution! The team is professional, responsive, and delivered my website on time with great quality. They understood my requirements perfectly and provided valuable suggestions. Highly recommended for website development and digital marketing services.' },
+  { name: 'shivam bhardwaj', rating: 5.0, text: 'Working with White Gravity Web Solutions was a great experience. The team was knowledgeable, approachable, and always ready to help. They delivered the project on time and ensured every detail matched my expectations. Their innovative ideas, prompt support, and dedication to quality truly set them apart. I would gladly recommend White Gravity Web Solutions to anyone looking for dependable and professional web development services.' },
+  { name: 'Sagar Yadav', rating: 5.0, text: 'Best website Development Company in Noida. and the owner is so Kind my website name of Prabha Enterprises.' }
 ];
 
 export const INDUSTRIES = [

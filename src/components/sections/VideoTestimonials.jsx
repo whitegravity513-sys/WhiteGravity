@@ -1,12 +1,5 @@
 import React, { useRef, useState } from "react";
-import {
-  Play,
-  Pause,
-  Star,
-  Volume2,
-  VolumeX,
-  Quote,
-} from "lucide-react";
+import { Play, Pause, Star, Volume2, VolumeX, Quote, BadgeCheck } from "lucide-react";
 import { motion } from "framer-motion";
 import SectionPill from "../SectionPill";
 
@@ -237,9 +230,7 @@ export default function VideoTestimonials() {
             md:mb-14
           "
         >
-          <SectionPill>
-            Client Success
-          </SectionPill>
+          <SectionPill>Client Success</SectionPill>
 
           <h2
             className="
@@ -260,10 +251,7 @@ export default function VideoTestimonials() {
               px-2
             "
           >
-            Hear It From{" "}
-            <span className="text-emerald-600">
-              Our Clients
-            </span>
+            Hear It From <span className="text-emerald-600">Our Clients</span>
           </h2>
 
           <p
@@ -281,8 +269,7 @@ export default function VideoTestimonials() {
               px-2
             "
           >
-            Real experiences from businesses we've helped grow
-            digitally.
+            Real experiences from businesses we've helped grow digitally.
           </p>
         </motion.div>
 
@@ -374,13 +361,17 @@ export default function VideoTestimonials() {
                   Tall premium layout
                 */
 
-                aspect-[9/16]
+                aspect-square
 
-                sm:aspect-[4/5]
+                sm:aspect-square
 
-                md:aspect-[4/5]
+                md:aspect-square
 
-                lg:aspect-[4/5]
+                lg:aspect-square
+
+                max-h-[50vh]
+                sm:max-h-[400px]
+                lg:max-h-[450px]
 
                 bg-black
 
@@ -396,17 +387,12 @@ export default function VideoTestimonials() {
             >
               {/* =============================================
                   VIDEO
-
-                  IMPORTANT:
-                  object-contain = NO CROPPING
               ============================================== */}
 
               <video
                 ref={videoRef}
                 src={TESTIMONIAL.src}
-                poster={
-                  TESTIMONIAL.poster || undefined
-                }
+                poster={TESTIMONIAL.poster || undefined}
                 className={`
                   absolute
                   inset-0
@@ -414,18 +400,15 @@ export default function VideoTestimonials() {
                   w-full
                   h-full
 
-                  object-contain
+                  object-cover
+                  object-[50%_15%]
 
                   bg-black
 
                   transition-opacity
                   duration-300
 
-                  ${
-                    hasVideo
-                      ? "opacity-100"
-                      : "opacity-0"
-                  }
+                  ${hasVideo ? "opacity-100" : "opacity-0"}
                 `}
                 playsInline
                 muted={muted}
@@ -592,11 +575,7 @@ export default function VideoTestimonials() {
                   <button
                     type="button"
                     onClick={toggleMute}
-                    aria-label={
-                      muted
-                        ? "Unmute video"
-                        : "Mute video"
-                    }
+                    aria-label={muted ? "Unmute video" : "Mute video"}
                     className="
                       w-9
                       h-9
@@ -764,9 +743,7 @@ export default function VideoTestimonials() {
 
             {/* Rating */}
 
-            <StarRating
-              rating={TESTIMONIAL.rating}
-            />
+            <StarRating rating={TESTIMONIAL.rating} />
 
             {/* Testimonial Text */}
 
@@ -809,36 +786,21 @@ export default function VideoTestimonials() {
                 sm:gap-4
               "
             >
-              {/* Avatar */}
-
-              <div
+              {/* Verified Tick Icon */}
+              <BadgeCheck
                 className="
-                  w-10
-                  h-10
+                  w-8
+                  h-8
 
-                  sm:w-12
-                  sm:h-12
+                  sm:w-10
+                  sm:h-10
 
-                  rounded-full
-
-                  bg-emerald-100
-
-                  flex
-                  items-center
-                  justify-center
-
-                  text-emerald-700
-
-                  font-bold
-
-                  text-sm
-                  sm:text-base
-
+                  text-[#009B6C]
                   flex-shrink-0
                 "
-              >
-                RB
-              </div>
+                fill="currentColor"
+                stroke="white"
+              />
 
               {/* Client Details */}
 
@@ -863,8 +825,7 @@ export default function VideoTestimonials() {
 
                     text-slate-500
                   "
-                >
-                </div>
+                ></div>
               </div>
             </div>
           </motion.div>

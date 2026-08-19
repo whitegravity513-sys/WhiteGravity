@@ -29,23 +29,20 @@ const Loader = () => (
   </div>
 );
 
-// Wrap routes to apply page-enter animation on route change
 function AnimatedRoutes() {
   const location = useLocation();
   return (
-    <div key={location.pathname} className="page-enter">
-      <Routes location={location}>
-        <Route path="/" element={<Home />} />
-        <Route path="/about" element={<About />} />
-        <Route path="/services" element={<Services />} />
-        <Route path="/erp-consultation/zoho-consultation" element={<ZohoConsultation />} />
-        <Route path="/services/:slug" element={<ServiceDetail />} />
-        <Route path="/industries" element={<Industries />} />
-        <Route path="/erp-consultation" element={<ERP />} />
-        <Route path="/contact" element={<Contact />} />
-        <Route path="*" element={<NotFound />} />
-      </Routes>
-    </div>
+    <Routes location={location}>
+      <Route path="/" element={<Home />} />
+      <Route path="/about" element={<About />} />
+      <Route path="/services" element={<Services />} />
+      <Route path="/zoho-consultation" element={<ZohoConsultation />} />
+      <Route path="/:slug" element={<ServiceDetail />} />
+      <Route path="/industries" element={<Industries />} />
+      <Route path="/erp-consultation" element={<ERP />} />
+      <Route path="/contact" element={<Contact />} />
+      <Route path="*" element={<NotFound />} />
+    </Routes>
   );
 }
 

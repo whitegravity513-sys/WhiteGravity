@@ -9,12 +9,12 @@ const ICONS = { Lightbulb, Layers, Code2, Hourglass, CloudUpload, RefreshCw };
 
 export default function Process() {
   return (
-    <section className="py-8 md:py-10 bg-emerald-50/60">
-      <div className="container-x">
-        <motion.div initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.3 }} className="text-center max-w-2xl mx-auto">
+    <section className="py-10 sm:py-12 md:py-16 lg:py-20 bg-emerald-50/60">
+      <div className="container-x px-4 sm:px-6 lg:px-8">
+        <motion.div initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.3 }} className="text-center max-w-2xl mx-auto mb-8 sm:mb-10">
           <SectionPill icon={Workflow}>Our Process</SectionPill>
-          <h2 className="mt-4 text-3xl md:text-5xl font-bold text-slate-900"><AnimatedText text="Our Custom Software Strategy" /></h2>
-          <p className="mt-4 text-slate-600">We follow a structured software development lifecycle focused on planning, scalability, performance, and long-term support.</p>
+          <h2 className="mt-4 text-2xl sm:text-3xl md:text-5xl font-bold text-slate-900"><AnimatedText text="Our Custom Software Strategy" /></h2>
+          <p className="mt-4 text-sm sm:text-base text-slate-600 px-2">We follow a structured software development lifecycle focused on planning, scalability, performance, and long-term support.</p>
         </motion.div>
 
         <div className="mt-8 relative">
@@ -33,7 +33,7 @@ export default function Process() {
             />
           </div>
 
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6 relative z-10">
+          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-4 sm:gap-5 lg:gap-6 relative z-10">
             {PROCESS_STEPS.map((p, i) => {
               const Icon = ICONS[p.icon];
               return (
@@ -54,7 +54,7 @@ export default function Process() {
                       delay: i * 0.3
                     }}
                     whileHover={{ scale: 1.05, y: -12, transition: { duration: 0.2 } }}
-                    className="bg-white h-full rounded-2xl border border-emerald-100 p-6 text-center shadow-sm hover:shadow-xl hover:shadow-emerald-900/5 transition-all"
+                    className="bg-white h-full rounded-2xl border border-emerald-100 p-4 sm:p-6 text-center shadow-sm hover:shadow-xl hover:shadow-emerald-900/5 transition-all"
                   >
                     <div className="w-14 h-14 mx-auto rounded-xl bg-emerald-100 grid place-items-center text-emerald-600 relative overflow-hidden">
                       <motion.div

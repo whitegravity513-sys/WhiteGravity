@@ -57,6 +57,7 @@ const footerLinks = [
   { label: "Home", to: "/" },
   { label: "About", to: "/about" },
   { label: "Services", to: "/services" },
+  { label: "Industries", to: "/industries" },
   { label: "ERP Consultation", to: "/erp-consultation" },
   { label: "Contact", to: "/contact" },
 ];
@@ -64,35 +65,39 @@ const footerLinks = [
 const serviceLinks = [
   {
     label: "Custom Software Development",
-    to: "/services/custom-software-development",
+    to: "/custom-software-development",
   },
   {
     label: "Website Development",
-    to: "/services/website-development",
+    to: "/website-development",
   },
   {
     label: "Ecommerce Development",
-    to: "/services/ecommerce-development",
+    to: "/ecommerce-development",
   },
   {
     label: "Mobile App Development",
-    to: "/services/mobile-app-development",
+    to: "/mobile-app-development",
   },
   {
     label: "Web App Development",
-    to: "/services/web-app-development",
+    to: "/web-app-development",
   },
   {
     label: "CRM & ERP Development",
-    to: "/services/crm-erp-development",
+    to: "/crm-erp-development",
   },
   {
     label: "Digital Marketing",
-    to: "/services/digital-marketing",
+    to: "/digital-marketing",
   },
   {
     label: "Meta Ads & Google Ads",
-    to: "/services/meta-google-ads",
+    to: "/meta-google-ads",
+  },
+  {
+    label: "Zoho Consultation",
+    to: "/zoho-consultation",
   },
 ];
 
@@ -115,30 +120,19 @@ export default function Footer() {
 
           {/* ================= BRAND ================= */}
           <div className="sm:col-span-2 lg:col-span-4">
-            <div className="flex flex-col sm:flex-row lg:flex-col xl:flex-row items-start sm:items-center lg:items-start xl:items-center gap-4">
+            <div className="flex flex-col items-start gap-4">
 
-              {/* Logo */}
-              <div className="bg-slate-900 border border-slate-800 rounded-xl p-2 shadow-inner shrink-0">
+              {/* Logo — already contains company name + icon */}
+              <div className="bg-white rounded-xl p-3 shadow-md shrink-0">
                 <img
                   src={COMPANY.logo}
-                  alt="White Gravity"
-                  className="h-14 sm:h-16 lg:h-14 xl:h-16 w-auto object-contain"
+                  alt="White Gravity Web Solutions"
+                  className="h-20 sm:h-24 w-auto object-contain"
                 />
-              </div>
-
-              {/* Company Name */}
-              <div>
-                <div className="text-white font-bold text-xl sm:text-2xl tracking-tight">
-                  {COMPANY.short}
-                </div>
-
-                <div className="text-[11px] sm:text-xs font-bold text-emerald-500 tracking-[0.18em] uppercase mt-1">
-                  Web Solutions
-                </div>
               </div>
             </div>
 
-            <p className="mt-5 text-sm sm:text-[15px] leading-relaxed text-slate-300 max-w-md">
+            <p className="mt-5 text-base sm:text-lg leading-relaxed text-slate-300 max-w-md">
               Your trusted technology partner for digital transformation,
               custom software development, cloud solutions, and business
               automation.
@@ -182,12 +176,12 @@ export default function Footer() {
 
           {/* ================= COMPANY ================= */}
           <div className="lg:col-span-2">
-            <h4 className="text-white font-bold text-sm tracking-wider uppercase mb-6 relative inline-block">
+            <h4 className="text-white font-bold text-base tracking-wider uppercase mb-6 relative inline-block">
               Company
               <span className="absolute -bottom-2 left-0 w-8 h-[2px] bg-emerald-500" />
             </h4>
 
-            <ul className="space-y-3 text-sm">
+            <ul className="space-y-3.5 text-sm sm:text-base">
               {footerLinks.map((link) => (
                 <li key={link.to}>
                   <Link
@@ -205,12 +199,12 @@ export default function Footer() {
 
           {/* ================= SERVICES ================= */}
           <div className="lg:col-span-3">
-            <h4 className="text-white font-bold text-sm tracking-wider uppercase mb-6 relative inline-block">
+            <h4 className="text-white font-bold text-base tracking-wider uppercase mb-6 relative inline-block">
               Services
               <span className="absolute -bottom-2 left-0 w-8 h-[2px] bg-emerald-500" />
             </h4>
 
-            <ul className="space-y-3 text-sm">
+            <ul className="space-y-3.5 text-sm sm:text-base">
               {serviceLinks.map((link) => (
                 <li key={link.to}>
                   <Link
@@ -230,12 +224,12 @@ export default function Footer() {
 
           {/* ================= CONTACT ================= */}
           <div className="sm:col-span-2 lg:col-span-3">
-            <h4 className="text-white font-bold text-sm tracking-wider uppercase mb-6 relative inline-block">
+            <h4 className="text-white font-bold text-base tracking-wider uppercase mb-6 relative inline-block">
               Contact Us
               <span className="absolute -bottom-2 left-0 w-8 h-[2px] bg-emerald-500" />
             </h4>
 
-            <ul className="space-y-5 text-sm">
+            <ul className="space-y-5 text-sm sm:text-base">
 
               {/* Phone */}
               {COMPANY.phones.map((p) => (
@@ -248,7 +242,7 @@ export default function Footer() {
                   </div>
 
                   <div className="min-w-0">
-                    <span className="block text-[10px] text-slate-500 font-bold uppercase tracking-wider">
+                    <span className="block text-xs sm:text-sm text-slate-500 font-bold uppercase tracking-wider">
                       Call Us
                     </span>
 
@@ -273,7 +267,7 @@ export default function Footer() {
                   </div>
 
                   <div className="min-w-0">
-                    <span className="block text-[10px] text-slate-500 font-bold uppercase tracking-wider">
+                    <span className="block text-xs sm:text-sm text-slate-500 font-bold uppercase tracking-wider">
                       Email Us
                     </span>
 
@@ -294,7 +288,7 @@ export default function Footer() {
                 </div>
 
                 <div className="min-w-0">
-                  <span className="block text-[10px] text-slate-500 font-bold uppercase tracking-wider">
+                  <span className="block text-xs sm:text-sm text-slate-500 font-bold uppercase tracking-wider">
                     Office Address
                   </span>
 
@@ -326,9 +320,8 @@ export default function Footer() {
             mt-14 sm:mt-16 lg:mt-20
             pt-8
             border-t border-slate-800
-            grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5
+            flex flex-wrap justify-center items-center
             gap-8 sm:gap-10 lg:gap-12
-            place-items-center
             max-w-6xl mx-auto
           "
         >
@@ -603,12 +596,12 @@ export default function Footer() {
             justify-between
             items-center
             gap-4
-            text-xs sm:text-sm
+            text-sm sm:text-base
             text-slate-400
           "
         >
           <p className="text-center sm:text-left">
-            © {new Date().getFullYear()} White Gravity Web Solutions.
+            © {new Date().getFullYear()} White Gravity.
             <span className="hidden sm:inline"> </span>
             All rights reserved.
           </p>

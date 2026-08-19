@@ -5,24 +5,9 @@ import SectionPill from "../SectionPill";
 import { TESTIMONIALS } from "../../data/mock";
 import AnimatedText from "../AnimatedText";
 
-// Quote Icon
-const QuoteIcon = ({ className }) => (
-  <svg
-    xmlns="http://www.w3.org/2000/svg"
-    viewBox="0 0 24 24"
-    fill="none"
-    stroke="currentColor"
-    strokeWidth="2"
-    strokeLinecap="round"
-    strokeLinejoin="round"
-    className={className}
-  >
-    <path d="M3 21c3 0 7-1 7-8V5c0-1.25-.756-2.017-2-2H4c-1.25 0-2 .75-2 1.972V11c0 1.25.75 2 2 2 1 0 1 0 1 1v1c0 1-1 1-2 2s-1 .008-1 1.031V21z" />
-    <path d="M15 21c3 0 7-1 7-8V5c0-1.25-.756-2.017-2-2h-4c-1.25 0-2 .75-2 1.972V11c0 1.25.75 2 2 2 1 0 1 0 1 1v1c0 1-1 1-2 2s-1 .008-1 1.031V21z" />
-  </svg>
-);
-
-// Star Rating
+// ==================================================
+// STAR RATING
+// ==================================================
 function StarRating({ rating = 5 }) {
   const fullStars = Math.floor(rating);
   const hasHalf = rating % 1 >= 0.5;
@@ -34,17 +19,48 @@ function StarRating({ rating = 5 }) {
       {[...Array(fullStars)].map((_, i) => (
         <Star
           key={`full-${i}`}
-          className="w-3.5 h-3.5 sm:w-4 sm:h-4 fill-amber-400 text-amber-400"
+          className="
+            w-3 h-3
+            sm:w-3.5 sm:h-3.5
+            md:w-4 md:h-4
+            fill-amber-400
+            text-amber-400
+          "
         />
       ))}
 
       {/* Half Star */}
       {hasHalf && (
-        <div className="relative w-3.5 h-3.5 sm:w-4 sm:h-4">
-          <Star className="w-3.5 h-3.5 sm:w-4 sm:h-4 fill-slate-200 text-slate-300 absolute inset-0" />
+        <div
+          className="
+            relative
+            w-3 h-3
+            sm:w-3.5 sm:h-3.5
+            md:w-4 md:h-4
+          "
+        >
+          <Star
+            className="
+              w-3 h-3
+              sm:w-3.5 sm:h-3.5
+              md:w-4 md:h-4
+              fill-slate-200
+              text-slate-300
+              absolute
+              inset-0
+            "
+          />
 
           <div className="overflow-hidden w-[50%] absolute inset-0">
-            <Star className="w-3.5 h-3.5 sm:w-4 sm:h-4 fill-amber-400 text-amber-400" />
+            <Star
+              className="
+                w-3 h-3
+                sm:w-3.5 sm:h-3.5
+                md:w-4 md:h-4
+                fill-amber-400
+                text-amber-400
+              "
+            />
           </div>
         </div>
       )}
@@ -53,118 +69,120 @@ function StarRating({ rating = 5 }) {
       {[...Array(emptyStars)].map((_, i) => (
         <Star
           key={`empty-${i}`}
-          className="w-3.5 h-3.5 sm:w-4 sm:h-4 fill-slate-200 text-slate-300"
+          className="
+            w-3 h-3
+            sm:w-3.5 sm:h-3.5
+            md:w-4 md:h-4
+            fill-slate-200
+            text-slate-300
+          "
         />
       ))}
 
       {/* Rating Number */}
-      <span className="ml-1 text-[11px] sm:text-xs font-extrabold text-slate-700">
+      <span
+        className="
+          ml-1
+          text-[10px]
+          sm:text-[11px]
+          md:text-xs
+          font-extrabold
+          text-slate-700
+        "
+      >
         {rating.toFixed(1)}
       </span>
     </div>
   );
 }
 
-// Testimonial Card
+// ==================================================
+// TESTIMONIAL CARD
+// ==================================================
 function TestimonialCard({ t }) {
   return (
     <div
       className="
-        w-[calc(100vw-32px)]
-        sm:w-[320px]
-        md:w-[380px]
-        lg:w-[400px]
-        max-w-[400px]
-        min-w-0
+        /* ================= MOBILE ================= */
+        w-[220px]
+        h-[230px]
+        p-4
+
+        /* ================= TABLET ================= */
+        sm:w-[250px]
+        sm:h-[260px]
+        sm:p-4.5
+
+        /* ================= DESKTOP ================= */
+        md:w-[280px]
+        md:h-[280px]
+        md:p-5
+
         flex-shrink-0
 
-        bg-gradient-to-br
-        from-emerald-50/80
-        to-white
-
+        bg-white
         border
         border-emerald-100
-
         rounded-2xl
 
-        p-4
-        sm:p-5
-        md:p-6
-
         shadow-sm
-        hover:shadow-xl
+        hover:shadow-md
+        hover:-translate-y-1
 
         transition-all
         duration-300
+
+        flex
+        flex-col
+        gap-2.5
+        sm:gap-3
       "
     >
-      {/* Quote + User Info */}
-      <div className="flex flex-col items-center justify-center">
-        <QuoteIcon
-          className="
-            w-7 h-7
-            sm:w-8 sm:h-8
-            text-emerald-300
-            opacity-60
-            mb-2
-            sm:mb-3
-          "
-        />
-
-        <div className="text-center min-w-0 w-full">
-          <div
-            className="
-              font-bold
-              text-sm
-              sm:text-base
-              text-slate-900
-              truncate
-              px-2
-            "
-          >
-            {t.name}
-          </div>
-
-          <div
-            className="
-              text-[11px]
-              sm:text-xs
-              text-slate-500
-              font-medium
-              break-words
-              px-2
-            "
-          >
-            {t.role} of {t.company}
-          </div>
-        </div>
-      </div>
-
-      {/* Rating */}
-      <div className="mt-2 sm:mt-3 flex items-center justify-center">
-        <StarRating rating={t.rating || 5} />
-      </div>
-
-      {/* Testimonial Text */}
-      <p
+      {/* Name */}
+      <div
         className="
-          mt-3
-          sm:mt-4
+          font-semibold
           text-xs
           sm:text-sm
-          text-slate-700
-          leading-relaxed
-          italic
+          text-slate-900
+          truncate
           text-center
-          break-words
+          w-full
         "
       >
-        "{t.text}"
+        {t.name}
+      </div>
+
+      {/* Stars */}
+      <StarRating rating={t.rating || 5} />
+
+      {/* Review Text */}
+      <p
+        className="
+          text-[10px]
+          sm:text-[11px]
+          md:text-xs
+
+          text-slate-600
+          leading-relaxed
+
+          overflow-hidden
+          flex-grow
+
+          line-clamp-6
+
+          mt-1
+        "
+      >
+        {t.text}
       </p>
     </div>
   );
 }
 
+// ==================================================
+// TESTIMONIALS SECTION
+// ==================================================
 export default function Testimonials() {
   // Split testimonials into two rows
   const middle = Math.ceil(TESTIMONIALS.length / 2);
@@ -189,7 +207,9 @@ export default function Testimonials() {
         overflow-hidden
       "
     >
-      {/* Section Heading */}
+      {/* ==================================================
+          SECTION HEADING
+      ================================================== */}
       <div className="container-x px-4 sm:px-6 lg:px-8">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -243,7 +263,9 @@ export default function Testimonials() {
         </motion.div>
       </div>
 
-      {/* Marquee Area */}
+      {/* ==================================================
+          MARQUEE AREA
+      ================================================== */}
       <div
         className="
           relative
@@ -263,7 +285,9 @@ export default function Testimonials() {
           sm:py-4
         "
       >
-        {/* Left Fade */}
+        {/* ==================================================
+            LEFT FADE
+        ================================================== */}
         <div
           className="
             absolute
@@ -271,7 +295,7 @@ export default function Testimonials() {
             top-0
             bottom-0
 
-            w-8
+            w-6
             sm:w-16
             md:w-32
 
@@ -284,7 +308,9 @@ export default function Testimonials() {
           "
         />
 
-        {/* Right Fade */}
+        {/* ==================================================
+            RIGHT FADE
+        ================================================== */}
         <div
           className="
             absolute
@@ -292,7 +318,7 @@ export default function Testimonials() {
             top-0
             bottom-0
 
-            w-8
+            w-6
             sm:w-16
             md:w-32
 
@@ -305,11 +331,14 @@ export default function Testimonials() {
           "
         />
 
-        {/* ================= ROW 1 ================= */}
+        {/* ==================================================
+            ROW 1
+        ================================================== */}
         <div className="w-full overflow-hidden">
           <div
             className="
               flex
+
               gap-3
               sm:gap-4
               md:gap-6
@@ -328,11 +357,14 @@ export default function Testimonials() {
           </div>
         </div>
 
-        {/* ================= ROW 2 ================= */}
+        {/* ==================================================
+            ROW 2
+        ================================================== */}
         <div className="w-full overflow-hidden">
           <div
             className="
               flex
+
               gap-3
               sm:gap-4
               md:gap-6

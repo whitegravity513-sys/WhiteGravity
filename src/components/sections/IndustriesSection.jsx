@@ -320,57 +320,7 @@ export default function IndustriesSection() {
               "
             >
 
-              {/* =================================================
-                  LEFT FADE
-              ================================================== */}
 
-              <div
-                className="
-                  absolute
-
-                  left-0
-                  top-0
-                  bottom-0
-
-                  w-6
-                  sm:w-8
-                  md:w-12
-
-                  bg-gradient-to-r
-                  from-emerald-50/60
-                  to-transparent
-
-                  z-10
-
-                  pointer-events-none
-                "
-              />
-
-              {/* =================================================
-                  RIGHT FADE
-              ================================================== */}
-
-              <div
-                className="
-                  absolute
-
-                  right-0
-                  top-0
-                  bottom-0
-
-                  w-6
-                  sm:w-8
-                  md:w-12
-
-                  bg-gradient-to-l
-                  from-emerald-50/60
-                  to-transparent
-
-                  z-10
-
-                  pointer-events-none
-                "
-              />
 
               {/* =================================================
                   ROW 1 - MOVES LEFT
@@ -395,7 +345,7 @@ export default function IndustriesSection() {
 
                     w-max
 
-                    animate-marquee
+                    animate-marquee-industries
                   "
                 >
                   {row1Industries.map((ind, i) => (
@@ -430,7 +380,7 @@ export default function IndustriesSection() {
 
                     w-max
 
-                    animate-marquee-reverse-slow
+                    animate-marquee-reverse-industries
 
                     ml-4
                     sm:ml-8

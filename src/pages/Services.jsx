@@ -1,6 +1,8 @@
 import React from 'react';
 import PageHeader from '../components/PageHeader';
 import ServicesGridStatic from '../components/sections/ServicesGridStatic';
+import Projects from '../components/sections/Projects';
+import Testimonials from '../components/sections/Testimonials';
 import CTA from '../components/sections/CTA';
 import ServicesProcess from '../components/sections/ServicesProcess';
 
@@ -10,6 +12,8 @@ export default function Services() {
       <PageHeader title="Our Services" crumbs={[{ label: 'Services' }]} />
       <ServicesGridStatic />
       <ServicesProcess />
+      <Projects />
+      <Testimonials />
       <CTA />
     </>
   );

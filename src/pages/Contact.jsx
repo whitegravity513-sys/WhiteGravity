@@ -64,7 +64,7 @@ export default function Contact() {
 
   return (
     <>
-      <section className="bg-[#009B6C] pt-16 pb-10 md:pt-20 md:pb-14 text-center px-4">
+      <section className="bg-[#009B6C] pt-28 pb-10 md:pt-32 lg:pt-36 md:pb-14 text-center px-4">
         <div className="container-x">
           <span className="inline-flex items-center gap-2 px-5 py-2 bg-[#bcf5d6] text-slate-900 font-bold text-sm tracking-widest uppercase rounded-full shadow-[0_4px_14px_0_rgba(0,0,0,0.1)] mx-auto mb-6">
             <Mail className="w-4 h-4" /> CONTACT US

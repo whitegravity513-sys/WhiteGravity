@@ -57,10 +57,19 @@ export default function StatsBanner() {
       className="
         relative
         z-10
-        -mt-8
-        sm:-mt-10
-        md:-mt-14
+
+        /* Mobile - thoda niche */
+        -mt-4
+
+        /* Small devices */
+        sm:-mt-6
+
+        /* Tablet - aur thoda niche */
+        md:-mt-8
+
+        /* Desktop - SAME AS BEFORE */
         lg:-mt-20
+
         pb-2
         sm:pb-4
         md:pb-6
@@ -101,22 +110,30 @@ export default function StatsBanner() {
             border
             border-slate-100
             shadow-xl
+
+            /* Mobile - height chhoti */
             px-4
-            py-6
+            py-3
+
             sm:rounded-3xl
-            sm:px-6
-            sm:py-7
-            md:px-8
-            md:py-8
+            sm:px-5
+            sm:py-4
+
+            md:px-6
+            md:py-5
+
+            /* Desktop - SAME AS BEFORE */
             lg:px-10
-            lg:py-10
+            lg:py-7
 
             grid
             grid-cols-2
-            gap-y-7
+
+            /* Mobile gaps reduced */
+            gap-y-4
             gap-x-3
 
-            sm:gap-y-8
+            sm:gap-y-5
             sm:gap-x-5
 
             md:grid-cols-4
@@ -156,15 +173,16 @@ export default function StatsBanner() {
               <div
                 className="
                   whitespace-nowrap
-                  text-2xl
+                  text-[28px]
                   font-extrabold
                   tracking-tight
                   text-[#009B6C]
+                  leading-none
 
-                  xs:text-3xl
-                  sm:text-4xl
-                  md:text-4xl
-                  lg:text-5xl
+                  xs:text-[34px]
+                  sm:text-[42px]
+                  md:text-[42px]
+                  lg:text-[54px]
                 "
               >
                 <AnimatedCounter

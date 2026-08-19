@@ -8,10 +8,13 @@ export default function Navbar() {
   const [open, setOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const [openSub, setOpenSub] = useState(null);
+  const [forceHide, setForceHide] = useState(false);
 
   const location = useLocation();
 
-  // Navbar shadow/background on scroll
+  // =========================================================
+  // NAVBAR SCROLL EFFECT
+  // =========================================================
   useEffect(() => {
     const handleScroll = () => {
       setScrolled(window.scrollY > 20);
@@ -24,13 +27,20 @@ export default function Navbar() {
     };
   }, []);
 
-  // Close mobile menu when route changes
+  // =========================================================
+  // CLOSE MENU WHEN ROUTE CHANGES
+  // =========================================================
   useEffect(() => {
     setOpen(false);
     setOpenSub(null);
+    setForceHide(true);
+    const timer = setTimeout(() => setForceHide(false), 100);
+    return () => clearTimeout(timer);
   }, [location.pathname]);
 
-  // Prevent body scrolling when mobile menu is open
+  // =========================================================
+  // PREVENT BODY SCROLL WHEN MOBILE MENU IS OPEN
+  // =========================================================
   useEffect(() => {
     if (open) {
       document.body.style.overflow = "hidden";
@@ -45,11 +55,20 @@ export default function Navbar() {
 
   return (
     <>
-      {/* ================= NAVBAR ================= */}
+      {/* ==================================================
+          NAVBAR
+      ================================================== */}
+
       <header
         className={`
-          fixed top-0 left-0 right-0 z-50 w-full
-          transition-all duration-300
+          fixed
+          top-0
+          left-0
+          right-0
+          z-50
+          w-full
+          transition-all
+          duration-300
           ${
             scrolled
               ? "bg-white/95 backdrop-blur-md shadow-md"
@@ -57,7 +76,10 @@ export default function Navbar() {
           }
         `}
       >
-        {/* Main Navbar */}
+        {/* ==================================================
+            MAIN NAVBAR
+        ================================================== */}
+
         <div
           className="
             container-x
@@ -65,7 +87,7 @@ export default function Navbar() {
             flex
             items-center
             justify-between
-            gap-4
+            gap-3
             px-4
             sm:px-6
             lg:px-8
@@ -74,15 +96,25 @@ export default function Navbar() {
             lg:py-3
           "
         >
-          {/* ================= LOGO ================= */}
+          {/* ==================================================
+              LOGO
+              MOBILE + TABLET + DESKTOP
+          ================================================== */}
+
           <Link
             to="/"
+            onClick={() => {
+              setOpen(false);
+              setOpenSub(null);
+            }}
             className="
               flex
               items-center
               shrink-0
               min-w-0
               group
+              lg:mr-10
+              xl:mr-16
             "
           >
             <img
@@ -98,6 +130,7 @@ export default function Navbar() {
                 max-w-[180px]
                 sm:max-w-[210px]
                 object-contain
+                mix-blend-multiply
                 transition-transform
                 duration-300
                 group-hover:scale-[1.02]
@@ -105,10 +138,24 @@ export default function Navbar() {
             />
           </Link>
 
-          {/* ================= DESKTOP NAV ================= */}
-          <nav className="hidden lg:flex items-center justify-center flex-1 gap-1 xl:gap-2">
+          {/* ==================================================
+              DESKTOP NAV
+          ================================================== */}
+
+          <nav
+            className="
+              hidden
+              lg:flex
+              items-center
+              justify-center
+              flex-1
+              gap-1
+              xl:gap-2
+            "
+          >
             {NAV_LINKS.map((item) => {
-              const linkTarget = item.href || item.to || "/";
+              const linkTarget =
+                item.href || item.to || "/";
 
               return (
                 <div
@@ -159,24 +206,25 @@ export default function Navbar() {
                     )}
                   </NavLink>
 
-                  {/* ================= DESKTOP DROPDOWN ================= */}
+                  {/* DESKTOP DROPDOWN */}
+
                   {item.children && (
                     <div
-                      className="
+                      className={`
                         absolute
                         left-0
                         top-full
                         pt-2
-                        opacity-0
-                        invisible
                         translate-y-1
-                        group-hover:opacity-100
-                        group-hover:visible
-                        group-hover:translate-y-0
                         transition-all
                         duration-200
                         z-50
-                      "
+                        ${
+                          forceHide
+                            ? "hidden"
+                            : "opacity-0 invisible group-hover:opacity-100 group-hover:visible group-hover:translate-y-0"
+                        }
+                      `}
                     >
                       <div
                         className="
@@ -222,24 +270,52 @@ export default function Navbar() {
             })}
           </nav>
 
-          {/* ================= DESKTOP CTA ================= */}
-          <div className="hidden lg:flex items-center shrink-0">
+          {/* ==================================================
+              RIGHT SIDE
+
+              MOBILE + TABLET:
+              BOOK + MENU
+
+              DESKTOP:
+              FREE CONSULTATION
+          ================================================== */}
+
+          <div
+            className="
+              flex
+              items-center
+              shrink-0
+              gap-2
+              sm:gap-3
+            "
+          >
+            {/* ==================================================
+                FREE CONSULTATION
+                DESKTOP + DIFFERENT WHATSAPP MESSAGE
+            ================================================== */}
+
             <a
-              href="https://wa.me/918796414339"
+              href="https://wa.me/9217135322?text=Hello%20White%20Gravity%2C%20I%20would%20like%20to%20book%20consultation."
               target="_blank"
               rel="noopener noreferrer"
               className="
                 inline-flex
                 items-center
                 justify-center
-                gap-2
-                px-4
+                gap-1.5
+                sm:gap-2
+                px-2.5
+                sm:px-4
+                lg:px-4
                 xl:px-6
-                py-2.5
+                py-1.5
+                sm:py-2.5
                 xl:py-3
                 rounded-full
                 font-extrabold
-                text-sm
+                text-[10px]
+                xs:text-[11px]
+                sm:text-sm
                 xl:text-[15px]
                 bg-[#009B6C]
                 text-white
@@ -252,48 +328,86 @@ export default function Navbar() {
                 duration-200
               "
             >
-              <Phone className="w-4 h-4" />
-              <span>Free Consultation</span>
-            </a>
-          </div>
+              <Phone
+                className="
+                  w-3
+                  h-3
+                  sm:w-[18px]
+                  sm:h-[18px]
+                "
+              />
 
-          {/* ================= MOBILE MENU BUTTON ================= */}
-          <button
-            type="button"
-            onClick={() => setOpen(!open)}
-            aria-label={open ? "Close menu" : "Open menu"}
-            aria-expanded={open}
-            className="
-              lg:hidden
-              shrink-0
-              w-10
-              h-10
-              sm:w-11
-              sm:h-11
-              rounded-xl
-              flex
-              items-center
-              justify-center
-              text-slate-800
-              bg-slate-50
-              border
-              border-slate-200
-              hover:bg-[#e6f7f2]
-              hover:text-[#009B6C]
-              active:scale-95
-              transition-all
-              duration-200
-            "
-          >
-            {open ? (
-              <X className="w-5 h-5 sm:w-6 sm:h-6" />
-            ) : (
-              <Menu className="w-5 h-5 sm:w-6 sm:h-6" />
-            )}
-          </button>
+              <span className="lg:hidden">
+                 Free Consultation
+              </span>
+
+              <span className="hidden lg:inline">
+                Free Consultation
+              </span>
+            </a>
+
+            {/* ==================================================
+                MOBILE + TABLET MENU BUTTON
+            ================================================== */}
+
+            <button
+              type="button"
+              onClick={() => setOpen(!open)}
+              aria-label={
+                open
+                  ? "Close menu"
+                  : "Open menu"
+              }
+              aria-expanded={open}
+              className="
+                lg:hidden
+                shrink-0
+                w-10
+                h-10
+                sm:w-11
+                sm:h-11
+                rounded-xl
+                flex
+                items-center
+                justify-center
+                text-slate-800
+                bg-slate-50
+                border
+                border-slate-200
+                hover:bg-[#e6f7f2]
+                hover:text-[#009B6C]
+                active:scale-95
+                transition-all
+                duration-200
+              "
+            >
+              {open ? (
+                <X
+                  className="
+                    w-5
+                    h-5
+                    sm:w-6
+                    sm:h-6
+                  "
+                />
+              ) : (
+                <Menu
+                  className="
+                    w-5
+                    h-5
+                    sm:w-6
+                    sm:h-6
+                  "
+                />
+              )}
+            </button>
+          </div>
         </div>
 
-        {/* ================= MOBILE MENU ================= */}
+        {/* ==================================================
+            MOBILE + TABLET MENU
+        ================================================== */}
+
         <AnimatePresence>
           {open && (
             <motion.div
@@ -302,7 +416,8 @@ export default function Navbar() {
                 opacity: 0,
               }}
               animate={{
-                height: "calc(100vh - 72px)",
+                height:
+                  "calc(100dvh - 72px)",
                 opacity: 1,
               }}
               exit={{
@@ -324,14 +439,17 @@ export default function Navbar() {
                 border-slate-100
                 shadow-xl
                 overflow-hidden
+                z-50
               "
             >
-              {/* Mobile Scroll Area */}
+              {/* SCROLL AREA */}
+
               <div
                 className="
                   h-full
                   overflow-y-auto
                   overscroll-contain
+                  touch-pan-y
                 "
               >
                 <div
@@ -343,12 +461,17 @@ export default function Navbar() {
                     sm:px-6
                     py-4
                     sm:py-6
+                    pb-10
                   "
                 >
-                  {/* Mobile Navigation */}
+                  {/* MOBILE NAVIGATION */}
+
                   <nav>
                     {NAV_LINKS.map((item) => {
-                      const linkTarget = item.href || item.to || "/";
+                      const linkTarget =
+                        item.href ||
+                        item.to ||
+                        "/";
 
                       return (
                         <div
@@ -359,7 +482,8 @@ export default function Navbar() {
                             last:border-b-0
                           "
                         >
-                          {/* Main Item */}
+                          {/* MAIN ITEM */}
+
                           <div
                             className="
                               flex
@@ -389,14 +513,16 @@ export default function Navbar() {
                               {item.label}
                             </Link>
 
-                            {/* Dropdown Button */}
+                            {/* SUBMENU BUTTON */}
+
                             {item.children && (
                               <button
                                 type="button"
                                 aria-label={`Toggle ${item.label} submenu`}
                                 onClick={() =>
                                   setOpenSub(
-                                    openSub === item.label
+                                    openSub ===
+                                      item.label
                                       ? null
                                       : item.label
                                   )
@@ -421,7 +547,8 @@ export default function Navbar() {
                                     transition-transform
                                     duration-200
                                     ${
-                                      openSub === item.label
+                                      openSub ===
+                                      item.label
                                         ? "rotate-180 text-[#009B6C]"
                                         : ""
                                     }
@@ -431,10 +558,14 @@ export default function Navbar() {
                             )}
                           </div>
 
-                          {/* ================= MOBILE SUBMENU ================= */}
-                          <AnimatePresence initial={false}>
+                          {/* MOBILE SUBMENU */}
+
+                          <AnimatePresence
+                            initial={false}
+                          >
                             {item.children &&
-                              openSub === item.label && (
+                              openSub ===
+                                item.label && (
                                 <motion.div
                                   initial={{
                                     height: 0,
@@ -451,9 +582,7 @@ export default function Navbar() {
                                   transition={{
                                     duration: 0.25,
                                   }}
-                                  className="
-                                    overflow-hidden
-                                  "
+                                  className="overflow-hidden"
                                 >
                                   <div
                                     className="
@@ -467,31 +596,40 @@ export default function Navbar() {
                                       space-y-1
                                     "
                                   >
-                                    {item.children.map((c) => (
-                                      <Link
-                                        key={c.label}
-                                        to={c.href || c.to}
-                                        className="
-                                          block
-                                          text-sm
-                                          sm:text-[15px]
-                                          font-medium
-                                          text-slate-600
-                                          px-3
-                                          py-2.5
-                                          rounded-lg
-                                          hover:text-[#009B6C]
-                                          hover:bg-[#e6f7f2]
-                                          transition-colors
-                                        "
-                                        onClick={() => {
-                                          setOpen(false);
-                                          setOpenSub(null);
-                                        }}
-                                      >
-                                        {c.label}
-                                      </Link>
-                                    ))}
+                                    {item.children.map(
+                                      (c) => (
+                                        <Link
+                                          key={c.label}
+                                          to={
+                                            c.href ||
+                                            c.to
+                                          }
+                                          className="
+                                            block
+                                            text-sm
+                                            sm:text-[15px]
+                                            font-medium
+                                            text-slate-600
+                                            px-3
+                                            py-2.5
+                                            rounded-lg
+                                            hover:text-[#009B6C]
+                                            hover:bg-[#e6f7f2]
+                                            transition-colors
+                                          "
+                                          onClick={() => {
+                                            setOpen(
+                                              false
+                                            );
+                                            setOpenSub(
+                                              null
+                                            );
+                                          }}
+                                        >
+                                          {c.label}
+                                        </Link>
+                                      )
+                                    )}
                                   </div>
                                 </motion.div>
                               )}
@@ -501,10 +639,15 @@ export default function Navbar() {
                     })}
                   </nav>
 
-                  {/* ================= MOBILE CTA ================= */}
+                  {/* ==================================================
+                      MOBILE CTA
+                      BOOK FREE CONSULTING
+                      DIFFERENT MESSAGE FROM FREE CONSULTATION
+                  ================================================== */}
+
                   <div className="pt-5 pb-4">
                     <a
-                      href="https://wa.me/918796414339"
+                      href="https://wa.me/918796414339?text=Hello%20White%20Gravity%2C%20I%20would%20like%20to%20book%20consultation."
                       target="_blank"
                       rel="noopener noreferrer"
                       onClick={() => setOpen(false)}
@@ -529,15 +672,31 @@ export default function Navbar() {
                         transition-all
                       "
                     >
-                      <Phone className="w-4 h-4 sm:w-5 sm:h-5" />
+                      <Phone
+                        className="
+                          w-4
+                          h-4
+                          sm:w-5
+                          sm:h-5
+                        "
+                      />
+
                       Free Consultation
                     </a>
                   </div>
 
-                  {/* Small Mobile Contact Text */}
+                  {/* CONTACT TEXT */}
+
                   <div className="text-center pb-4">
-                    <p className="text-xs sm:text-sm text-slate-400">
-                      Need help? Let's discuss your project.
+                    <p
+                      className="
+                        text-xs
+                        sm:text-sm
+                        text-slate-400
+                      "
+                    >
+                      Need help? Let's discuss your
+                      project.
                     </p>
                   </div>
                 </div>

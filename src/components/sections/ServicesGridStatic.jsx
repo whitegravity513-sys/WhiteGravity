@@ -8,28 +8,52 @@ import AnimatedText from '../AnimatedText';
 
 const container = {
   hidden: {},
-  visible: { transition: { staggerChildren: 0.07 } },
+  visible: {
+    transition: {
+      staggerChildren: 0.07,
+    },
+  },
 };
+
 const fadeUp = {
-  hidden: { opacity: 0, y: 30 },
-  visible: { opacity: 1, y: 0, transition: { duration: 0.5, ease: [0.22, 1, 0.36, 1] } },
+  hidden: {
+    opacity: 0,
+    y: 30,
+  },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      duration: 0.5,
+      ease: [0.22, 1, 0.36, 1],
+    },
+  },
 };
 
 const imageFold = {
-  hidden: { opacity: 0, rotateX: -90 },
-  visible: { 
-    opacity: 1, 
-    rotateX: 0, 
-    transition: { duration: 0.8, ease: "easeOut", delay: 0.1 } 
+  hidden: {
+    opacity: 0,
+    rotateX: -90,
+  },
+  visible: {
+    opacity: 1,
+    rotateX: 0,
+    transition: {
+      duration: 0.8,
+      ease: 'easeOut',
+      delay: 0.1,
+    },
   },
 };
 
 export default function ServicesGridStatic() {
   return (
-    <section className="py-14 md:py-20 bg-white">
-      <div className="container-x">
+    <section className="py-10 sm:py-12 md:py-16 lg:py-20 bg-white">
+      <div className="container-x px-4 sm:px-6 lg:px-8">
 
-        {/* Heading */}
+        {/* =========================
+            HEADING
+        ========================== */}
         <div className="text-center max-w-3xl mx-auto mb-12">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -38,10 +62,14 @@ export default function ServicesGridStatic() {
             transition={{ duration: 0.4 }}
             className="flex flex-col items-center"
           >
-            <SectionPill icon={Zap}>What We Do</SectionPill>
+            <SectionPill icon={Zap}>
+              What We Do
+            </SectionPill>
+
             <h2 className="mt-4 text-3xl md:text-4xl lg:text-5xl font-bold text-slate-900 leading-tight">
               Our <span className="text-[#009B6C]">IT Services</span>
             </h2>
+
             <p className="mt-4 text-slate-500 text-base leading-relaxed max-w-2xl">
               <AnimatedText
                 mode="words"
@@ -51,7 +79,9 @@ export default function ServicesGridStatic() {
           </motion.div>
         </div>
 
-        {/* Grid */}
+        {/* =========================
+            SERVICES GRID
+        ========================== */}
         <motion.div
           variants={container}
           initial="hidden"
@@ -63,31 +93,152 @@ export default function ServicesGridStatic() {
             <motion.div
               key={s.slug}
               variants={fadeUp}
-              whileHover={{ y: -6, boxShadow: '0 16px 40px -8px rgba(0,155,108,0.18)' }}
-              className="bg-white rounded-2xl border border-slate-100 shadow-sm overflow-hidden flex flex-col group transition-all duration-300"
+              whileHover={{
+                y: -6,
+                boxShadow:
+                  '0 16px 40px -8px rgba(0,155,108,0.18)',
+              }}
+              className="
+                bg-white
+                rounded-2xl
+                border border-slate-100
+                shadow-sm
+                overflow-hidden
+                flex flex-col
+                group
+                transition-all
+                duration-300
+              "
             >
-              <div className="h-48 overflow-hidden relative bg-white flex items-center justify-center p-2 rounded-t-2xl border-b border-slate-100">
+
+              {/* =========================
+                  IMAGE
+              ========================== */}
+              <div
+                className="
+                  h-36
+                  sm:h-40
+                  md:h-44
+                  lg:h-48
+                  overflow-hidden
+                  relative
+                  bg-white
+                  flex
+                  items-center
+                  justify-center
+                  p-6
+                  rounded-t-2xl
+                  border-b
+                  border-slate-100
+                "
+              >
                 <motion.img
                   variants={imageFold}
                   style={{ transformOrigin: 'top' }}
                   src={s.img}
                   loading="lazy"
                   alt={s.title}
-                  className="w-full h-full object-contain object-center group-hover:scale-105 transition-transform duration-500 rounded-xl"
+                  className="
+                    w-[90%]
+                    h-[90%]
+                    object-contain
+                    object-center
+                    group-hover:scale-105
+                    transition-transform
+                    duration-500
+                    rounded-xl
+                  "
                 />
-                <div className="absolute inset-0 bg-[#009B6C]/0 group-hover:bg-[#009B6C]/5 transition-colors duration-400 pointer-events-none rounded-xl" />
+
+                <div
+                  className="
+                    absolute
+                    inset-0
+                    bg-[#009B6C]/0
+                    group-hover:bg-[#009B6C]/5
+                    transition-colors
+                    duration-400
+                    pointer-events-none
+                    rounded-xl
+                  "
+                />
               </div>
-              <div className="p-5 flex flex-col flex-grow">
-                <h3 className="text-sm font-bold text-[#009B6C] leading-snug group-hover:text-[#007a55] transition-colors">
+
+              {/* =========================
+                  CARD CONTENT
+                  EVERYTHING CENTERED
+              ========================== */}
+              <div
+                className="
+                  p-5
+                  flex
+                  flex-col
+                  flex-grow
+                  items-center
+                  text-center
+                "
+              >
+
+                {/* TITLE */}
+                <h3
+                  className="
+                    text-sm
+                    font-semibold
+                    text-[#009B6C]
+                    leading-snug
+                    text-center
+                    w-full
+                    group-hover:text-[#007a55]
+                    transition-colors
+                  "
+                >
                   {s.title}
                 </h3>
-                <p className="mt-2 text-slate-500 text-xs leading-relaxed flex-grow">{s.desc}</p>
-                <Link
-                  to={`/services/${s.slug}`}
-                  className="mt-4 inline-flex items-center gap-1.5 text-[#009B6C] font-semibold text-xs group-hover:text-[#007a55] transition-colors"
+
+                {/* DESCRIPTION */}
+                <p
+                  className="
+                    mt-2
+                    text-slate-500
+                    text-xs
+                    leading-relaxed
+                    text-center
+                    w-full
+                    flex-grow
+                  "
                 >
-                  Explore Service <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-1 transition-transform" />
+                  {s.desc}
+                </p>
+
+                {/* EXPLORE BUTTON */}
+                <Link
+                  to={`/${s.slug}`}
+                  className="
+                    mt-4
+                    inline-flex
+                    items-center
+                    justify-center
+                    gap-1.5
+                    text-[#009B6C]
+                    font-semibold
+                    text-xs
+                    text-center
+                    group-hover:text-[#007a55]
+                    transition-colors
+                  "
+                >
+                  Explore Service
+
+                  <ArrowRight
+                    className="
+                      w-3.5
+                      h-3.5
+                      group-hover:translate-x-1
+                      transition-transform
+                    "
+                  />
                 </Link>
+
               </div>
             </motion.div>
           ))}

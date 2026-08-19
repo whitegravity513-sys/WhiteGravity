@@ -280,169 +280,8 @@ export default function CTA() {
             </motion.p>
 
             {/* =================================================
-                BUTTONS
-            ================================================== */}
-
-            <motion.div
-              variants={itemVariants}
-              className="
-                mt-7
-                sm:mt-8
-                md:mt-10
-
-                flex
-
-                flex-col
-                sm:flex-row
-
-                items-stretch
-                sm:items-center
-
-                gap-3
-                sm:gap-4
-                md:gap-5
-
-                w-full
-                sm:w-auto
-              "
-            >
-              {/* Book Call */}
-
-              <Link
-                to="/contact"
-                className="
-                  group
-
-                  inline-flex
-                  items-center
-                  justify-center
-                  gap-2
-                  sm:gap-3
-
-                  px-5
-                  sm:px-6
-                  md:px-8
-
-                  py-3
-                  sm:py-3.5
-                  md:py-4
-
-                  rounded-full
-
-                  font-extrabold
-
-                  bg-white
-
-                  text-[#009B6C]
-
-                  hover:-translate-y-1
-
-                  transition-transform
-
-                  shadow-[0_10px_30px_-5px_rgba(0,0,0,0.25)]
-
-                  text-sm
-                  sm:text-base
-
-                  w-full
-                  sm:w-auto
-                "
-              >
-                Book Free Strategy Call
-
-                <ArrowRight
-                  className="
-                    w-4
-                    h-4
-                    sm:w-5
-                    sm:h-5
-
-                    group-hover:translate-x-1
-
-                    transition-transform
-                  "
-                />
-              </Link>
-
-              {/* Phone */}
-
-              <a
-                href="tel:+919217135322"
-                className="
-                  inline-flex
-
-                  items-center
-                  justify-center
-
-                  gap-2
-                  sm:gap-3
-
-                  px-5
-                  sm:px-6
-                  md:px-8
-
-                  py-3
-                  sm:py-3.5
-                  md:py-4
-
-                  rounded-full
-
-                  font-extrabold
-
-                  bg-white/15
-
-                  border-2
-                  border-white/40
-
-                  text-white
-
-                  hover:bg-white/25
-                  hover:-translate-y-1
-
-                  transition-all
-
-                  text-sm
-                  sm:text-base
-
-                  w-full
-                  sm:w-auto
-                "
-              >
-                <div
-                  className="
-                    w-8
-                    h-8
-                    sm:w-9
-                    sm:h-9
-
-                    rounded-full
-
-                    bg-white/20
-
-                    flex
-                    items-center
-                    justify-center
-
-                    flex-shrink-0
-                  "
-                >
-                  <PhoneCallIcon
-                    className="
-                      w-4
-                      h-4
-
-                      text-white
-                    "
-                  />
-                </div>
-
-                +91 92171 35322
-              </a>
-            </motion.div>
-
-            {/* =================================================
-                MOBILE IMAGE
-                Shows below buttons only on mobile/tablet
+                MOBILE + TABLET IMAGE
+                IMAGE FIRST, BUTTONS AFTER IMAGE
             ================================================== */}
 
             <motion.div
@@ -469,8 +308,8 @@ export default function CTA() {
 
                 w-full
 
-                mt-10
-                sm:mt-12
+                mt-8
+                sm:mt-10
 
                 rounded-2xl
                 sm:rounded-3xl
@@ -491,9 +330,9 @@ export default function CTA() {
 
                   w-full
 
-                  h-[240px]
-                  sm:h-[320px]
-                  md:h-[380px]
+                  h-[220px]
+                  sm:h-[300px]
+                  md:h-[350px]
 
                   overflow-hidden
 
@@ -628,6 +467,167 @@ export default function CTA() {
                   </div>
                 </div>
               </div>
+            </motion.div>
+
+            {/* =================================================
+                BUTTONS
+            ================================================== */}
+
+            <motion.div
+              variants={itemVariants}
+              className="
+                mt-7
+                sm:mt-8
+                md:mt-10
+
+                flex
+
+                flex-col
+                sm:flex-row
+
+                items-stretch
+                sm:items-center
+
+                gap-3
+                sm:gap-4
+                md:gap-5
+
+                w-full
+                sm:w-auto
+              "
+            >
+              {/* Book Call */}
+
+              <Link
+                to="/contact"
+                className="
+                  group
+
+                  inline-flex
+                  items-center
+                  justify-center
+                  gap-2
+                  sm:gap-3
+
+                  px-5
+                  sm:px-6
+                  md:px-8
+
+                  py-3
+                  sm:py-3.5
+                  md:py-4
+
+                  rounded-full
+
+                  font-extrabold
+
+                  bg-[#F97316]
+
+                  text-white
+
+                  hover:-translate-y-1
+
+                  transition-transform
+
+                  shadow-[0_10px_30px_-5px_rgba(0,0,0,0.25)]
+
+                  text-sm
+                  sm:text-base
+
+                  w-full
+                  sm:w-auto
+                "
+              >
+                Book Free Strategy Call
+
+                <ArrowRight
+                  className="
+                    w-4
+                    h-4
+                    sm:w-5
+                    sm:h-5
+
+                    group-hover:translate-x-1
+
+                    transition-transform
+                  "
+                />
+              </Link>
+
+              {/* Phone */}
+
+              <a
+                href="tel:+919217135322"
+                className="
+                  inline-flex
+
+                  items-center
+                  justify-center
+
+                  gap-2
+                  sm:gap-3
+
+                  px-5
+                  sm:px-6
+                  md:px-8
+
+                  py-3
+                  sm:py-3.5
+                  md:py-4
+
+                  rounded-full
+
+                  font-extrabold
+
+                  bg-white/15
+
+                  border-2
+                  border-white/40
+
+                  text-white
+
+                  hover:bg-white/25
+                  hover:-translate-y-1
+
+                  transition-all
+
+                  text-sm
+                  sm:text-base
+
+                  w-full
+                  sm:w-auto
+                "
+              >
+                <div
+                  className="
+                    w-8
+                    h-8
+                    sm:w-9
+                    sm:h-9
+
+                    rounded-full
+
+                    bg-white/20
+
+                    flex
+                    items-center
+                    justify-center
+
+                    flex-shrink-0
+                  "
+                >
+                  <PhoneCallIcon
+                    className="
+                      w-4
+                      h-4
+
+                      text-white
+                    "
+                  />
+                </div>
+
+                +91 92171 35322
+              </a>
             </motion.div>
           </motion.div>
 

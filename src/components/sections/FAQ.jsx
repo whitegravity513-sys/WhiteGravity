@@ -8,7 +8,7 @@ const FAQS = [
   {
     question: "What services do you offer?",
     answer:
-      "We provide a full suite of digital solutions, including Custom Software Development, Website & App Development, eCommerce Solutions, CRM/ERP Integration (Zoho/Odoo), and Performance Marketing (Google/Meta Ads).",
+      "We provide a full suite of digital solutions, including Custom Software Development, Website & App Development, eCommerce Solutions, CRM/ERP Integration (Zoho), and Performance Marketing (Google/Meta Ads).",
   },
   {
     question: "How much time does it take to build a website or app?",

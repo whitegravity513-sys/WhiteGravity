@@ -7,13 +7,13 @@ import AnimatedText from '../AnimatedText';
 
 export default function TechStack({ isMarquee = false }) {
   return (
-    <section className="py-8 md:py-10 bg-slate-50 relative overflow-hidden">
-      <div className="container-x relative z-10">
+    <section className="py-10 sm:py-12 md:py-16 lg:py-20 bg-slate-50 relative overflow-hidden">
+      <div className="container-x relative z-10 px-4 sm:px-6 lg:px-8">
         {/* Header section */}
         <div className="text-center max-w-3xl mx-auto mb-8 flex flex-col items-center">
           <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.3 }} className="flex flex-col items-center">
             <SectionPill icon={Cpu}>Tech Stack</SectionPill>
-            <h2 className="mt-4 text-3xl md:text-5xl font-extrabold text-slate-900 leading-tight">
+            <h2 className="mt-4 text-2xl sm:text-3xl md:text-5xl font-extrabold text-slate-900 leading-tight">
               <AnimatedText text="Powered by " /><span className="text-transparent bg-clip-text bg-gradient-to-r from-emerald-600 to-teal-400"><AnimatedText text="Enterprise Tech" /></span>
             </h2>
             <p className="mt-4 text-slate-600 text-base leading-relaxed max-w-2xl">

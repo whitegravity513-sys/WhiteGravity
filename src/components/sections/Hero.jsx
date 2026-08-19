@@ -1,8 +1,8 @@
 import React, { useState, useEffect, useRef } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { ArrowRight, Sparkles } from "lucide-react";
 import { motion } from "framer-motion";
-import { COMPANY } from "../../data/mock";
+import { COMPANY, SERVICES } from "../../data/mock";
 import AnimatedText from "../AnimatedText";
 import TypewriterText from "../TypewriterText";
 
@@ -47,19 +47,8 @@ function AnimatedCounter({ value }) {
   );
 }
 
-const COLUMN1_IMAGES = [
-  "/images/service-website.jpg",
-  "/images/service-webapp.jpg",
-  "/images/service-marketing.jpg",
-  "/images/service-custom-software.jpg",
-];
-
-const COLUMN2_IMAGES = [
-  "/images/service-mobile.jpg",
-  "/images/service-ecommerce.jpg",
-  "/images/service-ads.jpg",
-  "/images/service-crm.jpg",
-];
+const COLUMN1_ITEMS = SERVICES.slice(0, 4);
+const COLUMN2_ITEMS = SERVICES.slice(4, 8);
 
 const container = {
   hidden: {},
@@ -89,6 +78,8 @@ const fadeUp = {
 };
 
 export default function Hero() {
+  const navigate = useNavigate();
+
   return (
     <section
       className="
@@ -103,13 +94,13 @@ export default function Hero() {
         flex
         items-center
 
-        pt-20
-        sm:pt-24
-        lg:pt-24
+        pt-24
+        sm:pt-28
+        lg:pt-20
 
-        pb-8
-        sm:pb-12
-        lg:pb-16
+        pb-6
+        sm:pb-10
+        lg:pb-12
       "
     >
       {/* =====================================================
@@ -130,6 +121,7 @@ export default function Hero() {
       />
 
       {/* Top Right Blob */}
+
       <div
         className="
           absolute
@@ -156,6 +148,7 @@ export default function Hero() {
       />
 
       {/* Bottom Left Blob */}
+
       <div
         className="
           absolute
@@ -182,6 +175,7 @@ export default function Hero() {
       />
 
       {/* Noise */}
+
       <div
         className="
           absolute
@@ -209,14 +203,14 @@ export default function Hero() {
           grid-cols-1
           lg:grid-cols-12
 
-          gap-8
-          sm:gap-10
+          gap-4
+          sm:gap-6
           lg:gap-4
 
           items-center
 
-          py-6
-          sm:py-8
+          py-2
+          sm:py-4
           lg:py-0
 
           px-4
@@ -224,7 +218,6 @@ export default function Hero() {
           lg:px-0
         "
       >
-
         {/* =====================================================
             LEFT CONTENT
         ====================================================== */}
@@ -241,21 +234,24 @@ export default function Hero() {
 
             flex
             flex-col
-            items-start
+            items-center
+            lg:items-start
 
-            text-left
+            text-center
+            lg:text-left
 
             pt-4
             sm:pt-6
             lg:pt-16
 
-            pb-2
-            sm:pb-4
+            pb-0
+            sm:pb-2
             lg:pb-10
           "
         >
-
-          {/* Tagline */}
+          {/* =================================================
+              TAGLINE
+          ================================================== */}
 
           <motion.span
             variants={fadeUp}
@@ -302,9 +298,7 @@ export default function Hero() {
               "
             />
 
-            <span className="truncate">
-              {COMPANY.tagline}
-            </span>
+            <span className="truncate">{COMPANY.tagline}</span>
           </motion.span>
 
           {/* =================================================
@@ -318,13 +312,13 @@ export default function Hero() {
               sm:mt-5
 
               text-[30px]
-              xs:text-3xl
+              xs:text-[32px]
               sm:text-4xl
               md:text-5xl
               lg:text-5xl
               xl:text-6xl
 
-              font-extrabold
+              font-bold
 
               leading-[1.08]
 
@@ -360,9 +354,7 @@ export default function Hero() {
                 break-words
               "
             >
-              <TypewriterText
-                words={["Intelligent Technology"]}
-              />
+              <TypewriterText words={["Intelligent Technology"]} />
             </span>
           </motion.h1>
 
@@ -390,26 +382,30 @@ export default function Hero() {
 
               pr-0
               lg:pr-6
+
+              text-justify
             "
           >
-            White Gravity Web Solutions delivers custom Website
-            development & Mobile App development, custom CRM
-            Development, E-Commerce, Zoho and AI-powered business
-            automation solutions for businesses in Noida and across
-            India.
+            White Gravity Web Solutions delivers custom Website development &
+            Mobile App development, custom CRM Development, E-Commerce, Zoho and
+            AI-powered business automation solutions for businesses in Noida and
+            across India.
           </motion.p>
 
           {/* =================================================
-              BUTTONS
+              DESKTOP BUTTONS
+              Mobile/Tablet par hidden
           ================================================== */}
 
           <motion.div
             variants={fadeUp}
             className="
+              hidden
+              lg:flex
+
               mt-6
               sm:mt-8
 
-              flex
               flex-col
               xs:flex-row
               sm:flex-row
@@ -428,7 +424,7 @@ export default function Hero() {
             {/* WhatsApp */}
 
             <a
-              href="https://wa.me/918796414339"
+              href="https://wa.me/918796414339?text=Hello%20White%20Gravity%2C%20I%20would%20like%20to%20book%20consultation"
               target="_blank"
               rel="noopener noreferrer"
               className="
@@ -451,8 +447,8 @@ export default function Hero() {
 
                 font-extrabold
 
-                bg-white
-                text-[#009B6C]
+                bg-[#F97316]
+                text-white
 
                 overflow-hidden
 
@@ -472,9 +468,7 @@ export default function Hero() {
                 xs:w-auto
               "
             >
-              <span className="relative z-10">
-                Book Free Consultation
-              </span>
+              <span className="relative z-10">Book Free Consultation</span>
 
               <ArrowRight
                 className="
@@ -550,19 +544,22 @@ export default function Hero() {
               mt-6
               sm:mt-8
 
-              flex
+              hidden
+              lg:flex
               flex-wrap
+              lg:justify-start
 
-              gap-2
-              sm:gap-3
+              gap-1.5
+              sm:gap-2
+              md:gap-3
 
               w-full
             "
           >
             {[
-              "Custom Web Development",
+              "Custom Web Dev",
               "CRM Solutions",
-              "Business Web Portals",
+              "Web Development",
               "Digital Transformation",
             ].map((t, i) => (
               <motion.div
@@ -588,21 +585,21 @@ export default function Hero() {
                   scale: 1.05,
                 }}
                 className="
-                  px-3
-                  sm:px-4
-                  md:px-5
+                  px-2.5
+                  sm:px-3.5
+                  md:px-4
 
-                  py-2
-                  sm:py-2.5
+                  py-1.5
+                  sm:py-2
 
                   rounded-full
 
                   border
                   border-white/40
 
-                  text-[10px]
-                  sm:text-xs
-                  md:text-sm
+                  text-[9px]
+                  sm:text-[11px]
+                  md:text-xs
 
                   font-bold
 
@@ -617,8 +614,8 @@ export default function Hero() {
                   flex
                   items-center
 
-                  gap-2
-                  sm:gap-3
+                  gap-1.5
+                  sm:gap-2
 
                   cursor-default
 
@@ -676,9 +673,7 @@ export default function Hero() {
                   />
                 </div>
 
-                <span className="break-words">
-                  {t}
-                </span>
+                <span className="break-words">{t}</span>
               </motion.div>
             ))}
           </motion.div>
@@ -711,14 +706,14 @@ export default function Hero() {
 
             self-stretch
 
-            h-[300px]
-            xs:h-[340px]
-            sm:h-[400px]
-            md:h-[440px]
+            h-[340px]
+            xs:h-[380px]
+            sm:h-[460px]
+            md:h-[500px]
             lg:h-auto
 
             min-h-0
-            lg:min-h-[440px]
+            lg:min-h-[480px]
 
             overflow-hidden
           "
@@ -740,7 +735,6 @@ export default function Hero() {
               sm:px-1
             "
           >
-
             {/* =================================================
                 COLUMN 1
             ================================================== */}
@@ -758,11 +752,10 @@ export default function Hero() {
                   animate-marquee-vertical-slow
                 "
               >
-                {[...COLUMN1_IMAGES, ...COLUMN1_IMAGES].map(
-                  (src, idx) => (
-                    <div
-                      key={`col1-${idx}`}
-                      className="
+                {[...COLUMN1_ITEMS, ...COLUMN1_ITEMS].map((item, idx) => (
+                  <div
+                    key={`col1-${idx}`}
+                    className="
                         w-full
 
                         rounded-xl
@@ -779,43 +772,35 @@ export default function Hero() {
 
                         shrink-0
 
-                        h-36
-                        xs:h-40
-                        sm:h-48
-                        md:h-52
-                        lg:h-60
+                        h-40
+                        xs:h-44
+                        sm:h-52
+                        md:h-56
+                        lg:h-64
 
                         flex
                         items-center
                         justify-center
 
-                        p-1
-                        sm:p-1.5
+                        cursor-pointer
+                        hover:scale-[1.02]
+                        transition-transform
                       "
-                    >
-                      <img
-                        src={src}
-                        alt="Web Development Service"
-                        fetchPriority="high"
-                        decoding="async"
-                        className="
+                    onClick={() => navigate(`/${item.slug}`)}
+                  >
+                    <img
+                      src={item.img}
+                      alt={item.title}
+                      fetchPriority="high"
+                      decoding="async"
+                      className="
                           w-full
                           h-full
-
                           object-contain
-
-                          rounded-lg
-                          sm:rounded-xl
-
-                          hover:scale-105
-
-                          transition-transform
-                          duration-500
                         "
-                      />
-                    </div>
-                  )
-                )}
+                    />
+                  </div>
+                ))}
               </div>
             </div>
 
@@ -839,11 +824,10 @@ export default function Hero() {
                   sm:pt-10
                 "
               >
-                {[...COLUMN2_IMAGES, ...COLUMN2_IMAGES].map(
-                  (src, idx) => (
-                    <div
-                      key={`col2-${idx}`}
-                      className="
+                {[...COLUMN2_ITEMS, ...COLUMN2_ITEMS].map((item, idx) => (
+                  <div
+                    key={`col2-${idx}`}
+                    className="
                         w-full
 
                         rounded-xl
@@ -860,46 +844,195 @@ export default function Hero() {
 
                         shrink-0
 
-                        h-36
-                        xs:h-40
-                        sm:h-48
-                        md:h-52
-                        lg:h-60
+                        h-44
+                        xs:h-48
+                        sm:h-56
+                        md:h-64
+                        lg:h-72
 
                         flex
                         items-center
                         justify-center
 
-                        p-1
-                        sm:p-1.5
+                        cursor-pointer
+                        hover:scale-[1.02]
+                        transition-transform
                       "
-                    >
-                      <img
-                        src={src}
-                        alt="Digital SEO & Mobile Service"
-                        fetchPriority="high"
-                        decoding="async"
-                        className="
+                    onClick={() => navigate(`/${item.slug}`)}
+                  >
+                    <img
+                      src={item.img}
+                      alt={item.title}
+                      fetchPriority="high"
+                      decoding="async"
+                      className="
                           w-full
                           h-full
-
                           object-contain
-
-                          rounded-lg
-                          sm:rounded-xl
-
-                          hover:scale-105
-
-                          transition-transform
-                          duration-500
                         "
-                      />
-                    </div>
-                  )
-                )}
+                    />
+                  </div>
+                ))}
               </div>
             </div>
           </div>
+        </motion.div>
+
+        {/* =====================================================
+            MOBILE SERVICE TAGS (BELOW IMAGE FLOW)
+        ====================================================== */}
+        <motion.div
+          variants={fadeUp}
+          className="
+            flex
+            lg:hidden
+            flex-wrap
+            justify-center
+
+            col-span-full
+
+            gap-1.5
+            sm:gap-2
+            md:gap-3
+
+            w-full
+            mt-2
+            sm:mt-4
+          "
+        >
+            {[
+              "Custom Web Dev",
+              "CRM Solutions",
+              "Web Development",
+              "Digital Transformation",
+            ].map((t, i) => (
+              <motion.div
+                key={`mob-${t}`}
+                initial={{ opacity: 0, y: 20, scale: 0.9 }}
+                animate={{ opacity: 1, y: 0, scale: 1 }}
+                transition={{
+                  duration: 0.5,
+                  delay: 0.6 + i * 0.1,
+                  type: "spring",
+                  stiffness: 100,
+                }}
+                className="
+                  px-2.5
+                  sm:px-3.5
+                  md:px-4
+
+                  py-1.5
+                  sm:py-2
+
+                  rounded-full
+
+                  border
+                  border-white/40
+
+                  text-[9px]
+                  sm:text-[11px]
+                  md:text-xs
+
+                  font-bold
+
+                  text-white
+
+                  bg-white/10
+
+                  backdrop-blur-md
+
+                  shadow-lg
+
+                  flex
+                  items-center
+
+                  gap-1.5
+                  sm:gap-2
+
+                  cursor-default
+
+                  max-w-full
+                "
+              >
+                <div className="relative flex h-2 w-2 sm:h-2.5 sm:w-2.5 flex-shrink-0">
+                  <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-300 opacity-75" />
+                  <span className="relative inline-flex rounded-full h-2 w-2 sm:h-2.5 sm:w-2.5 bg-emerald-100" />
+                </div>
+                <span className="break-words">{t}</span>
+              </motion.div>
+            ))}
+        </motion.div>
+
+        {/* =====================================================
+            MOBILE + TABLET ONLY
+            EXPLORE SERVICES BUTTON
+        ====================================================== */}
+
+        <motion.div
+          variants={fadeUp}
+          initial="hidden"
+          animate="visible"
+          className="
+            lg:hidden
+
+            col-span-full
+
+            w-full
+
+            flex
+            items-center
+            justify-center
+
+            -mt-2
+            sm:mt-0
+          "
+        >
+          <Link
+            to="/services"
+            className="
+              group
+              relative
+
+              inline-flex
+              items-center
+              justify-center
+
+              gap-2
+
+              px-6
+              sm:px-7
+
+              py-3
+
+              rounded-full
+
+              font-bold
+
+              text-white
+
+              /* ORANGE BACKGROUND - MOBILE/TABLET */
+              bg-[#F97316]
+
+              /* ORANGE BORDER */
+              border-2
+              border-[#F97316]
+
+              hover:bg-[#ea580c]
+              hover:border-[#ea580c]
+
+              transition-all
+
+              backdrop-blur-sm
+
+              text-xs
+              sm:text-sm
+
+              w-full
+              xs:w-auto
+            "
+          >
+            Explore Our Services
+          </Link>
         </motion.div>
       </div>
     </section>
