@@ -14,6 +14,7 @@ import {
   CheckCircle2,
   ArrowRight,
   ChevronDown,
+  ShoppingCart,
 } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
