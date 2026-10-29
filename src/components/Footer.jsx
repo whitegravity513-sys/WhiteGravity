@@ -105,24 +105,18 @@ export default function Footer() {
   return (
     <footer className="relative bg-slate-950 text-slate-400 pt-12 sm:pt-16 pb-6 sm:pb-8 border-t border-slate-900 overflow-hidden">
 
-      {/* Top Divider */}
       <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-slate-700 to-transparent" />
 
-      {/* Background Glow */}
       <div className="absolute -top-32 left-1/4 w-72 h-72 sm:w-96 sm:h-96 bg-emerald-500/5 rounded-full blur-3xl pointer-events-none" />
       <div className="absolute bottom-0 right-0 w-72 h-72 sm:w-96 sm:h-96 bg-emerald-500/5 rounded-full blur-3xl pointer-events-none" />
 
-      {/* Main Container */}
       <div className="container-x relative z-10 px-4 sm:px-6 lg:px-8">
 
-        {/* ================= TOP FOOTER ================= */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-12 gap-10 sm:gap-12 lg:gap-8">
 
-          {/* ================= BRAND ================= */}
           <div className="sm:col-span-2 lg:col-span-4">
             <div className="flex flex-col items-start gap-4">
 
-              {/* Logo — already contains company name + icon */}
               <div className="bg-white rounded-xl p-3 shadow-md shrink-0">
                 <img
                   src={COMPANY.logo}
@@ -138,7 +132,6 @@ export default function Footer() {
               automation.
             </p>
 
-            {/* Social Icons */}
             <div className="flex items-center gap-3 mt-6">
 
               <a
@@ -174,7 +167,6 @@ export default function Footer() {
             </div>
           </div>
 
-          {/* ================= COMPANY ================= */}
           <div className="lg:col-span-2">
             <h4 className="text-white font-bold text-base tracking-wider uppercase mb-6 relative inline-block">
               Company
@@ -197,7 +189,6 @@ export default function Footer() {
             </ul>
           </div>
 
-          {/* ================= SERVICES ================= */}
           <div className="lg:col-span-3">
             <h4 className="text-white font-bold text-base tracking-wider uppercase mb-6 relative inline-block">
               Services
@@ -222,7 +213,6 @@ export default function Footer() {
             </ul>
           </div>
 
-          {/* ================= CONTACT ================= */}
           <div className="sm:col-span-2 lg:col-span-3">
             <h4 className="text-white font-bold text-base tracking-wider uppercase mb-6 relative inline-block">
               Contact Us
@@ -231,7 +221,6 @@ export default function Footer() {
 
             <ul className="space-y-5 text-sm sm:text-base">
 
-              {/* Phone */}
               {COMPANY.phones.map((p) => (
                 <li
                   key={p}
@@ -256,7 +245,6 @@ export default function Footer() {
                 </li>
               ))}
 
-              {/* Email */}
               {COMPANY.emails.map((e) => (
                 <li
                   key={e}
@@ -281,7 +269,6 @@ export default function Footer() {
                 </li>
               ))}
 
-              {/* Address */}
               <li className="flex items-start gap-3">
                 <div className="bg-slate-900 border border-slate-800 rounded-lg p-2 text-emerald-400 shrink-0">
                   <MapPin className="w-4 h-4" />
@@ -302,7 +289,6 @@ export default function Footer() {
           </div>
         </div>
 
-        {/* ================= BADGES ================= */}
         <motion.div
           initial="hidden"
           whileInView="visible"
@@ -489,7 +475,6 @@ export default function Footer() {
             </motion.div>
           ))}
 
-          {/* ================= 5+ YEARS BADGE ================= */}
           <motion.div
             variants={{
               hidden: {
@@ -585,7 +570,6 @@ export default function Footer() {
           </motion.div>
         </motion.div>
 
-        {/* ================= BOTTOM BAR ================= */}
         <div
           className="
             mt-10 sm:mt-12
@@ -601,7 +585,7 @@ export default function Footer() {
           "
         >
           <p className="text-center sm:text-left">
-            © {new Date().getFullYear()} White Gravity.
+            © 2025 White Gravity.
             <span className="hidden sm:inline"> </span>
             All rights reserved.
           </p>

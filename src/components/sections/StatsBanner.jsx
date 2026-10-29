@@ -58,16 +58,16 @@ export default function StatsBanner() {
         relative
         z-10
 
-        /* Mobile - thoda niche */
+        
         -mt-4
 
-        /* Small devices */
+        
         sm:-mt-6
 
-        /* Tablet - aur thoda niche */
+        
         md:-mt-8
 
-        /* Desktop - SAME AS BEFORE */
+        
         lg:-mt-20
 
         pb-2
@@ -111,7 +111,7 @@ export default function StatsBanner() {
             border-slate-100
             shadow-xl
 
-            /* Mobile - height chhoti */
+            
             px-4
             py-3
 
@@ -122,14 +122,14 @@ export default function StatsBanner() {
             md:px-6
             md:py-5
 
-            /* Desktop - SAME AS BEFORE */
+            
             lg:px-10
             lg:py-7
 
             grid
             grid-cols-2
 
-            /* Mobile gaps reduced */
+            
             gap-y-4
             gap-x-3
 
@@ -169,7 +169,6 @@ export default function StatsBanner() {
                 min-w-0
               "
             >
-              {/* Counter */}
               <div
                 className="
                   whitespace-nowrap
@@ -191,7 +190,6 @@ export default function StatsBanner() {
                 />
               </div>
 
-              {/* Label */}
               <div
                 className="
                   mt-1.5
@@ -211,7 +209,6 @@ export default function StatsBanner() {
                 {s.label}
               </div>
 
-              {/* Divider for mobile 2x2 layout */}
               {i < COUNTER_STATS.length - 1 && (
                 <div
                   className="
@@ -231,7 +228,6 @@ export default function StatsBanner() {
                 />
               )}
 
-              {/* Bottom divider for mobile */}
               {i < 2 && (
                 <div
                   className="

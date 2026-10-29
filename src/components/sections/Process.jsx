@@ -18,8 +18,7 @@ export default function Process() {
         </motion.div>
 
         <div className="mt-8 relative">
-          
-          {/* Animated Wave Line (Centered Vertically - Desktop Only) */}
+
           <div className="hidden lg:block absolute left-4 right-4 top-1/2 -translate-y-1/2 h-[40px] overflow-hidden opacity-50 z-0 pointer-events-none">
             <motion.div
               animate={{ x: [-200, 0] }}
@@ -49,7 +48,7 @@ export default function Process() {
                     animate={{ y: [0, -8, 0] }}
                     transition={{
                       repeat: Infinity,
-                      duration: 4 + (i % 2), 
+                      duration: 4 + (i % 2),
                       ease: "easeInOut",
                       delay: i * 0.3
                     }}

@@ -39,10 +39,6 @@ export default function About() {
         crumbs={[{ label: "About" }]}
       />
 
-      {/* =========================================================
-          WHO WE ARE
-      ========================================================= */}
-
       <section className="py-10 sm:py-12 md:py-14 relative">
         <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-emerald-100/50 rounded-full blur-[100px] pointer-events-none" />
 
@@ -66,19 +62,6 @@ export default function About() {
               items-center
             "
           >
-            {/* =====================================================
-                LEFT CONTENT
-                MOBILE/TABLET:
-                HEADING
-                DESCRIPTION
-                IMAGE
-                4 LINES
-
-                DESKTOP:
-                HEADING
-                DESCRIPTION
-                4 LINES
-            ===================================================== */}
 
             <motion.div
               initial={{ opacity: 0, x: -30 }}
@@ -87,7 +70,6 @@ export default function About() {
               transition={{ duration: 0.3 }}
               className="lg:col-span-6"
             >
-              {/* ================= HEADING ================= */}
 
               <div className="flex flex-col items-start">
                 <SectionPill>Who We Are</SectionPill>
@@ -118,8 +100,6 @@ export default function About() {
                   </span>
                 </h2>
 
-                {/* ================= DESCRIPTION ================= */}
-
                 <p
                   className="
                     mt-5
@@ -140,18 +120,6 @@ export default function About() {
                   ROI.
                 </p>
               </div>
-
-              {/* =================================================
-                  MOBILE + TABLET IMAGE
-
-                  HEADING
-                  ↓
-                  DESCRIPTION
-                  ↓
-                  IMAGE
-                  ↓
-                  4 LINES
-              ================================================= */}
 
               <motion.div
                 initial={{ opacity: 0, x: 30 }}
@@ -222,10 +190,6 @@ export default function About() {
                 </div>
               </motion.div>
 
-              {/* =================================================
-                  4 LINES
-              ================================================= */}
-
               <ul
                 className="
                   mt-8
@@ -279,10 +243,6 @@ export default function About() {
                 ))}
               </ul>
             </motion.div>
-
-            {/* =====================================================
-                DESKTOP IMAGE
-            ===================================================== */}
 
             <motion.div
               initial={{ opacity: 0, x: 30 }}
@@ -355,10 +315,6 @@ export default function About() {
         </div>
       </section>
 
-      {/* =========================================================
-          MISSION / VISION / VALUES
-      ========================================================= */}
-
       <section className="py-10 sm:py-12 md:py-14 bg-emerald-50/60">
         <div
           className="
@@ -405,7 +361,6 @@ export default function About() {
                 cursor-pointer
               "
             >
-              {/* FRONT */}
 
               <div
                 className="
@@ -471,8 +426,6 @@ export default function About() {
                 </p>
               </div>
 
-              {/* BACK */}
-
               <div
                 className="
                   absolute
@@ -516,10 +469,6 @@ export default function About() {
         </div>
       </section>
 
-      {/* =========================================================
-          ABOUT US
-      ========================================================= */}
-
       <section className="py-10 sm:py-12 md:py-14 bg-white">
         <div
           className="
@@ -535,7 +484,6 @@ export default function About() {
             items-center
           "
         >
-          {/* TEXT */}
 
           <motion.div
             initial={{ opacity: 0, x: -30 }}
@@ -593,8 +541,6 @@ export default function About() {
             </div>
           </motion.div>
 
-          {/* IMAGE */}
-
           <motion.div
             initial={{ opacity: 0, x: 30 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -628,10 +574,6 @@ export default function About() {
         </div>
       </section>
 
-      {/* =========================================================
-          MEET OUR FOUNDER
-      ========================================================= */}
-
       <section className="py-10 sm:py-12 md:py-14 bg-slate-50">
         <div className="container-x px-4 sm:px-6 lg:px-8">
           <h2
@@ -658,7 +600,6 @@ export default function About() {
               items-center
             "
           >
-            {/* FOUNDER TEXT */}
 
             <motion.div
               initial={{ opacity: 0, x: -30 }}
@@ -767,8 +708,6 @@ export default function About() {
               </div>
             </motion.div>
 
-            {/* FOUNDER IMAGE */}
-
             <motion.div
               initial={{ opacity: 0, x: 30 }}
               whileInView={{ opacity: 1, x: 0 }}
@@ -836,10 +775,6 @@ export default function About() {
           </div>
         </div>
       </section>
-
-      {/* =========================================================
-          OTHER SECTIONS
-      ========================================================= */}
 
       <WhyUs />
 

@@ -20,7 +20,6 @@ export default function PageHeader({ title, crumbs = [] }) {
           ))}
         </motion.div>
       </div>
-      {/* Decorative background elements */}
       <div className="absolute inset-0 opacity-20 pointer-events-none" style={{ backgroundImage: 'radial-gradient(circle at 20% 20%, rgba(255,255,255,.3) 0, transparent 40%), radial-gradient(circle at 80% 60%, rgba(255,255,255,.2) 0, transparent 40%)' }} />
       <div className="absolute top-0 right-0 -mt-20 -mr-20 w-64 h-64 bg-white opacity-5 rounded-full blur-3xl"></div>
       <div className="absolute bottom-0 left-0 -mb-12 -ml-20 w-80 h-80 bg-white opacity-5 rounded-full blur-3xl"></div>

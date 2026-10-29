@@ -51,9 +51,6 @@ export default function ServicesGridStatic() {
     <section className="py-10 sm:py-12 md:py-16 lg:py-20 bg-white">
       <div className="container-x px-4 sm:px-6 lg:px-8">
 
-        {/* =========================
-            HEADING
-        ========================== */}
         <div className="text-center max-w-3xl mx-auto mb-12">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -79,9 +76,6 @@ export default function ServicesGridStatic() {
           </motion.div>
         </div>
 
-        {/* =========================
-            SERVICES GRID
-        ========================== */}
         <motion.div
           variants={container}
           initial="hidden"
@@ -111,22 +105,20 @@ export default function ServicesGridStatic() {
               "
             >
 
-              {/* =========================
-                  IMAGE
-              ========================== */}
               <div
                 className="
-                  h-36
-                  sm:h-40
-                  md:h-44
-                  lg:h-48
+                  h-40
+                  sm:h-44
+                  md:h-48
+                  lg:h-52
                   overflow-hidden
                   relative
                   bg-white
                   flex
                   items-center
                   justify-center
-                  p-6
+                  p-3
+                  sm:p-4
                   rounded-t-2xl
                   border-b
                   border-slate-100
@@ -136,18 +128,23 @@ export default function ServicesGridStatic() {
                   variants={imageFold}
                   style={{ transformOrigin: 'top' }}
                   src={s.img}
-                  loading="lazy"
                   alt={s.title}
-                  className="
-                    w-[90%]
-                    h-[90%]
+                  className={`
+                    w-full
+                    h-full
                     object-contain
                     object-center
-                    group-hover:scale-105
                     transition-transform
                     duration-500
                     rounded-xl
-                  "
+                    ${
+                      s.slug === 'digital-marketing'
+                        ? 'scale-[1.38] group-hover:scale-[1.44]'
+                        : s.slug === 'crm-erp-development'
+                        ? 'max-w-[96%] max-h-[96%] group-hover:scale-[1.04]'
+                        : 'max-w-[94%] max-h-[94%] group-hover:scale-[1.04]'
+                    }
+                  `}
                 />
 
                 <div
@@ -164,10 +161,6 @@ export default function ServicesGridStatic() {
                 />
               </div>
 
-              {/* =========================
-                  CARD CONTENT
-                  EVERYTHING CENTERED
-              ========================== */}
               <div
                 className="
                   p-5
@@ -179,7 +172,6 @@ export default function ServicesGridStatic() {
                 "
               >
 
-                {/* TITLE */}
                 <h3
                   className="
                     text-sm
@@ -195,7 +187,6 @@ export default function ServicesGridStatic() {
                   {s.title}
                 </h3>
 
-                {/* DESCRIPTION */}
                 <p
                   className="
                     mt-2
@@ -210,7 +201,6 @@ export default function ServicesGridStatic() {
                   {s.desc}
                 </p>
 
-                {/* EXPLORE BUTTON */}
                 <Link
                   to={`/${s.slug}`}
                   className="

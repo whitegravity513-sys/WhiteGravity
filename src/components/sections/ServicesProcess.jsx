@@ -28,7 +28,6 @@ export default function ServicesProcess() {
   return (
     <section className="py-8 md:py-10 bg-[#def8ea]">
       <div className="container-x">
-        {/* Header */}
         <div className="text-center max-w-3xl mx-auto mb-10 md:mb-12">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -48,7 +47,6 @@ export default function ServicesProcess() {
           </motion.div>
         </div>
 
-        {/* Cards Grid */}
         <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-8 md:gap-6 mt-8">
           {steps.map((step, i) => (
             <motion.div
@@ -59,7 +57,6 @@ export default function ServicesProcess() {
               transition={{ duration: 0.4, delay: i * 0.1 }}
               className="bg-white rounded-3xl p-8 pt-12 relative shadow-lg hover:shadow-xl transition-shadow text-center flex flex-col items-center mt-6"
             >
-              {/* Floating Number Badge */}
               <div className="absolute -top-6 w-16 h-14 bg-[#088365] rounded-xl text-white text-3xl font-extrabold flex items-center justify-center shadow-lg border-b-4 border-[#065b46]">
                 {step.num}
               </div>

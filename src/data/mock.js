@@ -22,7 +22,7 @@ export const NAV_LINKS = [
     href: '/erp-consultation',
     children: [
       { label: 'Zoho Consultation', href: '/zoho-consultation' },
-    ], 
+    ],
   },
   { label: 'Industries', href: '/industries' },
   { label: 'Contact Us', href: '/contact' },
@@ -48,7 +48,7 @@ export const SERVICES = [
   { slug: 'ecommerce-development', title: 'Ecommerce Development', img: '/images/service-ecommerce.jpg', desc: 'Sell online with confidence via robust Shopify, WooCommerce and custom ecommerce solutions.' },
   { slug: 'mobile-app-development', title: 'Mobile App Development', img: '/images/service-mobile.jpg', desc: 'Native and cross-platform iOS & Android apps engineered for scale, speed and delightful UX.' },
   { slug: 'web-app-development', title: 'Web App Development', img: '/images/service-webapp.jpg', desc: 'Full-stack SaaS platforms and business web apps with modern architectures and clean APIs.' },
-  { slug: 'crm-erp-development', title: 'CRM/ERP Development', img: '/images/service-crm.jpg', desc: 'Custom CRM & ERP built to streamline sales, operations, finance and support workflows.' },
+  { slug: 'crm-erp-development', title: 'CRM/ERP Development', img: '/images/service-crm.svg', desc: 'Custom CRM & ERP built to streamline sales, operations, finance and support workflows.' },
   { slug: 'digital-marketing', title: 'Digital Marketing (SEO, SMM)', img: '/images/service-marketing.jpg', desc: 'SEO, content and social strategies that generate compounding traffic and qualified leads.' },
   { slug: 'meta-google-ads', title: 'Meta and Google Ads', img: '/images/service-ads.jpg', desc: 'Performance marketing across Meta and Google to drive ROI-focused customer acquisition.' },
 ];
@@ -86,23 +86,19 @@ export const TECH_STACK = [
 ];
 
 export const PARTNERS = [
-  // Payment Gateways
   { name: 'PhonePe', img: '/images/tech/phonepe.svg', category: 'Payment Gateway' },
   { name: 'RazorPay', img: '/images/tech/razorpay.svg', category: 'Payment Gateway' },
   { name: 'Cashfree', img: '/images/tech/cashfree.svg', category: 'Payment Gateway' },
-  // E-Commerce Platforms
   { name: 'BigCommerce', img: '/images/tech/bigcommerce.svg', category: 'E-Commerce Platform' },
   { name: 'Shopify', img: '/images/tech/shopify.svg', category: 'E-Commerce Platform' },
   { name: 'WooCommerce', img: '/images/tech/woocommerce.svg', category: 'E-Commerce Platform' },
   { name: 'Magento', img: '/images/tech/magento.svg', category: 'E-Commerce Platform' },
   { name: 'Custom Commerce', img: '/images/tech/customcommerce.svg', category: 'E-Commerce Platform' },
-  // Hosting & Cloud
   { name: 'AWS', img: '/images/tech/aws.svg', category: 'Cloud & Hosting' },
   { name: 'Google Cloud', img: '/images/tech/googlecloud.svg', category: 'Cloud & Hosting' },
   { name: 'GoDaddy', img: '/images/tech/godaddy.svg', category: 'Cloud & Hosting' },
   { name: 'Hostinger', img: '/images/tech/hostinger.svg', category: 'Cloud & Hosting' },
   { name: 'BigRock', img: '/images/tech/bigrock.svg', category: 'Cloud & Hosting' },
-  // Advertising & Marketing
   { name: 'Meta', img: '/images/tech/meta.svg', category: 'Advertising & Marketing' },
   { name: 'Google', img: '/images/tech/google.svg', category: 'Advertising & Marketing' },
 ];
@@ -139,12 +135,6 @@ export const INDUSTRIES = [
   { name: 'Fitness & Wellness', img: '/images/industry-fitness.jpg' },
 ];
 
-export const TEAM = [
-  { name: 'Harrison Hudson', role: 'WordPress Developer', img: '/images/team-1.jpg' },
-  { name: 'Elizabeth Sofia', role: 'WordPress Developer', img: '/images/team-2.jpg' },
-  { name: 'Charlie Cooper', role: 'Front-End Developer', img: '/images/team-3.jpg' },
-  { name: 'Lucy Evelyn', role: 'UI/UX Designer', img: '/images/team-4.jpg' },
-];
 
 export const COMPANY = {
   name: 'White Gravity Web Solutions',
@@ -159,6 +149,6 @@ export const COMPANY = {
     instagram: 'https://www.instagram.com/whitegravityweb/',
     linkedin: 'https://www.linkedin.com/company/whitegravity/',
   },
-  logo: '/images/logo-whitegravity.webp',
+  logo: '/images/logo-whitegravity-new.png',
   heroImg: '/images/hero-main.jpg',
 };

@@ -5,8 +5,6 @@
   --breakpoint-xs: 475px;
 }
 
-
-/* ─── Base Performance & Smoothness ─────────────────────────────────────────── */
 *, *::before, *::after {
   box-sizing: border-box;
 }
@@ -15,7 +13,7 @@ html {
   scroll-behavior: smooth;
   text-rendering: optimizeLegibility;
   -webkit-text-size-adjust: 100%;
-  overscroll-behavior-y: none; /* prevents bounce jank */
+  overscroll-behavior-y: none;
   overflow-x: hidden;
 }
 
@@ -26,7 +24,7 @@ body {
   -moz-osx-font-smoothing: grayscale;
   background: #ffffff;
   color: #0f172a;
-  /* GPU compositing layer for the whole page */
+
   -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
   overflow-x: hidden;
@@ -42,13 +40,11 @@ h1, h2, h3, h4, h5, h6 {
   letter-spacing: -0.02em;
 }
 
-/* ─── Custom Scrollbar ───────────────────────────────────────────────────────── */
 ::-webkit-scrollbar { width: 6px; height: 6px; }
 ::-webkit-scrollbar-track { background: #f1f5f9; }
 ::-webkit-scrollbar-thumb { background: #009B6C; border-radius: 8px; }
 ::-webkit-scrollbar-thumb:hover { background: #00825a; }
 
-/* ─── Marquee ────────────────────────────────────────────────────────────────── */
 @keyframes marquee {
   0% { transform: translateX(0); }
   100% { transform: translateX(-50%); }
@@ -72,7 +68,6 @@ h1, h2, h3, h4, h5, h6 {
 .animate-marquee-vertical-reverse { animation: marquee-vertical-reverse 35s linear infinite; will-change: transform; }
 .pause-on-hover:hover { animation-play-state: paused; }
 
-/* ─── Marquee Reverse (horizontal) ──────────────────────────────────────────── */
 @keyframes marquee-reverse {
   0%   { transform: translateX(-50%); }
   100% { transform: translateX(0); }
@@ -81,15 +76,12 @@ h1, h2, h3, h4, h5, h6 {
 .animate-marquee-reverse-slow { animation: marquee-reverse 160s linear infinite; will-change: transform; transform: translateZ(0); }
 .animate-marquee-reverse-industries { animation: marquee-reverse 90s linear infinite; will-change: transform; transform: translateZ(0); }
 
-
-/* ─── Fade-in Up ─────────────────────────────────────────────────────────────── */
 @keyframes fadeInUp {
   from { opacity: 0; transform: translate3d(0, 20px, 0); }
   to { opacity: 1; transform: translate3d(0, 0, 0); }
 }
 .fade-in-up { animation: fadeInUp 0.5s cubic-bezier(0.22, 1, 0.36, 1) forwards; }
 
-/* ─── Gradient Text ──────────────────────────────────────────────────────────── */
 .text-brand-gradient {
   background: linear-gradient(135deg, #009B6C 0%, #00b37e 100%);
   -webkit-background-clip: text;
@@ -97,7 +89,6 @@ h1, h2, h3, h4, h5, h6 {
   -webkit-text-fill-color: transparent;
 }
 
-/* ─── Section Pill ───────────────────────────────────────────────────────────── */
 .section-pill {
   display: inline-flex;
   align-items: center;
@@ -113,11 +104,8 @@ h1, h2, h3, h4, h5, h6 {
   box-shadow: 0 1px 0 rgba(0,0,0,0.02);
 }
 
-/* ─── Container ──────────────────────────────────────────────────────────────── */
 .container-x { max-width: 1240px; margin-left: auto; margin-right: auto; padding-left: 1.25rem; padding-right: 1.25rem; }
 
-/* ─── GPU-Accelerated Cards ──────────────────────────────────────────────────── */
-/* Use transform3d to force GPU layer — eliminates layout-based repaints on hover */
 .svc-card {
   transition: transform 0.3s cubic-bezier(0.22, 1, 0.36, 1), box-shadow 0.3s ease;
   will-change: transform;
@@ -128,7 +116,6 @@ h1, h2, h3, h4, h5, h6 {
   box-shadow: 0 20px 40px -20px rgba(16,185,129,0.35);
 }
 
-/* ─── Buttons ────────────────────────────────────────────────────────────────── */
 .btn-primary {
   background: #009B6C;
   color: #ffffff;
@@ -146,14 +133,12 @@ h1, h2, h3, h4, h5, h6 {
 }
 .btn-coral:hover { background: #ef4444; box-shadow: 0 10px 30px -10px rgba(239,68,68,0.5); transform: translateY(-2px); }
 
-/* ─── Focus Styles ───────────────────────────────────────────────────────────── */
 *:focus-visible {
   outline: 2px solid #009B6C;
   outline-offset: 2px;
   border-radius: 4px;
 }
 
-/* ─── Floating Animation (GPU) ───────────────────────────────────────────────── */
 @keyframes float {
   0%, 100% { transform: translate3d(0, 0, 0); }
   50% { transform: translate3d(0, -10px, 0); }
@@ -161,14 +146,12 @@ h1, h2, h3, h4, h5, h6 {
 .animate-float { animation: float 3.5s cubic-bezier(0.45, 0, 0.55, 1) infinite; will-change: transform; }
 .animate-float-delayed { animation: float 3.5s cubic-bezier(0.45, 0, 0.55, 1) 1.75s infinite; will-change: transform; }
 
-/* ─── Pulse Glow ─────────────────────────────────────────────────────────────── */
 @keyframes pulse-glow {
   0%, 100% { box-shadow: 0 0 0 0 rgba(5, 150, 105, 0.4); }
   50% { box-shadow: 0 0 20px 5px rgba(5, 150, 105, 0.2); }
 }
 .animate-pulse-glow { animation: pulse-glow 2.5s ease-in-out infinite; }
 
-/* ─── Gradient Shift ─────────────────────────────────────────────────────────── */
 @keyframes gradient-shift {
   0% { background-position: 0% 50%; }
   50% { background-position: 100% 50%; }
@@ -179,7 +162,6 @@ h1, h2, h3, h4, h5, h6 {
   animation: gradient-shift 6s ease infinite;
 }
 
-/* ─── Hero Animated Background ──────────────────────────────────────────────── */
 @keyframes hero-bg-shift {
   0%   { background-position: 0% 50%; }
   25%  { background-position: 50% 0%; }
@@ -201,7 +183,6 @@ h1, h2, h3, h4, h5, h6 {
   animation: hero-bg-shift 8s ease infinite;
 }
 
-/* ─── Page Transition ────────────────────────────────────────────────────────── */
 @keyframes pageEnter {
   from { opacity: 0; transform: translate3d(0, 12px, 0); }
   to   { opacity: 1; transform: translate3d(0, 0, 0); }
@@ -210,23 +191,17 @@ h1, h2, h3, h4, h5, h6 {
   animation: pageEnter 0.35s cubic-bezier(0.22, 1, 0.36, 1) forwards;
 }
 
-/* ─── Image Smooth Load ──────────────────────────────────────────────────────── */
 img {
   image-rendering: auto;
-  /* Prevent image layout shift */
+
   display: block;
 }
-img[loading="lazy"] {
-  content-visibility: auto;
-}
 
-/* ─── Slider dot ─────────────────────────────────────────────────────────────── */
 .slider-dot-active {
   width: 2rem;
   background: #009B6C;
 }
 
-/* ─── Spin animations ────────────────────────────────────────────────────────── */
 @keyframes spin-slow {
   from { transform: rotate(0deg); }
   to   { transform: rotate(360deg); }
@@ -238,11 +213,9 @@ img[loading="lazy"] {
 .animate-spin-slow     { animation: spin-slow     10s linear infinite; }
 .animate-spin-slow-rev { animation: spin-slow-rev 12s linear infinite; }
 
-/* ─── Section smooth entry (used via JS IntersectionObserver fallback) ────────── */
 .section-hidden { opacity: 0; transform: translateY(16px); }
 .section-visible { opacity: 1; transform: translateY(0); transition: opacity 0.5s cubic-bezier(0.22, 1, 0.36, 1), transform 0.5s cubic-bezier(0.22, 1, 0.36, 1); }
 
-/* ─── Reduced Motion ─────────────────────────────────────────────────────────── */
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after {
     animation-duration: 0.01ms !important;
@@ -260,12 +233,10 @@ img[loading="lazy"] {
   .animate-spin-slow-rev { animation: none !important; }
 }
 
-/* ─── Mobile responsive ──────────────────────────────────────────────────────── */
 @media (max-width: 640px) {
   .container-x { padding-left: 1rem; padding-right: 1rem; }
 }
 
-/* ─── XS breakpoint (475px) ─────────────────────────────────────────────────── */
 @media (min-width: 475px) {
   .xs\:inline { display: inline; }
   .xs\:h-\[340px\] { height: 340px; }
@@ -276,14 +247,11 @@ img[loading="lazy"] {
   .xs\:items-center { align-items: center; }
 }
 
-/* ─── Mobile section overflow guard ─────────────────────────────────────────── */
 section {
   overflow-x: hidden;
   max-width: 100vw;
 }
 
-
-/* ─── Animated Section Background Blobs ─────────────────────────────────────── */
 @keyframes blob-drift-1 {
   0%, 100% { transform: translate(0px, 0px) scale(1); }
   33%       { transform: translate(30px, -20px) scale(1.05); }
@@ -303,7 +271,6 @@ section {
 .blob-2 { animation: blob-drift-2 15s ease-in-out infinite; }
 .blob-3 { animation: blob-drift-3 10s ease-in-out infinite; }
 
-/* ─── Subtle animated dot grid ──────────────────────────────────────────────── */
 @keyframes dot-fade {
   0%, 100% { opacity: 0.4; }
   50%       { opacity: 0.9; }

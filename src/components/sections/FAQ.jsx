@@ -32,14 +32,12 @@ export default function FAQ() {
 
   return (
     <section className="relative overflow-hidden bg-white py-12 sm:py-16 md:py-20 lg:py-24">
-      
-      {/* Background decoration */}
+
       <div className="pointer-events-none absolute -left-32 top-20 h-64 w-64 rounded-full bg-emerald-100/40 blur-3xl" />
       <div className="pointer-events-none absolute -right-32 bottom-10 h-72 w-72 rounded-full bg-teal-100/30 blur-3xl" />
 
       <div className="container-x relative z-10 mx-auto w-full max-w-4xl px-4 sm:px-6 lg:px-8">
 
-        {/* ================= HEADER ================= */}
         <motion.div
           initial={{ opacity: 0, y: 25 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -86,7 +84,6 @@ export default function FAQ() {
           </p>
         </motion.div>
 
-        {/* ================= FAQ LIST ================= */}
         <div className="space-y-3 sm:space-y-4">
           {FAQS.map((faq, index) => {
             const isOpen = openIndex === index;
@@ -115,7 +112,6 @@ export default function FAQ() {
                   }
                 `}
               >
-                {/* ================= QUESTION ================= */}
                 <button
                   type="button"
                   onClick={() =>
@@ -139,7 +135,6 @@ export default function FAQ() {
                     md:px-6
                   "
                 >
-                  {/* Question */}
                   <span
                     className={`
                       min-w-0
@@ -161,7 +156,6 @@ export default function FAQ() {
                     {faq.question}
                   </span>
 
-                  {/* Arrow */}
                   <div
                     className={`
                       flex
@@ -188,7 +182,6 @@ export default function FAQ() {
                   </div>
                 </button>
 
-                {/* ================= ANSWER ================= */}
                 <AnimatePresence initial={false}>
                   {isOpen && (
                     <motion.div

@@ -2,14 +2,17 @@ import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
 import tailwindcss from '@tailwindcss/vite'
 
-// https://vite.dev/config/
 export default defineConfig({
+  server: {
+    watch: {
+      ignored: ['**/*.zip', '**/dist/**', '**/.git/**'],
+    },
+  },
   plugins: [
     react(),
     tailwindcss(),
   ],
   build: {
-    // Split chunks for better caching
     rollupOptions: {
       output: {
         manualChunks(id) {
@@ -22,15 +25,11 @@ export default defineConfig({
         }
       },
     },
-    // Raise warning threshold — vendor libs are expected to be large
     chunkSizeWarningLimit: 600,
-    // Enable CSS code splitting
     cssCodeSplit: true,
     target: 'esnext',
   },
-  // Faster dev server
   optimizeDeps: {
     include: ['react', 'react-dom', 'framer-motion', 'react-router-dom', 'lucide-react'],
   },
 })
-

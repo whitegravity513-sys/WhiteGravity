@@ -1,6 +1,13 @@
 import React, { useState, useEffect } from 'react';
 
-export default function TypewriterText({ words, typingSpeed = 80, deletingSpeed = 40, pauseTime = 2500 }) {
+export default function TypewriterText({
+  words,
+  typingSpeed = 80,
+  deletingSpeed = 40,
+  pauseTime = 2500,
+  textClass = '',
+  cursorClass = 'bg-emerald-300'
+}) {
   const [text, setText] = useState('');
   const [isDeleting, setIsDeleting] = useState(false);
   const [loopNum, setLoopNum] = useState(0);
@@ -35,9 +42,14 @@ export default function TypewriterText({ words, typingSpeed = 80, deletingSpeed 
   }, [text, isDeleting, loopNum, words, typingSpeed, deletingSpeed, pauseTime]);
 
   return (
-    <span className="inline-flex items-center min-w-[20px]">
-      {text}
-      <span className="animate-ping h-[1.1em] w-[2px] bg-current ml-[2px] opacity-75 inline-block rounded-full" />
+    <span className="inline-flex items-center align-middle min-w-[20px]">
+      <span className={textClass}>
+        {text || '\u200B'}
+      </span>
+      <span
+        className={`animate-pulse h-[0.95em] w-[4px] sm:w-[5px] ml-2 inline-block rounded-full shadow-[0_0_10px_rgba(52,211,153,0.8)] ${cursorClass}`}
+        style={{ WebkitTextFillColor: 'initial', color: 'initial' }}
+      />
     </span>
   );
 }

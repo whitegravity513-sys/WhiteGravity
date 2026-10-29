@@ -2,14 +2,13 @@ import React from 'react';
 import { Cpu } from 'lucide-react';
 import { motion } from 'framer-motion';
 import SectionPill from '../SectionPill';
-import { TECH_STACK, PARTNERS } from '../../data/mock';
+import { PARTNERS } from '../../data/mock';
 import AnimatedText from '../AnimatedText';
 
 export default function TechStack({ isMarquee = false }) {
   return (
     <section className="py-10 sm:py-12 md:py-16 lg:py-20 bg-slate-50 relative overflow-hidden">
       <div className="container-x relative z-10 px-4 sm:px-6 lg:px-8">
-        {/* Header section */}
         <div className="text-center max-w-3xl mx-auto mb-8 flex flex-col items-center">
           <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.3 }} className="flex flex-col items-center">
             <SectionPill icon={Cpu}>Tech Stack</SectionPill>
@@ -23,14 +22,10 @@ export default function TechStack({ isMarquee = false }) {
         </div>
 
         {isMarquee ? (
-          /* Animated Tech Stack - Two Marquee Rows with undulating wave motion (About Page) */
           <div className="relative w-full overflow-hidden mb-12 py-6">
-            {/* Left fade */}
             <div className="absolute left-0 top-0 bottom-0 w-16 md:w-24 bg-gradient-to-r from-slate-50 to-transparent z-10 pointer-events-none" />
-            {/* Right fade */}
             <div className="absolute right-0 top-0 bottom-0 w-16 md:w-24 bg-gradient-to-l from-slate-50 to-transparent z-10 pointer-events-none" />
 
-            {/* Row 1 — moves left */}
             <div className="mb-6 overflow-hidden">
               <div className="flex gap-4 w-max animate-marquee-slow">
                 {[...Array(3)].flatMap(() => [
@@ -50,7 +45,7 @@ export default function TechStack({ isMarquee = false }) {
                       repeat: Infinity,
                       duration: 3.5,
                       ease: "easeInOut",
-                      delay: (i % 8) * 0.22, // Cycle delay to create wave pattern
+                      delay: (i % 8) * 0.22,
                     }}
                     whileHover={{ scale: 1.08, y: -12, transition: { duration: 0.2 } }}
                     className="group bg-white rounded-full px-6 py-3.5 border border-slate-200/80 shadow-sm hover:shadow-[0_10px_25px_-4px_rgba(16,185,129,0.25)] hover:border-emerald-400 transition-all duration-300 cursor-default flex items-center gap-3 shrink-0"
@@ -64,7 +59,6 @@ export default function TechStack({ isMarquee = false }) {
               </div>
             </div>
 
-            {/* Row 2 — moves right */}
             <div className="overflow-hidden">
               <div className="flex gap-4 w-max animate-marquee-reverse-slow">
                 {[...Array(3)].flatMap(() => [
@@ -84,7 +78,7 @@ export default function TechStack({ isMarquee = false }) {
                       repeat: Infinity,
                       duration: 3.5,
                       ease: "easeInOut",
-                      delay: (i % 8) * 0.22, // Cycle delay to create wave pattern
+                      delay: (i % 8) * 0.22,
                     }}
                     whileHover={{ scale: 1.08, y: -12, transition: { duration: 0.2 } }}
                     className="group bg-white rounded-full px-6 py-3.5 border border-slate-200/80 shadow-sm hover:shadow-[0_10px_25px_-4px_rgba(16,185,129,0.25)] hover:border-emerald-400 transition-all duration-300 cursor-default flex items-center gap-3 shrink-0"
@@ -99,7 +93,6 @@ export default function TechStack({ isMarquee = false }) {
             </div>
           </div>
         ) : (
-          /* Tech Stack Pills - Static wrapped grid (Home Page and other pages) */
           <div className="flex flex-wrap items-center justify-center gap-3 md:gap-4 mb-12 max-w-5xl mx-auto">
             {[
               { name: 'React', icon: 'react' },
@@ -136,7 +129,6 @@ export default function TechStack({ isMarquee = false }) {
           </div>
         )}
 
-        {/* Technology Partners Header */}
         <div className="pt-14 md:pt-16 border-t border-slate-200">
           <div className="text-center max-w-3xl mx-auto mb-10 md:mb-12 flex flex-col items-center">
             <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.3 }} className="flex flex-col items-center">
@@ -152,7 +144,6 @@ export default function TechStack({ isMarquee = false }) {
             </motion.div>
           </div>
 
-          {/* Partners Categories */}
           <div className="flex flex-col gap-12 md:gap-16 mt-8">
             {Array.from(new Set(PARTNERS.map(p => p.category))).filter(Boolean).map((category) => (
               <div key={category} className="w-full">
@@ -175,7 +166,6 @@ export default function TechStack({ isMarquee = false }) {
                         <img
                           src={p.img}
                           alt={p.name}
-                          loading="lazy"
                           className="max-h-10 md:max-h-12 max-w-[110px] md:max-w-[135px] w-auto object-contain transition-all duration-500 group-hover:scale-105 filter drop-shadow-sm"
                         />
                       </div>

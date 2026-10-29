@@ -1,27 +1,26 @@
 import React, { useRef, useState } from "react";
-import { Play, Pause, Star, Volume2, VolumeX, Quote, BadgeCheck } from "lucide-react";
+import {
+  Play,
+  Pause,
+  Star,
+  Volume2,
+  VolumeX,
+  BadgeCheck,
+} from "lucide-react";
 import { motion } from "framer-motion";
 import SectionPill from "../SectionPill";
-
-// ============================================================
-// VIDEO TESTIMONIAL DATA
-// ============================================================
 
 const TESTIMONIAL = {
   id: 1,
   name: "Verified Client",
   role: "Founder",
-  company: "Raff Beauty",
+  company: "Raaf Beauty",
   rating: 5.0,
   src: "/videos/testimonial-1.mp4",
   poster: "",
   quote:
-    "An amazing experience working with the team. They delivered outstanding results for Raff Beauty, transforming our digital presence completely.",
+    "An amazing experience working with the team. They delivered outstanding results for Raaf Beauty, transforming our digital presence completely.",
 };
-
-// ============================================================
-// STAR RATING
-// ============================================================
 
 function StarRating({ rating = 5 }) {
   const fullStars = Math.floor(rating);
@@ -54,20 +53,12 @@ function StarRating({ rating = 5 }) {
   );
 }
 
-// ============================================================
-// MAIN COMPONENT
-// ============================================================
-
 export default function VideoTestimonials() {
   const videoRef = useRef(null);
 
   const [playing, setPlaying] = useState(false);
   const [muted, setMuted] = useState(false);
   const [hasVideo, setHasVideo] = useState(true);
-
-  // ==========================================================
-  // PLAY / PAUSE
-  // ==========================================================
 
   const togglePlay = async () => {
     if (!videoRef.current || !hasVideo) return;
@@ -85,10 +76,6 @@ export default function VideoTestimonials() {
       setHasVideo(false);
     }
   };
-
-  // ==========================================================
-  // MUTE / UNMUTE
-  // ==========================================================
 
   const toggleMute = (e) => {
     e.stopPropagation();
@@ -108,74 +95,64 @@ export default function VideoTestimonials() {
         relative
         overflow-hidden
 
-        py-10
-        sm:py-12
-        md:py-16
-        lg:py-20
+        py-2
+        sm:py-3
+        md:py-4
 
         bg-[#eef5f2]
       "
     >
-      {/* =====================================================
-          BACKGROUND BLOBS
-      ====================================================== */}
 
-      <div
+      <motion.div
+        animate={{
+          scale: [1, 1.2, 1],
+          opacity: [0.3, 0.6, 0.3],
+          x: [0, 30, 0],
+          y: [0, -20, 0]
+        }}
+        transition={{
+          duration: 8,
+          repeat: Infinity,
+          ease: "easeInOut"
+        }}
         className="
           absolute
-
-          -top-20
-          sm:-top-10
-
+          -top-20 sm:-top-10
           left-1/4
-
-          w-56
-          sm:w-72
-          md:w-96
-
-          h-56
-          sm:h-72
-          md:h-96
-
-          bg-emerald-200/40
-
+          w-56 sm:w-72 md:w-96
+          h-56 sm:h-72 md:h-96
+          bg-emerald-300/40
           rounded-full
-
           blur-3xl
-
           pointer-events-none
         "
       />
 
-      <div
+      <motion.div
+        animate={{
+          scale: [1, 1.3, 1],
+          opacity: [0.2, 0.5, 0.2],
+          x: [0, -40, 0],
+          y: [0, 30, 0]
+        }}
+        transition={{
+          duration: 10,
+          repeat: Infinity,
+          ease: "easeInOut",
+          delay: 1
+        }}
         className="
           absolute
-
           -bottom-20
-
           right-1/4
-
-          w-52
-          sm:w-64
-          md:w-80
-
-          h-52
-          sm:h-64
-          md:h-80
-
-          bg-teal-200/30
-
+          w-52 sm:w-64 md:w-80
+          h-52 sm:h-64 md:h-80
+          bg-teal-300/30
           rounded-full
-
           blur-3xl
-
           pointer-events-none
         "
       />
-
-      {/* =====================================================
-          CONTAINER
-      ====================================================== */}
 
       <div
         className="
@@ -196,9 +173,6 @@ export default function VideoTestimonials() {
           mx-auto
         "
       >
-        {/* ===================================================
-            HEADING
-        ==================================================== */}
 
         <motion.div
           initial={{
@@ -225,9 +199,9 @@ export default function VideoTestimonials() {
 
             mx-auto
 
-            mb-8
-            sm:mb-10
-            md:mb-14
+            mb-4
+            sm:mb-6
+            md:mb-8
           "
         >
           <SectionPill>Client Success</SectionPill>
@@ -273,9 +247,7 @@ export default function VideoTestimonials() {
           </p>
         </motion.div>
 
-        {/* ===================================================
-            MAIN GRID
-        ==================================================== */}
+        {}
 
         <div
           className="
@@ -285,17 +257,14 @@ export default function VideoTestimonials() {
 
             lg:grid-cols-2
 
-            gap-8
-            sm:gap-10
-            md:gap-12
-            lg:gap-16
+            gap-6
+            sm:gap-8
+            lg:gap-10
 
             items-center
           "
         >
-          {/* =================================================
-              LEFT - VIDEO
-          ================================================== */}
+          {}
 
           <motion.div
             initial={{
@@ -315,99 +284,49 @@ export default function VideoTestimonials() {
             }}
             className="
               relative
-
-              w-full
-
-              max-w-xl
-
+              w-fit
               mx-auto
-
               group
-
               rounded-2xl
               sm:rounded-3xl
-
               overflow-hidden
-
               shadow-xl
               sm:shadow-2xl
-
               border-2
               sm:border-4
-
               border-white
-
               bg-black
             "
           >
-            {/* =================================================
-                VIDEO CONTAINER
-            ================================================== */}
+            {}
 
             <div
               className="
                 relative
-
-                w-full
-
-                /*
-                  Mobile:
-                  Portrait video ke liye 9/16
-
-                  Tablet:
-                  Thoda balanced 4/5
-
-                  Desktop:
-                  Tall premium layout
-                */
-
-                aspect-square
-
-                sm:aspect-square
-
-                md:aspect-square
-
-                lg:aspect-square
-
-                max-h-[50vh]
-                sm:max-h-[400px]
-                lg:max-h-[450px]
-
-                bg-black
-
-                cursor-pointer
-
-                overflow-hidden
-
                 flex
-                items-center
                 justify-center
+                bg-black
+                cursor-pointer
+                overflow-hidden
               "
               onClick={togglePlay}
             >
-              {/* =============================================
-                  VIDEO
-              ============================================== */}
+              {}
 
               <video
                 ref={videoRef}
                 src={TESTIMONIAL.src}
                 poster={TESTIMONIAL.poster || undefined}
                 className={`
-                  absolute
-                  inset-0
-
-                  w-full
-                  h-full
-
-                  object-cover
-                  object-[50%_15%]
-
+                  w-auto
+                  h-[350px]
+                  sm:h-[450px]
+                  md:h-[500px]
+                  object-contain
+                  block
                   bg-black
-
                   transition-opacity
                   duration-300
-
                   ${hasVideo ? "opacity-100" : "opacity-0"}
                 `}
                 playsInline
@@ -419,24 +338,19 @@ export default function VideoTestimonials() {
                 onPause={() => setPlaying(false)}
               />
 
-              {/* =============================================
-                  PLAY OVERLAY
-              ============================================== */}
+              {}
 
               {!playing && hasVideo && (
                 <div
                   className="
                     absolute
                     inset-0
-
                     bg-gradient-to-br
                     from-slate-900/20
                     to-slate-900/60
-
                     flex
                     items-center
                     justify-center
-
                     z-10
                   "
                 >
@@ -490,15 +404,14 @@ export default function VideoTestimonials() {
                 </div>
               )}
 
-              {/* =============================================
-                  PAUSE OVERLAY
-              ============================================== */}
+              {}
 
               {playing && (
                 <div
                   className="
                     absolute
                     inset-0
+                    -mb-6 sm:-mb-10 md:-mb-14
 
                     flex
                     items-center
@@ -554,9 +467,7 @@ export default function VideoTestimonials() {
                 </div>
               )}
 
-              {/* =============================================
-                  MUTE BUTTON
-              ============================================== */}
+              {}
 
               {playing && (
                 <div
@@ -630,15 +541,14 @@ export default function VideoTestimonials() {
                 </div>
               )}
 
-              {/* =============================================
-                  VIDEO ERROR
-              ============================================== */}
+              {}
 
               {!hasVideo && (
                 <div
                   className="
                     absolute
                     inset-0
+                    -mb-6 sm:-mb-10 md:-mb-14
 
                     bg-slate-800
 
@@ -684,9 +594,7 @@ export default function VideoTestimonials() {
             </div>
           </motion.div>
 
-          {/* =================================================
-              RIGHT - TESTIMONIAL CONTENT
-          ================================================== */}
+          {}
 
           <motion.div
             initial={{
@@ -720,32 +628,12 @@ export default function VideoTestimonials() {
               lg:items-start
             "
           >
-            {/* Quote */}
 
-            <Quote
-              className="
-                w-9
-                h-9
-
-                sm:w-10
-                sm:h-10
-
-                md:w-12
-                md:h-12
-
-                text-emerald-200
-
-                mb-4
-                sm:mb-5
-                md:mb-6
-              "
-            />
-
-            {/* Rating */}
+            {}
 
             <StarRating rating={TESTIMONIAL.rating} />
 
-            {/* Testimonial Text */}
+            {}
 
             <h3
               className="
@@ -769,9 +657,7 @@ export default function VideoTestimonials() {
               "{TESTIMONIAL.quote}"
             </h3>
 
-            {/* =================================================
-                CLIENT INFO
-            ================================================== */}
+            {}
 
             <div
               className="
@@ -786,7 +672,7 @@ export default function VideoTestimonials() {
                 sm:gap-4
               "
             >
-              {/* Verified Tick Icon */}
+              {}
               <BadgeCheck
                 className="
                   w-8
@@ -802,7 +688,7 @@ export default function VideoTestimonials() {
                 stroke="white"
               />
 
-              {/* Client Details */}
+              {}
 
               <div className="text-left">
                 <div

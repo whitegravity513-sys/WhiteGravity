@@ -30,7 +30,7 @@ export default function Projects() {
               className="group relative rounded-2xl overflow-hidden bg-slate-100 border border-slate-100 shadow-sm hover:shadow-xl transition-shadow"
             >
               <div className="aspect-[16/9] overflow-hidden">
-                <img src={p.img} loading="lazy" alt={p.name} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
+                <img src={p.img} alt={p.name} className="w-full h-full object-contain group-hover:scale-95 transition-transform duration-700" />
               </div>
               <div className="absolute inset-0 bg-gradient-to-t from-emerald-900/85 via-emerald-900/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
                 <div className="text-white">

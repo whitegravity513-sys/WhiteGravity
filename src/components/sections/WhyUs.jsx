@@ -23,14 +23,8 @@ const ICONS = [
   CheckCircle2,
 ];
 
-/* ============================================================
-   SINGLE FLIP CARD
-============================================================ */
-
 function FlipCard({ item, i }) {
   const Icon = ICONS[i % ICONS.length];
-
-  const [isFlipped, setIsFlipped] = useState(false);
   const controls = useAnimation();
   const [hasAnimated, setHasAnimated] = useState(false);
 
@@ -62,8 +56,6 @@ function FlipCard({ item, i }) {
       }}
       onMouseEnter={() => {
         if (hasAnimated) {
-          setIsFlipped(true);
-
           controls.start({
             rotateY: 180,
           });
@@ -71,17 +63,12 @@ function FlipCard({ item, i }) {
       }}
       onMouseLeave={() => {
         if (hasAnimated) {
-          setIsFlipped(false);
-
           controls.start({
             rotateY: 0,
           });
         }
       }}
     >
-      {/* =====================================================
-          3D FLIP CONTAINER
-      ====================================================== */}
 
       <motion.div
         initial={{
@@ -117,9 +104,6 @@ function FlipCard({ item, i }) {
           transformStyle: "preserve-3d",
         }}
       >
-        {/* =====================================================
-            FRONT FACE
-        ====================================================== */}
 
         <div
           className="
@@ -153,7 +137,6 @@ function FlipCard({ item, i }) {
             backfaceVisibility: "hidden",
           }}
         >
-          {/* ICON */}
 
           <div
             className="
@@ -191,8 +174,6 @@ function FlipCard({ item, i }) {
             />
           </div>
 
-          {/* CARD TEXT */}
-
           <div className="flex flex-col items-center">
             <h4
               className="
@@ -227,10 +208,6 @@ function FlipCard({ item, i }) {
             </p>
           </div>
         </div>
-
-        {/* =====================================================
-            BACK FACE
-        ====================================================== */}
 
         <div
           className="
@@ -318,10 +295,6 @@ function FlipCard({ item, i }) {
   );
 }
 
-/* ============================================================
-   WHY US
-============================================================ */
-
 export default function WhyUs() {
   return (
     <section
@@ -336,9 +309,6 @@ export default function WhyUs() {
         lg:py-24
       "
     >
-      {/* =====================================================
-          BACKGROUND BLOBS
-      ====================================================== */}
 
       <div
         className="
@@ -389,9 +359,6 @@ export default function WhyUs() {
             xl:gap-16
           "
         >
-          {/* =================================================
-              LEFT CONTENT
-          ================================================== */}
 
           <motion.div
             initial={{
@@ -416,9 +383,6 @@ export default function WhyUs() {
               lg:col-span-7
             "
           >
-            {/* =================================================
-                SECTION PILL
-            ================================================== */}
 
             <div
               className="
@@ -428,14 +392,10 @@ export default function WhyUs() {
                 lg:justify-start
               "
             >
-              <SectionPill icon={Users}>
+              <SectionPill icon={Users} className="!text-sm sm:!text-base !px-5 !py-2 !font-bold shadow-sm">
                 Why Us
               </SectionPill>
             </div>
-
-            {/* =================================================
-                HEADING
-            ================================================== */}
 
             <h2
               className="
@@ -456,28 +416,26 @@ export default function WhyUs() {
               "
             >
               <span className="inline">
-                Why White Gravity
+                Why White Gravity{" "}
               </span>
 
-              <br className="hidden sm:block" />
+              <br />
 
               <span className="inline">
                 Stands Out{" "}
               </span>
 
-              <span className="inline-block whitespace-nowrap">
+              <span className="block sm:inline-block whitespace-nowrap min-h-[1.2em]">
                 <TypewriterText
                   words={["in Noida"]}
                   typingSpeed={100}
                   deletingSpeed={50}
                   pauseTime={2000}
+                  textClass="text-slate-900"
+                  cursorClass="bg-slate-900 shadow-none"
                 />
               </span>
             </h2>
-
-            {/* =================================================
-                DESCRIPTION
-            ================================================== */}
 
             <p
               className="
@@ -502,23 +460,6 @@ export default function WhyUs() {
               />
             </p>
 
-            {/* =================================================
-                WHY US CARDS
-
-                MOBILE  → 2 COLUMNS
-                TABLET  → 2 COLUMNS
-                DESKTOP → 3 COLUMNS
-
-                DESKTOP:
-                
-                Card 1 | Card 2 | Card 3
-
-                   Card 4 | Card 5
-
-                Card 4 & 5 are positioned BETWEEN
-                the three cards.
-            ================================================== */}
-
             <div
               className="
                 mt-8
@@ -542,10 +483,6 @@ export default function WhyUs() {
                     w-full
 
                     ${
-                      /* ======================================
-                         MOBILE + TABLET
-                         Keep EXACTLY 2-column layout
-                      ====================================== */
 
                       i === 4
                         ? `
@@ -576,13 +513,6 @@ export default function WhyUs() {
               ))}
             </div>
           </motion.div>
-
-          {/* =================================================
-              RIGHT IMAGE
-              
-              MOBILE / TABLET → NORMAL
-              DESKTOP → RIGHT SIDE
-          ================================================== */}
 
           <div
             className="
@@ -615,9 +545,6 @@ export default function WhyUs() {
                 lg:pt-10
               "
             >
-              {/* =================================================
-                  BACKGROUND TILT
-              ================================================== */}
 
               <div
                 className="
@@ -636,10 +563,6 @@ export default function WhyUs() {
                   transform: "rotate(3deg) scale(1.02)",
                 }}
               />
-
-              {/* =================================================
-                  IMAGE
-              ================================================== */}
 
               <div
                 className="
@@ -694,10 +617,6 @@ export default function WhyUs() {
                   "
                 />
               </div>
-
-              {/* =================================================
-                  CLIENT SATISFACTION
-              ================================================== */}
 
               <motion.div
                 initial={{
@@ -810,10 +729,6 @@ export default function WhyUs() {
                   </div>
                 </motion.div>
               </motion.div>
-
-              {/* =================================================
-                  EXPERIENCE
-              ================================================== */}
 
               <motion.div
                 initial={{

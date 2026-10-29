@@ -6,46 +6,6 @@ import SectionPill from "../SectionPill";
 import { SERVICES } from "../../data/mock";
 import AnimatedText from "../AnimatedText";
 
-const container = {
-  hidden: {},
-  visible: {
-    transition: {
-      staggerChildren: 0.07,
-    },
-  },
-};
-
-const fadeUp = {
-  hidden: {
-    opacity: 0,
-    y: 30,
-  },
-  visible: {
-    opacity: 1,
-    y: 0,
-    transition: {
-      duration: 0.5,
-      ease: [0.22, 1, 0.36, 1],
-    },
-  },
-};
-
-const imageFold = {
-  hidden: {
-    opacity: 0,
-    rotateX: -90,
-  },
-  visible: {
-    opacity: 1,
-    rotateX: 0,
-    transition: {
-      duration: 0.8,
-      ease: "easeOut",
-      delay: 0.1,
-    },
-  },
-};
-
 export default function ServicesGrid() {
   const navigate = useNavigate();
 
@@ -59,16 +19,15 @@ export default function ServicesGrid() {
         sm:pt-10
         md:pt-12
         lg:pt-14
-        
+
         pb-10
         sm:pb-12
         md:pb-16
         lg:pb-20
- 
+
         bg-[#e8f7f2]
       "
     >
-      {/* ================= BACKGROUND BLOBS ================= */}
 
       <div
         className="
@@ -118,8 +77,6 @@ export default function ServicesGrid() {
         "
       />
 
-      {/* ================= MAIN CONTAINER ================= */}
-
       <div
         className="
           container-x
@@ -131,7 +88,6 @@ export default function ServicesGrid() {
           xl:px-0
         "
       >
-        {/* ================= HEADING ================= */}
 
         <div
           className="
@@ -166,11 +122,8 @@ export default function ServicesGrid() {
               items-center
             "
           >
-            {/* Section Pill */}
 
             <SectionPill icon={Zap}>What We Do</SectionPill>
-
-            {/* Heading */}
 
             <h2
               className="
@@ -192,8 +145,6 @@ export default function ServicesGrid() {
             >
               Our <span className="text-[#009B6C]">IT Services</span>
             </h2>
-
-            {/* Description */}
 
             <p
               className="
@@ -220,8 +171,6 @@ export default function ServicesGrid() {
             </p>
           </motion.div>
         </div>
-
-        {/* ================= SERVICES GRID ================= */}
 
         <div
           className="
@@ -287,7 +236,6 @@ export default function ServicesGrid() {
                 duration-300
               "
             >
-              {/* ================= IMAGE ================= */}
 
               <div
                 className="
@@ -296,10 +244,10 @@ export default function ServicesGrid() {
 
                   w-full
 
-                  h-36
-                  sm:h-40
-                  md:h-44
-                  lg:h-48
+                  h-40
+                  sm:h-44
+                  md:h-48
+                  lg:h-52
 
                   bg-white
 
@@ -307,8 +255,8 @@ export default function ServicesGrid() {
                   items-center
                   justify-center
 
-                  p-4
-                  sm:p-6
+                  p-3
+                  sm:p-4
 
                   rounded-t-xl
                   sm:rounded-t-2xl
@@ -319,26 +267,28 @@ export default function ServicesGrid() {
               >
                 <img
                   src={s.img}
-                  loading="lazy"
                   alt={s.title}
-                  className="
-                    w-[90%]
-                    h-[90%]
+                  className={`
+                    w-full
+                    h-full
 
                     object-contain
                     object-center
-
-                    group-hover:scale-105
 
                     transition-transform
                     duration-500
 
                     rounded-lg
                     sm:rounded-xl
-                  "
+                    ${
+                      s.slug === 'digital-marketing'
+                        ? 'scale-[1.38] group-hover:scale-[1.44]'
+                        : s.slug === 'crm-erp-development'
+                        ? 'max-w-[96%] max-h-[96%] group-hover:scale-[1.04]'
+                        : 'max-w-[94%] max-h-[94%] group-hover:scale-[1.04]'
+                    }
+                  `}
                 />
-
-                {/* Hover Overlay */}
 
                 <div
                   className="
@@ -359,8 +309,6 @@ export default function ServicesGrid() {
                 />
               </div>
 
-              {/* ================= CARD CONTENT ================= */}
-
               <div
                 className="
                   p-4
@@ -374,7 +322,6 @@ export default function ServicesGrid() {
                   text-center
                 "
               >
-                {/* Title */}
 
                 <h3
                   className="
@@ -398,8 +345,6 @@ export default function ServicesGrid() {
                   {s.title}
                 </h3>
 
-                {/* Description */}
-
                 <p
                   className="
                     mt-2
@@ -418,8 +363,6 @@ export default function ServicesGrid() {
                 >
                   {s.desc}
                 </p>
-
-                {/* Link */}
 
                 <Link
                   to={`/${s.slug}`}

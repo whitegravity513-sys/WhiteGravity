@@ -68,23 +68,36 @@ export default function ZohoConsultation() {
 
   return (
     <>
-      {/* Header Section */}
-      <section className="bg-[#009B6C] pt-24 pb-16 md:pt-32 md:pb-24 text-center px-4 relative overflow-hidden">
+      <section className="bg-[#009B6C] pt-24 sm:pt-28 md:pt-32 pb-16 sm:pb-20 md:pb-24 text-center px-4 relative overflow-hidden">
         <div className="absolute inset-0 opacity-20 pointer-events-none" style={{ backgroundImage: 'radial-gradient(circle at 20% 20%, rgba(255,255,255,.3) 0, transparent 40%), radial-gradient(circle at 80% 60%, rgba(255,255,255,.2) 0, transparent 40%)' }} />
         <div className="container-x relative z-10">
-          <motion.div initial={{ opacity: 0, y: -20 }} animate={{ opacity: 1, y: 0 }} className="inline-flex items-center gap-2 px-5 py-2 bg-[#bcf5d6] text-slate-900 font-bold text-xs sm:text-sm tracking-widest uppercase rounded-full shadow-[0_4px_14px_0_rgba(0,0,0,0.1)] mx-auto mb-6">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5 }}
+            className="inline-flex items-center gap-2 px-5 py-2 bg-[#bcf5d6] text-slate-900 font-bold text-sm tracking-widest uppercase rounded-full shadow-[0_4px_14px_0_rgba(0,0,0,0.1)] mx-auto"
+          >
             <Mail className="w-4 h-4" /> ZOHO SERVICES
           </motion.div>
-          <motion.h1 initial={{ opacity: 0, rotateX: 45, y: 40, scale: 0.9 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.1 }} className="text-3xl sm:text-4xl md:text-5xl lg:text-[50px] font-extrabold text-white mb-2 sm:mb-3 tracking-tight max-w-5xl mx-auto leading-tight">
-            <span className="text-white">Zoho CRM Consultant in Noida</span>
+          <motion.h1
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 0.2 }}
+            className="mt-6 sm:mt-8 text-[32px] xs:text-[36px] sm:text-4xl md:text-5xl lg:text-6xl font-extrabold text-white leading-[1.1] max-w-full"
+          >
+            Zoho CRM Consultant in Noida
           </motion.h1>
-          <motion.p initial={{ opacity: 0, rotateX: 45, y: 40, scale: 0.9 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.2 }} className="mt-2 sm:mt-3 text-white/90 text-lg sm:text-xl md:text-2xl font-light leading-relaxed max-w-3xl mx-auto text-center">
+          <motion.p
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 0.4 }}
+            className="mt-5 sm:mt-6 text-sm sm:text-base md:text-lg text-emerald-50 leading-relaxed font-light mx-auto max-w-2xl px-2 sm:px-4"
+          >
             Streamline your business with expert Zoho CRM implementation, Business Software Development, and Custom Web Application Development. We specialize in tailoring custom integrations and CRM Software Development for growing businesses.
           </motion.p>
         </div>
       </section>
 
-      {/* Why Choose Section */}
       <section className="py-12 md:py-20 bg-white">
         <div className="container-x grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
           <motion.div initial={{ opacity: 0, x: -30 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} transition={{ duration: 0.5 }} className="flex flex-col text-left">
@@ -96,7 +109,6 @@ export default function ZohoConsultation() {
                 White Gravity delivers tailored Zoho consultation and implementation services that help businesses automate operations, improve customer relationships, and boost productivity. Our experienced consultants work closely with organizations to understand their business processes and configure solutions that align with their growth objectives.
               </p>
 
-              {/* Mobile Image */}
               <div className="block lg:hidden my-8 rounded-3xl overflow-hidden shadow-2xl border-8 border-white bg-white">
                 <img src="/images/zoho-logo-full.svg" alt="Zoho Consultant" className="w-full h-[250px] sm:h-[350px] object-contain p-8" />
               </div>
@@ -106,9 +118,9 @@ export default function ZohoConsultation() {
               </p>
             </div>
           </motion.div>
-          
+
           <motion.div initial={{ opacity: 0, x: 30 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} transition={{ duration: 0.5 }} className="hidden lg:flex relative justify-center items-center">
-            <motion.div 
+            <motion.div
               animate={{ y: [0, -10, 0] }}
               transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
               className="rounded-3xl overflow-hidden shadow-2xl border-8 border-white bg-white max-w-md w-full flex items-center justify-center p-8"
@@ -119,25 +131,24 @@ export default function ZohoConsultation() {
         </div>
       </section>
 
-      {/* Grid Services Section */}
       <section className="py-16 md:py-24 bg-[#eefaf4]">
         <div className="container-x">
-          <motion.h2 
-            initial={{ opacity: 0, rotateX: 45, y: 40, scale: 0.9 }} 
-            whileInView={{ opacity: 1, rotateX: 0, y: 0, scale: 1 }} 
-            viewport={{ once: true }} 
+          <motion.h2
+            initial={{ opacity: 0, rotateX: 45, y: 40, scale: 0.9 }}
+            whileInView={{ opacity: 1, rotateX: 0, y: 0, scale: 1 }}
+            viewport={{ once: true }}
             transition={{ duration: 0.5 }}
             className="text-3xl md:text-4xl lg:text-[42px] font-bold text-[#009B6C] mb-10 text-center sm:text-left"
           >
             Comprehensive Zoho Solutions
           </motion.h2>
-          <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 lg:gap-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 lg:gap-8">
             {services.map((srv, i) => (
-              <motion.div 
-                key={srv.title} 
-                initial={{ opacity: 0, y: 30 }} 
-                whileInView={{ opacity: 1, rotateX: 0, y: 0, scale: 1 }} 
-                viewport={{ once: true }} 
+              <motion.div
+                key={srv.title}
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, rotateX: 0, y: 0, scale: 1 }}
+                viewport={{ once: true }}
                 transition={{ duration: 0.4, delay: i * 0.1 }}
                 className="bg-white rounded-xl p-4 sm:p-8 border border-slate-200 shadow-[0_4px_12px_rgba(0,155,108,0.08)] flex flex-col h-full hover:shadow-[-6px_6px_0px_0px_#009B6C] transition-all duration-300 group"
               >
@@ -156,9 +167,6 @@ export default function ZohoConsultation() {
         </div>
       </section>
 
-      {/* =====================================================
-          IMPLEMENTATION PROCESS
-      ====================================================== */}
       <section className="py-16 md:py-24 bg-white">
         <div className="container-x">
           <div className="text-center max-w-3xl mx-auto mb-16">
@@ -166,7 +174,7 @@ export default function ZohoConsultation() {
             <p className="text-slate-600 text-lg">A structured, proven approach to ensure your system goes live without friction.</p>
           </div>
 
-          <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-8">
             {PROCESS.map((p, i) => (
               <motion.div
                 key={p.step}
@@ -185,9 +193,6 @@ export default function ZohoConsultation() {
         </div>
       </section>
 
-      {/* =====================================================
-          ZOHO VS CUSTOM ERP
-      ====================================================== */}
       <section className="py-16 md:py-24 bg-[#f0fdf4]">
         <div className="container-x">
           <div className="text-center max-w-3xl mx-auto mb-16">
@@ -212,14 +217,13 @@ export default function ZohoConsultation() {
         </div>
       </section>
 
-      {/* Frequently Asked Questions Section */}
       <section className="py-16 md:py-24 bg-white">
         <div className="container-x">
           <div className="max-w-4xl mx-auto">
             <h2 className="text-3xl sm:text-4xl md:text-[40px] font-bold text-[#009B6C] mb-12 text-center sm:text-left">
               Frequently Asked Questions
             </h2>
-            
+
             <div className="bg-white p-6 sm:p-10 shadow-sm border border-slate-100 rounded-3xl">
               <div className="divide-y divide-slate-100 border-t border-slate-100">
                 {faqs.map((faq, idx) => (
@@ -235,11 +239,11 @@ export default function ZohoConsultation() {
                     </button>
                     <AnimatePresence>
                       {openFaq === idx && (
-                        <motion.div 
-                          initial={{ height: 0, opacity: 0 }} 
-                          animate={{ height: 'auto', opacity: 1 }} 
-                          exit={{ height: 0, opacity: 0 }} 
-                          transition={{ duration: 0.3 }} 
+                        <motion.div
+                          initial={{ height: 0, opacity: 0 }}
+                          animate={{ height: 'auto', opacity: 1 }}
+                          exit={{ height: 0, opacity: 0 }}
+                          transition={{ duration: 0.3 }}
                           className="overflow-hidden"
                         >
                           <div className="pt-3 pb-2 text-slate-600 text-sm md:text-base leading-relaxed font-medium">
@@ -256,16 +260,14 @@ export default function ZohoConsultation() {
         </div>
       </section>
 
-      {/* Testimonials */}
       <Testimonials />
 
-      {/* Custom Zoho CTA - Premium Design */}
       <section className="relative py-20 md:py-28 text-center px-4 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-[#009B6C] via-[#065b46] to-[#034232] pointer-events-none" />
         <div className="absolute inset-0 opacity-10 pointer-events-none" style={{ backgroundImage: 'radial-gradient(circle at 10% 20%, rgba(255,255,255,1) 0, transparent 40%), radial-gradient(circle at 90% 80%, rgba(255,255,255,1) 0, transparent 40%)' }} />
-        
+
         <div className="container-x relative z-10 max-w-5xl mx-auto">
-          <motion.h2 
+          <motion.h2
             initial={{ opacity: 0, rotateX: 45, y: 40, scale: 0.9 }}
             whileInView={{ opacity: 1, rotateX: 0, y: 0, scale: 1 }}
             viewport={{ once: true }}
@@ -273,7 +275,7 @@ export default function ZohoConsultation() {
           >
             Ready to Transform Your Business with Zoho?
           </motion.h2>
-          <motion.p 
+          <motion.p
             initial={{ opacity: 0, rotateX: 45, y: 40, scale: 0.9 }}
             whileInView={{ opacity: 1, rotateX: 0, y: 0, scale: 1 }}
             viewport={{ once: true }}
@@ -282,8 +284,8 @@ export default function ZohoConsultation() {
           >
             Optimize your workflows, automate routine tasks, and improve customer management with expert Zoho consultation from White Gravity. Our specialists will help you choose, implement, and customize the right Zoho solutions for your business.
           </motion.p>
-          
-          <motion.div 
+
+          <motion.div
             initial={{ opacity: 0, rotateX: 45, y: 40, scale: 0.9 }}
             whileInView={{ opacity: 1, rotateX: 0, y: 0, scale: 1 }}
             viewport={{ once: true }}

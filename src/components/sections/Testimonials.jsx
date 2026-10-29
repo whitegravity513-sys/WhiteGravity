@@ -5,9 +5,6 @@ import SectionPill from "../SectionPill";
 import { TESTIMONIALS } from "../../data/mock";
 import AnimatedText from "../AnimatedText";
 
-// ==================================================
-// STAR RATING
-// ==================================================
 function StarRating({ rating = 5 }) {
   const fullStars = Math.floor(rating);
   const hasHalf = rating % 1 >= 0.5;
@@ -15,7 +12,6 @@ function StarRating({ rating = 5 }) {
 
   return (
     <div className="flex items-center justify-center gap-1">
-      {/* Full Stars */}
       {[...Array(fullStars)].map((_, i) => (
         <Star
           key={`full-${i}`}
@@ -29,7 +25,6 @@ function StarRating({ rating = 5 }) {
         />
       ))}
 
-      {/* Half Star */}
       {hasHalf && (
         <div
           className="
@@ -65,7 +60,6 @@ function StarRating({ rating = 5 }) {
         </div>
       )}
 
-      {/* Empty Stars */}
       {[...Array(emptyStars)].map((_, i) => (
         <Star
           key={`empty-${i}`}
@@ -79,7 +73,6 @@ function StarRating({ rating = 5 }) {
         />
       ))}
 
-      {/* Rating Number */}
       <span
         className="
           ml-1
@@ -96,24 +89,21 @@ function StarRating({ rating = 5 }) {
   );
 }
 
-// ==================================================
-// TESTIMONIAL CARD
-// ==================================================
 function TestimonialCard({ t }) {
   return (
     <div
       className="
-        /* ================= MOBILE ================= */
+        
         w-[220px]
         h-[230px]
         p-4
 
-        /* ================= TABLET ================= */
+        
         sm:w-[250px]
         sm:h-[260px]
         sm:p-4.5
 
-        /* ================= DESKTOP ================= */
+        
         md:w-[280px]
         md:h-[280px]
         md:p-5
@@ -138,7 +128,6 @@ function TestimonialCard({ t }) {
         sm:gap-3
       "
     >
-      {/* Name */}
       <div
         className="
           font-semibold
@@ -153,10 +142,8 @@ function TestimonialCard({ t }) {
         {t.name}
       </div>
 
-      {/* Stars */}
       <StarRating rating={t.rating || 5} />
 
-      {/* Review Text */}
       <p
         className="
           text-[10px]
@@ -180,17 +167,12 @@ function TestimonialCard({ t }) {
   );
 }
 
-// ==================================================
-// TESTIMONIALS SECTION
-// ==================================================
 export default function Testimonials() {
-  // Split testimonials into two rows
   const middle = Math.ceil(TESTIMONIALS.length / 2);
 
   const set1 = TESTIMONIALS.slice(0, middle);
   const set2 = TESTIMONIALS.slice(middle);
 
-  // Duplicate testimonials for seamless marquee
   const row1 = [...set1, ...set1, ...set1, ...set1];
   const row2 = [...set2, ...set2, ...set2, ...set2];
 
@@ -207,9 +189,6 @@ export default function Testimonials() {
         overflow-hidden
       "
     >
-      {/* ==================================================
-          SECTION HEADING
-      ================================================== */}
       <div className="container-x px-4 sm:px-6 lg:px-8">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -263,9 +242,7 @@ export default function Testimonials() {
         </motion.div>
       </div>
 
-      {/* ==================================================
-          MARQUEE AREA
-      ================================================== */}
+      {}
       <div
         className="
           relative
@@ -285,9 +262,7 @@ export default function Testimonials() {
           sm:py-4
         "
       >
-        {/* ==================================================
-            LEFT FADE
-        ================================================== */}
+        {}
         <div
           className="
             absolute
@@ -308,9 +283,7 @@ export default function Testimonials() {
           "
         />
 
-        {/* ==================================================
-            RIGHT FADE
-        ================================================== */}
+        {}
         <div
           className="
             absolute
@@ -331,9 +304,7 @@ export default function Testimonials() {
           "
         />
 
-        {/* ==================================================
-            ROW 1
-        ================================================== */}
+        {}
         <div className="w-full overflow-hidden">
           <div
             className="
@@ -357,9 +328,7 @@ export default function Testimonials() {
           </div>
         </div>
 
-        {/* ==================================================
-            ROW 2
-        ================================================== */}
+        {}
         <div className="w-full overflow-hidden">
           <div
             className="

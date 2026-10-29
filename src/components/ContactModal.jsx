@@ -8,19 +8,44 @@ export default function ContactModal() {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [formData, setFormData] = useState({
     name: '',
+    email: '',
     phone: '',
     service: 'Website Development',
     message: '',
   });
 
+  useEffect(() => {
+    const handleOpenModal = (e) => {
+      if (e?.detail?.service) {
+        setFormData(prev => ({ ...prev, service: e.detail.service }));
+      }
+      setIsOpen(true);
+    };
+
+    window.addEventListener('open-contact-modal', handleOpenModal);
+    return () => window.removeEventListener('open-contact-modal', handleOpenModal);
+  }, []);
+
   const handleClose = () => {
     setIsOpen(false);
   };
+
   const handleSubmit = async (e) => {
     e.preventDefault();
+    if (!formData.name.trim() || !formData.email.trim() || !formData.phone.trim()) {
+      alert("Please fill in your Name, Email, and Phone number.");
+      return;
+    }
+
+    if (!/^[0-9]{10}$/.test(formData.phone.trim())) {
+      alert("Please enter a valid 10-digit mobile number.");
+      return;
+    }
+
     setIsSubmitting(true);
 
     try {
+      const submissionTime = new Date().toLocaleString('en-IN', { timeZone: 'Asia/Kolkata' });
       const response = await fetch("https://formsubmit.co/ajax/info@whitegravity.in", {
         method: "POST",
         headers: {
@@ -28,29 +53,42 @@ export default function ContactModal() {
           Accept: "application/json",
         },
         body: JSON.stringify({
-          Name: formData.name,
-          Contact: formData.phone,
-          Service: formData.service,
-          Message: formData.message || "No additional details provided.",
-          _subject: `New Website Lead: ${formData.name} - ${formData.service}`,
-          _template: "box",
+          'Full Name': formData.name,
+          'Email Address': formData.email,
+          'Phone / WhatsApp': formData.phone,
+          'Service Needed': formData.service,
+          'Project Requirements': formData.message || "No additional details provided.",
+          'Submission Time (IST)': submissionTime,
+          _subject: `⚡ Quick Lead: ${formData.name} - ${formData.service}`,
+          _replyto: formData.email,
+          _cc: 'sales@whitegravity.in',
+          _template: "table",
           _captcha: "false"
         }),
       });
 
       if (response.ok) {
+        if (window.dataLayer) {
+          window.dataLayer.push({
+            event: 'form_submission',
+            form_name: 'contact_modal',
+            form_id: 'contact-modal-form',
+            lead_service: formData.service
+          });
+        }
+
         setSubmitted(true);
-        setFormData({ name: '', phone: '', service: 'Website Development', message: '' });
+        setFormData({ name: '', email: '', phone: '', service: 'Website Development', message: '' });
         setTimeout(() => {
           handleClose();
-          setTimeout(() => setSubmitted(false), 500); // reset state after modal closes
+          setTimeout(() => setSubmitted(false), 500);
         }, 3000);
       } else {
-        alert("Failed to send message. Please try again.");
+        alert("Failed to send message. Please reach us directly at info@whitegravity.in or +91-9217135322");
       }
     } catch (error) {
       console.error("Form error:", error);
-      alert("An error occurred. Please try again later.");
+      alert("An error occurred while sending. Please WhatsApp us directly at +91-9217135322");
     } finally {
       setIsSubmitting(false);
     }
@@ -60,7 +98,6 @@ export default function ContactModal() {
     <AnimatePresence>
       {isOpen && (
         <div className="fixed inset-0 z-50 flex items-center justify-center p-4 sm:p-6">
-          {/* Backdrop */}
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
@@ -69,7 +106,6 @@ export default function ContactModal() {
             className="absolute inset-0 bg-slate-950/60 backdrop-blur-md"
           />
 
-          {/* Modal Card */}
           <motion.div
             initial={{ opacity: 0, scale: 0.88, y: 20 }}
             animate={{ opacity: 1, scale: 1, y: 0 }}
@@ -77,7 +113,6 @@ export default function ContactModal() {
             transition={{ duration: 0.3, ease: [0.22, 1, 0.36, 1] }}
             className="relative w-full max-w-lg bg-white rounded-3xl shadow-2xl border border-slate-100 overflow-hidden z-10"
           >
-            {/* Top Bar / Header */}
             <div className="bg-gradient-to-r from-[#009B6C] to-emerald-700 p-6 text-white relative">
               <button
                 onClick={handleClose}
@@ -98,7 +133,7 @@ export default function ContactModal() {
               </p>
             </div>
 
-            {/* Modal Body */}
+            {}
             <div className="p-6 sm:p-8">
               {submitted ? (
                 <div className="py-8 text-center flex flex-col items-center">
@@ -111,7 +146,7 @@ export default function ContactModal() {
                   </p>
                 </div>
               ) : (
-                <form onSubmit={handleSubmit} className="space-y-4">
+                <form id="contact-modal-form" data-tracking="lead-form" onSubmit={handleSubmit} className="space-y-4">
                   <div>
                     <label className="block text-xs font-bold text-slate-700 uppercase mb-1">Your Name</label>
                     <input
@@ -124,16 +159,35 @@ export default function ContactModal() {
                     />
                   </div>
 
-                  <div>
-                    <label className="block text-xs font-bold text-slate-700 uppercase mb-1">Phone or Email</label>
-                    <input
-                      type="text"
-                      required
-                      placeholder="e.g. +91 98765 43210"
-                      value={formData.phone}
-                      onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
-                      className="w-full px-4 py-3 rounded-xl border border-slate-200 text-slate-800 text-sm focus:outline-none focus:border-[#009B6C] focus:ring-2 focus:ring-[#009B6C]/20 transition-all"
-                    />
+                  <div className="grid grid-cols-2 gap-3">
+                    <div>
+                      <label className="block text-xs font-bold text-slate-700 uppercase mb-1">Email Address</label>
+                      <input
+                        type="email"
+                        required
+                        pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}$"
+                        title="Please enter a valid email address"
+                        placeholder="you@example.com"
+                        value={formData.email}
+                        onChange={(e) => setFormData({ ...formData, email: e.target.value })}
+                        className="w-full px-4 py-3 rounded-xl border border-slate-200 text-slate-800 text-sm focus:outline-none focus:border-[#009B6C] focus:ring-2 focus:ring-[#009B6C]/20 transition-all"
+                      />
+                    </div>
+                    <div>
+                      <label className="block text-xs font-bold text-slate-700 uppercase mb-1">Phone Number</label>
+                      <input
+                        type="tel"
+                        required
+                        maxLength={10}
+                        minLength={10}
+                        pattern="[0-9]{10}"
+                        title="Please enter exactly 10 digits"
+                        placeholder="9876543210"
+                        value={formData.phone}
+                        onChange={(e) => setFormData({ ...formData, phone: e.target.value.replace(/\D/g, '').slice(0, 10) })}
+                        className="w-full px-4 py-3 rounded-xl border border-slate-200 text-slate-800 text-sm focus:outline-none focus:border-[#009B6C] focus:ring-2 focus:ring-[#009B6C]/20 transition-all"
+                      />
+                    </div>
                   </div>
 
                   <div>
@@ -170,13 +224,29 @@ export default function ContactModal() {
                     disabled={isSubmitting}
                     className="w-full py-3.5 px-6 rounded-full bg-[#009B6C] text-white font-extrabold text-sm hover:bg-[#00825a] disabled:opacity-70 disabled:cursor-not-allowed active:scale-95 transition-all shadow-md flex items-center justify-center gap-2 mt-2"
                   >
-                    <Send className={`w-4 h-4 ${isSubmitting ? 'animate-pulse' : ''}`} /> 
+                    <Send className={`w-4 h-4 ${isSubmitting ? 'animate-pulse' : ''}`} />
                     {isSubmitting ? 'Sending Request...' : 'Get Free Consultation Now'}
                   </button>
 
                   <div className="pt-3 flex items-center justify-between border-t border-slate-100 text-xs font-medium text-slate-500">
                     <span>Or reach us directly:</span>
-                    <a href="https://wa.me/918796414339?text=Hi%20White%20Gravity%20Team!%20I%20visited%20your%20website%20and%20would%20like%20to%20discuss%20a%20project." target="_blank" rel="noopener noreferrer" className="text-[#009B6C] font-bold hover:underline flex items-center gap-1">
+                    <a
+                      href="https://wa.me/918796414339?text=Hi%20White%20Gravity%20Team!%20I%20visited%20your%20website%20and%20would%20like%20to%20discuss%20a%20project."
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      data-tracking="whatsapp"
+                      data-action="whatsapp_click"
+                      onClick={() => {
+                        if (window.dataLayer) {
+                          window.dataLayer.push({
+                            event: 'whatsapp_click',
+                            click_location: 'contact_modal',
+                            whatsapp_number: '918796414339'
+                          });
+                        }
+                      }}
+                      className="text-[#009B6C] font-bold hover:underline flex items-center gap-1"
+                    >
                       <Phone className="w-3.5 h-3.5" /> +91 87964 14339
                     </a>
                   </div>

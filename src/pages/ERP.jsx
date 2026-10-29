@@ -6,7 +6,6 @@ import { motion, AnimatePresence, useInView, animate } from "framer-motion";
 import {
   CheckCircle2,
   ArrowRight,
-  LayoutDashboard,
   Target,
   Layers,
   FileText,
@@ -23,17 +22,12 @@ import {
   Globe,
   MessageCircle,
   Mail,
-  Smartphone,
   ChevronDown,
   Building2,
   Truck,
   HeartPulse,
   Briefcase
 } from "lucide-react";
-
-// =========================================================
-// DATA CONSTANTS
-// =========================================================
 
 const STATS = [
   { value: "100", suffix: "+", isCounter: true, label: "Workflows Automated" },
@@ -131,10 +125,6 @@ const FAQS = [
   { q: "Do you provide post-launch support?", a: "We offer dedicated 24/7 post-launch support, continuous optimization, and troubleshooting to keep your operations running smoothly." },
 ];
 
-// =========================================================
-// COMPONENTS
-// =========================================================
-
 function CountUpAnimation({ endValue, suffix = "", duration = 2.5 }) {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: "-50px" });
@@ -202,16 +192,12 @@ export default function ERP() {
     <>
       <PageHeader title="ERP & Zoho Solutions" crumbs={[{ label: "ERP Consultation" }]} />
 
-      {/* =====================================================
-          1. HERO SECTION
-      ====================================================== */}
       <section className="py-12 md:py-16 relative overflow-hidden bg-[#f0fdf4]">
         <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-[#009B6C]/10 rounded-full blur-[100px] pointer-events-none" />
-        
+
         <div className="container-x relative z-10">
           <div className="grid lg:grid-cols-12 gap-10 lg:gap-16 items-center">
-            
-            {/* Left Content */}
+
             <motion.div
               initial={{ opacity: 0, x: -30 }}
               animate={{ opacity: 1, x: 0 }}
@@ -221,15 +207,14 @@ export default function ERP() {
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-slate-900 leading-[1.1]">
                 Certified <span className="text-[#009B6C]">Zoho & Custom ERP</span> Consultants
               </h1>
-              
+
               <p className="mt-6 text-slate-600 leading-relaxed text-lg max-w-xl text-justify lg:text-left">
                 We help growth-stage businesses implement, customize and scale Zoho ecosystems and build robust custom ERP software. As a leading software development company, we deliver measurable operational impact within weeks — not quarters.
               </p>
 
-              {/* Mobile/Tablet Image */}
               <div className="block lg:hidden w-full max-w-lg mx-auto my-8 relative">
                 <div className="absolute inset-0 bg-[#009B6C] rounded-[2.5rem] translate-x-4 translate-y-4 opacity-20" />
-                <motion.div 
+                <motion.div
                   animate={{ y: [0, -10, 0] }}
                   transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
                   className="rounded-[2rem] overflow-hidden shadow-2xl relative border-8 border-white bg-white aspect-square sm:aspect-video flex items-center justify-center p-8"
@@ -245,7 +230,6 @@ export default function ERP() {
               </div>
             </motion.div>
 
-            {/* Right Image (Desktop Only) */}
             <motion.div
               initial={{ opacity: 0, x: 30 }}
               animate={{ opacity: 1, x: 0 }}
@@ -253,7 +237,7 @@ export default function ERP() {
               className="hidden lg:block lg:col-span-6 relative w-full lg:max-w-none"
             >
               <div className="absolute inset-0 bg-[#009B6C] rounded-[2.5rem] translate-x-4 translate-y-4 opacity-20" />
-              <motion.div 
+              <motion.div
                 animate={{ y: [0, -10, 0] }}
                 transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
                 className="rounded-[2rem] overflow-hidden shadow-2xl relative border-8 border-white bg-white lg:aspect-square flex items-center justify-center p-8"
@@ -266,15 +250,12 @@ export default function ERP() {
         </div>
       </section>
 
-      {/* =====================================================
-          2. TRUST STATS STRIP
-      ====================================================== */}
       <section className="py-10 bg-white border-y border-slate-100 relative overflow-hidden shadow-sm">
         <div className="container-x relative z-10">
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8 divide-x divide-slate-100">
             {STATS.map((stat, i) => (
-              <motion.div 
-                key={i} 
+              <motion.div
+                key={i}
                 initial={{ opacity: 0, rotateX: 45, y: 40, scale: 0.9 }}
                 whileInView={{ opacity: 1, rotateX: 0, y: 0, scale: 1 }}
                 viewport={{ once: true }}
@@ -295,9 +276,6 @@ export default function ERP() {
         </div>
       </section>
 
-      {/* =====================================================
-          3. WHY BUSINESSES CHOOSE US
-      ====================================================== */}
       <section className="py-16 md:py-24 bg-white">
         <div className="container-x">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
@@ -310,12 +288,11 @@ export default function ERP() {
               <p className="text-slate-600 mb-8 leading-relaxed text-lg text-justify lg:text-left">
                 As a premier business software development agency, we replace chaos with clarity. Upgrading to a unified ERP system resolves major bottlenecks and scales with your business natively.
               </p>
-              
-              {/* Mobile Image (Description ke baad, Points ke pehle) */}
+
               <div className="block lg:hidden mb-8 rounded-3xl overflow-hidden shadow-2xl border border-slate-100">
-                <img 
-                  src="/images/service-custom-software.jpg" 
-                  alt="Business Team Collaborating" 
+                <img
+                  src="/images/service-custom-software.jpg"
+                  alt="Business Team Collaborating"
                   className="w-full h-[250px] sm:h-[350px] object-cover"
                 />
               </div>
@@ -336,19 +313,18 @@ export default function ERP() {
                 ))}
               </ul>
             </motion.div>
-            
-            {/* Desktop Image (Hidden on Mobile) */}
+
             <motion.div
               initial={{ opacity: 0, scale: 0.9 }}
               whileInView={{ opacity: 1, scale: 1 }}
               viewport={{ once: true }}
               className="hidden lg:block relative rounded-3xl overflow-hidden shadow-2xl border border-slate-100 group"
             >
-              <motion.img 
+              <motion.img
                 animate={{ y: [0, -15, 0] }}
                 transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
-                src="/images/service-custom-software.jpg" 
-                alt="Business Team Collaborating" 
+                src="/images/service-custom-software.jpg"
+                alt="Business Team Collaborating"
                 className="w-full h-[400px] object-cover group-hover:scale-105 transition-transform duration-700"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-[#009B6C]/80 to-transparent mix-blend-multiply opacity-60" />
@@ -357,17 +333,14 @@ export default function ERP() {
         </div>
       </section>
 
-      {/* =====================================================
-          4. OUR ZOHO SERVICES
-      ====================================================== */}
       <section className="py-16 md:py-24 bg-[#f0fdf4]">
         <div className="container-x">
           <div className="text-center max-w-3xl mx-auto mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4">Our <span className="text-[#009B6C]">Zoho Services</span></h2>
             <p className="text-slate-600 text-lg">As a dedicated Zoho CRM Consultant in Noida, we unlock the full potential of the Zoho suite for your business.</p>
           </div>
-          
-          <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-6">
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-6">
             {ZOHO_SERVICES.map((srv, i) => (
               <motion.div
                 key={srv.title}
@@ -388,9 +361,6 @@ export default function ERP() {
         </div>
       </section>
 
-      {/* =====================================================
-          5. CUSTOM ERP DEVELOPMENT
-      ====================================================== */}
       <section className="py-16 md:py-24 bg-white relative">
         <div className="container-x">
           <div className="text-center max-w-3xl mx-auto mb-16">
@@ -399,8 +369,8 @@ export default function ERP() {
               Every business has different processes. We build robust custom software and ERP systems around the way your business actually works, rather than changing your workflow to fit an app.
             </p>
           </div>
-          
-          <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
             {CUSTOM_ERP_MODULES.map((mod, i) => (
               <motion.div
                 key={mod.title}
@@ -425,9 +395,6 @@ export default function ERP() {
         </div>
       </section>
 
-      {/* =====================================================
-          6. ERP INTEGRATIONS
-      ====================================================== */}
       <section className="py-16 md:py-24 bg-[#009B6C] text-white relative overflow-hidden">
         <div className="absolute inset-0 opacity-10 bg-[url('/images/noise.svg')] mix-blend-overlay" />
         <div className="container-x relative z-10">
@@ -458,9 +425,6 @@ export default function ERP() {
         </div>
       </section>
 
-      {/* =====================================================
-          7. IMPLEMENTATION PROCESS
-      ====================================================== */}
       <section className="py-16 md:py-24 bg-[#f0fdf4]">
         <div className="container-x">
           <div className="text-center max-w-3xl mx-auto mb-16">
@@ -468,7 +432,7 @@ export default function ERP() {
             <p className="text-slate-600 text-lg">A structured, proven approach to ensure your system goes live without friction.</p>
           </div>
 
-          <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-8">
             {PROCESS.map((p, i) => (
               <motion.div
                 key={p.step}
@@ -487,9 +451,6 @@ export default function ERP() {
         </div>
       </section>
 
-      {/* =====================================================
-          8. INDUSTRIES WE SERVE
-      ====================================================== */}
       <section className="py-16 md:py-24 bg-white">
         <div className="container-x">
           <div className="text-center max-w-3xl mx-auto mb-16">
@@ -497,7 +458,7 @@ export default function ERP() {
             <p className="text-slate-600 text-lg">We deliver custom tailored business software development across various verticals.</p>
           </div>
 
-          <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-6">
             {INDUSTRIES.map((ind, i) => (
               <motion.div
                 key={ind.title}
@@ -518,9 +479,6 @@ export default function ERP() {
         </div>
       </section>
 
-      {/* =====================================================
-          9. WHY CHOOSE US
-      ====================================================== */}
       <section className="py-16 md:py-24 bg-[#f0fdf4] border-t border-slate-100">
         <div className="container-x">
           <div className="text-center max-w-3xl mx-auto mb-16">
@@ -528,7 +486,7 @@ export default function ERP() {
             <p className="text-slate-600 text-lg">We aren't just developers; we are business consultants who understand your bottom line.</p>
           </div>
 
-          <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
             {WHY_US.map((item, i) => (
               <motion.div
                 key={item.title}
@@ -548,9 +506,7 @@ export default function ERP() {
         </div>
       </section>
 
-      {/* =====================================================
-          10. CASE STUDIES
-      ====================================================== */}
+      {}
       <section className="py-16 md:py-24 bg-[#009B6C] relative overflow-hidden">
         <div className="absolute inset-0 opacity-10 bg-[url('/images/noise.svg')] mix-blend-overlay" />
         <div className="container-x relative z-10">
@@ -583,9 +539,6 @@ export default function ERP() {
         </div>
       </section>
 
-      {/* =====================================================
-          11. ZOHO VS CUSTOM ERP
-      ====================================================== */}
       <section className="py-16 md:py-24 bg-white">
         <div className="container-x">
           <div className="text-center max-w-3xl mx-auto mb-16">
@@ -607,7 +560,7 @@ export default function ERP() {
               </div>
             ))}
           </div>
-          
+
           <div className="mt-10 text-center">
             <p className="text-slate-600 mb-6">Not sure which option is right for your business? Talk to an ERP consultant.</p>
             <Link to="/contact" className="inline-flex items-center gap-2 px-6 py-3 rounded-full font-bold bg-[#009B6C] text-white hover:bg-[#007f58] transition-colors">
@@ -617,9 +570,6 @@ export default function ERP() {
         </div>
       </section>
 
-      {/* =====================================================
-          12. FAQ
-      ====================================================== */}
       <section className="py-16 md:py-24 bg-slate-50">
         <div className="container-x max-w-4xl">
           <div className="text-center mb-16">
@@ -635,9 +585,6 @@ export default function ERP() {
         </div>
       </section>
 
-      {/* =====================================================
-          13. CTA
-      ====================================================== */}
       <CTA />
     </>
   );

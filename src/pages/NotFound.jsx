@@ -7,9 +7,9 @@ export default function NotFound() {
   return (
     <section className="min-h-[70vh] grid place-items-center py-20">
       <div className="text-center px-6">
-        <motion.div 
-          initial={{ y: -50, opacity: 0 }} 
-          animate={{ y: 0, opacity: 1 }} 
+        <motion.div
+          initial={{ y: -50, opacity: 0 }}
+          animate={{ y: 0, opacity: 1 }}
           transition={{ type: "spring", bounce: 0.6, duration: 0.3 }}
           className="text-[120px] md:text-[180px] font-extrabold leading-none text-brand-gradient"
         >

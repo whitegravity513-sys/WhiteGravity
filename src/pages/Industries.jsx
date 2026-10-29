@@ -1,40 +1,21 @@
 import React, { useState, useEffect, useRef } from 'react';
 import CTA from '../components/sections/CTA';
-import IndustryProcess from '../components/sections/IndustryProcess';
-import Projects from '../components/sections/Projects';
 import { INDUSTRIES } from '../data/mock';
 import AnimatedText from '../components/AnimatedText';
 import { motion, AnimatePresence, useInView, animate } from 'framer-motion';
-import { 
-  HeartPulse, 
-  Building2, 
-  ShoppingCart, 
-  Briefcase, 
-  Globe, 
-  Code, 
-  Smartphone, 
-  Database, 
-  TrendingUp, 
-  Zap, 
-  Plug, 
-  CheckCircle2, 
+import {
+  Globe,
+  Code,
+  Smartphone,
+  Database,
+  TrendingUp,
+  Zap,
+  Plug,
+  CheckCircle2,
   ArrowRight,
   ChevronDown,
-  LayoutTemplate
 } from 'lucide-react';
 import { Link } from 'react-router-dom';
-import PageHeader from '../components/PageHeader';
-
-// =========================================================
-// DATA CONSTANTS
-// =========================================================
-
-const INDUSTRIES_FOCUS = [
-  { icon: HeartPulse, title: "Healthcare", desc: "Secure and user-friendly websites and digital platforms for hospitals, clinics, doctors, and healthcare brands." },
-  { icon: Building2, title: "Real Estate", desc: "Property websites, lead-generation systems, property listings, and CRM integrations designed for real estate businesses." },
-  { icon: ShoppingCart, title: "E-commerce", desc: "High-converting online stores with seamless checkout, product management, payment integration, and analytics." },
-  { icon: Briefcase, title: "Finance", desc: "Professional and secure digital experiences for financial services, consultants, fintech companies, and investment businesses." }
-];
 
 const DIGITAL_SOLUTIONS = [
   { title: "Website Design & Development", icon: Globe },
@@ -76,7 +57,7 @@ const STATS = [
 ];
 
 const CASE_STUDIES = [
-  { 
+  {
     name: "Kartavyam",
     industry: "NGO & Healthcare",
     challenge: "Client needed a robust digital platform to manage donations, track healthcare campaigns, and engage with volunteers effectively without relying on manual Excel sheets.",
@@ -100,10 +81,6 @@ const FAQS = [
   { q: "Can you integrate my website with existing software?", a: "Yes. We can seamlessly integrate your website with your existing CRM, accounting software, payment gateways, and third-party APIs." },
   { q: "Do you provide post-launch support?", a: "We offer comprehensive 24/7 post-launch support, maintenance, and regular updates to ensure your digital solutions run flawlessly." }
 ];
-
-// =========================================================
-// COMPONENTS
-// =========================================================
 
 function CountUpAnimation({ endValue, suffix = "", duration = 2.5 }) {
   const ref = useRef(null);
@@ -170,7 +147,6 @@ function FAQItem({ faq }) {
 export default function Industries() {
   return (
     <>
-      {/* Custom Industries Header (Green Banner) */}
       <section className="bg-[#009B6C] pt-24 pb-16 md:pt-32 md:pb-24 text-center px-4">
         <div className="container-x">
           <span className="inline-block px-5 py-2 bg-[#bcf5d6] text-slate-900 font-bold text-sm tracking-widest uppercase rounded-full shadow-[0_4px_14px_0_rgba(0,0,0,0.1)] mx-auto mb-6">
@@ -185,19 +161,15 @@ export default function Industries() {
         </div>
       </section>
 
-      {/* =====================================================
-          2. INDUSTRIES WE SERVE (IMAGE GRID)
-      ====================================================== */}
       <section className="py-12 md:py-20 bg-white overflow-hidden">
         <div className="container-x max-w-[1400px]">
           <div className="grid lg:grid-cols-12 gap-10 lg:gap-16 items-center">
-            
-            {/* Left Content */}
-            <motion.div 
-              initial={{ opacity: 0, x: -30 }} 
-              whileInView={{ opacity: 1, x: 0 }} 
-              viewport={{ once: true }} 
-              transition={{ duration: 0.5 }} 
+
+            <motion.div
+              initial={{ opacity: 0, x: -30 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5 }}
               className="lg:col-span-3 flex flex-col items-start text-left"
             >
               <h1 className="text-4xl md:text-5xl lg:text-[48px] font-extrabold text-[#065b46] leading-tight mb-5">
@@ -218,7 +190,6 @@ export default function Industries() {
               </p>
             </motion.div>
 
-            {/* Right Content - Image Grid */}
             <div className="lg:col-span-9">
               <div className="grid grid-cols-2 md:grid-cols-4 gap-3 md:gap-4">
                 {INDUSTRIES.map((ind, i) => (
@@ -230,7 +201,7 @@ export default function Industries() {
                     transition={{ duration: 0.4, delay: (i % 4) * 0.08 }}
                     className="group relative rounded-xl overflow-hidden shadow-[0_2px_10px_-4px_rgba(0,0,0,0.1)] hover:shadow-lg h-28 md:h-36 cursor-pointer"
                   >
-                    <img src={ind.img} loading="lazy" alt={ind.name} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-[1.5s]" />
+                    <img src={ind.img} alt={ind.name} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-[1.5s]" />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
                     <div className="absolute inset-x-2 bottom-3 text-center text-white">
                       <div className="font-extrabold text-[13px] md:text-[15px] tracking-wide">{ind.name}</div>
@@ -244,9 +215,6 @@ export default function Industries() {
         </div>
       </section>
 
-      {/* =====================================================
-          3. DIGITAL SOLUTIONS
-      ====================================================== */}
       <section className="py-16 md:py-24 bg-white relative overflow-hidden">
         <div className="container-x relative z-10">
           <div className="text-center max-w-3xl mx-auto mb-16">
@@ -274,9 +242,6 @@ export default function Industries() {
         </div>
       </section>
 
-      {/* =====================================================
-          4. INDUSTRY CHALLENGES WE SOLVE
-      ====================================================== */}
       <section className="py-16 md:py-24 bg-[#f0fdf4] relative overflow-hidden">
         <div className="container-x relative z-10">
           <div className="text-center max-w-3xl mx-auto mb-16">
@@ -292,7 +257,7 @@ export default function Industries() {
                 whileInView={{ opacity: 1, rotateX: 0, y: 0, scale: 1 }}
                 viewport={{ once: true }}
                 transition={{ delay: i * 0.1 }}
-                className={`bg-white border border-slate-100 shadow-sm p-4 sm:p-6 rounded-2xl hover:shadow-md transition-shadow ${i === CHALLENGES.length - 1 && CHALLENGES.length % 2 !== 0 ? 'col-span-2' : ''}`}
+                className="bg-white border border-slate-100 shadow-sm p-4 sm:p-6 rounded-2xl hover:shadow-md transition-shadow"
               >
                 <h3 className="text-sm sm:text-base md:text-lg font-bold text-slate-900 mb-2 sm:mb-3 flex flex-col sm:flex-row items-start gap-2">
                   <CheckCircle2 className="w-5 h-5 sm:w-6 sm:h-6 text-[#009B6C] shrink-0 mt-0.5" />
@@ -305,9 +270,6 @@ export default function Industries() {
         </div>
       </section>
 
-      {/* =====================================================
-          5. INDUSTRY-WISE SOLUTIONS TABLE
-      ====================================================== */}
       <section className="py-16 md:py-24 bg-white">
         <div className="container-x">
           <div className="text-center max-w-3xl mx-auto mb-16">
@@ -330,15 +292,12 @@ export default function Industries() {
         </div>
       </section>
 
-      {/* =====================================================
-          6. STATS STRIP
-      ====================================================== */}
       <section className="py-10 bg-white border-y border-slate-100 relative overflow-hidden shadow-sm">
         <div className="container-x relative z-10">
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8 divide-x divide-slate-100">
             {STATS.map((stat, i) => (
-              <motion.div 
-                key={i} 
+              <motion.div
+                key={i}
                 initial={{ opacity: 0, rotateX: 45, y: 40, scale: 0.9 }}
                 whileInView={{ opacity: 1, rotateX: 0, y: 0, scale: 1 }}
                 viewport={{ once: true }}
@@ -359,9 +318,6 @@ export default function Industries() {
         </div>
       </section>
 
-      {/* =====================================================
-          7. CASE STUDIES
-      ====================================================== */}
       <section className="py-16 md:py-24 bg-[#f0fdf4]">
         <div className="container-x">
           <div className="text-center max-w-3xl mx-auto mb-16">
@@ -370,7 +326,7 @@ export default function Industries() {
           </div>
 
           <div className="max-w-4xl mx-auto">
-            {CASE_STUDIES.map((study, i) => (
+            {CASE_STUDIES.map((study) => (
               <motion.div
                 key={study.name}
                 initial={{ opacity: 0, rotateX: 45, y: 40, scale: 0.9 }}
@@ -387,7 +343,7 @@ export default function Industries() {
                     View Case Study <ArrowRight className="w-4 h-4" />
                   </Link>
                 </div>
-                
+
                 <div className="space-y-6">
                   <div className="bg-red-50 p-5 rounded-2xl border border-red-100">
                     <div className="font-bold text-red-900 mb-1 flex items-center gap-2">Challenge</div>
@@ -408,9 +364,7 @@ export default function Industries() {
         </div>
       </section>
 
-      {/* =====================================================
-          8. WHY CHOOSE US
-      ====================================================== */}
+      {}
       <section className="py-16 md:py-24 bg-white border-t border-slate-100">
         <div className="container-x">
           <div className="text-center max-w-3xl mx-auto mb-16">
@@ -425,7 +379,7 @@ export default function Industries() {
                 initial={{ opacity: 0, x: i % 2 === 0 ? -20 : 20 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true }}
-                className={`flex flex-col sm:flex-row gap-3 sm:gap-4 p-4 sm:p-6 md:p-8 bg-[#f0fdf4] rounded-2xl md:rounded-3xl border border-slate-100 ${i === WHY_US.length - 1 && WHY_US.length % 2 !== 0 ? 'col-span-2' : ''}`}
+                className="flex flex-col sm:flex-row gap-3 sm:gap-4 p-4 sm:p-6 md:p-8 bg-[#f0fdf4] rounded-2xl md:rounded-3xl border border-slate-100"
               >
                 <div className="shrink-0 w-10 h-10 sm:w-12 sm:h-12 bg-white shadow-sm rounded-lg sm:rounded-xl flex items-center justify-center text-[#009B6C]">
                   <CheckCircle2 className="w-5 h-5 sm:w-6 sm:h-6" />
@@ -440,9 +394,7 @@ export default function Industries() {
         </div>
       </section>
 
-      {/* =====================================================
-          9. FAQ
-      ====================================================== */}
+      {}
       <section className="py-16 md:py-24 bg-[#f0fdf4] border-t border-slate-100">
         <div className="container-x max-w-4xl">
           <div className="text-center mb-16">
@@ -458,9 +410,7 @@ export default function Industries() {
         </div>
       </section>
 
-      {/* =====================================================
-          10. CTA
-      ====================================================== */}
+      {}
       <CTA />
     </>
   );

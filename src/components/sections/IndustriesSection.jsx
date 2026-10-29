@@ -76,10 +76,6 @@ export default function IndustriesSection() {
           "
         >
 
-          {/* =====================================================
-              LEFT CONTENT
-          ====================================================== */}
-
           <div
             className="
               lg:col-span-5
@@ -111,13 +107,10 @@ export default function IndustriesSection() {
               }}
               className="w-full"
             >
-              {/* Pill */}
 
               <SectionPill icon={Building2Icon}>
                 Industries
               </SectionPill>
-
-              {/* Heading */}
 
               <h2
                 className="
@@ -168,8 +161,6 @@ export default function IndustriesSection() {
                 </motion.span>
               </h2>
 
-              {/* Description */}
-
               <p
                 className="
                   mt-4
@@ -193,8 +184,6 @@ export default function IndustriesSection() {
                 and real estate to e-commerce and finance, we build
                 custom tech that scales and transforms your operations.
               </p>
-
-              {/* Button */}
 
               <div
                 className="
@@ -272,10 +261,6 @@ export default function IndustriesSection() {
             </motion.div>
           </div>
 
-          {/* =====================================================
-              RIGHT - TWO ROW MARQUEE
-          ====================================================== */}
-
           <div
             className="
               lg:col-span-7
@@ -292,6 +277,7 @@ export default function IndustriesSection() {
                 relative
 
                 w-full
+                lg:w-[200%]
 
                 h-[250px]
                 xs:h-[280px]
@@ -319,12 +305,6 @@ export default function IndustriesSection() {
                 pause-on-hover
               "
             >
-
-
-
-              {/* =================================================
-                  ROW 1 - MOVES LEFT
-              ================================================== */}
 
               <div
                 className="
@@ -356,10 +336,6 @@ export default function IndustriesSection() {
                   ))}
                 </div>
               </div>
-
-              {/* =================================================
-                  ROW 2 - MOVES RIGHT
-              ================================================== */}
 
               <div
                 className="
@@ -404,11 +380,6 @@ export default function IndustriesSection() {
   );
 }
 
-
-/* ============================================================
-   INDUSTRY CARD
-============================================================ */
-
 function IndustryCard({ industry }) {
   return (
     <div
@@ -438,11 +409,9 @@ function IndustryCard({ industry }) {
         cursor-pointer
       "
     >
-      {/* Image */}
 
       <img
         src={industry.img}
-        loading="lazy"
         alt={industry.name}
         className="
           w-full
@@ -456,8 +425,6 @@ function IndustryCard({ industry }) {
           duration-700
         "
       />
-
-      {/* Gradient */}
 
       <div
         className="
@@ -477,8 +444,6 @@ function IndustryCard({ industry }) {
           duration-300
         "
       />
-
-      {/* Industry Name */}
 
       <div
         className="

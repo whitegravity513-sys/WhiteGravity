@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
-import { useParams, Link } from 'react-router-dom';
+import { useParams } from 'react-router-dom';
 import CTA from '../components/sections/CTA';
+import QuickContactSection from '../components/sections/QuickContactSection';
 import { SERVICES } from '../data/mock';
 
 import {
@@ -63,11 +64,6 @@ import {
   motion,
   AnimatePresence
 } from 'framer-motion';
-
-
-// ======================================================
-// DETAILED SERVICES CONTENT
-// ======================================================
 
 const DETAILED_SERVICES_CONTENT = {
 
@@ -159,11 +155,6 @@ const DETAILED_SERVICES_CONTENT = {
     ]
   },
 
-
-  // ======================================================
-  // WEBSITE DEVELOPMENT
-  // ======================================================
-
   'website-development': {
     pill: 'Website Development',
 
@@ -246,11 +237,6 @@ const DETAILED_SERVICES_CONTENT = {
       }
     ]
   },
-
-
-  // ======================================================
-  // ECOMMERCE
-  // ======================================================
 
   'ecommerce-development': {
     pill: 'E-Commerce',
@@ -338,11 +324,6 @@ const DETAILED_SERVICES_CONTENT = {
     ]
   },
 
-
-  // ======================================================
-  // MOBILE APP
-  // ======================================================
-
   'mobile-app-development': {
     pill: 'Mobile App Development',
 
@@ -428,11 +409,6 @@ const DETAILED_SERVICES_CONTENT = {
       }
     ]
   },
-
-
-  // ======================================================
-  // WEB APP
-  // ======================================================
 
   'web-app-development': {
     pill: 'Web App Development',
@@ -521,11 +497,6 @@ const DETAILED_SERVICES_CONTENT = {
     ]
   },
 
-
-  // ======================================================
-  // CRM ERP
-  // ======================================================
-
   'crm-erp-development': {
     pill: 'CRM & ERP Development',
 
@@ -539,7 +510,7 @@ const DETAILED_SERVICES_CONTENT = {
       "Managing customer relationships and business operations efficiently is essential for sustainable growth. At White Gravity, we develop powerful CRM and ERP solutions that help organizations centralize data, automate processes, and improve decision-making.\n\nOur custom-built systems are designed to simplify daily operations, increase productivity, and provide complete visibility across departments. Whether you're a growing startup or an established enterprise, we deliver scalable solutions tailored to your unique business requirements.",
 
     tailoredImg:
-      '/images/service-crm.jpg',
+      '/images/service-crm.svg',
 
     subServicesTitle:
       'Our CRM & ERP Development Solutions',
@@ -609,11 +580,6 @@ const DETAILED_SERVICES_CONTENT = {
       }
     ]
   },
-
-
-  // ======================================================
-  // DIGITAL MARKETING
-  // ======================================================
 
   'digital-marketing': {
     pill: 'Digital Marketing',
@@ -702,11 +668,6 @@ const DETAILED_SERVICES_CONTENT = {
     ]
   },
 
-
-  // ======================================================
-  // META & GOOGLE ADS
-  // ======================================================
-
   'meta-google-ads': {
     pill: 'Meta Ads & Google Ads',
 
@@ -793,11 +754,6 @@ const DETAILED_SERVICES_CONTENT = {
       }
     ]
   },
-
-
-  // ======================================================
-  // ZOHO
-  // ======================================================
 
   'zoho-consultation': {
     pill: 'Zoho Consultation',
@@ -887,11 +843,6 @@ const DETAILED_SERVICES_CONTENT = {
   }
 };
 
-
-// ======================================================
-// DEFAULT CONTENT
-// ======================================================
-
 const getDefaultContent = (service) => ({
   pill: service.title.toUpperCase(),
 
@@ -976,11 +927,6 @@ const getDefaultContent = (service) => ({
   ]
 });
 
-
-// ======================================================
-// GRADIENTS
-// ======================================================
-
 const GradientDefs = () => (
   <svg
     width="0"
@@ -1042,11 +988,6 @@ const GradientDefs = () => (
   </svg>
 );
 
-
-// ======================================================
-// ICON COLOR
-// ======================================================
-
 const getIconColor = (title) => {
 
   const t = title.toLowerCase();
@@ -1084,11 +1025,6 @@ const getIconColor = (title) => {
   return 'url(#grad-theme)';
 };
 
-
-// ======================================================
-// SERVICE DETAIL
-// ======================================================
-
 export default function ServiceDetail() {
 
   const { slug } = useParams();
@@ -1104,16 +1040,10 @@ export default function ServiceDetail() {
 
   const [openFaq, setOpenFaq] = useState(0);
 
-
   return (
     <>
 
       <GradientDefs />
-
-
-      {/* ==================================================
-          PAGE HEADER
-      ================================================== */}
 
       <section
         className="
@@ -1189,7 +1119,6 @@ export default function ServiceDetail() {
 
           </motion.div>
 
-
           <motion.h1
             initial={{
               opacity: 0,
@@ -1214,7 +1143,6 @@ export default function ServiceDetail() {
           >
             {content.heroTitle || service.title}
           </motion.h1>
-
 
           <motion.p
             initial={{
@@ -1243,11 +1171,6 @@ export default function ServiceDetail() {
         </div>
 
       </section>
-
-
-      {/* ==================================================
-          TAILORED SECTION
-      ================================================== */}
 
       <section className="py-10 md:py-12 bg-white">
 
@@ -1299,7 +1222,6 @@ export default function ServiceDetail() {
               {content.tailoredTitle}
             </h2>
 
-
             <p
               className="
                 mt-6
@@ -1313,7 +1235,6 @@ export default function ServiceDetail() {
               {content.tailoredDesc}
             </p>
 
-            {/* Mobile Image (Description -> Image -> Points) */}
             <div className="block lg:hidden w-full mt-10 rounded-[2.5rem] overflow-hidden shadow-2xl border-4 md:border-8 border-white group relative bg-white p-3">
               <img src={content.tailoredImg} alt={service.title} className="w-full h-auto max-h-[500px] object-contain group-hover:scale-105 transition-transform duration-700 rounded-2xl" />
             </div>
@@ -1362,11 +1283,10 @@ export default function ServiceDetail() {
 
             </div>
 
-
             <div className="mt-10">
 
-              <Link
-                to="/contact"
+              <a
+                href="#contact-form-section"
                 className="
                   inline-flex
                   items-center
@@ -1389,12 +1309,11 @@ export default function ServiceDetail() {
 
                 <ArrowRight className="w-5 h-5" />
 
-              </Link>
+              </a>
 
             </div>
 
           </motion.div>
-
 
           <motion.div
             initial={{
@@ -1460,10 +1379,11 @@ export default function ServiceDetail() {
 
       </section>
 
-
-      {/* ==================================================
-          SERVICE CARDS
-      ================================================== */}
+      <QuickContactSection
+        defaultService={content.pill || 'Website Development'}
+        title={`Get a Free Proposal for ${content.pill || 'Your Project'}`}
+        subtitle="Tell us your project requirements. Our Noida-based senior engineering team will provide a comprehensive scope, timeline, and free consultation within 24 hours."
+      />
 
       <section className="py-10 md:py-12 bg-[#e6f7f2]/50">
 
@@ -1485,7 +1405,6 @@ export default function ServiceDetail() {
             </h2>
 
           </div>
-
 
           <div
             className="
@@ -1568,10 +1487,6 @@ export default function ServiceDetail() {
                     }}
                   >
 
-                    {/* ==========================
-                        ICON
-                    ========================== */}
-
                     <div
                       className="
                         service-card-icon
@@ -1626,11 +1541,6 @@ export default function ServiceDetail() {
 
                     </div>
 
-
-                    {/* ==========================
-                        CARD TITLE
-                    ========================== */}
-
                     <h3
                       className="
                         service-card-title
@@ -1658,11 +1568,6 @@ export default function ServiceDetail() {
                     >
                       {sub.title}
                     </h3>
-
-
-                    {/* ==========================
-                        CARD DESCRIPTION
-                    ========================== */}
 
                     <p
                       className="
@@ -1709,13 +1614,6 @@ export default function ServiceDetail() {
 
       </section>
 
-
-
-
-      {/* ==================================================
-          FAQ
-      ================================================== */}
-
       <section className="py-10 md:py-12 bg-[#e6f7f2]/50">
 
         <div className="container-x">
@@ -1743,7 +1641,6 @@ export default function ServiceDetail() {
             </h2>
 
           </div>
-
 
           <div
             className="
@@ -1808,7 +1705,6 @@ export default function ServiceDetail() {
                         {faq.q}
                       </span>
 
-
                       <div
                         className="
                           w-8
@@ -1847,7 +1743,6 @@ export default function ServiceDetail() {
                       </div>
 
                     </button>
-
 
                     <AnimatePresence>
 
@@ -1901,11 +1796,6 @@ export default function ServiceDetail() {
         </div>
 
       </section>
-
-
-      {/* ==================================================
-          CTA
-      ================================================== */}
 
       <CTA />
 

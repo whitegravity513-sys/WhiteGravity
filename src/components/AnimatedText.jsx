@@ -1,18 +1,13 @@
 import React, { useRef } from 'react';
 import { motion, useInView } from 'framer-motion';
 
-export default function AnimatedText({ text, children, className = '', mode = 'chars' }) {
+export default function AnimatedText({ text, children, className = '', mode: _mode = 'chars' }) {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: '-10%' });
 
-  // If children are passed, we animate the children as a block for simplicity.
-  // But to do typewriter on complex DOM, it's tricky.
-  // Instead, let's just do a nice staggered reveal for the whole heading block.
-  // If `text` is passed as string, we can do letter by letter.
-  
   if (text) {
     const items = text.split(' ');
-    
+
     return (
       <motion.span
         ref={ref}
@@ -41,7 +36,6 @@ export default function AnimatedText({ text, children, className = '', mode = 'c
     );
   }
 
-  // Fallback for complex children (like <span> tags)
   return (
     <motion.span
       ref={ref}
