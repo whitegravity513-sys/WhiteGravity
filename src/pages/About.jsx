@@ -23,7 +23,7 @@ export default function About() {
     {
       icon: Rocket,
       title: "Our Vision",
-      desc: "To become one of India's most trusted digital transformation companies by delivering world-class technology solutions that inspire innovation and help businesses succeed in the digital era.",
+      desc: "To become one of the most trusted digital transformation companies in the US by delivering world-class technology solutions that inspire innovation and help businesses succeed in the digital era.",
     },
     {
       icon: Handshake,
@@ -112,12 +112,12 @@ export default function About() {
                     font-normal
                   "
                 >
-                  White Gravity Web Solutions is a premium IT
-                  company in Noida. We specialize in custom
-                  software architecture, high-performance
-                  website development, and targeted digital
-                  marketing campaigns that drive measurable
-                  ROI.
+                  White Gravity Web Solutions is a premier IT
+                  company serving businesses across the US. We
+                  specialize in custom software architecture,
+                  high-performance website development, and
+                  targeted digital marketing campaigns that
+                  drive measurable ROI.
                 </p>
               </div>
 

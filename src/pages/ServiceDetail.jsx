@@ -124,7 +124,7 @@ const DETAILED_SERVICES_CONTENT = {
     ],
 
     faqsTitle:
-      'Frequently Asked Questions — Custom Software Development in Noida',
+      'Frequently Asked Questions — Custom Software Development in the US',
 
     faqs: [
       {
@@ -165,7 +165,7 @@ const DETAILED_SERVICES_CONTENT = {
       'Custom Website Development Services by White Gravity',
 
     tailoredDesc:
-      "Website development in Noida is one of White Gravity's core specialties. We create modern, high-performing websites that do more than just look impressive—they help businesses grow. Every website is built with a focus on speed, responsive design, SEO best practices, and a seamless user experience across all devices.\n\nWhether you need a business website, corporate portal, portfolio, landing page, eCommerce store, or a custom web solution, our experienced team delivers websites tailored to your goals. At White Gravity, we combine creative design with powerful development to build websites that strengthen your online presence and drive measurable business results.",
+      "Website development in the US is one of White Gravity's core specialties. We create modern, high-performing websites that do more than just look impressive—they help businesses grow. Every website is built with a focus on speed, responsive design, SEO best practices, and a seamless user experience across all devices.\n\nWhether you need a business website, corporate portal, portfolio, landing page, eCommerce store, or a custom web solution, our experienced team delivers websites tailored to your goals. At White Gravity, we combine creative design with powerful development to build websites that strengthen your online presence and drive measurable business results.",
 
     tailoredImg: '/images/service-website.jpg',
 
@@ -212,7 +212,7 @@ const DETAILED_SERVICES_CONTENT = {
     ],
 
     faqsTitle:
-      'Frequently Asked Questions — Website Development in Noida',
+      'Frequently Asked Questions — Website Development in the US',
 
     faqs: [
       {
@@ -242,16 +242,16 @@ const DETAILED_SERVICES_CONTENT = {
     pill: 'E-Commerce',
 
     heroTitle:
-      'ECommerce Development in Noida',
+      'ECommerce Development in the US',
 
     heroSubtitle:
       'Build powerful, secure, and scalable online stores tailored to your business. We develop high-performance eCommerce websites that deliver seamless shopping experiences and drive more sales.',
 
     tailoredTitle:
-      'Grow Your Business with Professional ECommerce Development in Noida',
+      'Grow Your Business with Professional ECommerce Development in the US',
 
     tailoredDesc:
-      "ECommerce development in Noida is one of White Gravity's core services. We build modern, secure, and scalable online stores that are designed to deliver exceptional user experiences and drive business growth.\n\nWhether you're launching a new eCommerce brand or expanding an existing business, our team provides end-to-end development solutions. From custom storefront design and product catalog management to secure payment gateway integration, inventory management, order processing, and shipping solutions, we ensure every aspect of your online store is optimized for success.",
+      "ECommerce development in the US is one of White Gravity's core services. We build modern, secure, and scalable online stores that are designed to deliver exceptional user experiences and drive business growth.\n\nWhether you're launching a new eCommerce brand or expanding an existing business, our team provides end-to-end development solutions. From custom storefront design and product catalog management to secure payment gateway integration, inventory management, order processing, and shipping solutions, we ensure every aspect of your online store is optimized for success.",
 
     tailoredImg: '/images/service-ecommerce.jpg',
 
@@ -298,7 +298,7 @@ const DETAILED_SERVICES_CONTENT = {
     ],
 
     faqsTitle:
-      'Frequently Asked Questions — ECommerce Development in Noida',
+      'Frequently Asked Questions — ECommerce Development in the US',
 
     faqs: [
       {
@@ -328,13 +328,13 @@ const DETAILED_SERVICES_CONTENT = {
     pill: 'Mobile App Development',
 
     heroTitle:
-      'Mobile App Development in Noida',
+      'Mobile App Development in the US',
 
     heroSubtitle:
       'Custom mobile app development for iOS and Android, delivering intuitive user experiences, robust functionality, and scalable solutions from concept to launch.',
 
     tailoredTitle:
-      'Expert Mobile App Development in Noida',
+      'Expert Mobile App Development in the US',
 
     tailoredDesc:
       "At White Gravity, we specialize in developing custom mobile applications that help businesses connect with customers, streamline operations, and accelerate digital growth. Our team creates high-performance Android and iOS apps with intuitive user experiences, modern designs, and scalable architectures tailored to your business objectives.\n\nFrom strategy and UI/UX design to app development, API integration, testing, deployment, and ongoing maintenance, we provide end-to-end mobile app development services. Whether you need a customer-facing application, an enterprise mobility solution, an eCommerce app, or an on-demand service platform, we build secure, reliable, and feature-rich mobile applications that deliver exceptional performance across devices.",
@@ -384,7 +384,7 @@ const DETAILED_SERVICES_CONTENT = {
     ],
 
     faqsTitle:
-      'Frequently Asked Questions — Mobile App Development in Noida',
+      'Frequently Asked Questions — Mobile App Development in the US',
 
     faqs: [
       {
@@ -414,16 +414,16 @@ const DETAILED_SERVICES_CONTENT = {
     pill: 'Web App Development',
 
     heroTitle:
-      'Web App Development in Noida',
+      'Web App Development in the US',
 
     heroSubtitle:
       'Build secure, scalable, and high-performance web applications tailored to your business needs. We develop custom SaaS platforms, enterprise solutions, customer portals, and business dashboards designed for long-term growth.',
 
     tailoredTitle:
-      'Custom Web Application Development in Noida for Modern Businesses',
+      'Custom Web Application Development in the US for Modern Businesses',
 
     tailoredDesc:
-      'Web app development in Noida is a key service at White Gravity, where we build custom web applications that help businesses streamline operations, improve productivity, and accelerate digital growth. Our solutions are designed with performance, security, and scalability in mind, ensuring they evolve alongside your business. Whether you need a custom CRM, ERP system, customer portal, SaaS platform, business dashboard, booking system, or workflow automation tool, our experienced developers deliver feature-rich applications tailored to your unique requirements. Using modern technologies and industry best practices, we create intuitive, reliable, and high-performing web applications that provide seamless user experiences across all devices.',
+      'Web app development in the US is a key service at White Gravity, where we build custom web applications that help businesses streamline operations, improve productivity, and accelerate digital growth. Our solutions are designed with performance, security, and scalability in mind, ensuring they evolve alongside your business. Whether you need a custom CRM, ERP system, customer portal, SaaS platform, business dashboard, booking system, or workflow automation tool, our experienced developers deliver feature-rich applications tailored to your unique requirements. Using modern technologies and industry best practices, we create intuitive, reliable, and high-performing web applications that provide seamless user experiences across all devices.',
 
     tailoredImg:
       '/images/service-webapp.jpg',
@@ -471,7 +471,7 @@ const DETAILED_SERVICES_CONTENT = {
     ],
 
     faqsTitle:
-      'Frequently Asked Questions — Web App Development in Noida',
+      'Frequently Asked Questions — Web App Development in the US',
 
     faqs: [
       {
@@ -642,7 +642,7 @@ const DETAILED_SERVICES_CONTENT = {
     ],
 
     faqsTitle:
-      'Frequently Asked Questions — Digital Marketing in Noida',
+      'Frequently Asked Questions — Digital Marketing in the US',
 
     faqs: [
       {
@@ -729,7 +729,7 @@ const DETAILED_SERVICES_CONTENT = {
     ],
 
     faqsTitle:
-      'Frequently Asked Questions — Meta & Google Ads in Noida',
+      'Frequently Asked Questions — Meta & Google Ads in the US',
 
     faqs: [
       {
@@ -740,7 +740,7 @@ const DETAILED_SERVICES_CONTENT = {
       {
         q: 'What budget is needed to start running ad campaigns?',
         a:
-          'We design flexible campaign budgets starting from ₹15,000/month up to enterprise scaling budgets.'
+          'We design flexible campaign budgets starting from $500/month up to enterprise scaling budgets.'
       },
       {
         q: 'How do you optimize cost-per-lead (CPL) and ROAS?',
@@ -759,7 +759,7 @@ const DETAILED_SERVICES_CONTENT = {
     pill: 'Zoho Consultation',
 
     heroTitle:
-      'Zoho Consultation & Implementation in Noida',
+      'Zoho Consultation & Implementation in the US',
 
     heroSubtitle:
       'Streamline Your Entire Business Operations with Certified Zoho One Experts',
@@ -816,11 +816,11 @@ const DETAILED_SERVICES_CONTENT = {
     ],
 
     faqsTitle:
-      'Frequently Asked Questions — Zoho Consultation in Noida',
+      'Frequently Asked Questions — Zoho Consultation in the US',
 
     faqs: [
       {
-        q: 'Why choose White Gravity as your Zoho Partner in Noida?',
+        q: 'Why choose White Gravity as your Zoho Partner in the US?',
         a:
           'Our certified Zoho experts bring years of domain experience across CRM, ERP, and Zoho One apps to ensure smooth deployment and maximum ROI.'
       },
@@ -901,7 +901,7 @@ const getDefaultContent = (service) => ({
   ],
 
   faqsTitle:
-    `Frequently Asked Questions — ${service.title} in Noida`,
+    `Frequently Asked Questions — ${service.title} in the US`,
 
   faqs: [
     {
@@ -1382,7 +1382,7 @@ export default function ServiceDetail() {
       <QuickContactSection
         defaultService={content.pill || 'Website Development'}
         title={`Get a Free Proposal for ${content.pill || 'Your Project'}`}
-        subtitle="Tell us your project requirements. Our Noida-based senior engineering team will provide a comprehensive scope, timeline, and free consultation within 24 hours."
+        subtitle="Tell us your project requirements. Our senior engineering team will provide a comprehensive scope, timeline, and free consultation within 24 hours."
       />
 
       <section className="py-10 md:py-12 bg-[#e6f7f2]/50">

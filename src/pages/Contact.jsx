@@ -220,7 +220,7 @@ export default function Contact() {
                   </div>
                   <div>
                     <h4 className="font-bold text-[#009B6C] text-sm">Main Office</h4>
-                    <p className="text-slate-700 text-sm leading-relaxed">LG-04, Dallas 1 Business Park<br />H-202, Sector 63, Noida, U.P - 201301</p>
+                    <p className="text-slate-700 text-sm leading-relaxed">United States</p>
                   </div>
                 </div>
               </div>
@@ -346,7 +346,7 @@ export default function Contact() {
       {}
       <section className="container-x pb-12">
         <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.3 }} className="rounded-2xl overflow-hidden shadow-lg border-4 border-white">
-          <iframe title="map" src="https://www.google.com/maps?q=Sector+63+Noida&output=embed" className="w-full h-[300px] md:h-[420px] border-0" loading="lazy" />
+          <iframe title="map" src="https://www.google.com/maps?q=United+States&output=embed" className="w-full h-[300px] md:h-[420px] border-0" loading="lazy" />
         </motion.div>
       </section>
 

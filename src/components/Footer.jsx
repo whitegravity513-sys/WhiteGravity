@@ -332,7 +332,7 @@ export default function Footer() {
             {
               type: "clutch",
               title: "ECOMMERCE AGENCIES",
-              location: "INDIA",
+              location: "UNITED STATES",
               year: "2023",
             },
           ].map((badge, index) => (
@@ -594,7 +594,7 @@ export default function Footer() {
             <span className="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse shrink-0" />
 
             <p>
-              Made with care in Noida, India.
+              Made with care in the United States.
             </p>
           </div>
         </div>

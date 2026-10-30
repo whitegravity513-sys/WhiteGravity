@@ -79,7 +79,7 @@ export default function Hero() {
             variants={fadeUp}
             className="mt-4 sm:mt-5 text-white/90 text-xs sm:text-sm md:text-base leading-relaxed max-w-2xl font-light pr-0 lg:pr-6 text-justify"
           >
-            White Gravity Web Solutions delivers custom Website development & Mobile App development, custom CRM Development, E-Commerce, Zoho and business automation solutions for businesses in Noida and across India.
+            White Gravity Web Solutions delivers custom Website development & Mobile App development, custom CRM Development, E-Commerce, Zoho and business automation solutions for businesses across the United States.
           </motion.p>
 
           <motion.div

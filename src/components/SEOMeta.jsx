@@ -84,7 +84,7 @@ export default function SEOMeta({ page, isNotFound = false }) {
           '@id': 'https://whitegravity.in/#website',
           'url': 'https://whitegravity.in/',
           'name': COMPANY.name,
-          'description': 'IT and Software Company in Noida providing Custom Software, Web & Mobile App Development, CRM/ERP, and Digital Marketing.',
+          'description': 'IT and Software Company in the US providing Custom Software, Web & Mobile App Development, CRM/ERP, and Digital Marketing.',
           'publisher': {
             '@id': 'https://whitegravity.in/#organization',
           },
@@ -97,19 +97,13 @@ export default function SEOMeta({ page, isNotFound = false }) {
           'url': 'https://whitegravity.in/',
           'telephone': COMPANY.phones[0] || '+91-921-713-5322',
           'email': COMPANY.emails[0] || 'info@whitegravity.in',
-          'priceRange': '₹₹',
+          'priceRange': '$$',
           'address': {
             '@type': 'PostalAddress',
-            'streetAddress': 'LG-04, Dallas 1 Business Park, H-202, Sector 63',
-            'addressLocality': 'Noida',
-            'addressRegion': 'Uttar Pradesh',
-            'postalCode': '201301',
-            'addressCountry': 'IN',
-          },
-          'geo': {
-            '@type': 'GeoCoordinates',
-            'latitude': 28.6280,
-            'longitude': 77.3789,
+            'streetAddress': 'United States',
+            'addressLocality': 'United States',
+            'addressRegion': 'US',
+            'addressCountry': 'US',
           },
           'sameAs': [
             COMPANY.socials?.facebook,
@@ -117,12 +111,9 @@ export default function SEOMeta({ page, isNotFound = false }) {
             COMPANY.socials?.linkedin,
           ].filter(Boolean),
           'areaServed': [
-            'Noida',
-            'Greater Noida',
-            'Noida Extension',
-            'Delhi NCR',
-            'Ghaziabad',
-            'India',
+            'United States',
+            'USA',
+            'Nationwide',
           ],
         },
         {
@@ -134,8 +125,8 @@ export default function SEOMeta({ page, isNotFound = false }) {
             '@id': 'https://whitegravity.in/#organization',
           },
           'areaServed': {
-            '@type': 'City',
-            'name': 'Noida',
+            '@type': 'Country',
+            'name': 'United States',
           },
           'description': page.metaDescription,
           'url': canonicalUrl,
@@ -153,7 +144,7 @@ export default function SEOMeta({ page, isNotFound = false }) {
             {
               '@type': 'ListItem',
               'position': 2,
-              'name': 'Services in Noida',
+              'name': 'Services in USA',
               'item': 'https://whitegravity.in/services',
             },
             {

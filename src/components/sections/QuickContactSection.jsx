@@ -6,7 +6,7 @@ import { COMPANY } from '../../data/mock';
 export default function QuickContactSection({
   defaultService = 'Website Development',
   title = "Ready to Build Something Exceptional?",
-  subtitle = "Discuss your requirements with our senior team in Sector 63, Noida. Get a free proposal & estimate within 24 hours."
+  subtitle = "Discuss your requirements with our senior team. Get a free proposal & estimate within 24 hours."
 }) {
   const [form, setForm] = useState({
     name: '',
@@ -179,9 +179,9 @@ export default function QuickContactSection({
                   <MapPin className="w-4 h-4 text-[#009B6C]" />
                 </div>
                 <div>
-                  <div className="text-[11px] font-bold uppercase tracking-wider text-slate-400">Noida Office</div>
+                  <div className="text-[11px] font-bold uppercase tracking-wider text-slate-400">Headquarters</div>
                   <div className="text-xs font-semibold text-slate-800 leading-snug">
-                    Sector 63, Noida, Uttar Pradesh - 201301
+                    United States
                   </div>
                 </div>
               </div>

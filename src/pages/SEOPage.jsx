@@ -83,7 +83,7 @@ export default function SEOPage() {
   const [openFaq, setOpenFaq] = useState(0);
 
   if (!slug) {
-    return <Navigate to="/website-development-company-noida" replace />;
+    return <Navigate to="/website-development-company-usa" replace />;
   }
 
   const page = getSeoPageData(slug);
@@ -155,7 +155,7 @@ export default function SEOPage() {
                 className="flex items-center gap-2"
               >
                 <Link to="/services" itemProp="item" className="hover:text-white transition-colors">
-                  <span itemProp="name">Services in Noida</span>
+                  <span itemProp="name">Services in USA</span>
                 </Link>
                 <meta itemProp="position" content="2" />
                 <ChevronRight className="w-3.5 h-3.5 text-emerald-200/70" />
@@ -217,8 +217,8 @@ export default function SEOPage() {
                   <div className="text-xs text-emerald-100 font-medium">Projects Delivered</div>
                 </div>
                 <div className="bg-white/10 p-3 rounded-2xl">
-                  <div className="text-xl sm:text-2xl font-black text-white">Sec 63</div>
-                  <div className="text-xs text-emerald-100 font-medium">Noida Office</div>
+                  <div className="text-xl sm:text-2xl font-black text-white">US</div>
+                  <div className="text-xs text-emerald-100 font-medium">Headquarters</div>
                 </div>
                 <div className="bg-white/10 p-3 rounded-2xl">
                   <div className="text-xl sm:text-2xl font-black text-white">100%</div>
@@ -241,7 +241,7 @@ export default function SEOPage() {
       <QuickContactSection
         defaultService={page.title}
         title={`Get a Free Proposal for ${page.title}`}
-        subtitle={`Tell us about your project requirements. Our senior Noida developers will analyze your goals and share a custom scope, architecture plan, and transparent quote within 24 hours.`}
+        subtitle={`Tell us about your project requirements. Our senior engineering team will analyze your goals and share a custom scope, architecture plan, and transparent quote within 24 hours.`}
       />
 
       <section className="py-12 sm:py-16 bg-white border-b border-slate-100">
@@ -323,7 +323,7 @@ export default function SEOPage() {
                       <ArrowRight className="w-3.5 h-3.5" />
                     </button>
                     <span className="text-[11px] font-semibold text-slate-400">
-                      Noida & NCR
+                      Across the US
                     </span>
                   </div>
                 </div>
@@ -338,7 +338,7 @@ export default function SEOPage() {
           <div className="text-center max-w-3xl mx-auto mb-12 sm:mb-14">
             <SectionPill icon={Award}>Why Partner With Us</SectionPill>
             <h2 className="mt-3 text-2xl sm:text-3xl md:text-4xl font-extrabold text-slate-900 tracking-tight">
-              Why Choose White Gravity in Noida
+              Why Choose White Gravity in the US
             </h2>
             <p className="mt-3 text-sm sm:text-base text-slate-600">
               Accountable technology and growth partnerships backed by senior in-house developers.
@@ -376,7 +376,7 @@ export default function SEOPage() {
               Frequently Asked Questions
             </h2>
             <p className="mt-3 text-sm sm:text-base text-slate-600">
-              Everything you need to know about our {page.title.toLowerCase()} in Noida.
+              Everything you need to know about our {page.title.toLowerCase()} in the US.
             </p>
           </div>
 
@@ -425,7 +425,7 @@ export default function SEOPage() {
           <div className="container-x max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center max-w-2xl mx-auto mb-8">
               <h2 className="text-xl sm:text-2xl font-extrabold text-slate-900 tracking-tight">
-                Related Services in Noida
+                Related Services in USA
               </h2>
               <p className="text-xs sm:text-sm text-slate-600 mt-1">
                 Complementary digital services frequently paired with {page.title}.
@@ -463,7 +463,7 @@ export default function SEOPage() {
             Ready to Start Your Project with White Gravity?
           </h2>
           <p className="mt-3 text-emerald-50 text-sm sm:text-base max-w-2xl mx-auto leading-relaxed">
-            Discuss your requirements with our Noida team. We provide free consultations with full architecture roadmaps.
+            Discuss your requirements with our team. We provide free consultations with full architecture roadmaps.
           </p>
           <div className="mt-6 flex flex-col sm:flex-row items-center justify-center gap-4">
             <a

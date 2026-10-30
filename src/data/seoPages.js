@@ -1,39 +1,39 @@
 
 export const SEO_PAGES_DATA = {
-  'website-development-company-noida': {
-    slug: 'website-development-company-noida',
-    title: 'Website Development Company in Noida',
-    tagline: 'Custom, High-Performance Web Development Services in Noida & NCR',
-    metaTitle: 'Website Development Company Noida | White Gravity',
-    metaDescription: 'Professional website development company in Noida. We build fast, scalable, mobile-friendly custom websites and web applications tailored to your business.',
+  'website-development-company-usa': {
+    slug: 'website-development-company-usa',
+    title: 'Website Development Company in the US',
+    tagline: 'Custom, High-Performance Web Development Services in the US',
+    metaTitle: 'Website Development Company US | White Gravity',
+    metaDescription: 'Professional website development company in the US. We build fast, scalable, mobile-friendly custom websites and web applications tailored to your business.',
     heroImg: '/images/service-website.jpg',
     heroImgAlt: 'Modern responsive website development on desktop and mobile devices',
     showcaseImg: '/images/portfolio-kartavyam.png',
     showcaseImgAlt: 'Client website project developed by White Gravity Web Solutions',
     keywords: [
-      'Website Development Company Noida',
-      'Web Development Company Noida',
-      'Custom Website Development Company Noida',
-      'Website Development Services Noida',
-      'Website Design and Development Company Noida',
+      'Website Development Company US',
+      'Web Development Company US',
+      'Custom Website Development Company US',
+      'Website Development Services US',
+      'Website Design and Development Company US',
     ],
     hero: {
-      badge: 'Premier Web Engineering in Noida',
-      heading: 'Website Development Company in Noida',
-      subheading: 'High-performance, secure, and conversion-optimized websites engineered to turn visitors into paying clients. Built with cutting-edge tech stacks for startups, growing SMBs, and established enterprises across Noida and NCR.',
+      badge: 'Premier Web Engineering in the US',
+      heading: 'Website Development Company in the US',
+      subheading: 'High-performance, secure, and conversion-optimized websites engineered to turn visitors into paying clients. Built with cutting-edge tech stacks for startups, growing SMBs, and established enterprises across the United States.',
       primaryCta: 'Book Free Strategy Call',
       secondaryCta: 'Explore Services',
     },
     intro: {
       whatIs: 'Professional website development is far more than building visual layouts—it is the engineering of your brand\'s primary digital headquarters. It combines rock-solid server architecture, intuitive frontend code, robust security protocols, and lightning-fast loading speeds to provide an effortless user experience across every device.',
-      whoNeeds: 'Startups looking to establish an immediate market foothold, local businesses in Noida transitioning online, B2B companies requiring lead-generation funnels, and enterprises seeking to modernize outdated web platforms.',
+      whoNeeds: 'Startups looking to establish an immediate market foothold, local businesses across the US transitioning online, B2B companies requiring lead-generation funnels, and enterprises seeking to modernize outdated web platforms.',
       problemsSolved: [
         'Slow loading times causing high bounce rates and lost customer inquiries',
         'Inflexible legacy platforms that break on modern mobile and tablet screens',
         'Lack of technical SEO foundations hurting organic Google visibility',
         'Complex maintenance bottlenecks requiring developer intervention for simple tasks',
       ],
-      howWeHelp: 'At White Gravity, our Noida-based engineering team builds custom websites using React, Next.js, Node.js, PHP/Laravel, and modern headless CMS platforms. We prioritize sub-second load times, clean code standards, mobile-first responsiveness, and structured conversion paths.',
+      howWeHelp: 'At White Gravity, our US-focused engineering team builds custom websites using React, Next.js, Node.js, PHP/Laravel, and modern headless CMS platforms. We prioritize sub-second load times, clean code standards, mobile-first responsiveness, and structured conversion paths.',
     },
     services: [
       {
@@ -69,8 +69,8 @@ export const SEO_PAGES_DATA = {
     ],
     whyChooseUs: [
       {
-        title: 'Local Noida Engineering Team',
-        desc: 'Work directly with accessible developers and technical architects based in Sector 63, Noida, ensuring direct communication and rapid turnaround.',
+        title: 'Local US Engineering Team',
+        desc: 'Work directly with accessible developers and technical architects serving businesses nationwide in the US, ensuring direct communication and rapid turnaround.',
       },
       {
         title: 'Performance & Speed First',
@@ -89,7 +89,7 @@ export const SEO_PAGES_DATA = {
       {
         step: '01',
         title: 'Requirement Discovery',
-        desc: 'We analyze your business model, target audience in Noida/NCR, functional requirements, and competitive landscape.',
+        desc: 'We analyze your business model, target audience across the US, functional requirements, and competitive landscape.',
       },
       {
         step: '02',
@@ -118,14 +118,14 @@ export const SEO_PAGES_DATA = {
       },
     ],
     contextualLinks: [
-      { slug: 'website-design-company-noida', anchor: 'Website Design Company in Noida' },
-      { slug: 'web-application-development-noida', anchor: 'Web Application Development in Noida' },
-      { slug: 'ecommerce-development-noida', anchor: 'Ecommerce Development Company in Noida' },
+      { slug: 'website-design-company-usa', anchor: 'Website Design Company in the US' },
+      { slug: 'web-application-development-usa', anchor: 'Web Application Development in the US' },
+      { slug: 'ecommerce-development-usa', anchor: 'Ecommerce Development Company in the US' },
     ],
     faqs: [
       {
-        q: 'What does website development cost in Noida?',
-        a: 'Website development costs in Noida depend on project complexity, number of pages, custom features, and third-party integrations. A standard corporate website generally starts around ₹25,000 to ₹50,000, while complex custom web applications or ecommerce portals range higher based on specific scope. We provide transparent, itemized quotes with no hidden fees.',
+        q: 'What does website development cost in the US?',
+        a: 'Website development costs in the US depend on project complexity, number of pages, custom features, and third-party integrations. A standard corporate website generally starts around $500 to $2,500, while complex custom web applications or ecommerce portals range higher based on specific scope. We provide transparent, itemized quotes with no hidden fees.',
       },
       {
         q: 'How long does it take to develop a custom website?',
@@ -146,24 +146,24 @@ export const SEO_PAGES_DATA = {
     ],
   },
 
-  'website-design-company-noida': {
-    slug: 'website-design-company-noida',
-    title: 'Website Design Company in Noida',
-    tagline: 'Stunning UI/UX and User-Centric Web Design Agency in Noida',
-    metaTitle: 'Website Design Company Noida | White Gravity',
-    metaDescription: 'Award-winning website design company in Noida creating modern, responsive, and conversion-focused UI/UX designs that elevate brand perception.',
+  'website-design-company-usa': {
+    slug: 'website-design-company-usa',
+    title: 'Website Design Company in the US',
+    tagline: 'Stunning UI/UX and User-Centric Web Design Agency in the US',
+    metaTitle: 'Website Design Company US | White Gravity',
+    metaDescription: 'Award-winning website design company in the US creating modern, responsive, and conversion-focused UI/UX designs that elevate brand perception.',
     heroImg: '/images/service-website.jpg',
     heroImgAlt: 'Custom UI/UX website design layout and visual prototyping',
     showcaseImg: '/images/portfolio-decortiq.png',
     showcaseImgAlt: 'Premium interior design website UI designed by White Gravity',
     keywords: [
-      'Website Design Company Noida',
-      'Web Design Agency Noida',
-      'Website Design and Development Company Noida',
+      'Website Design Company US',
+      'Web Design Agency US',
+      'Website Design and Development Company US',
     ],
     hero: {
       badge: 'Creative UI/UX Design Studio',
-      heading: 'Website Design Company in Noida',
+      heading: 'Website Design Company in the US',
       subheading: 'Transform your brand perception with custom, user-focused web designs. We create immersive digital experiences that captivate your visitors and guide them intuitively toward taking action.',
       primaryCta: 'Book Free Strategy Call',
       secondaryCta: 'View Design Approach',
@@ -177,7 +177,7 @@ export const SEO_PAGES_DATA = {
         'Inconsistent brand identity across digital touchpoints weakening consumer trust',
         'Low conversion rates due to hidden or uninspiring call-to-action buttons',
       ],
-      howWeHelp: 'Our creative design team in Noida blends modern aesthetic trends with conversion science. We design custom Figma prototypes, validate user flows, implement responsive design systems, and ensure pixel-perfect delivery on all screen resolutions.',
+      howWeHelp: 'Our creative design team in the US blends modern aesthetic trends with conversion science. We design custom Figma prototypes, validate user flows, implement responsive design systems, and ensure pixel-perfect delivery on all screen resolutions.',
     },
     services: [
       {
@@ -262,9 +262,9 @@ export const SEO_PAGES_DATA = {
       },
     ],
     contextualLinks: [
-      { slug: 'website-development-company-noida', anchor: 'Website Development Company in Noida' },
-      { slug: 'shopify-wordpress-development-noida', anchor: 'Shopify & WordPress Development in Noida' },
-      { slug: 'web-application-development-noida', anchor: 'Web Application Development in Noida' },
+      { slug: 'website-development-company-usa', anchor: 'Website Development Company in the US' },
+      { slug: 'shopify-wordpress-development-usa', anchor: 'Shopify & WordPress Development in the US' },
+      { slug: 'web-application-development-usa', anchor: 'Web Application Development in the US' },
     ],
     faqs: [
       {
@@ -290,30 +290,30 @@ export const SEO_PAGES_DATA = {
     ],
   },
 
-  'digital-marketing-agency-noida': {
-    slug: 'digital-marketing-agency-noida',
-    title: 'Digital Marketing Agency in Noida',
+  'digital-marketing-agency-usa': {
+    slug: 'digital-marketing-agency-usa',
+    title: 'Digital Marketing Agency in the US',
     tagline: 'ROI-Driven Digital Marketing Company Driving Qualified Inquiries',
-    metaTitle: 'Digital Marketing Agency Noida | White Gravity',
-    metaDescription: 'Results-driven digital marketing company in Noida offering technical SEO, Google Ads, Meta Ads, social media management, and high-intent lead generation.',
+    metaTitle: 'Digital Marketing Agency US | White Gravity',
+    metaDescription: 'Results-driven digital marketing company in the US offering technical SEO, Google Ads, Meta Ads, social media management, and high-intent lead generation.',
     heroImg: '/images/hero-digital-marketing.jpg',
     heroImgAlt: 'Digital marketing analytics and multi-channel campaign management',
     showcaseImg: '/images/service-ads.jpg',
     showcaseImgAlt: 'Google Ads and Meta advertising performance dashboard',
     keywords: [
-      'Digital Marketing Agency Noida',
-      'Digital Marketing Company Noida',
+      'Digital Marketing Agency US',
+      'Digital Marketing Company US',
     ],
     hero: {
       badge: 'Data-Driven Growth Agency',
-      heading: 'Digital Marketing Agency in Noida',
+      heading: 'Digital Marketing Agency in the US',
       subheading: 'Stop burning marketing budgets on vanity metrics. We build measurable, multi-channel customer acquisition funnels that generate qualified leads, boost online sales, and maximize marketing ROI.',
       primaryCta: 'Book Free Strategy Call',
       secondaryCta: 'Discover Channels',
     },
     intro: {
       whatIs: 'Modern digital marketing is the strategic combination of organic search visibility, high-intent paid advertising, social media engagement, and conversion rate optimization designed to connect your offerings with active buyers.',
-      whoNeeds: 'B2B companies seeking consistent inbound inquiries, B2C brands looking to accelerate sales, local service providers in Noida wanting geo-targeted customers, and businesses seeking profitable returns on ad spend.',
+      whoNeeds: 'B2B companies seeking consistent inbound inquiries, B2C brands looking to accelerate sales, local service providers in the US wanting geo-targeted customers, and businesses seeking profitable returns on ad spend.',
       problemsSolved: [
         'Wasting advertising budgets on non-targeted clicks that never turn into paying customers',
         'Relying solely on word-of-mouth with unpredictable, stagnant monthly revenue',
@@ -361,7 +361,7 @@ export const SEO_PAGES_DATA = {
       },
       {
         title: 'Transparent Real-Time Reporting',
-        desc: 'Custom analytics dashboards and monthly reviews showing exactly where every marketing rupee was invested and what it produced.',
+        desc: 'Custom analytics dashboards and monthly reviews showing exactly where every marketing dollar was invested and what it produced.',
       },
       {
         title: 'Integrated Tech & Marketing Team',
@@ -405,9 +405,9 @@ export const SEO_PAGES_DATA = {
       },
     ],
     contextualLinks: [
-      { slug: 'seo-company-noida', anchor: 'SEO Company in Noida' },
-      { slug: 'website-development-company-noida', anchor: 'Website Development Company in Noida' },
-      { slug: 'ecommerce-development-noida', anchor: 'Ecommerce Development in Noida' },
+      { slug: 'seo-company-usa', anchor: 'SEO Company in the US' },
+      { slug: 'website-development-company-usa', anchor: 'Website Development Company in the US' },
+      { slug: 'ecommerce-development-usa', anchor: 'Ecommerce Development in the US' },
     ],
     faqs: [
       {
@@ -424,7 +424,7 @@ export const SEO_PAGES_DATA = {
       },
       {
         q: 'Which platform is better for my business: Google Ads or Meta Ads?',
-        a: 'Google Ads is ideal for high-intent search queries where potential clients are actively looking for a service right now (e.g., "Software company in Noida"). Meta Ads (Facebook & Instagram) excels at visual storytelling, brand awareness, B2C offerings, and targeted retargeting. We recommend the optimal mix based on your business model.',
+        a: 'Google Ads is ideal for high-intent search queries where potential clients are actively looking for a service right now (e.g., "Software company in the US"). Meta Ads (Facebook & Instagram) excels at visual storytelling, brand awareness, B2C offerings, and targeted retargeting. We recommend the optimal mix based on your business model.',
       },
       {
         q: 'Can you handle lead routing directly to our sales team?',
@@ -433,36 +433,36 @@ export const SEO_PAGES_DATA = {
     ],
   },
 
-  'seo-company-noida': {
-    slug: 'seo-company-noida',
-    title: 'SEO Company in Noida',
+  'seo-company-usa': {
+    slug: 'seo-company-usa',
+    title: 'SEO Company in the US',
     tagline: 'Sustainable Organic Search Growth & First-Page Google Visibility',
-    metaTitle: 'SEO Company Noida | White Gravity',
-    metaDescription: 'Explore SEO services in Noida including technical SEO, on-page optimization, local SEO and content optimization for growing businesses.',
+    metaTitle: 'SEO Company US | White Gravity',
+    metaDescription: 'Explore SEO services in the US including technical SEO, on-page optimization, local SEO and content optimization for growing businesses.',
     heroImg: '/images/service-marketing.jpg',
     heroImgAlt: 'Search engine optimization and organic Google ranking strategy',
     showcaseImg: '/images/hero-digital-marketing.jpg',
     showcaseImgAlt: 'SEO traffic analytics and keyword tracking visualization',
     keywords: [
-      'SEO Company Noida',
-      'SEO Agency Noida',
-      'SEO Services Noida',
+      'SEO Company US',
+      'SEO Agency US',
+      'SEO Services US',
     ],
     hero: {
       badge: 'Organic Search Optimization Experts',
-      heading: 'SEO Company in Noida',
-      subheading: 'Earn high-intent search visibility that compounds month after month. We implement ethical, technical, and data-backed search engine optimization that puts your business directly in front of active searchers in Noida and global markets.',
+      heading: 'SEO Company in the US',
+      subheading: 'Earn high-intent search visibility that compounds month after month. We implement ethical, technical, and data-backed search engine optimization that puts your business directly in front of active searchers in the US and global markets.',
       primaryCta: 'Book Free Strategy Call',
       secondaryCta: 'Explore SEO Solutions',
     },
     intro: {
       whatIs: 'Search Engine Optimization (SEO) is the systematic process of enhancing your website\'s technical architecture, content relevance, and domain authority so search engines like Google rank your pages at the top of organic search results.',
-      whoNeeds: 'Companies spending too much on recurring pay-per-click ads, regional businesses wanting to dominate local Noida searches, and B2B enterprises seeking qualified, inbound organic leads without paying per click.',
+      whoNeeds: 'Companies spending too much on recurring pay-per-click ads, regional businesses wanting to dominate local US searches, and B2B enterprises seeking qualified, inbound organic leads without paying per click.',
       problemsSolved: [
         'Languishing on page 3 or 4 of Google where 95% of prospective clients never look',
         'Technical crawling and indexing errors preventing Google from understanding your site',
         'Thin or unoptimized content that fails to match what your prospective clients are searching for',
-        'Complete absence from Google Local Pack and Google Maps results in Noida',
+        'Complete absence from Google Local Pack and Google Maps results in the US',
       ],
       howWeHelp: 'We employ white-hat, Google-compliant SEO methodologies. We fix deep technical site architecture issues, perform exhaustive keyword and intent mapping, craft authoritative content, optimize Google Business Profiles, and build organic authority.',
     },
@@ -480,7 +480,7 @@ export const SEO_PAGES_DATA = {
       {
         iconName: 'MapPin',
         title: 'Local SEO & Google Business Profile',
-        desc: 'Dominating Noida search queries with Google Maps optimization, local citation building, and review generation frameworks.',
+        desc: 'Dominating US search queries with Google Maps optimization, local citation building, and review generation frameworks.',
       },
       {
         iconName: 'Search',
@@ -549,9 +549,9 @@ export const SEO_PAGES_DATA = {
       },
     ],
     contextualLinks: [
-      { slug: 'digital-marketing-agency-noida', anchor: 'Digital Marketing Agency in Noida' },
-      { slug: 'website-development-company-noida', anchor: 'Website Development Company in Noida' },
-      { slug: 'website-design-company-noida', anchor: 'Website Design Company in Noida' },
+      { slug: 'digital-marketing-agency-usa', anchor: 'Digital Marketing Agency in the US' },
+      { slug: 'website-development-company-usa', anchor: 'Website Development Company in the US' },
+      { slug: 'website-design-company-usa', anchor: 'Website Design Company in the US' },
     ],
     faqs: [
       {
@@ -563,8 +563,8 @@ export const SEO_PAGES_DATA = {
         a: 'No ethical SEO agency can guarantee a #1 ranking, as Google\'s algorithms consider hundreds of dynamic variables beyond any single agency\'s control. What we do guarantee is strict adherence to Google Webmaster Guidelines, meticulous technical execution, high-quality content, and measurable, upward ranking trajectories.',
       },
       {
-        q: 'What is Local SEO and why is it important for businesses in Noida?',
-        a: 'Local SEO optimizes your digital footprint to appear in location-specific searches (e.g., "SEO company in Noida" or "web developers near me"). It optimizes your Google Business Profile and local citations so your business appears in Google\'s 3-Pack Maps results, which drive significant local phone calls and foot traffic.',
+        q: 'What is Local SEO and why is it important for businesses across the US?',
+        a: 'Local SEO optimizes your digital footprint to appear in location-specific searches (e.g., "SEO company in the US" or "web developers near me"). It optimizes your Google Business Profile and local citations so your business appears in Google\'s 3-Pack Maps results, which drive significant local phone calls and foot traffic.',
       },
       {
         q: 'Can SEO replace paid advertising?',
@@ -577,23 +577,23 @@ export const SEO_PAGES_DATA = {
     ],
   },
 
-  'software-development-company-noida': {
-    slug: 'software-development-company-noida',
-    title: 'Software Development Company in Noida',
+  'software-development-company-usa': {
+    slug: 'software-development-company-usa',
+    title: 'Software Development Company in the US',
     tagline: 'Custom Enterprise Software, SaaS Platforms & Cloud Solutions',
-    metaTitle: 'Software Development Company Noida | White Gravity',
-    metaDescription: 'Custom software development company in Noida engineering secure enterprise software, cloud SaaS platforms, and automated business workflows.',
+    metaTitle: 'Software Development Company US | White Gravity',
+    metaDescription: 'Custom software development company in the US engineering secure enterprise software, cloud SaaS platforms, and automated business workflows.',
     heroImg: '/images/service-custom-software.jpg',
     heroImgAlt: 'Enterprise software development and cloud architecture engineering',
     showcaseImg: '/images/about-collaboration-new.jpg',
     showcaseImgAlt: 'White Gravity software development team architecting solutions',
     keywords: [
-      'Software Development Company Noida',
-      'Custom Software Development Company Noida',
+      'Software Development Company US',
+      'Custom Software Development Company US',
     ],
     hero: {
       badge: 'Enterprise Software Engineering',
-      heading: 'Software Development Company in Noida',
+      heading: 'Software Development Company in the US',
       subheading: 'Build scalable, secure, and mission-critical software solutions tailored exactly to your unique business logic. We turn complex operational requirements into high-performing software that powers organizational growth.',
       primaryCta: 'Book Free Strategy Call',
       secondaryCta: 'Review Capabilities',
@@ -692,9 +692,9 @@ export const SEO_PAGES_DATA = {
       },
     ],
     contextualLinks: [
-      { slug: 'crm-erp-development-noida', anchor: 'CRM & ERP Development in Noida' },
-      { slug: 'web-application-development-noida', anchor: 'Web Application Development in Noida' },
-      { slug: 'zoho-crm-consultant-noida', anchor: 'Zoho CRM Consultant in Noida' },
+      { slug: 'crm-erp-development-usa', anchor: 'CRM & ERP Development in the US' },
+      { slug: 'web-application-development-usa', anchor: 'Web Application Development in the US' },
+      { slug: 'zoho-crm-consultant-usa', anchor: 'Zoho CRM Consultant in the US' },
     ],
     faqs: [
       {
@@ -720,22 +720,22 @@ export const SEO_PAGES_DATA = {
     ],
   },
 
-  'web-application-development-noida': {
-    slug: 'web-application-development-noida',
-    title: 'Web Application Development in Noida',
+  'web-application-development-usa': {
+    slug: 'web-application-development-usa',
+    title: 'Web Application Development in the US',
     tagline: 'Scalable Full-Stack Web Apps, Client Portals & Cloud SaaS Solutions',
-    metaTitle: 'Web Application Development Noida | White Gravity',
-    metaDescription: 'Scalable web application development in Noida. We engineer full-stack web applications, SaaS tools, and client portals with modern React and cloud architectures.',
+    metaTitle: 'Web Application Development US | White Gravity',
+    metaDescription: 'Scalable web application development in the US. We engineer full-stack web applications, SaaS tools, and client portals with modern React and cloud architectures.',
     heroImg: '/images/service-webapp.jpg',
     heroImgAlt: 'Full-stack web application development and SaaS platform dashboard',
     showcaseImg: '/images/portfolio-poshpro.png',
     showcaseImgAlt: 'Web application platform engineered for client by White Gravity',
     keywords: [
-      'Web Application Development Company Noida',
+      'Web Application Development Company US',
     ],
     hero: {
       badge: 'Full-Stack Web App Engineering',
-      heading: 'Web Application Development Company in Noida',
+      heading: 'Web Application Development Company in the US',
       subheading: 'Deliver rich, desktop-grade software experiences directly in the web browser. We engineer high-concurrency, cloud-hosted web applications that empower users, automate operations, and scale effortlessly.',
       primaryCta: 'Book Free Strategy Call',
       secondaryCta: 'Explore Web App Solutions',
@@ -834,9 +834,9 @@ export const SEO_PAGES_DATA = {
       },
     ],
     contextualLinks: [
-      { slug: 'software-development-company-noida', anchor: 'Software Development Company in Noida' },
-      { slug: 'website-development-company-noida', anchor: 'Website Development Company in Noida' },
-      { slug: 'crm-erp-development-noida', anchor: 'CRM & ERP Development in Noida' },
+      { slug: 'software-development-company-usa', anchor: 'Software Development Company in the US' },
+      { slug: 'website-development-company-usa', anchor: 'Website Development Company in the US' },
+      { slug: 'crm-erp-development-usa', anchor: 'CRM & ERP Development in the US' },
     ],
     faqs: [
       {
@@ -862,23 +862,23 @@ export const SEO_PAGES_DATA = {
     ],
   },
 
-  'ecommerce-development-noida': {
-    slug: 'ecommerce-development-noida',
-    title: 'Ecommerce Development in Noida',
+  'ecommerce-development-usa': {
+    slug: 'ecommerce-development-usa',
+    title: 'Ecommerce Development in the US',
     tagline: 'High-Converting Online Stores, Shopify, WooCommerce & Custom Commerce',
-    metaTitle: 'Ecommerce Development Company Noida | White Gravity',
-    metaDescription: 'Premier ecommerce development company in Noida building fast, high-converting online stores, custom storefronts, and secure Indian payment/shipping workflows.',
+    metaTitle: 'Ecommerce Development Company US | White Gravity',
+    metaDescription: 'Premier ecommerce development company in the US building fast, high-converting online stores, custom storefronts, and secure Indian payment/shipping workflows.',
     heroImg: '/images/service-ecommerce.jpg',
     heroImgAlt: 'Modern ecommerce website development with shopping cart and payment integration',
     showcaseImg: '/images/portfolio-raaf.png',
     showcaseImgAlt: 'Live eCommerce beauty store developed by White Gravity',
     keywords: [
-      'Ecommerce Development Company Noida',
-      'Ecommerce Website Development Company Noida',
+      'Ecommerce Development Company US',
+      'Ecommerce Website Development Company US',
     ],
     hero: {
       badge: 'Online Store Engineering',
-      heading: 'Ecommerce Development Company in Noida',
+      heading: 'Ecommerce Development Company in the US',
       subheading: 'Turn online browsers into repeat buyers. We build fast, visually compelling, and frictionless ecommerce websites designed to maximize average order value, streamline checkouts, and scale catalog operations.',
       primaryCta: 'Book Free Strategy Call',
       secondaryCta: 'Explore Ecommerce Features',
@@ -977,9 +977,9 @@ export const SEO_PAGES_DATA = {
       },
     ],
     contextualLinks: [
-      { slug: 'shopify-wordpress-development-noida', anchor: 'Shopify & WordPress Development in Noida' },
-      { slug: 'website-development-company-noida', anchor: 'Website Development Company in Noida' },
-      { slug: 'digital-marketing-agency-noida', anchor: 'Digital Marketing Agency in Noida' },
+      { slug: 'shopify-wordpress-development-usa', anchor: 'Shopify & WordPress Development in the US' },
+      { slug: 'website-development-company-usa', anchor: 'Website Development Company in the US' },
+      { slug: 'digital-marketing-agency-usa', anchor: 'Digital Marketing Agency in the US' },
     ],
     faqs: [
       {
@@ -1005,23 +1005,23 @@ export const SEO_PAGES_DATA = {
     ],
   },
 
-  'shopify-wordpress-development-noida': {
-    slug: 'shopify-wordpress-development-noida',
-    title: 'Shopify & WordPress Development in Noida',
+  'shopify-wordpress-development-usa': {
+    slug: 'shopify-wordpress-development-usa',
+    title: 'Shopify & WordPress Development in the US',
     tagline: 'Expert CMS Engineering, Custom Themes & Plugin Customization',
-    metaTitle: 'Shopify & WordPress Development Noida | White Gravity',
-    metaDescription: 'Expert Shopify and WordPress development company in Noida providing custom themes, specialized plugin engineering, speed optimization, and CMS maintenance.',
+    metaTitle: 'Shopify & WordPress Development US | White Gravity',
+    metaDescription: 'Expert Shopify and WordPress development company in the US providing custom themes, specialized plugin engineering, speed optimization, and CMS maintenance.',
     heroImg: '/images/service-website.jpg',
     heroImgAlt: 'Shopify store and custom WordPress theme development',
     showcaseImg: '/images/portfolio-sejwal.png',
     showcaseImgAlt: 'Custom WordPress website developed by White Gravity',
     keywords: [
-      'Shopify Development Company Noida',
-      'WordPress Development Company Noida',
+      'Shopify Development Company US',
+      'WordPress Development Company US',
     ],
     hero: {
       badge: 'CMS Development Specialists',
-      heading: 'Shopify & WordPress Development in Noida',
+      heading: 'Shopify & WordPress Development in the US',
       subheading: 'Harness the global power of Shopify and WordPress with customized engineering. We design custom themes, build tailored plugins, and optimize performance so you never feel restricted by cookie-cutter templates.',
       primaryCta: 'Book Free Strategy Call',
       secondaryCta: 'View CMS Services',
@@ -1120,9 +1120,9 @@ export const SEO_PAGES_DATA = {
       },
     ],
     contextualLinks: [
-      { slug: 'ecommerce-development-noida', anchor: 'Ecommerce Development in Noida' },
-      { slug: 'website-development-company-noida', anchor: 'Website Development Company in Noida' },
-      { slug: 'website-design-company-noida', anchor: 'Website Design Company in Noida' },
+      { slug: 'ecommerce-development-usa', anchor: 'Ecommerce Development in the US' },
+      { slug: 'website-development-company-usa', anchor: 'Website Development Company in the US' },
+      { slug: 'website-design-company-usa', anchor: 'Website Design Company in the US' },
     ],
     faqs: [
       {
@@ -1148,25 +1148,25 @@ export const SEO_PAGES_DATA = {
     ],
   },
 
-  'crm-erp-development-noida': {
-    slug: 'crm-erp-development-noida',
-    title: 'CRM & ERP Development in Noida',
+  'crm-erp-development-usa': {
+    slug: 'crm-erp-development-usa',
+    title: 'CRM & ERP Development in the US',
     tagline: 'Custom CRM & ERP Software to Streamline Operations, Sales & Resources',
-    metaTitle: 'CRM & ERP Development Company Noida | White Gravity',
-    metaDescription: 'Explore custom CRM development services in Noida for lead management, employee workflows, sales operations and business automation.',
+    metaTitle: 'CRM & ERP Development Company US | White Gravity',
+    metaDescription: 'Explore custom CRM development services in the US for lead management, employee workflows, sales operations and business automation.',
     heroImg: '/images/service-crm.svg',
     heroImgAlt: 'Custom CRM and ERP enterprise software workflow and lead management',
     showcaseImg: '/images/service-custom-software.jpg',
     showcaseImgAlt: 'Custom enterprise business software dashboard',
     keywords: [
-      'CRM Development Company Noida',
-      'ERP Development Company Noida',
-      'Custom CRM Development Noida',
-      'Custom ERP Development Noida',
+      'CRM Development Company US',
+      'ERP Development Company US',
+      'Custom CRM Development US',
+      'Custom ERP Development US',
     ],
     hero: {
       badge: 'Business Automation & Enterprise Systems',
-      heading: 'CRM & ERP Development Company in Noida',
+      heading: 'CRM & ERP Development Company in the US',
       subheading: 'Unify your sales pipeline, employee workflows, inventory, and financial reporting under one intelligent, custom-built system. Replace chaotic spreadsheets with automated, centralized software engineered around your exact operations.',
       primaryCta: 'Book Free Strategy Call',
       secondaryCta: 'Explore CRM/ERP Modules',
@@ -1265,9 +1265,9 @@ export const SEO_PAGES_DATA = {
       },
     ],
     contextualLinks: [
-      { slug: 'software-development-company-noida', anchor: 'Software Development Company in Noida' },
-      { slug: 'zoho-crm-consultant-noida', anchor: 'Zoho CRM Consultant in Noida' },
-      { slug: 'web-application-development-noida', anchor: 'Web Application Development in Noida' },
+      { slug: 'software-development-company-usa', anchor: 'Software Development Company in the US' },
+      { slug: 'zoho-crm-consultant-usa', anchor: 'Zoho CRM Consultant in the US' },
+      { slug: 'web-application-development-usa', anchor: 'Web Application Development in the US' },
     ],
     faqs: [
       {
@@ -1293,22 +1293,22 @@ export const SEO_PAGES_DATA = {
     ],
   },
 
-  'zoho-crm-consultant-noida': {
-    slug: 'zoho-crm-consultant-noida',
-    title: 'Zoho CRM Consultant in Noida',
+  'zoho-crm-consultant-usa': {
+    slug: 'zoho-crm-consultant-usa',
+    title: 'Zoho CRM Consultant in the US',
     tagline: 'Authorized Zoho Setup, Deluge Automation & Custom Business Integration',
-    metaTitle: 'Zoho CRM Consultant Noida | White Gravity',
-    metaDescription: 'Authorized Zoho CRM consultant in Noida offering custom pipeline setup, Deluge automation, third-party integrations, and comprehensive team training.',
+    metaTitle: 'Zoho CRM Consultant US | White Gravity',
+    metaDescription: 'Authorized Zoho CRM consultant in the US offering custom pipeline setup, Deluge automation, third-party integrations, and comprehensive team training.',
     heroImg: '/images/service-zoho.jpg',
     heroImgAlt: 'Zoho CRM consultation, pipeline setup and Deluge script automation',
     showcaseImg: '/images/about-collaboration-new.jpg',
     showcaseImgAlt: 'Zoho consulting workflow mapping session',
     keywords: [
-      'Zoho CRM Consultant Noida',
+      'Zoho CRM Consultant US',
     ],
     hero: {
       badge: 'Certified Zoho Implementation Specialists',
-      heading: 'Zoho CRM Consultant in Noida',
+      heading: 'Zoho CRM Consultant in the US',
       subheading: 'Maximize your investment in the Zoho ecosystem. We configure, customize, and automate Zoho CRM and Zoho One to match your exact sales pipelines, eliminate manual data entry, and empower your sales team.',
       primaryCta: 'Book Free Strategy Call',
       secondaryCta: 'Discover Zoho Services',
@@ -1322,7 +1322,7 @@ export const SEO_PAGES_DATA = {
         'Inability to integrate Zoho with Indian communication tools like WhatsApp, local telephony, or Indiamart',
         'Messy, duplicate customer databases resulting in conflicting sales communications',
       ],
-      howWeHelp: 'Our Noida-based Zoho specialists configure custom pipelines, build automated blueprint stages, write custom Deluge functions, integrate telephony and WhatsApp, migrate your historical data, and train your staff for seamless adoption.',
+      howWeHelp: 'Our US-focused Zoho specialists configure custom pipelines, build automated blueprint stages, write custom Deluge functions, integrate telephony and WhatsApp, migrate your historical data, and train your staff for seamless adoption.',
     },
     services: [
       {
@@ -1362,8 +1362,8 @@ export const SEO_PAGES_DATA = {
         desc: 'We are experienced developers capable of writing complex Deluge functions and API integrations, not just basic drag-and-drop tweakers.',
       },
       {
-        title: 'Local Noida Consultation',
-        desc: 'Meet our consultants directly in Sector 63, Noida, for in-person workflow mapping, strategy sessions, and team training.',
+        title: 'Local US Consultation',
+        desc: 'Meet our consultants directly in the US, for in-person workflow mapping, strategy sessions, and team training.',
       },
       {
         title: 'End-to-End Business Integration',
@@ -1407,9 +1407,9 @@ export const SEO_PAGES_DATA = {
       },
     ],
     contextualLinks: [
-      { slug: 'crm-erp-development-noida', anchor: 'CRM & ERP Development in Noida' },
-      { slug: 'software-development-company-noida', anchor: 'Software Development Company in Noida' },
-      { slug: 'digital-marketing-agency-noida', anchor: 'Digital Marketing Agency in Noida' },
+      { slug: 'crm-erp-development-usa', anchor: 'CRM & ERP Development in the US' },
+      { slug: 'software-development-company-usa', anchor: 'Software Development Company in the US' },
+      { slug: 'digital-marketing-agency-usa', anchor: 'Digital Marketing Agency in the US' },
     ],
     faqs: [
       {
@@ -1417,7 +1417,7 @@ export const SEO_PAGES_DATA = {
         a: 'While basic Zoho setup seems straightforward, unlocking its true power requires advanced blueprint engineering, workflow automation, custom Deluge coding, and clean API integrations. Without expert guidance, companies often configure messy data structures that frustrate sales teams. We ensure your Zoho implementation is structured correctly from day one, saving months of trial and error.',
       },
       {
-        q: 'Can you integrate Zoho CRM with WhatsApp in India?',
+        q: 'Can you integrate Zoho CRM with WhatsApp and communication tools in the US?',
         a: 'Yes! We integrate official WhatsApp Business APIs with Zoho CRM, enabling your sales team to send automated WhatsApp templates upon lead receipt, trigger status updates, and chat with leads directly from their Zoho contact record.',
       },
       {
@@ -1437,21 +1437,36 @@ export const SEO_PAGES_DATA = {
 };
 
 export const SEO_SLUG_ALIASES = {
-  'crm-development-company-noida': 'crm-erp-development-noida',
-  'erp-development-company-noida': 'crm-erp-development-noida',
-  'custom-crm-development-noida': 'crm-erp-development-noida',
-  'custom-erp-development-noida': 'crm-erp-development-noida',
-  'web-development-company-noida': 'website-development-company-noida',
-  'custom-website-development-company-noida': 'website-development-company-noida',
-  'website-development-services-noida': 'website-development-company-noida',
-  'web-design-agency-noida': 'website-design-company-noida',
-  'digital-marketing-company-noida': 'digital-marketing-agency-noida',
-  'seo-agency-noida': 'seo-company-noida',
-  'seo-services-noida': 'seo-company-noida',
-  'custom-software-development-company-noida': 'software-development-company-noida',
-  'ecommerce-website-development-company-noida': 'ecommerce-development-noida',
-  'shopify-development-company-noida': 'shopify-wordpress-development-noida',
-  'wordpress-development-company-noida': 'shopify-wordpress-development-noida',
+  'crm-development-company-usa': 'crm-erp-development-usa',
+  'erp-development-company-usa': 'crm-erp-development-usa',
+  'custom-crm-development-usa': 'crm-erp-development-usa',
+  'custom-erp-development-usa': 'crm-erp-development-usa',
+  'web-development-company-usa': 'website-development-company-usa',
+  'custom-website-development-company-usa': 'website-development-company-usa',
+  'website-development-services-usa': 'website-development-company-usa',
+  'web-design-agency-usa': 'website-design-company-usa',
+  'digital-marketing-company-usa': 'digital-marketing-agency-usa',
+  'seo-agency-usa': 'seo-company-usa',
+  'seo-services-usa': 'seo-company-usa',
+  'custom-software-development-company-usa': 'software-development-company-usa',
+  'ecommerce-website-development-company-usa': 'ecommerce-development-usa',
+  'shopify-development-company-usa': 'shopify-wordpress-development-usa',
+  'wordpress-development-company-usa': 'shopify-wordpress-development-usa',
+  'crm-development-company-noida': 'crm-erp-development-usa',
+  'erp-development-company-noida': 'crm-erp-development-usa',
+  'custom-crm-development-noida': 'crm-erp-development-usa',
+  'custom-erp-development-noida': 'crm-erp-development-usa',
+  'web-development-company-noida': 'website-development-company-usa',
+  'custom-website-development-company-noida': 'website-development-company-usa',
+  'website-development-services-noida': 'website-development-company-usa',
+  'web-design-agency-noida': 'website-design-company-usa',
+  'digital-marketing-company-noida': 'digital-marketing-agency-usa',
+  'seo-agency-noida': 'seo-company-usa',
+  'seo-services-noida': 'seo-company-usa',
+  'custom-software-development-company-noida': 'software-development-company-usa',
+  'ecommerce-website-development-company-noida': 'ecommerce-development-usa',
+  'shopify-development-company-noida': 'shopify-wordpress-development-usa',
+  'wordpress-development-company-noida': 'shopify-wordpress-development-usa',
 };
 
 export function getSeoPageData(slug) {
@@ -1468,3 +1483,11 @@ export function getSeoPageData(slug) {
 }
 
 export const ALL_SEO_PAGES = Object.values(SEO_PAGES_DATA);
+
+// Backwards compatibility alias mapping
+Object.keys(SEO_PAGES_DATA).forEach((key) => {
+  if (key.endsWith('-usa')) {
+    const legacyKey = key.replace(/-usa$/, '-noida');
+    SEO_PAGES_DATA[legacyKey] = SEO_PAGES_DATA[key];
+  }
+});

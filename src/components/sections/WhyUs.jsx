@@ -427,7 +427,7 @@ export default function WhyUs() {
 
               <span className="block sm:inline-block whitespace-nowrap min-h-[1.2em]">
                 <TypewriterText
-                  words={["in Noida"]}
+                  words={["in the US", "Nationwide"]}
                   typingSpeed={100}
                   deletingSpeed={50}
                   pauseTime={2000}

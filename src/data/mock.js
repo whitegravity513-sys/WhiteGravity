@@ -113,7 +113,7 @@ export const TESTIMONIALS = [
   { name: 'Sujeet Kumar', rating: 5.0, text: 'I had a great experience working with White Gravity Web Solution. Their team is professional, responsive, and highly skilled in website design and development. They understood my requirements clearly and delivered a modern, responsive, and high-performing website on time. Communication throughout the project was excellent, and they were always willing to make changes whenever needed. I highly recommend White Gravity Web Solution to anyone looking for reliable web development and digital marketing services.' },
   { name: 'Deepak Kumar', rating: 5.0, text: 'Excellent service by White Gravity Web Solution! The team is professional, responsive, and delivered my website on time with great quality. They understood my requirements perfectly and provided valuable suggestions. Highly recommended for website development and digital marketing services.' },
   { name: 'shivam bhardwaj', rating: 5.0, text: 'Working with White Gravity Web Solutions was a great experience. The team was knowledgeable, approachable, and always ready to help. They delivered the project on time and ensured every detail matched my expectations. Their innovative ideas, prompt support, and dedication to quality truly set them apart. I would gladly recommend White Gravity Web Solutions to anyone looking for dependable and professional web development services.' },
-  { name: 'Sagar Yadav', rating: 5.0, text: 'Best website Development Company in Noida. and the owner is so Kind my website name of Prabha Enterprises.' }
+  { name: 'Sagar Yadav', rating: 5.0, text: 'Best website Development Company. The team was highly supportive and attentive to all our requirements.' }
 ];
 
 export const INDUSTRIES = [
@@ -139,11 +139,11 @@ export const INDUSTRIES = [
 export const COMPANY = {
   name: 'White Gravity Web Solutions',
   short: 'White Gravity',
-  tagline: ' #1 IT Company in Noida',
+  tagline: 'Premier IT & Software Company in the US',
   phones: ['+91-921-713-5322', '+91-879-641-4339'],
   whatsapp: 'https://wa.me/919217135322?text=Hello%20White%20Gravity%20Team!%20I%20visited%20your%20website%20and%20I%20would%20like%20to%20discuss%20a%20new%20project%20with%20you.',
   emails: ['info@whitegravity.in', 'sales@whitegravity.in'],
-  address: 'LG-04, Dallas 1 Business Park, H-202, Sector 63, Noida, U.P-201301',
+  address: 'United States',
   socials: {
     facebook: 'https://www.facebook.com/people/White-Gravity-Web-Solution/61583427517726/',
     instagram: 'https://www.instagram.com/whitegravityweb/',

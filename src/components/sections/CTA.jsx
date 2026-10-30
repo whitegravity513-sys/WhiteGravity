@@ -101,7 +101,7 @@ export default function CTA() {
             transition={{ duration: 0.6, delay: 0.3 }}
             className="text-emerald-50 text-lg sm:text-xl max-w-2xl leading-relaxed mb-8 font-medium"
           >
-            Get a free 30-minute strategy call with our Noida-based tech experts.
+            Get a free 30-minute strategy call with our senior tech experts.
             Let's discuss your software, web, or marketing needs — no strings attached.
           </motion.p>
 

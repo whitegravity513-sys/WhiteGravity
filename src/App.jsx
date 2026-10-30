@@ -5,7 +5,7 @@ import Footer from './components/Footer';
 import SEOKeywords from './components/sections/SEOKeywords';
 import ScrollToTop from './components/ScrollToTop';
 import ContactModal from './components/ContactModal';
-import { SEO_PAGES_DATA } from './data/seoPages';
+import { SEO_PAGES_DATA, SEO_SLUG_ALIASES } from './data/seoPages';
 import { SERVICES } from './data/mock';
 
 const Home = lazy(() => import('./pages/Home'));
@@ -33,6 +33,9 @@ const Loader = () => (
 
 function DynamicSlugRoute() {
   const { slug } = useParams();
+  if (slug && SEO_SLUG_ALIASES && SEO_SLUG_ALIASES[slug]) {
+    return <Navigate to={`/${SEO_SLUG_ALIASES[slug]}`} replace />;
+  }
   if (slug && SEO_PAGES_DATA[slug]) {
     return <SEOPage />;
   }
