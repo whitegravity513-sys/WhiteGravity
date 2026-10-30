@@ -6,7 +6,6 @@ import WhyUs from "../components/sections/WhyUs";
 import Process from "../components/sections/Process";
 import Projects from "../components/sections/Projects";
 import TechStack from "../components/sections/TechStack";
-import Testimonials from "../components/sections/Testimonials";
 import VideoTestimonials from "../components/sections/VideoTestimonials";
 import IndustriesSection from "../components/sections/IndustriesSection";
 import CTA from "../components/sections/CTA";
@@ -22,7 +21,6 @@ export default function Home() {
       <Process />
       <Projects />
       <TechStack />
-      <Testimonials />
       <VideoTestimonials />
       <IndustriesSection />
       <FAQ />

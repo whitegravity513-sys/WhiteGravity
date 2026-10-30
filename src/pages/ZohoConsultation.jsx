@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Mail, Plus, Minus, Calendar } from 'lucide-react';
 import { FaUsers, FaProjectDiagram, FaPlug, FaDatabase, FaGraduationCap, FaBuilding, FaBriefcase } from 'react-icons/fa';
-import Testimonials from '../components/sections/Testimonials';
 
 const services = [
   {
@@ -259,8 +258,6 @@ export default function ZohoConsultation() {
           </div>
         </div>
       </section>
-
-      <Testimonials />
 
       <section className="relative py-20 md:py-28 text-center px-4 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-[#009B6C] via-[#065b46] to-[#034232] pointer-events-none" />
