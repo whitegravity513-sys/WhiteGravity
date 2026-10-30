@@ -87,7 +87,7 @@ export default function Hero() {
             className="hidden lg:flex mt-6 sm:mt-8 flex-col xs:flex-row sm:flex-row items-stretch xs:items-center sm:items-center gap-3 sm:gap-4 w-full xs:w-auto"
           >
             <a
-              href="https://wa.me/918796414339?text=Hello%20White%20Gravity%2C%20I%20would%20like%20to%20book%20consultation"
+              href="https://wa.me/14694614710?text=Hello%20White%20Gravity%2C%20I%20would%20like%20to%20book%20consultation"
               target="_blank"
               rel="noopener noreferrer"
               data-tracking="whatsapp"
@@ -97,7 +97,7 @@ export default function Hero() {
                   window.dataLayer.push({
                     event: 'whatsapp_click',
                     click_location: 'hero_section',
-                    whatsapp_number: '918796414339'
+                    whatsapp_number: '14694614710'
                   });
                 }
               }}

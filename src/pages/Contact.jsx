@@ -52,7 +52,7 @@ export default function Contact() {
           phone:      form.phone || 'N/A',
           service:    form.service || 'Website Design & Development',
           message:    form.message,
-          to_email:   'info@whitegravity.in',
+          to_email:   'info@whitegravitycrm.com',
           reply_to:   form.email,
         };
 
@@ -63,8 +63,8 @@ export default function Contact() {
           EMAILJS_PUBLIC_KEY
         );
       } else {
-        const submissionTime = new Date().toLocaleString('en-IN', { timeZone: 'Asia/Kolkata' });
-        const res = await fetch('https://formsubmit.co/ajax/info@whitegravity.in', {
+        const submissionTime = new Date().toLocaleString('en-US', { timeZone: 'America/Chicago' });
+        const res = await fetch('https://formsubmit.co/ajax/info@whitegravitycrm.com', {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',
@@ -76,10 +76,10 @@ export default function Contact() {
             'Phone Number': form.phone,
             'Service Required': form.service || 'Website Design & Development',
             'Message / Requirements': form.message || 'No additional details provided.',
-            'Submission Time (IST)': submissionTime,
+            'Submission Time (CST)': submissionTime,
             _subject: `New Contact Enquiry: ${form.name} - ${form.service || 'Website Design & Development'}`,
             _replyto: form.email,
-            _cc: 'sales@whitegravity.in',
+            _cc: 'info@whitegravitycrm.com',
             _template: 'table',
             _captcha: 'false',
           }),
@@ -106,8 +106,8 @@ export default function Contact() {
       console.error('Email send error:', err);
       if (isEmailJSConfigured) {
         try {
-          const submissionTime = new Date().toLocaleString('en-IN', { timeZone: 'Asia/Kolkata' });
-          await fetch('https://formsubmit.co/ajax/info@whitegravity.in', {
+          const submissionTime = new Date().toLocaleString('en-US', { timeZone: 'America/Chicago' });
+          await fetch('https://formsubmit.co/ajax/info@whitegravitycrm.com', {
             method: 'POST',
             headers: {
               'Content-Type': 'application/json',
@@ -119,10 +119,10 @@ export default function Contact() {
               'Phone Number': form.phone,
               'Service Required': form.service || 'Website Design & Development',
               'Message / Requirements': form.message || 'No additional details provided.',
-              'Submission Time (IST)': submissionTime,
+              'Submission Time (CST)': submissionTime,
               _subject: `New Contact Enquiry: ${form.name} - ${form.service || 'Website Design & Development'}`,
               _replyto: form.email,
-              _cc: 'sales@whitegravity.in',
+              _cc: 'info@whitegravitycrm.com',
               _template: 'table',
               _captcha: 'false',
             }),
@@ -145,7 +145,7 @@ export default function Contact() {
           console.error('Fallback error:', fallbackErr);
         }
       }
-      setErrorMsg('Failed to send message. Please try again or email us directly at info@whitegravity.in');
+      setErrorMsg('Failed to send message. Please try again or email us directly at info@whitegravitycrm.com');
       setStatus('error');
       setTimeout(() => setStatus('idle'), 8000);
     }
@@ -198,8 +198,7 @@ export default function Contact() {
                   </div>
                   <div>
                     <h4 className="font-bold text-[#009B6C] text-sm">Call Support</h4>
-                    <a href="tel:+919217135322" className="block text-slate-700 text-sm hover:text-[#009B6C] transition-colors">+91-921-713-5322</a>
-                    <a href="tel:+918796414339" className="block text-slate-700 text-sm hover:text-[#009B6C] transition-colors">+91-879-641-4339</a>
+                    <a href="tel:+14694614710" className="block text-slate-700 text-sm hover:text-[#009B6C] transition-colors">+1 (469) 461-4710</a>
                   </div>
                 </div>
 
@@ -209,8 +208,7 @@ export default function Contact() {
                   </div>
                   <div>
                     <h4 className="font-bold text-[#009B6C] text-sm">Email Address</h4>
-                    <a href="mailto:sales@whitegravity.in" className="block text-slate-700 text-sm hover:text-[#009B6C] transition-colors">sales@whitegravity.in</a>
-                    <a href="mailto:info@whitegravity.in" className="block text-slate-700 text-sm hover:text-[#009B6C] transition-colors">info@whitegravity.in</a>
+                    <a href="mailto:info@whitegravitycrm.com" className="block text-slate-700 text-sm hover:text-[#009B6C] transition-colors">info@whitegravitycrm.com</a>
                   </div>
                 </div>
 
@@ -220,7 +218,7 @@ export default function Contact() {
                   </div>
                   <div>
                     <h4 className="font-bold text-[#009B6C] text-sm">Main Office</h4>
-                    <p className="text-slate-700 text-sm leading-relaxed">United States</p>
+                    <p className="text-slate-700 text-sm leading-relaxed">Dallas, TX<br />United States (CST / UTC-6)</p>
                   </div>
                 </div>
               </div>
@@ -326,7 +324,7 @@ export default function Contact() {
 
                 {status === 'success' && (
                   <motion.div initial={{ opacity: 0, y: -10 }} animate={{ opacity: 1, y: 0 }} className="flex items-center gap-2 text-[#009B6C] font-bold bg-[#e6f7f2] px-4 py-3 rounded-lg text-sm">
-                    <CheckCircle2 className="w-5 h-5 shrink-0" /> Message sent successfully to info@whitegravity.in! We'll get back to you within 24 hours.
+                    <CheckCircle2 className="w-5 h-5 shrink-0" /> Message sent successfully to info@whitegravitycrm.com! We'll get back to you within 24 hours.
                   </motion.div>
                 )}
 
@@ -346,7 +344,7 @@ export default function Contact() {
       {}
       <section className="container-x pb-12">
         <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.3 }} className="rounded-2xl overflow-hidden shadow-lg border-4 border-white">
-          <iframe title="map" src="https://www.google.com/maps?q=United+States&output=embed" className="w-full h-[300px] md:h-[420px] border-0" loading="lazy" />
+          <iframe title="map" src="https://www.google.com/maps?q=Dallas,+TX,+USA&output=embed" className="w-full h-[300px] md:h-[420px] border-0" loading="lazy" />
         </motion.div>
       </section>
 
@@ -359,15 +357,15 @@ export default function Contact() {
 
           <div className="relative z-10">
             <h2 className="text-3xl md:text-4xl font-extrabold mb-4 tracking-tight">Prefer a Direct Call?</h2>
-            <p className="text-emerald-100 text-lg mb-1 font-medium">Our team is available Monday through Saturday.</p>
+            <p className="text-emerald-100 text-lg mb-1 font-medium">Our team is available Monday through Saturday (CST).</p>
             <p className="text-emerald-100 text-lg mb-8 font-medium">Call us now for an instant consultation.</p>
 
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-6">
-              <a href="tel:+919217135322" className="flex items-center gap-3 bg-white text-[#009B6C] px-8 py-4 rounded-xl font-bold text-lg hover:bg-emerald-50 transition-colors shadow-lg w-full sm:w-auto justify-center group">
-                <Phone className="w-6 h-6 group-hover:rotate-12 transition-transform" /> +91-9217135322
+              <a href="tel:+14694614710" className="flex items-center gap-3 bg-white text-[#009B6C] px-8 py-4 rounded-xl font-bold text-lg hover:bg-emerald-50 transition-colors shadow-lg w-full sm:w-auto justify-center group">
+                <Phone className="w-6 h-6 group-hover:rotate-12 transition-transform" /> +1 (469) 461-4710
               </a>
-              <a href="mailto:sales@whitegravity.in" className="flex items-center gap-3 bg-[#065b46] text-white px-8 py-4 rounded-xl font-bold text-lg hover:bg-[#044a39] transition-colors shadow-lg border border-emerald-500/30 w-full sm:w-auto justify-center group">
-                <Mail className="w-6 h-6 group-hover:-rotate-12 transition-transform" /> sales@whitegravity.in
+              <a href="mailto:info@whitegravitycrm.com" className="flex items-center gap-3 bg-[#065b46] text-white px-8 py-4 rounded-xl font-bold text-lg hover:bg-[#044a39] transition-colors shadow-lg border border-emerald-500/30 w-full sm:w-auto justify-center group">
+                <Mail className="w-6 h-6 group-hover:-rotate-12 transition-transform" /> info@whitegravitycrm.com
               </a>
             </div>
           </div>

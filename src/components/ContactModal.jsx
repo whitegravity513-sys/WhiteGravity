@@ -45,8 +45,8 @@ export default function ContactModal() {
     setIsSubmitting(true);
 
     try {
-      const submissionTime = new Date().toLocaleString('en-IN', { timeZone: 'Asia/Kolkata' });
-      const response = await fetch("https://formsubmit.co/ajax/info@whitegravity.in", {
+      const submissionTime = new Date().toLocaleString('en-US', { timeZone: 'America/Chicago' });
+      const response = await fetch("https://formsubmit.co/ajax/info@whitegravitycrm.com", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -58,10 +58,10 @@ export default function ContactModal() {
           'Phone / WhatsApp': formData.phone,
           'Service Needed': formData.service,
           'Project Requirements': formData.message || "No additional details provided.",
-          'Submission Time (IST)': submissionTime,
+          'Submission Time (CST)': submissionTime,
           _subject: `⚡ Quick Lead: ${formData.name} - ${formData.service}`,
           _replyto: formData.email,
-          _cc: 'sales@whitegravity.in',
+          _cc: 'info@whitegravitycrm.com',
           _template: "table",
           _captcha: "false"
         }),
@@ -84,11 +84,11 @@ export default function ContactModal() {
           setTimeout(() => setSubmitted(false), 500);
         }, 3000);
       } else {
-        alert("Failed to send message. Please reach us directly at info@whitegravity.in or +91-9217135322");
+        alert("Failed to send message. Please reach us directly at info@whitegravitycrm.com or +1 (469) 461-4710");
       }
     } catch (error) {
       console.error("Form error:", error);
-      alert("An error occurred while sending. Please WhatsApp us directly at +91-9217135322");
+      alert("An error occurred while sending. Please contact us directly at info@whitegravitycrm.com or +1 (469) 461-4710");
     } finally {
       setIsSubmitting(false);
     }
@@ -231,7 +231,7 @@ export default function ContactModal() {
                   <div className="pt-3 flex items-center justify-between border-t border-slate-100 text-xs font-medium text-slate-500">
                     <span>Or reach us directly:</span>
                     <a
-                      href="https://wa.me/918796414339?text=Hi%20White%20Gravity%20Team!%20I%20visited%20your%20website%20and%20would%20like%20to%20discuss%20a%20project."
+                      href="https://wa.me/14694614710?text=Hi%20White%20Gravity%20Team!%20I%20visited%20your%20website%20and%20would%20like%20to%20discuss%20a%20project."
                       target="_blank"
                       rel="noopener noreferrer"
                       data-tracking="whatsapp"
@@ -241,13 +241,13 @@ export default function ContactModal() {
                           window.dataLayer.push({
                             event: 'whatsapp_click',
                             click_location: 'contact_modal',
-                            whatsapp_number: '918796414339'
+                            whatsapp_number: '14694614710'
                           });
                         }
                       }}
                       className="text-[#009B6C] font-bold hover:underline flex items-center gap-1"
                     >
-                      <Phone className="w-3.5 h-3.5" /> +91 87964 14339
+                      <Phone className="w-3.5 h-3.5" /> +1 (469) 461-4710
                     </a>
                   </div>
                 </form>

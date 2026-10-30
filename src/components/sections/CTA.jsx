@@ -124,11 +124,11 @@ export default function CTA() {
             </Link>
 
             <a
-              href="tel:+919217135322"
+              href="tel:+14694614710"
               className="group inline-flex items-center justify-center gap-3 bg-emerald-800/30 border-2 border-emerald-300/50 text-white px-8 sm:px-10 py-4 rounded-full font-extrabold text-lg transition-all hover:bg-emerald-800/60 hover:border-white shadow-[0_0_20px_rgba(0,0,0,0.1)] hover:-translate-y-1 backdrop-blur-md w-full sm:w-auto"
             >
               <PhoneCallIcon className="w-5 h-5 group-hover:rotate-12 group-hover:scale-110 transition-transform" />
-              <span>+91 92171 35322</span>
+              <span>+1 (469) 461-4710</span>
             </a>
           </motion.div>
         </div>

@@ -93,7 +93,7 @@ export default function Navbar() {
 
         <div className="flex items-center shrink-0 gap-2 sm:gap-3">
           <a
-            href="https://wa.me/9217135322?text=Hello%20White%20Gravity%2C%20I%20would%20like%20to%20book%20consultation."
+            href="https://wa.me/14694614710?text=Hello%20White%20Gravity%2C%20I%20would%20like%20to%20book%20consultation."
             target="_blank"
             rel="noopener noreferrer"
             data-tracking="whatsapp"
@@ -103,7 +103,7 @@ export default function Navbar() {
                 window.dataLayer.push({
                   event: 'whatsapp_click',
                   click_location: 'navbar_desktop',
-                  whatsapp_number: '9217135322'
+                  whatsapp_number: '14694614710'
                 });
               }
             }}
@@ -199,7 +199,7 @@ export default function Navbar() {
 
                 <div className="pt-5 pb-4">
                   <a
-                    href="https://wa.me/918796414339?text=Hello%20White%20Gravity%2C%20I%20would%20like%20to%20book%20consultation."
+                    href="https://wa.me/14694614710?text=Hello%20White%20Gravity%2C%20I%20would%20like%20to%20book%20consultation."
                     target="_blank"
                     rel="noopener noreferrer"
                     data-tracking="whatsapp"
@@ -210,7 +210,7 @@ export default function Navbar() {
                         window.dataLayer.push({
                           event: 'whatsapp_click',
                           click_location: 'navbar_mobile',
-                          whatsapp_number: '918796414339'
+                          whatsapp_number: '14694614710'
                         });
                       }
                     }}

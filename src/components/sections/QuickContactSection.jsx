@@ -44,8 +44,8 @@ export default function QuickContactSection({
     setErrorMsg('');
 
     try {
-      const submissionTime = new Date().toLocaleString('en-IN', { timeZone: 'Asia/Kolkata' });
-      const res = await fetch('https://formsubmit.co/ajax/info@whitegravity.in', {
+      const submissionTime = new Date().toLocaleString('en-US', { timeZone: 'America/Chicago' });
+      const res = await fetch('https://formsubmit.co/ajax/info@whitegravitycrm.com', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -57,10 +57,10 @@ export default function QuickContactSection({
           'Phone / WhatsApp': form.phone,
           'Service Needed': form.service,
           'Project Requirements': form.message || 'Quick consultation request via website.',
-          'Submission Time (IST)': submissionTime,
+          'Submission Time (CST)': submissionTime,
           _subject: `⚡ Lead Inquiry: ${form.name} - ${form.service}`,
           _replyto: form.email,
-          _cc: 'sales@whitegravity.in',
+          _cc: 'info@whitegravitycrm.com',
           _template: 'table',
           _captcha: 'false',
         }),
@@ -116,7 +116,7 @@ export default function QuickContactSection({
 
             <div className="space-y-2.5 pt-1">
               <a
-                href="tel:+919217135322"
+                href="tel:+14694614710"
                 className="flex items-center gap-3.5 p-3 rounded-2xl bg-white border border-slate-200/80 shadow-sm hover:border-[#009B6C] hover:shadow transition-all group"
               >
                 <div className="w-10 h-10 rounded-xl bg-[#e6f7f2] text-[#009B6C] flex items-center justify-center shrink-0 group-hover:bg-[#009B6C] group-hover:text-white transition-colors">
@@ -125,7 +125,7 @@ export default function QuickContactSection({
                 <div>
                   <div className="text-[11px] font-bold uppercase tracking-wider text-slate-400">Call Directly</div>
                   <div className="text-sm font-extrabold text-slate-900 group-hover:text-[#009B6C] transition-colors">
-                    +91 92171 35322 / +91 87964 14339
+                    +1 (469) 461-4710
                   </div>
                 </div>
               </a>
@@ -160,7 +160,7 @@ export default function QuickContactSection({
               </a>
 
               <a
-                href="mailto:info@whitegravity.in"
+                href="mailto:info@whitegravitycrm.com"
                 className="flex items-center gap-3.5 p-3 rounded-2xl bg-white border border-slate-200/80 shadow-sm hover:border-[#009B6C] hover:shadow transition-all group"
               >
                 <div className="w-10 h-10 rounded-xl bg-[#e6f7f2] text-[#009B6C] flex items-center justify-center shrink-0 group-hover:bg-[#009B6C] group-hover:text-white transition-colors">
@@ -169,7 +169,7 @@ export default function QuickContactSection({
                 <div>
                   <div className="text-[11px] font-bold uppercase tracking-wider text-slate-400">Email Us</div>
                   <div className="text-sm font-extrabold text-slate-900 group-hover:text-[#009B6C] transition-colors">
-                    info@whitegravity.in
+                    info@whitegravitycrm.com
                   </div>
                 </div>
               </a>
@@ -181,7 +181,7 @@ export default function QuickContactSection({
                 <div>
                   <div className="text-[11px] font-bold uppercase tracking-wider text-slate-400">Headquarters</div>
                   <div className="text-xs font-semibold text-slate-800 leading-snug">
-                    United States
+                    Dallas, TX, United States (CST)
                   </div>
                 </div>
               </div>

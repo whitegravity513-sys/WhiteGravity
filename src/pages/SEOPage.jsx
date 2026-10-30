@@ -203,11 +203,11 @@ export default function SEOPage() {
                 </a>
 
                 <a
-                  href="tel:+919217135322"
+                  href="tel:+14694614710"
                   className="inline-flex items-center justify-center gap-2 bg-white/10 hover:bg-white/20 border border-white/30 text-white font-bold px-6 py-3.5 sm:py-4 rounded-full text-base backdrop-blur-sm transition-all"
                 >
                   <Phone className="w-4 h-4 text-emerald-200" />
-                  <span>+91 92171 35322</span>
+                  <span>+1 (469) 461-4710</span>
                 </a>
               </div>
 
@@ -217,7 +217,7 @@ export default function SEOPage() {
                   <div className="text-xs text-emerald-100 font-medium">Projects Delivered</div>
                 </div>
                 <div className="bg-white/10 p-3 rounded-2xl">
-                  <div className="text-xl sm:text-2xl font-black text-white">US</div>
+                  <div className="text-xl sm:text-2xl font-black text-white">Dallas, TX</div>
                   <div className="text-xs text-emerald-100 font-medium">Headquarters</div>
                 </div>
                 <div className="bg-white/10 p-3 rounded-2xl">
