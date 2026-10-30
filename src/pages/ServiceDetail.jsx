@@ -70,8 +70,11 @@ const DETAILED_SERVICES_CONTENT = {
   'custom-software-development': {
     pill: 'Custom Software Development',
 
+    heroTitle:
+      'Custom Software Development for Growing Enterprises',
+
     heroSubtitle:
-      'Build Smarter Business Solutions with Custom Software',
+      'Scalable software architecture, intelligent workflow automation, and custom enterprise tools engineered to power your business growth.',
 
     tailoredTitle:
       'Tailored Software Solutions Designed Around Your Business',
@@ -158,8 +161,11 @@ const DETAILED_SERVICES_CONTENT = {
   'website-development': {
     pill: 'Website Development',
 
+    heroTitle:
+      'Custom Website Design & Modern Web Development',
+
     heroSubtitle:
-      'Custom-built websites focused on speed, user experience, and business success.',
+      'High-converting, responsive websites engineered for ultra-fast performance, modern visual appeal, and superior search visibility.',
 
     tailoredTitle:
       'Custom Website Development Services by White Gravity',
@@ -239,16 +245,16 @@ const DETAILED_SERVICES_CONTENT = {
   },
 
   'ecommerce-development': {
-    pill: 'E-Commerce',
+    pill: 'Ecommerce Development',
 
     heroTitle:
-      'ECommerce Development in USA',
+      'Scalable E-Commerce Store Design & Development',
 
     heroSubtitle:
-      'Build powerful, secure, and scalable online stores tailored to your business. We develop high-performance eCommerce websites that deliver seamless shopping experiences and drive more sales.',
+      'High-performance Shopify, WooCommerce, and custom online storefronts built with seamless checkout, secure payments, and higher sales conversion.',
 
     tailoredTitle:
-      'Grow Your Business with Professional ECommerce Development in USA',
+      'Grow Your Online Business with Professional E-Commerce Solutions',
 
     tailoredDesc:
       "ECommerce development in USA is one of White Gravity's core services. We build modern, secure, and scalable online stores that are designed to deliver exceptional user experiences and drive business growth.\n\nWhether you're launching a new eCommerce brand or expanding an existing business, our team provides end-to-end development solutions. From custom storefront design and product catalog management to secure payment gateway integration, inventory management, order processing, and shipping solutions, we ensure every aspect of your online store is optimized for success.",
@@ -328,13 +334,13 @@ const DETAILED_SERVICES_CONTENT = {
     pill: 'Mobile App Development',
 
     heroTitle:
-      'Mobile App Development in USA',
+      'Next-Gen Mobile App Development for iOS & Android',
 
     heroSubtitle:
-      'Custom mobile app development for iOS and Android, delivering intuitive user experiences, robust functionality, and scalable solutions from concept to launch.',
+      'Intuitive, feature-packed native and cross-platform mobile apps engineered with sleek UI/UX, rapid performance, and cloud scalability.',
 
     tailoredTitle:
-      'Expert Mobile App Development in USA',
+      'Expert Mobile App Development for iOS & Android Platforms',
 
     tailoredDesc:
       "At White Gravity, we specialize in developing custom mobile applications that help businesses connect with customers, streamline operations, and accelerate digital growth. Our team creates high-performance Android and iOS apps with intuitive user experiences, modern designs, and scalable architectures tailored to your business objectives.\n\nFrom strategy and UI/UX design to app development, API integration, testing, deployment, and ongoing maintenance, we provide end-to-end mobile app development services. Whether you need a customer-facing application, an enterprise mobility solution, an eCommerce app, or an on-demand service platform, we build secure, reliable, and feature-rich mobile applications that deliver exceptional performance across devices.",
@@ -414,13 +420,13 @@ const DETAILED_SERVICES_CONTENT = {
     pill: 'Web App Development',
 
     heroTitle:
-      'Web App Development in USA',
+      'Modern Web Applications & Enterprise SaaS Platforms',
 
     heroSubtitle:
-      'Build secure, scalable, and high-performance web applications tailored to your business needs. We develop custom SaaS platforms, enterprise solutions, customer portals, and business dashboards designed for long-term growth.',
+      'Scalable cloud applications, secure customer portals, and real-time interactive dashboards engineered for modern business operations.',
 
     tailoredTitle:
-      'Custom Web Application Development in USA for Modern Businesses',
+      'Custom Web Application Development for Modern Enterprises',
 
     tailoredDesc:
       'Web app development in USA is a key service at White Gravity, where we build custom web applications that help businesses streamline operations, improve productivity, and accelerate digital growth. Our solutions are designed with performance, security, and scalability in mind, ensuring they evolve alongside your business. Whether you need a custom CRM, ERP system, customer portal, SaaS platform, business dashboard, booking system, or workflow automation tool, our experienced developers deliver feature-rich applications tailored to your unique requirements. Using modern technologies and industry best practices, we create intuitive, reliable, and high-performing web applications that provide seamless user experiences across all devices.',
@@ -500,8 +506,11 @@ const DETAILED_SERVICES_CONTENT = {
   'crm-erp-development': {
     pill: 'CRM & ERP Development',
 
+    heroTitle:
+      'Custom CRM & ERP Systems to Streamline Business Operations',
+
     heroSubtitle:
-      'Build Smarter Business Solutions with Custom CRM & ERP',
+      'Centralize your sales data, eliminate manual processes, and connect business workflows with bespoke CRM & ERP platforms.',
 
     tailoredTitle:
       'Custom CRM & ERP Development Services by White Gravity',
@@ -585,10 +594,10 @@ const DETAILED_SERVICES_CONTENT = {
     pill: 'Digital Marketing',
 
     heroTitle:
-      'Digital Marketing',
+      'Data-Driven Digital Marketing That Accelerates Growth',
 
     heroSubtitle:
-      'Drive More Traffic, Generate Quality Leads & Grow Your Business Online',
+      'Targeted SEO, full-funnel content marketing, and performance social campaigns designed to drive qualified traffic and maximize conversions.',
 
     tailoredTitle:
       'Results-Driven Digital Marketing Services by White Gravity',
@@ -672,10 +681,10 @@ const DETAILED_SERVICES_CONTENT = {
     pill: 'Meta Ads & Google Ads',
 
     heroTitle:
-      'Meta Ads & Google Ads',
+      'High-ROI Meta Ads & Google Ads Campaign Management',
 
     heroSubtitle:
-      'Reach the Right Audience and Maximize Your Advertising ROI',
+      'Reach high-intent customers, reduce acquisition costs, and maximize return on ad spend with precision-targeted PPC and paid social advertising.',
 
     tailoredTitle:
       'Performance-Driven Meta Ads & Google Ads Management',
@@ -759,10 +768,10 @@ const DETAILED_SERVICES_CONTENT = {
     pill: 'Zoho Consultation',
 
     heroTitle:
-      'Zoho Consultation & Implementation in USA',
+      'Certified Zoho Consultation, Setup & System Integration',
 
     heroSubtitle:
-      'Streamline Your Entire Business Operations with Certified Zoho One Experts',
+      'Maximize business efficiency with complete Zoho One setup, tailored workflow automations, and custom module integrations.',
 
     tailoredTitle:
       'Certified Zoho Consultation & Development Services by White Gravity',
@@ -1051,10 +1060,10 @@ export default function ServiceDetail() {
           overflow-hidden
           bg-[#009B6C]
           text-white
-          pt-28
-          pb-14
-          lg:pt-36
-          lg:pb-20
+          pt-20
+          pb-10
+          lg:pt-24
+          lg:pb-14
           text-center
         "
       >
@@ -1101,19 +1110,19 @@ export default function ServiceDetail() {
               gap-2
               bg-white
               text-[#009B6C]
-              px-5
-              py-2
+              px-4
+              py-1.5
               rounded-full
               text-xs
-              font-extrabold
+              font-bold
               tracking-wider
               uppercase
-              shadow-md
-              mb-6
+              shadow-sm
+              mb-4
             "
           >
 
-            <Code className="w-4 h-4 stroke-[3]" />
+            <Code className="w-3.5 h-3.5 stroke-[2.5]" />
 
             {content.pill}
 
@@ -1131,15 +1140,7 @@ export default function ServiceDetail() {
             transition={{
               delay: 0.1
             }}
-            className="
-              text-4xl
-              sm:text-5xl
-              lg:text-6xl
-              font-extrabold
-              tracking-tight
-              text-white
-              leading-tight
-            "
+            className="text-2xl sm:text-3xl md:text-4xl lg:text-[44px] font-extrabold tracking-tight text-white leading-tight md:leading-[1.2] max-w-3xl mx-auto"
           >
             {content.heroTitle || service.title}
           </motion.h1>
@@ -1156,14 +1157,7 @@ export default function ServiceDetail() {
             transition={{
               delay: 0
             }}
-            className="
-              mt-4
-              text-white/90
-              text-lg
-              md:text-xl
-              font-semibold
-              max-w-2xl
-            "
+            className="mt-4 text-white/95 text-base sm:text-lg md:text-xl font-normal max-w-2xl mx-auto leading-relaxed"
           >
             {content.heroSubtitle}
           </motion.p>
@@ -1209,29 +1203,11 @@ export default function ServiceDetail() {
             "
           >
 
-            <h2
-              className="
-                text-3xl
-                sm:text-4xl
-                md:text-5xl
-                font-extrabold
-                text-slate-900
-                leading-[1.15]
-              "
-            >
+            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-[40px] font-extrabold text-slate-900 leading-tight tracking-tight">
               {content.tailoredTitle}
             </h2>
 
-            <p
-              className="
-                mt-6
-                text-slate-600
-                leading-relaxed
-                text-base
-                md:text-lg
-                whitespace-pre-line
-              "
-            >
+            <p className="mt-5 text-slate-600 leading-relaxed text-base sm:text-lg md:text-[18px] whitespace-pre-line">
               {content.tailoredDesc}
             </p>
 
@@ -1239,7 +1215,7 @@ export default function ServiceDetail() {
               <img src={content.tailoredImg} alt={service.title} className="w-full h-auto max-h-[500px] object-contain group-hover:scale-105 transition-transform duration-700 rounded-2xl" />
             </div>
 
-            <div className="mt-8 space-y-3.5">
+            <div className="mt-8 space-y-4">
 
               {[
                 'Scalable, enterprise-ready software architecture',
@@ -1253,7 +1229,7 @@ export default function ServiceDetail() {
                   className="
                     flex
                     items-center
-                    gap-3
+                    gap-3.5
                   "
                 >
 
@@ -1261,6 +1237,8 @@ export default function ServiceDetail() {
                     className="
                       w-5
                       h-5
+                      sm:w-6
+                      sm:h-6
                       text-[#009B6C]
                       shrink-0
                     "
@@ -1269,9 +1247,9 @@ export default function ServiceDetail() {
                   <span
                     className="
                       text-slate-800
-                      font-bold
-                      text-sm
-                      md:text-base
+                      font-semibold
+                      text-base
+                      sm:text-lg
                     "
                   >
                     {item}
@@ -1393,10 +1371,10 @@ export default function ServiceDetail() {
 
             <h2
               className="
-                text-3xl
-                sm:text-4xl
-                md:text-5xl
-                font-extrabold
+                text-2xl
+                sm:text-3xl
+                md:text-4xl
+                font-bold
                 text-[#009B6C]
                 leading-tight
               "
@@ -1412,8 +1390,8 @@ export default function ServiceDetail() {
               grid-cols-1
               md:grid-cols-2
               lg:grid-cols-3
-              gap-6
-              md:gap-8
+              gap-5
+              md:gap-6
             "
           >
 
@@ -1429,7 +1407,7 @@ export default function ServiceDetail() {
 
                     initial={{
                       opacity: 0,
-                      y: 25
+                      y: 20
                     }}
 
                     whileInView={{
@@ -1442,34 +1420,28 @@ export default function ServiceDetail() {
                     }}
 
                     transition={{
-                      duration: 0.5,
-                      delay: idx * 0.08
+                      duration: 0.4,
+                      delay: idx * 0.06
                     }}
 
                     className="
                       service-detail-card
 
                       bg-white
-                      rounded-3xl
+                      rounded-2xl
 
-                      p-7
-                      md:p-8
+                      p-5
+                      sm:p-6
 
-                      min-h-[280px]
+                      min-h-[220px]
 
-                      shadow-[0_4px_25px_-5px_rgba(0,0,0,0.06)]
+                      shadow-sm
+                      border
+                      border-slate-200/80
 
-                      border-l-4
-                      border-[#009B6C]
-
-                      border-t
-                      border-r
-                      border-b
-
-                      border-[#009B6C]/20
-
-                      hover:shadow-xl
-                      hover:-translate-y-1
+                      hover:shadow-md
+                      hover:border-[#009B6C]/50
+                      hover:-translate-y-0.5
 
                       transition-all
                       duration-300
@@ -1491,23 +1463,23 @@ export default function ServiceDetail() {
                       className="
                         service-card-icon
 
-                        w-16
-                        h-16
+                        w-12
+                        h-12
 
-                        rounded-2xl
+                        rounded-xl
 
-                        bg-[#d1f2eb]
+                        bg-[#e6f7f2]
 
-                        border-2
-                        border-[#009B6C]/20
+                        border
+                        border-[#009B6C]/25
 
                         flex
                         items-center
                         justify-center
 
-                        mb-6
+                        mb-4
 
-                        shadow-sm
+                        shadow-xs
 
                         shrink-0
 
@@ -1525,13 +1497,13 @@ export default function ServiceDetail() {
 
                       <Icon
                         className="
-                          !w-8
-                          !h-8
+                          !w-6
+                          !h-6
                         "
 
                         style={{
-                          width: '32px',
-                          height: '32px',
+                          width: '24px',
+                          height: '24px',
                           display: 'block',
                           marginLeft: 'auto',
                           marginRight: 'auto',
@@ -1550,9 +1522,10 @@ export default function ServiceDetail() {
 
                         !text-center
 
-                        text-xl
-                        font-extrabold
-                        text-slate-900
+                        text-base
+                        sm:text-lg
+                        font-bold
+                        text-slate-800
 
                         leading-snug
 
@@ -1578,13 +1551,14 @@ export default function ServiceDetail() {
 
                         !text-center
 
-                        mt-3
+                        mt-2
 
                         text-slate-600
 
                         leading-relaxed
 
-                        text-sm
+                        text-xs
+                        sm:text-sm
 
                         flex-grow
 

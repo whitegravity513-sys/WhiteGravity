@@ -37,8 +37,9 @@ export default function ContactModal() {
       return;
     }
 
-    if (!/^[0-9]{10}$/.test(formData.phone.trim())) {
-      alert("Please enter a valid 10-digit mobile number.");
+    const phoneDigits = formData.phone.replace(/\D/g, '');
+    if (phoneDigits.length < 10) {
+      alert("Please enter a valid phone number with area code (minimum 10 digits).");
       return;
     }
 
@@ -152,7 +153,7 @@ export default function ContactModal() {
                     <input
                       type="text"
                       required
-                      placeholder="e.g. Rahul Sharma"
+                      placeholder="e.g. John Smith"
                       value={formData.name}
                       onChange={(e) => setFormData({ ...formData, name: e.target.value })}
                       className="w-full px-4 py-3 rounded-xl border border-slate-200 text-slate-800 text-sm focus:outline-none focus:border-[#009B6C] focus:ring-2 focus:ring-[#009B6C]/20 transition-all"
@@ -167,7 +168,7 @@ export default function ContactModal() {
                         required
                         pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}$"
                         title="Please enter a valid email address"
-                        placeholder="you@example.com"
+                        placeholder="john@company.com"
                         value={formData.email}
                         onChange={(e) => setFormData({ ...formData, email: e.target.value })}
                         className="w-full px-4 py-3 rounded-xl border border-slate-200 text-slate-800 text-sm focus:outline-none focus:border-[#009B6C] focus:ring-2 focus:ring-[#009B6C]/20 transition-all"
@@ -178,13 +179,10 @@ export default function ContactModal() {
                       <input
                         type="tel"
                         required
-                        maxLength={10}
-                        minLength={10}
-                        pattern="[0-9]{10}"
-                        title="Please enter exactly 10 digits"
-                        placeholder="9876543210"
+                        maxLength={18}
+                        placeholder="e.g. +1 (555) 019-2834"
                         value={formData.phone}
-                        onChange={(e) => setFormData({ ...formData, phone: e.target.value.replace(/\D/g, '').slice(0, 10) })}
+                        onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
                         className="w-full px-4 py-3 rounded-xl border border-slate-200 text-slate-800 text-sm focus:outline-none focus:border-[#009B6C] focus:ring-2 focus:ring-[#009B6C]/20 transition-all"
                       />
                     </div>

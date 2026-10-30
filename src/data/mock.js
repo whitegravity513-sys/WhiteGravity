@@ -7,7 +7,7 @@ export const NAV_LINKS = [
     label: 'Services',
     href: '/services',
     children: [
-      { label: 'Custom software development', href: '/custom-software-development' },
+      { label: 'Custom Software Development', href: '/custom-software-development' },
       { label: 'Website Development', href: '/website-development' },
       { label: 'Ecommerce Development', href: '/ecommerce-development' },
       { label: 'Mobile App Development', href: '/mobile-app-development' },

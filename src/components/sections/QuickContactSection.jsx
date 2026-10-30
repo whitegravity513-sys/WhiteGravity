@@ -34,8 +34,9 @@ export default function QuickContactSection({
       return;
     }
 
-    if (!/^[0-9]{10}$/.test(form.phone.trim())) {
-      setErrorMsg('Please enter a valid 10-digit mobile number.');
+    const phoneDigits = form.phone.replace(/\D/g, '');
+    if (phoneDigits.length < 10) {
+      setErrorMsg('Please enter a valid phone number with area code (minimum 10 digits).');
       setStatus('error');
       return;
     }
@@ -250,7 +251,7 @@ export default function QuickContactSection({
                     <input
                       type="text"
                       required
-                      placeholder="e.g. Rahul Sharma"
+                      placeholder="e.g. Michael Brown"
                       value={form.name}
                       onChange={(e) => setForm({ ...form, name: e.target.value })}
                       className={inputCls}
@@ -259,17 +260,15 @@ export default function QuickContactSection({
 
                   <div>
                     <label className="block text-[11px] font-bold text-slate-600 uppercase tracking-wider mb-1">
-                      Phone Number (10 Digits) <span className="text-red-500">*</span>
+                      Phone Number <span className="text-red-500">*</span>
                     </label>
                     <input
                       type="tel"
                       required
-                      maxLength={10}
-                      minLength={10}
-                      pattern="[0-9]{10}"
-                      placeholder="e.g. 9876543210"
+                      maxLength={18}
+                      placeholder="e.g. +1 (555) 234-5678"
                       value={form.phone}
-                      onChange={(e) => setForm({ ...form, phone: e.target.value.replace(/\D/g, '').slice(0, 10) })}
+                      onChange={(e) => setForm({ ...form, phone: e.target.value })}
                       className={inputCls}
                     />
                   </div>
@@ -283,7 +282,7 @@ export default function QuickContactSection({
                     <input
                       type="email"
                       required
-                      placeholder="e.g. rahul@company.com"
+                      placeholder="e.g. michael@yourcompany.com"
                       value={form.email}
                       onChange={(e) => setForm({ ...form, email: e.target.value })}
                       className={inputCls}

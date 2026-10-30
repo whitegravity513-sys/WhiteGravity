@@ -30,8 +30,9 @@ export default function Contact() {
       return;
     }
 
-    if (!/^[0-9]{10}$/.test(form.phone.trim())) {
-      setErrorMsg('Please enter a valid 10-digit mobile number.');
+    const digitsOnly = form.phone.replace(/\D/g, '');
+    if (digitsOnly.length < 10) {
+      setErrorMsg('Please enter a valid phone number with area code (minimum 10 digits).');
       setStatus('error');
       return;
     }
@@ -249,7 +250,7 @@ export default function Contact() {
                     value={form.name}
                     onChange={(e) => setForm({ ...form, name: e.target.value })}
                     className={inputCls}
-                    placeholder="Your Name"
+                    placeholder="e.g. Sarah Jenkins"
                   />
                 </div>
 
@@ -262,7 +263,7 @@ export default function Contact() {
                       value={form.email}
                       onChange={(e) => setForm({ ...form, email: e.target.value })}
                       className={inputCls}
-                      placeholder="you@example.com"
+                      placeholder="e.g. sarah@company.com"
                     />
                   </div>
                   <div>
@@ -270,14 +271,11 @@ export default function Contact() {
                     <input
                       required
                       type="tel"
-                      maxLength={10}
-                      minLength={10}
-                      pattern="[0-9]{10}"
-                      title="Please enter a valid 10-digit phone number"
+                      maxLength={18}
                       value={form.phone}
-                      onChange={(e) => setForm({ ...form, phone: e.target.value.replace(/\D/g, '').slice(0, 10) })}
+                      onChange={(e) => setForm({ ...form, phone: e.target.value })}
                       className={inputCls}
-                      placeholder="e.g., 9876543210"
+                      placeholder="e.g. +1 (555) 839-2041"
                     />
                   </div>
                 </div>

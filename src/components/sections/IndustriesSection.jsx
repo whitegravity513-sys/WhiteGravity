@@ -2,7 +2,6 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { ArrowRight } from "lucide-react";
 import { motion } from "framer-motion";
-import SectionPill from "../SectionPill";
 import { INDUSTRIES } from "../../data/mock";
 
 const Building2Icon = ({ className }) => (
@@ -38,331 +37,74 @@ export default function IndustriesSection() {
   ];
 
   return (
-    <section
-      className="
-        relative
-        overflow-hidden
-
-        py-10
-        sm:py-12
-        md:py-16
-        lg:py-20
-
-        bg-emerald-50/60
-      "
-    >
+    <section className="relative overflow-hidden py-8 sm:py-10 md:py-12 bg-emerald-50/60">
       <div className="container-x">
-        <div
-          className="
-            grid
-
-            grid-cols-1
-            lg:grid-cols-12
-
-            gap-8
-            sm:gap-10
-            lg:gap-12
-
-            items-center
-          "
-        >
-
-          <div
-            className="
-              lg:col-span-5
-
-              w-full
-
-              flex
-              flex-col
-              items-start
-
-              text-left
-            "
+        {/* Header centered in middle like upper headers */}
+        <div className="text-center max-w-3xl mx-auto mb-6 sm:mb-8">
+          <motion.div
+            initial={{ opacity: 0, y: -10 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.4 }}
           >
-            <motion.div
-              initial={{
-                opacity: 0,
-                x: -30,
-              }}
-              whileInView={{
-                opacity: 1,
-                x: 0,
-              }}
-              viewport={{
-                once: true,
-                amount: 0.2,
-              }}
-              transition={{
-                duration: 0.5,
-              }}
-              className="w-full"
+            <span className="inline-flex items-center gap-2 px-4 sm:px-5 py-1.5 sm:py-2 rounded-full text-xs sm:text-sm font-extrabold uppercase tracking-wider bg-emerald-100 text-[#009B6C] border border-emerald-200/80 shadow-xs mb-3">
+              <Building2Icon className="w-4 h-4 text-[#009B6C] shrink-0" />
+              Industries
+            </span>
+          </motion.div>
+
+          <motion.h2
+            initial={{ opacity: 0, y: 15 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.4, delay: 0.1 }}
+            className="text-2xl sm:text-3xl md:text-4xl lg:text-[40px] font-extrabold text-slate-900 tracking-tight leading-tight"
+          >
+            Industries <span className="text-emerald-600">We Serve</span>
+          </motion.h2>
+
+          <motion.p
+            initial={{ opacity: 0, y: 15 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.4, delay: 0.2 }}
+            className="mt-3 text-slate-600 text-sm sm:text-base md:text-lg leading-relaxed max-w-2xl mx-auto"
+          >
+            White Gravity delivers innovative digital solutions for businesses across multiple sectors. From healthcare and real estate to e-commerce and finance, we build custom tech that scales and transforms your operations.
+          </motion.p>
+
+          <motion.div
+            initial={{ opacity: 0, y: 10 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.4, delay: 0.3 }}
+            className="mt-4"
+          >
+            <Link
+              to="/industries"
+              className="inline-flex items-center gap-2 text-xs sm:text-sm font-bold text-emerald-700 hover:text-emerald-800 bg-white px-5 py-2 rounded-full border border-emerald-200 shadow-xs hover:shadow transition-all"
             >
+              <span>View All Industries</span>
+              <ArrowRight className="w-3.5 h-3.5" />
+            </Link>
+          </motion.div>
+        </div>
 
-              <SectionPill icon={Building2Icon}>
-                Industries
-              </SectionPill>
-
-              <h2
-                className="
-                  mt-3
-                  sm:mt-4
-
-                  text-3xl
-                  sm:text-4xl
-                  md:text-5xl
-
-                  font-bold
-
-                  leading-[1.15]
-
-                  whitespace-normal
-                "
-              >
-                <span className="text-slate-900">
-                  Industries{" "}
-                </span>
-
-                <motion.span
-                  initial={{
-                    opacity: 0,
-                    y: 40,
-                    rotateX: -60,
-                  }}
-                  whileInView={{
-                    opacity: 1,
-                    y: 0,
-                    rotateX: 0,
-                  }}
-                  viewport={{
-                    once: true,
-                  }}
-                  transition={{
-                    duration: 0.7,
-                    delay: 0.2,
-                    ease: [0.22, 1, 0.36, 1],
-                  }}
-                  style={{
-                    display: "inline-block",
-                    transformOrigin: "top center",
-                  }}
-                  className="text-emerald-600"
-                >
-                  We Serve
-                </motion.span>
-              </h2>
-
-              <p
-                className="
-                  mt-4
-                  sm:mt-5
-                  md:mt-6
-
-                  text-slate-600
-
-                  text-sm
-                  sm:text-base
-                  md:text-lg
-                  lg:text-xl
-
-                  leading-relaxed
-
-                  max-w-xl
-                "
-              >
-                White Gravity delivers innovative digital solutions
-                for businesses across multiple sectors. From healthcare
-                and real estate to e-commerce and finance, we build
-                custom tech that scales and transforms your operations.
-              </p>
-
-              <div
-                className="
-                  mt-6
-                  sm:mt-8
-                  md:mt-10
-                "
-              >
-                <Link
-                  to="/industries"
-                  className="
-                    group
-
-                    inline-flex
-
-                    items-center
-                    justify-center
-
-                    gap-2
-                    sm:gap-3
-
-                    px-5
-                    sm:px-6
-                    md:px-8
-
-                    py-3
-                    sm:py-3.5
-                    md:py-4
-
-                    rounded-full
-
-                    font-semibold
-
-                    bg-white
-
-                    border
-                    border-slate-200
-
-                    text-slate-800
-
-                    transition-all
-
-                    hover:shadow-[0_8px_30px_-4px_rgba(16,185,129,0.2)]
-
-                    hover:border-emerald-300
-
-                    hover:text-emerald-700
-
-                    text-xs
-                    sm:text-sm
-                    md:text-base
-                  "
-                >
-                  <span>
-                    View All Industries
-                  </span>
-
-                  <ArrowRight
-                    className="
-                      w-4
-                      h-4
-
-                      sm:w-5
-                      sm:h-5
-
-                      group-hover:translate-x-1
-
-                      transition-transform
-
-                      flex-shrink-0
-                    "
-                  />
-                </Link>
-              </div>
-            </motion.div>
+        {/* Compact height Marquee Rows */}
+        <div className="relative w-full overflow-hidden flex flex-col gap-3 sm:gap-4 pause-on-hover">
+          <div className="w-full overflow-hidden relative">
+            <div className="flex gap-3 sm:gap-4 md:gap-5 w-max animate-marquee-industries">
+              {row1Industries.map((ind, i) => (
+                <IndustryCard key={`row1-${i}`} industry={ind} />
+              ))}
+            </div>
           </div>
 
-          <div
-            className="
-              lg:col-span-7
-
-              relative
-
-              w-full
-
-              min-w-0
-            "
-          >
-            <div
-              className="
-                relative
-
-                w-full
-                lg:w-[200%]
-
-                h-[250px]
-                xs:h-[280px]
-                sm:h-[340px]
-                md:h-[440px]
-                lg:h-[500px]
-
-                flex
-                flex-col
-
-                gap-3
-                sm:gap-4
-                md:gap-6
-
-                justify-center
-
-                overflow-hidden
-
-                rounded-2xl
-                sm:rounded-3xl
-
-                lg:rounded-l-3xl
-                lg:rounded-r-none
-
-                pause-on-hover
-              "
-            >
-
-              <div
-                className="
-                  w-full
-
-                  overflow-hidden
-
-                  relative
-                "
-              >
-                <div
-                  className="
-                    flex
-
-                    gap-3
-                    sm:gap-4
-                    md:gap-6
-
-                    w-max
-
-                    animate-marquee-industries
-                  "
-                >
-                  {row1Industries.map((ind, i) => (
-                    <IndustryCard
-                      key={`row1-${i}`}
-                      industry={ind}
-                    />
-                  ))}
-                </div>
-              </div>
-
-              <div
-                className="
-                  w-full
-
-                  overflow-hidden
-
-                  relative
-                "
-              >
-                <div
-                  className="
-                    flex
-
-                    gap-3
-                    sm:gap-4
-                    md:gap-6
-
-                    w-max
-
-                    animate-marquee-reverse-industries
-
-                    ml-4
-                    sm:ml-8
-                    md:ml-12
-                  "
-                >
-                  {row2Industries.map((ind, i) => (
-                    <IndustryCard
-                      key={`row2-${i}`}
-                      industry={ind}
-                    />
-                  ))}
-                </div>
-              </div>
-
+          <div className="w-full overflow-hidden relative">
+            <div className="flex gap-3 sm:gap-4 md:gap-5 w-max animate-marquee-reverse-industries ml-4 sm:ml-8 md:ml-12">
+              {row2Industries.map((ind, i) => (
+                <IndustryCard key={`row2-${i}`} industry={ind} />
+              ))}
             </div>
           </div>
         </div>
@@ -373,101 +115,15 @@ export default function IndustriesSection() {
 
 function IndustryCard({ industry }) {
   return (
-    <div
-      className="
-        relative
-
-        rounded-xl
-        sm:rounded-2xl
-        md:rounded-[24px]
-
-        overflow-hidden
-
-        shadow-md
-
-        shrink-0
-
-        w-[180px]
-        xs:w-[200px]
-        sm:w-[240px]
-        md:w-[280px]
-        lg:w-[300px]
-
-        aspect-[16/9]
-
-        group
-
-        cursor-pointer
-      "
-    >
-
+    <div className="relative rounded-xl sm:rounded-2xl overflow-hidden shadow-sm hover:shadow-md shrink-0 w-[170px] xs:w-[190px] sm:w-[220px] md:w-[240px] aspect-[16/10] group cursor-pointer border border-emerald-100">
       <img
         src={industry.img}
         alt={industry.name}
-        className="
-          w-full
-          h-full
-
-          object-cover
-
-          group-hover:scale-105
-
-          transition-transform
-          duration-700
-        "
+        className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
       />
-
-      <div
-        className="
-          absolute
-          inset-0
-
-          bg-gradient-to-t
-          from-slate-900/90
-          via-slate-900/20
-          to-transparent
-
-          opacity-80
-
-          group-hover:opacity-100
-
-          transition-opacity
-          duration-300
-        "
-      />
-
-      <div
-        className="
-          absolute
-
-          inset-x-1
-          sm:inset-x-2
-
-          bottom-2
-          sm:bottom-3
-          md:bottom-4
-
-          text-center
-
-          text-white
-
-          px-1
-          sm:px-2
-        "
-      >
-        <div
-          className="
-            font-extrabold
-
-            text-[11px]
-            sm:text-sm
-            md:text-lg
-
-            tracking-wide
-
-            leading-tight
-          "
-        >
+      <div className="absolute inset-0 bg-gradient-to-t from-slate-950/85 via-slate-900/30 to-transparent opacity-85 group-hover:opacity-100 transition-opacity duration-300" />
+      <div className="absolute inset-x-2 bottom-2 sm:bottom-3 text-center text-white">
+        <div className="font-extrabold text-xs sm:text-sm md:text-base tracking-wide leading-tight drop-shadow-sm">
           {industry.name}
         </div>
       </div>

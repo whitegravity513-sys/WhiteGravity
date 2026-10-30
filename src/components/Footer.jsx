@@ -103,45 +103,39 @@ const serviceLinks = [
 
 export default function Footer() {
   return (
-    <footer className="relative bg-slate-950 text-slate-400 pt-12 sm:pt-16 pb-6 sm:pb-8 border-t border-slate-900 overflow-hidden">
-
+    <footer className="relative bg-slate-950 text-slate-400 pt-10 sm:pt-12 pb-6 sm:pb-8 border-t border-slate-900 overflow-hidden">
       <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-slate-700 to-transparent" />
-
       <div className="absolute -top-32 left-1/4 w-72 h-72 sm:w-96 sm:h-96 bg-emerald-500/5 rounded-full blur-3xl pointer-events-none" />
       <div className="absolute bottom-0 right-0 w-72 h-72 sm:w-96 sm:h-96 bg-emerald-500/5 rounded-full blur-3xl pointer-events-none" />
 
       <div className="container-x relative z-10 px-4 sm:px-6 lg:px-8">
-
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-12 gap-10 sm:gap-12 lg:gap-8">
-
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-12 gap-8 lg:gap-8">
           <div className="sm:col-span-2 lg:col-span-4">
-            <div className="flex flex-col items-start gap-4">
-
-              <div className="bg-white rounded-xl p-3 shadow-md shrink-0">
+            <div className="flex flex-col items-start gap-3">
+              <div className="bg-white rounded-xl px-3.5 py-2 shadow-sm shrink-0">
                 <img
                   src={COMPANY.logo}
                   alt="White Gravity Web Solutions"
-                  className="h-20 sm:h-24 w-auto object-contain"
+                  className="h-10 sm:h-12 w-auto object-contain"
                 />
               </div>
             </div>
 
-            <p className="mt-5 text-base sm:text-lg leading-relaxed text-slate-300 max-w-md">
+            <p className="mt-4 text-sm sm:text-base leading-relaxed text-slate-300 max-w-sm">
               Your trusted technology partner for digital transformation,
               custom software development, cloud solutions, and business
               automation.
             </p>
 
-            <div className="flex items-center gap-3 mt-6">
-
+            <div className="flex items-center gap-3 mt-5">
               <a
                 href={COMPANY.socials.facebook}
                 target="_blank"
                 rel="noreferrer"
                 aria-label="Facebook"
-                className="w-10 h-10 rounded-xl bg-slate-900 border border-slate-800 hover:border-[#1877F2]/40 hover:bg-[#1877F2] hover:text-white grid place-items-center transition-all duration-300"
+                className="w-9 h-9 rounded-xl bg-slate-900 border border-slate-800 hover:border-[#1877F2]/40 hover:bg-[#1877F2] hover:text-white grid place-items-center transition-all duration-300 text-slate-300"
               >
-                <Facebook className="w-5 h-5" />
+                <Facebook className="w-4 h-4" />
               </a>
 
               <a
@@ -149,9 +143,9 @@ export default function Footer() {
                 target="_blank"
                 rel="noreferrer"
                 aria-label="Instagram"
-                className="w-10 h-10 rounded-xl bg-slate-900 border border-slate-800 hover:border-[#E1306C]/40 hover:bg-gradient-to-tr hover:from-[#FCAF45] hover:via-[#FD1D1D] hover:to-[#E1306C] hover:text-white grid place-items-center transition-all duration-300"
+                className="w-9 h-9 rounded-xl bg-slate-900 border border-slate-800 hover:border-[#E1306C]/40 hover:bg-gradient-to-tr hover:from-[#FCAF45] hover:via-[#FD1D1D] hover:to-[#E1306C] hover:text-white grid place-items-center transition-all duration-300 text-slate-300"
               >
-                <Instagram className="w-5 h-5" />
+                <Instagram className="w-4 h-4" />
               </a>
 
               <a
@@ -159,29 +153,27 @@ export default function Footer() {
                 target="_blank"
                 rel="noreferrer"
                 aria-label="LinkedIn"
-                className="w-10 h-10 rounded-xl bg-slate-900 border border-slate-800 hover:border-[#0A66C2]/40 hover:bg-[#0A66C2] hover:text-white grid place-items-center transition-all duration-300"
+                className="w-9 h-9 rounded-xl bg-slate-900 border border-slate-800 hover:border-[#0A66C2]/40 hover:bg-[#0A66C2] hover:text-white grid place-items-center transition-all duration-300 text-slate-300"
               >
-                <Linkedin className="w-5 h-5" />
+                <Linkedin className="w-4 h-4" />
               </a>
-
             </div>
           </div>
 
           <div className="lg:col-span-2">
-            <h4 className="text-white font-bold text-base tracking-wider uppercase mb-6 relative inline-block">
+            <h4 className="text-white font-bold text-sm sm:text-base tracking-wider uppercase mb-4 relative inline-block">
               Company
-              <span className="absolute -bottom-2 left-0 w-8 h-[2px] bg-emerald-500" />
+              <span className="absolute -bottom-1.5 left-0 w-8 h-[2px] bg-emerald-500" />
             </h4>
 
-            <ul className="space-y-3.5 text-sm sm:text-base">
+            <ul className="space-y-2.5 text-sm sm:text-[15px]">
               {footerLinks.map((link) => (
                 <li key={link.to}>
                   <Link
                     to={link.to}
-                    className="group flex items-center gap-2 text-slate-400 hover:text-emerald-400 transition-all duration-300"
+                    className="group flex items-center gap-1.5 text-slate-300 font-medium hover:text-emerald-400 transition-all duration-200"
                   >
-                    <ArrowRight className="w-3.5 h-3.5 opacity-0 -ml-5 group-hover:opacity-100 group-hover:ml-0 transition-all duration-300 text-emerald-400 shrink-0" />
-
+                    <ArrowRight className="w-3.5 h-3.5 opacity-0 -ml-4 group-hover:opacity-100 group-hover:ml-0 transition-all duration-200 text-emerald-400 shrink-0" />
                     <span>{link.label}</span>
                   </Link>
                 </li>
@@ -190,23 +182,20 @@ export default function Footer() {
           </div>
 
           <div className="lg:col-span-3">
-            <h4 className="text-white font-bold text-base tracking-wider uppercase mb-6 relative inline-block">
+            <h4 className="text-white font-bold text-sm sm:text-base tracking-wider uppercase mb-4 relative inline-block">
               Services
-              <span className="absolute -bottom-2 left-0 w-8 h-[2px] bg-emerald-500" />
+              <span className="absolute -bottom-1.5 left-0 w-8 h-[2px] bg-emerald-500" />
             </h4>
 
-            <ul className="space-y-3.5 text-sm sm:text-base">
+            <ul className="space-y-2.5 text-sm sm:text-[15px]">
               {serviceLinks.map((link) => (
                 <li key={link.to}>
                   <Link
                     to={link.to}
-                    className="group flex items-start gap-2 text-slate-400 hover:text-emerald-400 transition-all duration-300"
+                    className="group flex items-start gap-1.5 text-slate-300 font-medium hover:text-emerald-400 transition-all duration-200"
                   >
-                    <ArrowRight className="w-3.5 h-3.5 mt-0.5 opacity-0 -ml-5 group-hover:opacity-100 group-hover:ml-0 transition-all duration-300 text-emerald-400 shrink-0" />
-
-                    <span className="leading-relaxed">
-                      {link.label}
-                    </span>
+                    <ArrowRight className="w-3.5 h-3.5 mt-0.5 opacity-0 -ml-4 group-hover:opacity-100 group-hover:ml-0 transition-all duration-200 text-emerald-400 shrink-0" />
+                    <span className="leading-snug">{link.label}</span>
                   </Link>
                 </li>
               ))}
@@ -214,30 +203,24 @@ export default function Footer() {
           </div>
 
           <div className="sm:col-span-2 lg:col-span-3">
-            <h4 className="text-white font-bold text-base tracking-wider uppercase mb-6 relative inline-block">
+            <h4 className="text-white font-bold text-sm sm:text-base tracking-wider uppercase mb-4 relative inline-block">
               Contact Us
-              <span className="absolute -bottom-2 left-0 w-8 h-[2px] bg-emerald-500" />
+              <span className="absolute -bottom-1.5 left-0 w-8 h-[2px] bg-emerald-500" />
             </h4>
 
-            <ul className="space-y-5 text-sm sm:text-base">
-
+            <ul className="space-y-3.5 text-sm sm:text-[15px]">
               {COMPANY.phones.map((p) => (
-                <li
-                  key={p}
-                  className="flex items-start gap-3"
-                >
-                  <div className="bg-slate-900 border border-slate-800 rounded-lg p-2 text-emerald-400 shrink-0">
+                <li key={p} className="flex items-start gap-3">
+                  <div className="bg-slate-900 border border-slate-800 rounded-lg p-2 text-emerald-400 shrink-0 mt-0.5">
                     <Phone className="w-4 h-4" />
                   </div>
-
                   <div className="min-w-0">
-                    <span className="block text-xs sm:text-sm text-slate-500 font-bold uppercase tracking-wider">
+                    <span className="block text-xs text-slate-400 font-bold uppercase tracking-wider">
                       Call Us
                     </span>
-
                     <a
                       href={`tel:${p}`}
-                      className="block text-slate-300 hover:text-emerald-400 transition-colors font-medium mt-1 break-all"
+                      className="block text-slate-200 font-semibold hover:text-emerald-400 transition-colors break-all mt-0.5"
                     >
                       {p}
                     </a>
@@ -246,22 +229,17 @@ export default function Footer() {
               ))}
 
               {COMPANY.emails.map((e) => (
-                <li
-                  key={e}
-                  className="flex items-start gap-3"
-                >
-                  <div className="bg-slate-900 border border-slate-800 rounded-lg p-2 text-emerald-400 shrink-0">
+                <li key={e} className="flex items-start gap-3">
+                  <div className="bg-slate-900 border border-slate-800 rounded-lg p-2 text-emerald-400 shrink-0 mt-0.5">
                     <Mail className="w-4 h-4" />
                   </div>
-
                   <div className="min-w-0">
-                    <span className="block text-xs sm:text-sm text-slate-500 font-bold uppercase tracking-wider">
+                    <span className="block text-xs text-slate-400 font-bold uppercase tracking-wider">
                       Email Us
                     </span>
-
                     <a
                       href={`mailto:${e}`}
-                      className="block text-slate-300 hover:text-emerald-400 transition-colors font-medium mt-1 break-all"
+                      className="block text-slate-200 font-semibold hover:text-emerald-400 transition-colors break-all mt-0.5"
                     >
                       {e}
                     </a>
@@ -270,25 +248,23 @@ export default function Footer() {
               ))}
 
               <li className="flex items-start gap-3">
-                <div className="bg-slate-900 border border-slate-800 rounded-lg p-2 text-emerald-400 shrink-0">
+                <div className="bg-slate-900 border border-slate-800 rounded-lg p-2 text-emerald-400 shrink-0 mt-0.5">
                   <MapPin className="w-4 h-4" />
                 </div>
-
                 <div className="min-w-0">
-                  <span className="block text-xs sm:text-sm text-slate-500 font-bold uppercase tracking-wider">
+                  <span className="block text-xs text-slate-400 font-bold uppercase tracking-wider">
                     Office Address
                   </span>
-
-                  <span className="block text-slate-300 leading-relaxed mt-1">
+                  <span className="block text-slate-200 font-medium leading-snug mt-0.5">
                     {COMPANY.address}
                   </span>
                 </div>
               </li>
-
             </ul>
           </div>
         </div>
 
+        {/* Badges Section with generous gap as requested */}
         <motion.div
           initial="hidden"
           whileInView="visible"
@@ -302,16 +278,8 @@ export default function Footer() {
               },
             },
           }}
-          className="
-            mt-14 sm:mt-16 lg:mt-20
-            pt-8
-            border-t border-slate-800
-            flex flex-wrap justify-center items-center
-            gap-8 sm:gap-10 lg:gap-12
-            max-w-6xl mx-auto
-          "
+          className="mt-10 sm:mt-12 pt-6 sm:pt-8 border-t border-slate-800/80 flex flex-wrap justify-center items-center gap-8 sm:gap-12 md:gap-16 lg:gap-20 max-w-6xl mx-auto"
         >
-
           {[
             {
               type: "image",
@@ -341,8 +309,8 @@ export default function Footer() {
               variants={{
                 hidden: {
                   opacity: 0,
-                  y: 30,
-                  scale: 0.8,
+                  y: 20,
+                  scale: 0.85,
                 },
                 visible: {
                   opacity: 1,
@@ -356,7 +324,7 @@ export default function Footer() {
                 },
               }}
               animate={{
-                y: [0, -6, 0],
+                y: [0, -5, 0],
               }}
               transition={{
                 y: {
@@ -366,14 +334,7 @@ export default function Footer() {
                   delay: index * 0.2,
                 },
               }}
-              className="
-                h-20 w-20
-                sm:h-24 sm:w-24
-                md:h-28 md:w-28
-                flex items-center justify-center
-                hover:scale-110
-                transition-transform duration-300
-              "
+              className="h-16 w-16 sm:h-20 sm:w-20 md:h-24 md:w-24 flex items-center justify-center hover:scale-110 transition-transform duration-300"
             >
               {badge.type === "image" ? (
                 <img
@@ -382,27 +343,15 @@ export default function Footer() {
                   className="w-full h-full object-contain"
                 />
               ) : (
-                <svg
-                  viewBox="0 0 100 115"
-                  className="w-full h-full"
-                >
+                <svg viewBox="0 0 100 115" className="w-full h-full">
                   <polygon
                     points="50,2 98,28 98,82 50,108 2,82 2,28"
                     fill="#1e293b"
                     stroke="#cbd5e1"
                     strokeWidth="3"
                   />
-
-                  <polygon
-                    points="50,8 92,30 92,42 8,42 8,30"
-                    fill="#ffffff"
-                  />
-
-                  <polygon
-                    points="8,68 92,68 92,80 50,102 8,80"
-                    fill="#ffffff"
-                  />
-
+                  <polygon points="50,8 92,30 92,42 8,42 8,30" fill="#ffffff" />
+                  <polygon points="8,68 92,68 92,80 50,102 8,80" fill="#ffffff" />
                   <text
                     x="50"
                     y="23"
@@ -415,7 +364,6 @@ export default function Footer() {
                   >
                     TOP
                   </text>
-
                   <text
                     x="50"
                     y="34"
@@ -427,7 +375,6 @@ export default function Footer() {
                   >
                     {badge.title}
                   </text>
-
                   <text
                     x="46"
                     y="60"
@@ -439,14 +386,7 @@ export default function Footer() {
                   >
                     Clutch
                   </text>
-
-                  <circle
-                    cx="77"
-                    cy="59"
-                    r="2.5"
-                    fill="#ef4444"
-                  />
-
+                  <circle cx="77" cy="59" r="2.5" fill="#ef4444" />
                   <text
                     x="50"
                     y="78"
@@ -458,7 +398,6 @@ export default function Footer() {
                   >
                     {badge.location}
                   </text>
-
                   <text
                     x="50"
                     y="90"
@@ -479,8 +418,8 @@ export default function Footer() {
             variants={{
               hidden: {
                 opacity: 0,
-                y: 30,
-                scale: 0.8,
+                y: 20,
+                scale: 0.85,
               },
               visible: {
                 opacity: 1,
@@ -494,7 +433,7 @@ export default function Footer() {
               },
             }}
             animate={{
-              y: [0, -6, 0],
+              y: [0, -5, 0],
             }}
             transition={{
               y: {
@@ -504,21 +443,9 @@ export default function Footer() {
                 delay: 0.8,
               },
             }}
-            className="
-              relative
-              h-20 w-20
-              sm:h-24 sm:w-24
-              md:h-28 md:w-28
-              flex flex-col
-              items-center justify-center
-              hover:scale-110
-              transition-transform duration-300
-            "
+            className="relative h-16 w-16 sm:h-20 sm:w-20 md:h-24 md:w-24 flex flex-col items-center justify-center hover:scale-110 transition-transform duration-300"
           >
-            <svg
-              viewBox="0 0 100 100"
-              className="absolute inset-0 w-full h-full"
-            >
+            <svg viewBox="0 0 100 100" className="absolute inset-0 w-full h-full">
               <circle
                 cx="50"
                 cy="50"
@@ -528,7 +455,6 @@ export default function Footer() {
                 strokeWidth="2"
                 strokeDasharray="3 3"
               />
-
               <circle
                 cx="50"
                 cy="50"
@@ -537,29 +463,19 @@ export default function Footer() {
                 stroke="#fbbf24"
                 strokeWidth="3.5"
               />
-
-              <path
-                d="M15 85 L30 75 L20 60 Z"
-                fill="#f59e0b"
-              />
-
-              <path
-                d="M85 85 L70 75 L80 60 Z"
-                fill="#f59e0b"
-              />
-
+              <path d="M15 85 L30 75 L20 60 Z" fill="#f59e0b" />
+              <path d="M85 85 L70 75 L80 60 Z" fill="#f59e0b" />
               <path
                 d="M22 82 L50 94 L78 82 L72 73 L50 83 L28 73 Z"
                 fill="#fbbf24"
               />
             </svg>
 
-            <div className="relative z-10 flex flex-col items-center text-center -mt-2 px-2">
-              <div className="text-xl sm:text-2xl md:text-3xl font-extrabold text-slate-900 leading-none">
-                5<span className="text-amber-500 text-base sm:text-lg md:text-xl">+</span>
+            <div className="relative z-10 flex flex-col items-center text-center -mt-1 px-1">
+              <div className="text-lg sm:text-xl md:text-2xl font-extrabold text-slate-900 leading-none">
+                5<span className="text-amber-500 text-sm sm:text-base md:text-lg">+</span>
               </div>
-
-              <div className="text-[5px] sm:text-[6px] md:text-[7px] font-extrabold text-slate-800 uppercase tracking-wider mt-1 leading-tight">
+              <div className="text-[5px] sm:text-[6px] md:text-[7px] font-extrabold text-slate-800 uppercase tracking-wider mt-0.5 leading-tight">
                 Years Of
                 <br />
                 Industry
@@ -570,35 +486,16 @@ export default function Footer() {
           </motion.div>
         </motion.div>
 
-        <div
-          className="
-            mt-10 sm:mt-12
-            pt-6 sm:pt-7
-            border-t border-slate-800
-            flex flex-col
-            sm:flex-row
-            justify-between
-            items-center
-            gap-4
-            text-sm sm:text-base
-            text-slate-400
-          "
-        >
+        <div className="mt-8 pt-4 border-t border-slate-800/80 flex flex-col sm:flex-row justify-between items-center gap-3 text-xs sm:text-sm font-medium text-slate-400">
           <p className="text-center sm:text-left">
-            © 2025 White Gravity.
-            <span className="hidden sm:inline"> </span>
-            All rights reserved.
+            &copy; {new Date().getFullYear()} White Gravity. All rights reserved.
           </p>
 
           <div className="flex items-center gap-2 text-center">
             <span className="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse shrink-0" />
-
-            <p>
-              Made with care in the United States.
-            </p>
+            <p>Made with care in the United States.</p>
           </div>
         </div>
-
       </div>
     </footer>
   );
