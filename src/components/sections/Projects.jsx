@@ -87,7 +87,7 @@ export default function Projects() {
                     to={`/${project.slug}`}
                     className="inline-flex items-center gap-1 text-xs sm:text-sm font-semibold text-[#009B6C] hover:text-[#007a55] transition-colors whitespace-nowrap shrink-0 group/link"
                   >
-                    View Project
+                    Know More
                     <ArrowRight className="w-3.5 h-3.5 group-hover/link:translate-x-0.5 transition-transform" />
                   </Link>
                 </div>
