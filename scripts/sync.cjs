@@ -2,6 +2,10 @@ const fs = require('fs');
 const path = require('path');
 const { execSync } = require('child_process');
 
+if (process.platform !== 'win32' || process.env.VERCEL || process.env.CI) {
+  process.exit(0);
+}
+
 const dRoot = path.resolve(__dirname, '..');
 const cRoot = 'C:/Users/Admin/Desktop/WhiteGravity/WhiteGravity';
 
@@ -42,15 +46,19 @@ if (fs.existsSync(cRoot)) {
   copyDir(dDist, cDist);
 }
 
-const dZip = path.join(dRoot, 'dist.zip');
-const cZip = path.join(cRoot, 'dist.zip');
+try {
+  const dZip = path.join(dRoot, 'dist.zip');
+  const cZip = path.join(cRoot, 'dist.zip');
 
-if (fs.existsSync(dZip)) fs.unlinkSync(dZip);
-if (fs.existsSync(cZip)) fs.unlinkSync(cZip);
+  if (fs.existsSync(dZip)) fs.unlinkSync(dZip);
+  if (fs.existsSync(cZip)) fs.unlinkSync(cZip);
 
-const psCmd = `Get-ChildItem -Path '${dDist}' -Force | Compress-Archive -DestinationPath '${dZip}' -Force`;
-execSync(`powershell -NoProfile -Command "${psCmd}"`, { stdio: 'inherit' });
+  const psCmd = `Get-ChildItem -Path '${dDist}' -Force | Compress-Archive -DestinationPath '${dZip}' -Force`;
+  execSync(`powershell -NoProfile -Command "${psCmd}"`, { stdio: 'inherit' });
 
-if (fs.existsSync(cRoot)) {
-  fs.copyFileSync(dZip, cZip);
+  if (fs.existsSync(cRoot)) {
+    fs.copyFileSync(dZip, cZip);
+  }
+} catch {
+  // Silently ignore zip creation errors on environments without powershell
 }

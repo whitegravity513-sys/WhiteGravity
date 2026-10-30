@@ -5,7 +5,8 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "vite build && node scripts/sync.cjs",
+    "build": "vite build",
+    "sync": "node scripts/sync.cjs",
     "lint": "oxlint",
     "preview": "vite preview"
   },
