@@ -77,17 +77,7 @@ export default function ServicesGrid() {
         "
       />
 
-      <div
-        className="
-          container-x
-
-          px-4
-          sm:px-6
-          md:px-8
-          lg:px-10
-          xl:px-0
-        "
-      >
+      <div className="container-x">
 
         <div
           className="

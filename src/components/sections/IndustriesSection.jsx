@@ -51,16 +51,7 @@ export default function IndustriesSection() {
         bg-emerald-50/60
       "
     >
-      <div
-        className="
-          container-x
-
-          px-4
-          sm:px-6
-          md:px-8
-          lg:px-0
-        "
-      >
+      <div className="container-x">
         <div
           className="
             grid

@@ -154,25 +154,7 @@ export default function VideoTestimonials() {
         "
       />
 
-      <div
-        className="
-          container-x
-
-          relative
-          z-10
-
-          w-full
-
-          px-4
-          sm:px-6
-          md:px-8
-          lg:px-0
-
-          max-w-6xl
-
-          mx-auto
-        "
-      >
+      <div className="container-x relative z-10 w-full max-w-6xl mx-auto">
 
         <motion.div
           initial={{

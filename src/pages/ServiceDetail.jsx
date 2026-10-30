@@ -124,7 +124,7 @@ const DETAILED_SERVICES_CONTENT = {
     ],
 
     faqsTitle:
-      'Frequently Asked Questions — Custom Software Development in the US',
+      'Frequently Asked Questions — Custom Software Development in USA',
 
     faqs: [
       {
@@ -165,7 +165,7 @@ const DETAILED_SERVICES_CONTENT = {
       'Custom Website Development Services by White Gravity',
 
     tailoredDesc:
-      "Website development in the US is one of White Gravity's core specialties. We create modern, high-performing websites that do more than just look impressive—they help businesses grow. Every website is built with a focus on speed, responsive design, SEO best practices, and a seamless user experience across all devices.\n\nWhether you need a business website, corporate portal, portfolio, landing page, eCommerce store, or a custom web solution, our experienced team delivers websites tailored to your goals. At White Gravity, we combine creative design with powerful development to build websites that strengthen your online presence and drive measurable business results.",
+      "Website development in USA is one of White Gravity's core specialties. We create modern, high-performing websites that do more than just look impressive—they help businesses grow. Every website is built with a focus on speed, responsive design, SEO best practices, and a seamless user experience across all devices.\n\nWhether you need a business website, corporate portal, portfolio, landing page, eCommerce store, or a custom web solution, our experienced team delivers websites tailored to your goals. At White Gravity, we combine creative design with powerful development to build websites that strengthen your online presence and drive measurable business results.",
 
     tailoredImg: '/images/service-website.jpg',
 
@@ -212,7 +212,7 @@ const DETAILED_SERVICES_CONTENT = {
     ],
 
     faqsTitle:
-      'Frequently Asked Questions — Website Development in the US',
+      'Frequently Asked Questions — Website Development in USA',
 
     faqs: [
       {
@@ -242,16 +242,16 @@ const DETAILED_SERVICES_CONTENT = {
     pill: 'E-Commerce',
 
     heroTitle:
-      'ECommerce Development in the US',
+      'ECommerce Development in USA',
 
     heroSubtitle:
       'Build powerful, secure, and scalable online stores tailored to your business. We develop high-performance eCommerce websites that deliver seamless shopping experiences and drive more sales.',
 
     tailoredTitle:
-      'Grow Your Business with Professional ECommerce Development in the US',
+      'Grow Your Business with Professional ECommerce Development in USA',
 
     tailoredDesc:
-      "ECommerce development in the US is one of White Gravity's core services. We build modern, secure, and scalable online stores that are designed to deliver exceptional user experiences and drive business growth.\n\nWhether you're launching a new eCommerce brand or expanding an existing business, our team provides end-to-end development solutions. From custom storefront design and product catalog management to secure payment gateway integration, inventory management, order processing, and shipping solutions, we ensure every aspect of your online store is optimized for success.",
+      "ECommerce development in USA is one of White Gravity's core services. We build modern, secure, and scalable online stores that are designed to deliver exceptional user experiences and drive business growth.\n\nWhether you're launching a new eCommerce brand or expanding an existing business, our team provides end-to-end development solutions. From custom storefront design and product catalog management to secure payment gateway integration, inventory management, order processing, and shipping solutions, we ensure every aspect of your online store is optimized for success.",
 
     tailoredImg: '/images/service-ecommerce.jpg',
 
@@ -298,7 +298,7 @@ const DETAILED_SERVICES_CONTENT = {
     ],
 
     faqsTitle:
-      'Frequently Asked Questions — ECommerce Development in the US',
+      'Frequently Asked Questions — ECommerce Development in USA',
 
     faqs: [
       {
@@ -328,13 +328,13 @@ const DETAILED_SERVICES_CONTENT = {
     pill: 'Mobile App Development',
 
     heroTitle:
-      'Mobile App Development in the US',
+      'Mobile App Development in USA',
 
     heroSubtitle:
       'Custom mobile app development for iOS and Android, delivering intuitive user experiences, robust functionality, and scalable solutions from concept to launch.',
 
     tailoredTitle:
-      'Expert Mobile App Development in the US',
+      'Expert Mobile App Development in USA',
 
     tailoredDesc:
       "At White Gravity, we specialize in developing custom mobile applications that help businesses connect with customers, streamline operations, and accelerate digital growth. Our team creates high-performance Android and iOS apps with intuitive user experiences, modern designs, and scalable architectures tailored to your business objectives.\n\nFrom strategy and UI/UX design to app development, API integration, testing, deployment, and ongoing maintenance, we provide end-to-end mobile app development services. Whether you need a customer-facing application, an enterprise mobility solution, an eCommerce app, or an on-demand service platform, we build secure, reliable, and feature-rich mobile applications that deliver exceptional performance across devices.",
@@ -384,7 +384,7 @@ const DETAILED_SERVICES_CONTENT = {
     ],
 
     faqsTitle:
-      'Frequently Asked Questions — Mobile App Development in the US',
+      'Frequently Asked Questions — Mobile App Development in USA',
 
     faqs: [
       {
@@ -414,16 +414,16 @@ const DETAILED_SERVICES_CONTENT = {
     pill: 'Web App Development',
 
     heroTitle:
-      'Web App Development in the US',
+      'Web App Development in USA',
 
     heroSubtitle:
       'Build secure, scalable, and high-performance web applications tailored to your business needs. We develop custom SaaS platforms, enterprise solutions, customer portals, and business dashboards designed for long-term growth.',
 
     tailoredTitle:
-      'Custom Web Application Development in the US for Modern Businesses',
+      'Custom Web Application Development in USA for Modern Businesses',
 
     tailoredDesc:
-      'Web app development in the US is a key service at White Gravity, where we build custom web applications that help businesses streamline operations, improve productivity, and accelerate digital growth. Our solutions are designed with performance, security, and scalability in mind, ensuring they evolve alongside your business. Whether you need a custom CRM, ERP system, customer portal, SaaS platform, business dashboard, booking system, or workflow automation tool, our experienced developers deliver feature-rich applications tailored to your unique requirements. Using modern technologies and industry best practices, we create intuitive, reliable, and high-performing web applications that provide seamless user experiences across all devices.',
+      'Web app development in USA is a key service at White Gravity, where we build custom web applications that help businesses streamline operations, improve productivity, and accelerate digital growth. Our solutions are designed with performance, security, and scalability in mind, ensuring they evolve alongside your business. Whether you need a custom CRM, ERP system, customer portal, SaaS platform, business dashboard, booking system, or workflow automation tool, our experienced developers deliver feature-rich applications tailored to your unique requirements. Using modern technologies and industry best practices, we create intuitive, reliable, and high-performing web applications that provide seamless user experiences across all devices.',
 
     tailoredImg:
       '/images/service-webapp.jpg',
@@ -471,7 +471,7 @@ const DETAILED_SERVICES_CONTENT = {
     ],
 
     faqsTitle:
-      'Frequently Asked Questions — Web App Development in the US',
+      'Frequently Asked Questions — Web App Development in USA',
 
     faqs: [
       {
@@ -642,7 +642,7 @@ const DETAILED_SERVICES_CONTENT = {
     ],
 
     faqsTitle:
-      'Frequently Asked Questions — Digital Marketing in the US',
+      'Frequently Asked Questions — Digital Marketing in USA',
 
     faqs: [
       {
@@ -729,7 +729,7 @@ const DETAILED_SERVICES_CONTENT = {
     ],
 
     faqsTitle:
-      'Frequently Asked Questions — Meta & Google Ads in the US',
+      'Frequently Asked Questions — Meta & Google Ads in USA',
 
     faqs: [
       {
@@ -759,7 +759,7 @@ const DETAILED_SERVICES_CONTENT = {
     pill: 'Zoho Consultation',
 
     heroTitle:
-      'Zoho Consultation & Implementation in the US',
+      'Zoho Consultation & Implementation in USA',
 
     heroSubtitle:
       'Streamline Your Entire Business Operations with Certified Zoho One Experts',
@@ -816,11 +816,11 @@ const DETAILED_SERVICES_CONTENT = {
     ],
 
     faqsTitle:
-      'Frequently Asked Questions — Zoho Consultation in the US',
+      'Frequently Asked Questions — Zoho Consultation in USA',
 
     faqs: [
       {
-        q: 'Why choose White Gravity as your Zoho Partner in the US?',
+        q: 'Why choose White Gravity as your Zoho Partner in USA?',
         a:
           'Our certified Zoho experts bring years of domain experience across CRM, ERP, and Zoho One apps to ensure smooth deployment and maximum ROI.'
       },
@@ -901,7 +901,7 @@ const getDefaultContent = (service) => ({
   ],
 
   faqsTitle:
-    `Frequently Asked Questions — ${service.title} in the US`,
+    `Frequently Asked Questions — ${service.title} in USA`,
 
   faqs: [
     {

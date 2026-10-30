@@ -44,7 +44,7 @@ export default function Hero() {
       <div className="absolute bottom-0 left-0 -mb-10 -ml-16 sm:-mb-12 sm:-ml-20 w-60 h-60 sm:w-80 sm:h-80 bg-white opacity-10 rounded-full blur-3xl pointer-events-none" />
       <div className="absolute inset-0 bg-[url('/images/noise.svg')] opacity-20 pointer-events-none mix-blend-overlay" />
 
-      <div className="container-x relative z-10 w-full grid grid-cols-1 lg:grid-cols-12 gap-4 sm:gap-6 lg:gap-4 items-center py-2 sm:py-4 lg:py-0 px-4 sm:px-6 lg:px-0">
+      <div className="container-x relative z-10 w-full grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-8 items-center py-4 sm:py-6 lg:py-0">
         <motion.div
           variants={container}
           initial="hidden"
@@ -77,9 +77,9 @@ export default function Hero() {
 
           <motion.p
             variants={fadeUp}
-            className="mt-4 sm:mt-5 text-white/90 text-xs sm:text-sm md:text-base leading-relaxed max-w-2xl font-light pr-0 lg:pr-6 text-justify"
+            className="mt-4 sm:mt-5 text-white/90 text-xs sm:text-sm md:text-base leading-relaxed max-w-2xl font-light pr-0 lg:pr-6"
           >
-            White Gravity Web Solutions delivers custom Website development & Mobile App development, custom CRM Development, E-Commerce, Zoho and business automation solutions for businesses across the United States.
+            White Gravity Web Solutions delivers custom Website development & Mobile App development, custom CRM Development, E-Commerce, Zoho and business automation solutions for businesses across the USA.
           </motion.p>
 
           <motion.div

@@ -84,7 +84,7 @@ export default function ZohoConsultation() {
             transition={{ duration: 0.5, delay: 0.2 }}
             className="mt-6 sm:mt-8 text-[32px] xs:text-[36px] sm:text-4xl md:text-5xl lg:text-6xl font-extrabold text-white leading-[1.1] max-w-full"
           >
-            Zoho CRM Consultant in the US
+            Zoho CRM Consultant in USA
           </motion.h1>
           <motion.p
             initial={{ opacity: 0, y: 30 }}

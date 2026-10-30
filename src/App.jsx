@@ -63,6 +63,7 @@ function AnimatedRoutes() {
       <Route path="/contact" element={<Contact />} />
       <Route path="/seo/:slug" element={<LegacySeoRedirect />} />
       <Route path="/seo" element={<LegacySeoRedirect />} />
+      <Route path="/services/:slug" element={<DynamicSlugRoute />} />
       <Route path="/:slug" element={<DynamicSlugRoute />} />
       <Route path="*" element={<NotFound />} />
     </Routes>

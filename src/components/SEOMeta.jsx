@@ -84,7 +84,7 @@ export default function SEOMeta({ page, isNotFound = false }) {
           '@id': 'https://whitegravity.in/#website',
           'url': 'https://whitegravity.in/',
           'name': COMPANY.name,
-          'description': 'IT and Software Company in the US providing Custom Software, Web & Mobile App Development, CRM/ERP, and Digital Marketing.',
+          'description': 'IT and Software Company in USA providing Custom Software, Web & Mobile App Development, CRM/ERP, and Digital Marketing.',
           'publisher': {
             '@id': 'https://whitegravity.in/#organization',
           },

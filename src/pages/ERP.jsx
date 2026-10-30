@@ -337,7 +337,7 @@ export default function ERP() {
         <div className="container-x">
           <div className="text-center max-w-3xl mx-auto mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4">Our <span className="text-[#009B6C]">Zoho Services</span></h2>
-            <p className="text-slate-600 text-lg">As a dedicated Zoho CRM Consultant in the US, we unlock the full potential of the Zoho suite for your business.</p>
+            <p className="text-slate-600 text-lg">As a dedicated Zoho CRM Consultant in USA, we unlock the full potential of the Zoho suite for your business.</p>
           </div>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-6">

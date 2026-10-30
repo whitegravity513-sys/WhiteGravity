@@ -323,7 +323,7 @@ export default function SEOPage() {
                       <ArrowRight className="w-3.5 h-3.5" />
                     </button>
                     <span className="text-[11px] font-semibold text-slate-400">
-                      Across the US
+                      Across the USA & Globally
                     </span>
                   </div>
                 </div>
@@ -338,7 +338,7 @@ export default function SEOPage() {
           <div className="text-center max-w-3xl mx-auto mb-12 sm:mb-14">
             <SectionPill icon={Award}>Why Partner With Us</SectionPill>
             <h2 className="mt-3 text-2xl sm:text-3xl md:text-4xl font-extrabold text-slate-900 tracking-tight">
-              Why Choose White Gravity in the US
+              Why Choose White Gravity in USA
             </h2>
             <p className="mt-3 text-sm sm:text-base text-slate-600">
               Accountable technology and growth partnerships backed by senior in-house developers.
@@ -376,7 +376,7 @@ export default function SEOPage() {
               Frequently Asked Questions
             </h2>
             <p className="mt-3 text-sm sm:text-base text-slate-600">
-              Everything you need to know about our {page.title.toLowerCase()} in the US.
+              Everything you need to know about our {page.title.toLowerCase()} in USA.
             </p>
           </div>
 

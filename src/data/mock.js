@@ -139,7 +139,7 @@ export const INDUSTRIES = [
 export const COMPANY = {
   name: 'White Gravity Web Solutions',
   short: 'White Gravity',
-  tagline: 'Premier IT & Software Company in the US',
+  tagline: 'Premier IT & Software Company in USA',
   phones: ['+1 (469) 461-4710'],
   whatsapp: 'https://wa.me/14694614710?text=Hello%20White%20Gravity%20Team!%20I%20visited%20your%20website%20and%20I%20would%20like%20to%20discuss%20a%20new%20project%20with%20you.',
   emails: ['info@whitegravitycrm.com'],

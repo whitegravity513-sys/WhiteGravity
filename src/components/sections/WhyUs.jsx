@@ -427,7 +427,7 @@ export default function WhyUs() {
 
               <span className="block sm:inline-block whitespace-nowrap min-h-[1.2em]">
                 <TypewriterText
-                  words={["in the US", "Nationwide"]}
+                  words={["in USA", "Globally"]}
                   typingSpeed={100}
                   deletingSpeed={50}
                   pauseTime={2000}
@@ -463,14 +463,12 @@ export default function WhyUs() {
             <div
               className="
                 mt-8
-
                 grid
                 grid-cols-2
-                gap-3
-
-                sm:gap-4
-
+                md:grid-cols-3
                 lg:grid-cols-6
+                gap-3
+                sm:gap-4
                 lg:gap-4
                 xl:gap-5
               "
@@ -481,27 +479,12 @@ export default function WhyUs() {
                   className={`
                     min-w-0
                     w-full
-
                     ${
-
                       i === 4
-                        ? `
-                          col-span-2
-                          mx-auto
-                          w-[calc(50%-6px)]
-
-                          lg:col-span-2
-                          lg:col-start-4
-                          lg:w-full
-                        `
+                        ? 'col-span-2 md:col-span-1 lg:col-span-2 lg:col-start-4'
                         : i === 3
-                        ? `
-                          lg:col-span-2
-                          lg:col-start-2
-                        `
-                        : `
-                          lg:col-span-2
-                        `
+                        ? 'col-span-1 md:col-span-1 lg:col-span-2 lg:col-start-2'
+                        : 'col-span-1 md:col-span-1 lg:col-span-2'
                     }
                   `}
                 >

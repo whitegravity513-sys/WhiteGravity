@@ -23,7 +23,7 @@ export default function About() {
     {
       icon: Rocket,
       title: "Our Vision",
-      desc: "To become one of the most trusted digital transformation companies in the US by delivering world-class technology solutions that inspire innovation and help businesses succeed in the digital era.",
+      desc: "To become one of the most trusted digital transformation companies in USA by delivering world-class technology solutions that inspire innovation and help businesses succeed in the digital era.",
     },
     {
       icon: Handshake,
@@ -113,7 +113,7 @@ export default function About() {
                   "
                 >
                   White Gravity Web Solutions is a premier IT
-                  company serving businesses across the US. We
+                  company serving businesses across the USA and globally. We
                   specialize in custom software architecture,
                   high-performance website development, and
                   targeted digital marketing campaigns that
