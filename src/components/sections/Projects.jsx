@@ -34,12 +34,12 @@ export default function Projects() {
           transition={{ duration: 0.4 }}
           className="text-center max-w-2xl mx-auto"
         >
-          <SectionPill icon={Briefcase}>Our Work</SectionPill>
+          <SectionPill icon={Briefcase}>Our Services</SectionPill>
           <h2 className="mt-4 text-3xl sm:text-4xl md:text-5xl font-extrabold text-slate-900 tracking-tight">
-            Featured Projects &amp; Case Studies
+            Digital Solutions We Build for Your Business
           </h2>
           <p className="mt-3.5 text-sm sm:text-base md:text-lg text-slate-600 leading-relaxed font-normal">
-            A showcase of websites, apps, and digital solutions we've delivered for clients across industries.
+            We build custom websites, eCommerce platforms, CRM systems, web applications, and business software tailored to your needs.
           </p>
         </motion.div>
 
