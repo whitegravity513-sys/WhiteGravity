@@ -71,12 +71,72 @@ export const PROCESS_STEPS = [
 ];
 
 export const PROJECTS = [
-  { name: 'Kartavyam', img: '/images/portfolio-kartavyam.png' },
-  { name: 'Sejwal', img: '/images/portfolio-sejwal.png' },
-  { name: 'Posh Pro', img: '/images/portfolio-poshpro.png' },
-  { name: 'Raaf Beauty', img: '/images/portfolio-raaf.png' },
-  { name: 'Decortiq Interior', img: '/images/portfolio-decortiq.png' },
-  { name: 'Skbbuildcon', img: '/images/portfolio-skb.png' },
+  {
+    id: 1,
+    title: 'Sales CRM Platform',
+    category: 'Custom CRM',
+    img: '/images/projects/project-crm.jpg',
+    slug: 'crm-erp-development',
+    iconType: 'crm',
+    iconBg: 'bg-indigo-50',
+    iconColor: 'text-indigo-600',
+    borderHover: 'hover:border-indigo-200'
+  },
+  {
+    id: 2,
+    title: 'Business Website',
+    category: 'Website Development',
+    img: '/images/projects/project-website.jpg',
+    slug: 'website-development',
+    iconType: 'web',
+    iconBg: 'bg-sky-50',
+    iconColor: 'text-sky-600',
+    borderHover: 'hover:border-sky-200'
+  },
+  {
+    id: 3,
+    title: 'Online Store',
+    category: 'E-commerce',
+    img: '/images/projects/project-ecommerce.jpg',
+    slug: 'ecommerce-development',
+    iconType: 'ecommerce',
+    iconBg: 'bg-rose-50',
+    iconColor: 'text-rose-500',
+    borderHover: 'hover:border-rose-200'
+  },
+  {
+    id: 4,
+    title: 'Task Management SaaS',
+    category: 'Custom Software',
+    img: '/images/projects/project-software.jpg',
+    slug: 'custom-software-development',
+    iconType: 'software',
+    iconBg: 'bg-emerald-50',
+    iconColor: 'text-emerald-600',
+    borderHover: 'hover:border-emerald-200'
+  },
+  {
+    id: 5,
+    title: 'Food Delivery App',
+    category: 'Mobile App Development',
+    img: '/images/projects/project-mobile.jpg',
+    slug: 'mobile-app-development',
+    iconType: 'mobile',
+    iconBg: 'bg-amber-50',
+    iconColor: 'text-amber-500',
+    borderHover: 'hover:border-amber-200'
+  },
+  {
+    id: 6,
+    title: 'Enterprise Dashboard',
+    category: 'Web Application',
+    img: '/images/projects/project-webapp.jpg',
+    slug: 'web-app-development',
+    iconType: 'dashboard',
+    iconBg: 'bg-blue-50',
+    iconColor: 'text-blue-600',
+    borderHover: 'hover:border-blue-200'
+  }
 ];
 
 export const TECH_STACK = [

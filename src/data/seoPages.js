@@ -2,10 +2,10 @@
 export const SEO_PAGES_DATA = {
   'website-development-company-usa': {
     slug: 'website-development-company-usa',
-    title: 'Website Development Company in USAA',
-    tagline: 'Custom, High-Performance Web Development Services in USAA',
+    title: 'Website Development Company in USA',
+    tagline: 'Custom, High-Performance Web Development Services in USA',
     metaTitle: 'Website Development Company USA | White Gravity',
-    metaDescription: 'Professional website development company in USAA. We build fast, scalable, mobile-friendly custom websites and web applications tailored to your business.',
+    metaDescription: 'Professional website development company in USA. We build fast, scalable, mobile-friendly custom websites and web applications tailored to your business.',
     heroImg: '/images/service-website.jpg',
     heroImgAlt: 'Modern responsive website development on desktop and mobile devices',
     showcaseImg: '/images/portfolio-kartavyam.png',
@@ -18,8 +18,8 @@ export const SEO_PAGES_DATA = {
       'Website Design and Development Company USA',
     ],
     hero: {
-      badge: 'Premier Web Engineering in USAA',
-      heading: 'Website Development Company in USAA',
+      badge: 'Premier Web Engineering in USA',
+      heading: 'Website Development Company in USA',
       subheading: 'High-performance, secure, and conversion-optimized websites engineered to turn visitors into paying clients. Built with cutting-edge tech stacks for startups, growing SMBs, and established enterprises across the United States.',
       primaryCta: 'Book Free Strategy Call',
       secondaryCta: 'Explore Services',
@@ -70,7 +70,7 @@ export const SEO_PAGES_DATA = {
     whyChooseUs: [
       {
         title: 'Local US Engineering Team',
-        desc: 'Work directly with accessible developers and technical architects serving businesses globally in USAA, ensuring direct communication and rapid turnaround.',
+        desc: 'Work directly with accessible developers and technical architects serving businesses globally in USA, ensuring direct communication and rapid turnaround.',
       },
       {
         title: 'Performance & Speed First',
@@ -118,14 +118,14 @@ export const SEO_PAGES_DATA = {
       },
     ],
     contextualLinks: [
-      { slug: 'website-design-company-usa', anchor: 'Website Design Company in USAA' },
-      { slug: 'web-application-development-usa', anchor: 'Web Application Development in USAA' },
-      { slug: 'ecommerce-development-usa', anchor: 'Ecommerce Development Company in USAA' },
+      { slug: 'website-design-company-usa', anchor: 'Website Design Company in USA' },
+      { slug: 'web-application-development-usa', anchor: 'Web Application Development in USA' },
+      { slug: 'ecommerce-development-usa', anchor: 'Ecommerce Development Company in USA' },
     ],
     faqs: [
       {
-        q: 'What does website development cost in USAA?',
-        a: 'Website development costs in USAA depend on project complexity, number of pages, custom features, and third-party integrations. A standard corporate website generally starts around $500 to $2,500, while complex custom web applications or ecommerce portals range higher based on specific scope. We provide transparent, itemized quotes with no hidden fees.',
+        q: 'What does website development cost in USA?',
+        a: 'Website development costs in USA depend on project complexity, number of pages, custom features, and third-party integrations. A standard corporate website generally starts around $500 to $2,500, while complex custom web applications or ecommerce portals range higher based on specific scope. We provide transparent, itemized quotes with no hidden fees.',
       },
       {
         q: 'How long does it take to develop a custom website?',
@@ -148,10 +148,10 @@ export const SEO_PAGES_DATA = {
 
   'website-design-company-usa': {
     slug: 'website-design-company-usa',
-    title: 'Website Design Company in USAA',
-    tagline: 'Stunning UI/UX and User-Centric Web Design Agency in USAA',
+    title: 'Website Design Company in USA',
+    tagline: 'Stunning UI/UX and User-Centric Web Design Agency in USA',
     metaTitle: 'Website Design Company USA | White Gravity',
-    metaDescription: 'Award-winning website design company in USAA creating modern, responsive, and conversion-focused UI/UX designs that elevate brand perception.',
+    metaDescription: 'Award-winning website design company in USA creating modern, responsive, and conversion-focused UI/UX designs that elevate brand perception.',
     heroImg: '/images/service-website.jpg',
     heroImgAlt: 'Custom UI/UX website design layout and visual prototyping',
     showcaseImg: '/images/portfolio-decortiq.png',
@@ -163,7 +163,7 @@ export const SEO_PAGES_DATA = {
     ],
     hero: {
       badge: 'Creative UI/UX Design Studio',
-      heading: 'Website Design Company in USAA',
+      heading: 'Website Design Company in USA',
       subheading: 'Transform your brand perception with custom, user-focused web designs. We create immersive digital experiences that captivate your visitors and guide them intuitively toward taking action.',
       primaryCta: 'Book Free Strategy Call',
       secondaryCta: 'View Design Approach',
@@ -177,7 +177,7 @@ export const SEO_PAGES_DATA = {
         'Inconsistent brand identity across digital touchpoints weakening consumer trust',
         'Low conversion rates due to hidden or uninspiring call-to-action buttons',
       ],
-      howWeHelp: 'Our creative design team in USAA blends modern aesthetic trends with conversion science. We design custom Figma prototypes, validate user flows, implement responsive design systems, and ensure pixel-perfect delivery on all screen resolutions.',
+      howWeHelp: 'Our creative design team in USA blends modern aesthetic trends with conversion science. We design custom Figma prototypes, validate user flows, implement responsive design systems, and ensure pixel-perfect delivery on all screen resolutions.',
     },
     services: [
       {
@@ -262,9 +262,9 @@ export const SEO_PAGES_DATA = {
       },
     ],
     contextualLinks: [
-      { slug: 'website-development-company-usa', anchor: 'Website Development Company in USAA' },
-      { slug: 'shopify-wordpress-development-usa', anchor: 'Shopify & WordPress Development in USAA' },
-      { slug: 'web-application-development-usa', anchor: 'Web Application Development in USAA' },
+      { slug: 'website-development-company-usa', anchor: 'Website Development Company in USA' },
+      { slug: 'shopify-wordpress-development-usa', anchor: 'Shopify & WordPress Development in USA' },
+      { slug: 'web-application-development-usa', anchor: 'Web Application Development in USA' },
     ],
     faqs: [
       {
@@ -292,10 +292,10 @@ export const SEO_PAGES_DATA = {
 
   'digital-marketing-agency-usa': {
     slug: 'digital-marketing-agency-usa',
-    title: 'Digital Marketing Agency in USAA',
+    title: 'Digital Marketing Agency in USA',
     tagline: 'ROI-Driven Digital Marketing Company Driving Qualified Inquiries',
     metaTitle: 'Digital Marketing Agency USA | White Gravity',
-    metaDescription: 'Results-driven digital marketing company in USAA offering technical SEO, Google Ads, Meta Ads, social media management, and high-intent lead generation.',
+    metaDescription: 'Results-driven digital marketing company in USA offering technical SEO, Google Ads, Meta Ads, social media management, and high-intent lead generation.',
     heroImg: '/images/hero-digital-marketing.jpg',
     heroImgAlt: 'Digital marketing analytics and multi-channel campaign management',
     showcaseImg: '/images/service-ads.jpg',
@@ -306,14 +306,14 @@ export const SEO_PAGES_DATA = {
     ],
     hero: {
       badge: 'Data-Driven Growth Agency',
-      heading: 'Digital Marketing Agency in USAA',
+      heading: 'Digital Marketing Agency in USA',
       subheading: 'Stop burning marketing budgets on vanity metrics. We build measurable, multi-channel customer acquisition funnels that generate qualified leads, boost online sales, and maximize marketing ROI.',
       primaryCta: 'Book Free Strategy Call',
       secondaryCta: 'Discover Channels',
     },
     intro: {
       whatIs: 'Modern digital marketing is the strategic combination of organic search visibility, high-intent paid advertising, social media engagement, and conversion rate optimization designed to connect your offerings with active buyers.',
-      whoNeeds: 'B2B companies seeking consistent inbound inquiries, B2C brands looking to accelerate sales, local service providers in USAA wanting geo-targeted customers, and businesses seeking profitable returns on ad spend.',
+      whoNeeds: 'B2B companies seeking consistent inbound inquiries, B2C brands looking to accelerate sales, local service providers in USA wanting geo-targeted customers, and businesses seeking profitable returns on ad spend.',
       problemsSolved: [
         'Wasting advertising budgets on non-targeted clicks that never turn into paying customers',
         'Relying solely on word-of-mouth with unpredictable, stagnant monthly revenue',
@@ -405,9 +405,9 @@ export const SEO_PAGES_DATA = {
       },
     ],
     contextualLinks: [
-      { slug: 'seo-company-usa', anchor: 'SEO Company in USAA' },
-      { slug: 'website-development-company-usa', anchor: 'Website Development Company in USAA' },
-      { slug: 'ecommerce-development-usa', anchor: 'Ecommerce Development in USAA' },
+      { slug: 'seo-company-usa', anchor: 'SEO Company in USA' },
+      { slug: 'website-development-company-usa', anchor: 'Website Development Company in USA' },
+      { slug: 'ecommerce-development-usa', anchor: 'Ecommerce Development in USA' },
     ],
     faqs: [
       {
@@ -424,7 +424,7 @@ export const SEO_PAGES_DATA = {
       },
       {
         q: 'Which platform is better for my business: Google Ads or Meta Ads?',
-        a: 'Google Ads is ideal for high-intent search queries where potential clients are actively looking for a service right now (e.g., "Software company in USAA"). Meta Ads (Facebook & Instagram) excels at visual storytelling, brand awareness, B2C offerings, and targeted retargeting. We recommend the optimal mix based on your business model.',
+        a: 'Google Ads is ideal for high-intent search queries where potential clients are actively looking for a service right now (e.g., "Software company in USA"). Meta Ads (Facebook & Instagram) excels at visual storytelling, brand awareness, B2C offerings, and targeted retargeting. We recommend the optimal mix based on your business model.',
       },
       {
         q: 'Can you handle lead routing directly to our sales team?',
@@ -435,10 +435,10 @@ export const SEO_PAGES_DATA = {
 
   'seo-company-usa': {
     slug: 'seo-company-usa',
-    title: 'SEO Company in USAA',
+    title: 'SEO Company in USA',
     tagline: 'Sustainable Organic Search Growth & First-Page Google Visibility',
     metaTitle: 'SEO Company USA | White Gravity',
-    metaDescription: 'Explore SEO services in USAA including technical SEO, on-page optimization, local SEO and content optimization for growing businesses.',
+    metaDescription: 'Explore SEO services in USA including technical SEO, on-page optimization, local SEO and content optimization for growing businesses.',
     heroImg: '/images/service-marketing.jpg',
     heroImgAlt: 'Search engine optimization and organic Google ranking strategy',
     showcaseImg: '/images/hero-digital-marketing.jpg',
@@ -450,8 +450,8 @@ export const SEO_PAGES_DATA = {
     ],
     hero: {
       badge: 'Organic Search Optimization Experts',
-      heading: 'SEO Company in USAA',
-      subheading: 'Earn high-intent search visibility that compounds month after month. We implement ethical, technical, and data-backed search engine optimization that puts your business directly in front of active searchers in USAA and global markets.',
+      heading: 'SEO Company in USA',
+      subheading: 'Earn high-intent search visibility that compounds month after month. We implement ethical, technical, and data-backed search engine optimization that puts your business directly in front of active searchers in USA and global markets.',
       primaryCta: 'Book Free Strategy Call',
       secondaryCta: 'Explore SEO Solutions',
     },
@@ -462,7 +462,7 @@ export const SEO_PAGES_DATA = {
         'Languishing on page 3 or 4 of Google where 95% of prospective clients never look',
         'Technical crawling and indexing errors preventing Google from understanding your site',
         'Thin or unoptimized content that fails to match what your prospective clients are searching for',
-        'Complete absence from Google Local Pack and Google Maps results in USAA',
+        'Complete absence from Google Local Pack and Google Maps results in USA',
       ],
       howWeHelp: 'We employ white-hat, Google-compliant SEO methodologies. We fix deep technical site architecture issues, perform exhaustive keyword and intent mapping, craft authoritative content, optimize Google Business Profiles, and build organic authority.',
     },
@@ -549,9 +549,9 @@ export const SEO_PAGES_DATA = {
       },
     ],
     contextualLinks: [
-      { slug: 'digital-marketing-agency-usa', anchor: 'Digital Marketing Agency in USAA' },
-      { slug: 'website-development-company-usa', anchor: 'Website Development Company in USAA' },
-      { slug: 'website-design-company-usa', anchor: 'Website Design Company in USAA' },
+      { slug: 'digital-marketing-agency-usa', anchor: 'Digital Marketing Agency in USA' },
+      { slug: 'website-development-company-usa', anchor: 'Website Development Company in USA' },
+      { slug: 'website-design-company-usa', anchor: 'Website Design Company in USA' },
     ],
     faqs: [
       {
@@ -564,7 +564,7 @@ export const SEO_PAGES_DATA = {
       },
       {
         q: 'What is Local SEO and why is it important for businesses across the USA?',
-        a: 'Local SEO optimizes your digital footprint to appear in location-specific searches (e.g., "SEO company in USAA" or "web developers near me"). It optimizes your Google Business Profile and local citations so your business appears in Google\'s 3-Pack Maps results, which drive significant local phone calls and foot traffic.',
+        a: 'Local SEO optimizes your digital footprint to appear in location-specific searches (e.g., "SEO company in USA" or "web developers near me"). It optimizes your Google Business Profile and local citations so your business appears in Google\'s 3-Pack Maps results, which drive significant local phone calls and foot traffic.',
       },
       {
         q: 'Can SEO replace paid advertising?',
@@ -579,10 +579,10 @@ export const SEO_PAGES_DATA = {
 
   'software-development-company-usa': {
     slug: 'software-development-company-usa',
-    title: 'Software Development Company in USAA',
+    title: 'Software Development Company in USA',
     tagline: 'Custom Enterprise Software, SaaS Platforms & Cloud Solutions',
     metaTitle: 'Software Development Company USA | White Gravity',
-    metaDescription: 'Custom software development company in USAA engineering secure enterprise software, cloud SaaS platforms, and automated business workflows.',
+    metaDescription: 'Custom software development company in USA engineering secure enterprise software, cloud SaaS platforms, and automated business workflows.',
     heroImg: '/images/service-custom-software.jpg',
     heroImgAlt: 'Enterprise software development and cloud architecture engineering',
     showcaseImg: '/images/about-collaboration-new.jpg',
@@ -593,7 +593,7 @@ export const SEO_PAGES_DATA = {
     ],
     hero: {
       badge: 'Enterprise Software Engineering',
-      heading: 'Software Development Company in USAA',
+      heading: 'Software Development Company in USA',
       subheading: 'Build scalable, secure, and mission-critical software solutions tailored exactly to your unique business logic. We turn complex operational requirements into high-performing software that powers organizational growth.',
       primaryCta: 'Book Free Strategy Call',
       secondaryCta: 'Review Capabilities',
@@ -692,9 +692,9 @@ export const SEO_PAGES_DATA = {
       },
     ],
     contextualLinks: [
-      { slug: 'crm-erp-development-usa', anchor: 'CRM & ERP Development in USAA' },
-      { slug: 'web-application-development-usa', anchor: 'Web Application Development in USAA' },
-      { slug: 'zoho-crm-consultant-usa', anchor: 'Zoho CRM Consultant in USAA' },
+      { slug: 'crm-erp-development-usa', anchor: 'CRM & ERP Development in USA' },
+      { slug: 'web-application-development-usa', anchor: 'Web Application Development in USA' },
+      { slug: 'zoho-crm-consultant-usa', anchor: 'Zoho CRM Consultant in USA' },
     ],
     faqs: [
       {
@@ -722,10 +722,10 @@ export const SEO_PAGES_DATA = {
 
   'web-application-development-usa': {
     slug: 'web-application-development-usa',
-    title: 'Web Application Development in USAA',
+    title: 'Web Application Development in USA',
     tagline: 'Scalable Full-Stack Web Apps, Client Portals & Cloud SaaS Solutions',
     metaTitle: 'Web Application Development US | White Gravity',
-    metaDescription: 'Scalable web application development in USAA. We engineer full-stack web applications, SaaS tools, and client portals with modern React and cloud architectures.',
+    metaDescription: 'Scalable web application development in USA. We engineer full-stack web applications, SaaS tools, and client portals with modern React and cloud architectures.',
     heroImg: '/images/service-webapp.jpg',
     heroImgAlt: 'Full-stack web application development and SaaS platform dashboard',
     showcaseImg: '/images/portfolio-poshpro.png',
@@ -735,7 +735,7 @@ export const SEO_PAGES_DATA = {
     ],
     hero: {
       badge: 'Full-Stack Web App Engineering',
-      heading: 'Web Application Development Company in USAA',
+      heading: 'Web Application Development Company in USA',
       subheading: 'Deliver rich, desktop-grade software experiences directly in the web browser. We engineer high-concurrency, cloud-hosted web applications that empower users, automate operations, and scale effortlessly.',
       primaryCta: 'Book Free Strategy Call',
       secondaryCta: 'Explore Web App Solutions',
@@ -834,9 +834,9 @@ export const SEO_PAGES_DATA = {
       },
     ],
     contextualLinks: [
-      { slug: 'software-development-company-usa', anchor: 'Software Development Company in USAA' },
-      { slug: 'website-development-company-usa', anchor: 'Website Development Company in USAA' },
-      { slug: 'crm-erp-development-usa', anchor: 'CRM & ERP Development in USAA' },
+      { slug: 'software-development-company-usa', anchor: 'Software Development Company in USA' },
+      { slug: 'website-development-company-usa', anchor: 'Website Development Company in USA' },
+      { slug: 'crm-erp-development-usa', anchor: 'CRM & ERP Development in USA' },
     ],
     faqs: [
       {
@@ -864,10 +864,10 @@ export const SEO_PAGES_DATA = {
 
   'ecommerce-development-usa': {
     slug: 'ecommerce-development-usa',
-    title: 'Ecommerce Development in USAA',
+    title: 'Ecommerce Development in USA',
     tagline: 'High-Converting Online Stores, Shopify, WooCommerce & Custom Commerce',
     metaTitle: 'Ecommerce Development Company USA | White Gravity',
-    metaDescription: 'Premier ecommerce development company in USAA building fast, high-converting online stores, custom storefronts, and secure Indian payment/shipping workflows.',
+    metaDescription: 'Premier ecommerce development company in USA building fast, high-converting online stores, custom storefronts, and secure Indian payment/shipping workflows.',
     heroImg: '/images/service-ecommerce.jpg',
     heroImgAlt: 'Modern ecommerce website development with shopping cart and payment integration',
     showcaseImg: '/images/portfolio-raaf.png',
@@ -878,7 +878,7 @@ export const SEO_PAGES_DATA = {
     ],
     hero: {
       badge: 'Online Store Engineering',
-      heading: 'Ecommerce Development Company in USAA',
+      heading: 'Ecommerce Development Company in USA',
       subheading: 'Turn online browsers into repeat buyers. We build fast, visually compelling, and frictionless ecommerce websites designed to maximize average order value, streamline checkouts, and scale catalog operations.',
       primaryCta: 'Book Free Strategy Call',
       secondaryCta: 'Explore Ecommerce Features',
@@ -977,9 +977,9 @@ export const SEO_PAGES_DATA = {
       },
     ],
     contextualLinks: [
-      { slug: 'shopify-wordpress-development-usa', anchor: 'Shopify & WordPress Development in USAA' },
-      { slug: 'website-development-company-usa', anchor: 'Website Development Company in USAA' },
-      { slug: 'digital-marketing-agency-usa', anchor: 'Digital Marketing Agency in USAA' },
+      { slug: 'shopify-wordpress-development-usa', anchor: 'Shopify & WordPress Development in USA' },
+      { slug: 'website-development-company-usa', anchor: 'Website Development Company in USA' },
+      { slug: 'digital-marketing-agency-usa', anchor: 'Digital Marketing Agency in USA' },
     ],
     faqs: [
       {
@@ -1007,10 +1007,10 @@ export const SEO_PAGES_DATA = {
 
   'shopify-wordpress-development-usa': {
     slug: 'shopify-wordpress-development-usa',
-    title: 'Shopify & WordPress Development in USAA',
+    title: 'Shopify & WordPress Development in USA',
     tagline: 'Expert CMS Engineering, Custom Themes & Plugin Customization',
     metaTitle: 'Shopify & WordPress Development US | White Gravity',
-    metaDescription: 'Expert Shopify and WordPress development company in USAA providing custom themes, specialized plugin engineering, speed optimization, and CMS maintenance.',
+    metaDescription: 'Expert Shopify and WordPress development company in USA providing custom themes, specialized plugin engineering, speed optimization, and CMS maintenance.',
     heroImg: '/images/service-website.jpg',
     heroImgAlt: 'Shopify store and custom WordPress theme development',
     showcaseImg: '/images/portfolio-sejwal.png',
@@ -1021,7 +1021,7 @@ export const SEO_PAGES_DATA = {
     ],
     hero: {
       badge: 'CMS Development Specialists',
-      heading: 'Shopify & WordPress Development in USAA',
+      heading: 'Shopify & WordPress Development in USA',
       subheading: 'Harness the global power of Shopify and WordPress with customized engineering. We design custom themes, build tailored plugins, and optimize performance so you never feel restricted by cookie-cutter templates.',
       primaryCta: 'Book Free Strategy Call',
       secondaryCta: 'View CMS Services',
@@ -1120,9 +1120,9 @@ export const SEO_PAGES_DATA = {
       },
     ],
     contextualLinks: [
-      { slug: 'ecommerce-development-usa', anchor: 'Ecommerce Development in USAA' },
-      { slug: 'website-development-company-usa', anchor: 'Website Development Company in USAA' },
-      { slug: 'website-design-company-usa', anchor: 'Website Design Company in USAA' },
+      { slug: 'ecommerce-development-usa', anchor: 'Ecommerce Development in USA' },
+      { slug: 'website-development-company-usa', anchor: 'Website Development Company in USA' },
+      { slug: 'website-design-company-usa', anchor: 'Website Design Company in USA' },
     ],
     faqs: [
       {
@@ -1150,10 +1150,10 @@ export const SEO_PAGES_DATA = {
 
   'crm-erp-development-usa': {
     slug: 'crm-erp-development-usa',
-    title: 'CRM & ERP Development in USAA',
+    title: 'CRM & ERP Development in USA',
     tagline: 'Custom CRM & ERP Software to Streamline Operations, Sales & Resources',
     metaTitle: 'CRM & ERP Development Company USA | White Gravity',
-    metaDescription: 'Explore custom CRM development services in USAA for lead management, employee workflows, sales operations and business automation.',
+    metaDescription: 'Explore custom CRM development services in USA for lead management, employee workflows, sales operations and business automation.',
     heroImg: '/images/service-crm.svg',
     heroImgAlt: 'Custom CRM and ERP enterprise software workflow and lead management',
     showcaseImg: '/images/service-custom-software.jpg',
@@ -1166,7 +1166,7 @@ export const SEO_PAGES_DATA = {
     ],
     hero: {
       badge: 'Business Automation & Enterprise Systems',
-      heading: 'CRM & ERP Development Company in USAA',
+      heading: 'CRM & ERP Development Company in USA',
       subheading: 'Unify your sales pipeline, employee workflows, inventory, and financial reporting under one intelligent, custom-built system. Replace chaotic spreadsheets with automated, centralized software engineered around your exact operations.',
       primaryCta: 'Book Free Strategy Call',
       secondaryCta: 'Explore CRM/ERP Modules',
@@ -1265,9 +1265,9 @@ export const SEO_PAGES_DATA = {
       },
     ],
     contextualLinks: [
-      { slug: 'software-development-company-usa', anchor: 'Software Development Company in USAA' },
-      { slug: 'zoho-crm-consultant-usa', anchor: 'Zoho CRM Consultant in USAA' },
-      { slug: 'web-application-development-usa', anchor: 'Web Application Development in USAA' },
+      { slug: 'software-development-company-usa', anchor: 'Software Development Company in USA' },
+      { slug: 'zoho-crm-consultant-usa', anchor: 'Zoho CRM Consultant in USA' },
+      { slug: 'web-application-development-usa', anchor: 'Web Application Development in USA' },
     ],
     faqs: [
       {
@@ -1295,10 +1295,10 @@ export const SEO_PAGES_DATA = {
 
   'zoho-crm-consultant-usa': {
     slug: 'zoho-crm-consultant-usa',
-    title: 'Zoho CRM Consultant in USAA',
+    title: 'Zoho CRM Consultant in USA',
     tagline: 'Authorized Zoho Setup, Deluge Automation & Custom Business Integration',
     metaTitle: 'Zoho CRM Consultant US | White Gravity',
-    metaDescription: 'Authorized Zoho CRM consultant in USAA offering custom pipeline setup, Deluge automation, third-party integrations, and comprehensive team training.',
+    metaDescription: 'Authorized Zoho CRM consultant in USA offering custom pipeline setup, Deluge automation, third-party integrations, and comprehensive team training.',
     heroImg: '/images/service-zoho.jpg',
     heroImgAlt: 'Zoho CRM consultation, pipeline setup and Deluge script automation',
     showcaseImg: '/images/about-collaboration-new.jpg',
@@ -1308,7 +1308,7 @@ export const SEO_PAGES_DATA = {
     ],
     hero: {
       badge: 'Certified Zoho Implementation Specialists',
-      heading: 'Zoho CRM Consultant in USAA',
+      heading: 'Zoho CRM Consultant in USA',
       subheading: 'Maximize your investment in the Zoho ecosystem. We configure, customize, and automate Zoho CRM and Zoho One to match your exact sales pipelines, eliminate manual data entry, and empower your sales team.',
       primaryCta: 'Book Free Strategy Call',
       secondaryCta: 'Discover Zoho Services',
@@ -1363,7 +1363,7 @@ export const SEO_PAGES_DATA = {
       },
       {
         title: 'Local US Consultation',
-        desc: 'Meet our consultants directly in USAA, for in-person workflow mapping, strategy sessions, and team training.',
+        desc: 'Meet our consultants directly in USA, for in-person workflow mapping, strategy sessions, and team training.',
       },
       {
         title: 'End-to-End Business Integration',
@@ -1407,9 +1407,9 @@ export const SEO_PAGES_DATA = {
       },
     ],
     contextualLinks: [
-      { slug: 'crm-erp-development-usa', anchor: 'CRM & ERP Development in USAA' },
-      { slug: 'software-development-company-usa', anchor: 'Software Development Company in USAA' },
-      { slug: 'digital-marketing-agency-usa', anchor: 'Digital Marketing Agency in USAA' },
+      { slug: 'crm-erp-development-usa', anchor: 'CRM & ERP Development in USA' },
+      { slug: 'software-development-company-usa', anchor: 'Software Development Company in USA' },
+      { slug: 'digital-marketing-agency-usa', anchor: 'Digital Marketing Agency in USA' },
     ],
     faqs: [
       {
@@ -1417,7 +1417,7 @@ export const SEO_PAGES_DATA = {
         a: 'While basic Zoho setup seems straightforward, unlocking its true power requires advanced blueprint engineering, workflow automation, custom Deluge coding, and clean API integrations. Without expert guidance, companies often configure messy data structures that frustrate sales teams. We ensure your Zoho implementation is structured correctly from day one, saving months of trial and error.',
       },
       {
-        q: 'Can you integrate Zoho CRM with WhatsApp and communication tools in USAA?',
+        q: 'Can you integrate Zoho CRM with WhatsApp and communication tools in USA?',
         a: 'Yes! We integrate official WhatsApp Business APIs with Zoho CRM, enabling your sales team to send automated WhatsApp templates upon lead receipt, trigger status updates, and chat with leads directly from their Zoho contact record.',
       },
       {
